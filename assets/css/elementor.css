@@ -52,6 +52,7 @@ CSS INDEX
     --docfi-red2: 247;
     --docfi-green2: 247;
     --docfi-blue2: 255;
+    --post-color: #F84436;
 }
 @media(max-width: 991px) {
 	.custom-align-center {
@@ -1590,11 +1591,27 @@ CSS INDEX
 /*-------------------------------------
 #. EL: Feature Post Tab
 -------------------------------------*/
-
+.best-online-documentation-section .nav {
+    display: block;
+}
+.best-online-documentation-section .nav p{
+    margin-bottom: 0;
+}
+.best-online-documentation-section .nav .nav-link {
+    border-radius: 10px;
+    border: 1px solid #CDCDCD;
+}
+.best-online-documentation-section .nav .nav-link.active {
+    background-color: var(--color-white);
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+}
+.best-online-documentation-section .nav .nav-link.active .logo-card-btn svg {
+    fill: #1D2746;
+}
 .best-online-documentation-section {
     overflow: unset;
 }
-
 .best-online-documentation-section .theme-logo-wrapper li {
     margin-bottom: 15px;
 }
@@ -1607,80 +1624,27 @@ CSS INDEX
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
 }
-
 .best-online-documentation-section .theme-logo-wrapper li.active .logo-card .logo-card-btn svg {
     fill: #1D2746;
 }
-
 .best-online-documentation-section .theme-logo-wrapper li:last-child {
     margin-bottom: 0;
 }
-
 .best-online-documentation-section .best-documentation-info-wrapper {
     border: 1px solid #CDCDCD;
     padding: 60px 65px 20px 65px;
     border-radius: 10px;
 }
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(1) .rt-card .icon {
-    border: 1px solid #F84436;
+.best-online-documentation-section .best-documentation-info-wrapper .rt-card .icon {
+    border: 1px solid var(--post-color);
 }
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(1) .rt-card:hover .icon {
+.best-online-documentation-section .best-documentation-info-wrapper .rt-card:hover .icon {
     border: 1px solid transparent;
-    background-color: #F84436;
+    background-color: var(--post-color);
 }
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(2) .rt-card .icon {
-    border: 1px solid #F47D0E;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(2) .rt-card:hover .icon {
-    border: 1px solid transparent;
-    background-color: #F47D0E;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(3) .rt-card .icon {
-    border: 1px solid #6836F8;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(3) .rt-card:hover .icon {
-    border: 1px solid transparent;
-    background-color: #6836F8;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(4) .rt-card .icon {
-    border: 1px solid #C82CFF;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(4) .rt-card:hover .icon {
-    border: 1px solid transparent;
-    background-color: #C82CFF;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(5) .rt-card .icon {
-    border: 1px solid #F47D0E;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(5) .rt-card:hover .icon {
-    border: 1px solid transparent;
-    background-color: #F47D0E;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(6) .rt-card .icon {
-    border: 1px solid #3678F8;
-}
-
-.best-online-documentation-section .best-documentation-info-wrapper .child:nth-child(6) .rt-card:hover .icon {
-    border: 1px solid transparent;
-    background-color: #3678F8;
-}
-
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card {
     margin-bottom: 40px;
 }
-
-
 .logo-card {
     padding: 34px 48px 35px 30px;
     border: 1px solid #CDCDCD;
@@ -1689,13 +1653,11 @@ CSS INDEX
     transition: all 0.4s ease-in-out;
     margin-bottom: 11px;
     height: 150px;
-    background: var(--color-white);
+    background: var(--docfi-white-color);
 }
-
 .logo-card .logo img {
     margin-bottom: 8px;
 }
-
 .logo-card .logo .text,
 .logo-card .logo .single-element-section .elements-info-layout .cheatsheet-widget .cheatsheet-area .cheatsheet-card .title,
 .single-element-section .elements-info-layout .cheatsheet-widget .cheatsheet-area .cheatsheet-card .logo-card .logo .title {
@@ -1705,34 +1667,28 @@ CSS INDEX
     line-height: 28px;
     color: #8E8E8F;
 }
-
 .logo-card:hover {
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
 }
-
 .logo-card:hover .logo-card-btn svg {
     fill: #1D2746;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
 .logo-card:last-child {
     margin-bottom: 0;
 }
-
 .rt-card--style-3 {
     background: transparent;
     border-radius: 0;
     width: 329px;
 }
-
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
     .rt-card--style-3 {
         width: 270px;
     }
 }
-
 .rt-card--style-3 .icon {
     width: 45px;
     height: 45px;
@@ -1740,40 +1696,33 @@ CSS INDEX
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
 .rt-card--style-3 .card-title {
     margin-bottom: 5px;
     line-height: 26px;
 }
-
 .rt-card--style-3 .card-title a {
     font-weight: 500;
     font-size: 1.375rem;
 }
-
 .rt-card--style-3 .card-title a:hover {
     color: var(--color-secondary);
 }
-
 .rt-card--style-3 .card-info {
     line-height: 30px;
     margin-bottom: 0;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
 .rt-card--style-3:hover {
     color: unset;
 }
-
 .rt-card--style-3:hover .icon {
     border: 1px solid transparent;
 }
-
 .rt-card--style-3:hover .icon svg path {
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    stroke: var(--color-white) !important;
+    stroke: var(--docfi-white-color);
 }
 
 
