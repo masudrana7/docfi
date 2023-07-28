@@ -723,7 +723,6 @@ function docfi_content_load_scripts() {
     // Window Load
     $(window).on('load', function () {
         docfi_content_load_scripts();
-
         // select first isotope data-filter
         var first_filter = $(".rt-docs-tab a:first").attr('data-filter');
         //isotop default filter

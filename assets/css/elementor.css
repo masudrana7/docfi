@@ -52,7 +52,7 @@ CSS INDEX
     --docfi-red2: 247;
     --docfi-green2: 247;
     --docfi-blue2: 255;
-    --post-color: #F84436;
+    --docfi-post-color: 248;
 }
 @media(max-width: 991px) {
 	.custom-align-center {
@@ -1635,15 +1635,38 @@ CSS INDEX
     padding: 60px 65px 20px 65px;
     border-radius: 10px;
 }
+.best-online-documentation-section .best-documentation-info-wrapper .rt-card:hover .icon img{
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card .icon {
-    border: 1px solid var(--post-color);
+    border: 1px solid var(--docfi-post-color);
 }
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card:hover .icon {
     border: 1px solid transparent;
-    background-color: var(--post-color);
+    background: var(--docfi-post-color);
 }
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card {
     margin-bottom: 40px;
+}
+div.rt-cat-list .logo-card{
+    margin-bottom: 25px;
+    border-color: transparent;
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    transition: 0.4s;
+}
+div.rt-cat-list .logo-card:hover{
+    border-color: var(--docfi-primary-color);
+}
+div.rt-cat-list .logo-card svg{
+    transition: 0.4s;
+}
+div.rt-cat-list .logo-card:hover svg{
+    fill: var(--docfi-heading-color);
+}
+.rt-cat-list .logo-card p{
+    margin-bottom: 0;
 }
 .logo-card {
     padding: 34px 48px 35px 30px;
