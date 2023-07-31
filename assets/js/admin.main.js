@@ -19,6 +19,7 @@
 	}
 
 	$(document).ready(function () {
+		
 		onReadyScripts();
 		//category color
 		if($('.colorpicker').length) {

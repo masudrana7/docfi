@@ -243,7 +243,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 					'family' => urlencode( implode( '|', $final_fonts ) ),
 					'display' => urlencode( 'fallback' ),
 				);
-
 				$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
 			}
 			
@@ -418,7 +417,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 					}
 				}
 			}
-			
 			return $docfi_layout_class;
 			
 		}
@@ -486,19 +484,28 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			$css = str_replace( array( "\r\n", "\r", "\n", "\t", '  ', '    ', '    ' ), ' ', $css );
 			return $css;
 		}
+
 		
+		public static function custom_group_list(){
+			$group_list = array();
+			$terms = get_terms('docfi_docs_group');
+			if ( $terms ) {
+				foreach ( $terms as $term ) {
+					$group_list[$term['id']] = $term->name;
+				}
+			}
+			return $group_list;
+		}
+
 		public static function custom_sidebar_fields(){
 			$sidebar_fields = array();
-
 			$sidebar_fields['sidebar'] = esc_html__( 'Sidebar', 'docfi' );
-
 			$sidebars = get_option( 'docfi_custom_sidebars', array() );
 			if ( $sidebars ) {
 				foreach ( $sidebars as $sidebar ) {
 					$sidebar_fields[$sidebar['id']] = $sidebar['name'];
 				}
 			}
-
 			return $sidebar_fields;
 		}
 		

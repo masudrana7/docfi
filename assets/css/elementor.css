@@ -1659,14 +1659,23 @@ div.rt-cat-list .logo-card{
 div.rt-cat-list .logo-card:hover{
     border-color: var(--docfi-primary-color);
 }
+div.rt-cat-list .logo-card{
+    height: auto;
+    min-height: 158px;
+}
 div.rt-cat-list .logo-card svg{
     transition: 0.4s;
+    min-width: 23px;
 }
 div.rt-cat-list .logo-card:hover svg{
     fill: var(--docfi-heading-color);
 }
 .rt-cat-list .logo-card p{
     margin-bottom: 0;
+}
+.rt-cat-list .logo-card .cat_desc{
+    color: var(--docfi-body-color);
+    margin-top: 12px;
 }
 .logo-card {
     padding: 34px 48px 35px 30px;

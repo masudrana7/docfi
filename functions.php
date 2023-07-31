@@ -73,4 +73,8 @@ $docfi_theme_data = wp_get_theme();
 		add_post_type_support( 'post', 'page-attributes' );
 	}
 
-
+	// function remove_custom_taxonomy_meta_box() {
+	// 	// Replace 'custom_taxonomy' with the name of your custom taxonomy
+	// 	remove_meta_box('tagsdiv-docfi_docs_group', 'docfi_docs', 'normal');
+	// }
+	// add_action('admin_menu', 'remove_custom_taxonomy_meta_box');
