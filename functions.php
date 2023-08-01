@@ -73,8 +73,48 @@ $docfi_theme_data = wp_get_theme();
 		add_post_type_support( 'post', 'page-attributes' );
 	}
 
-	// function remove_custom_taxonomy_meta_box() {
-	// 	// Replace 'custom_taxonomy' with the name of your custom taxonomy
-	// 	remove_meta_box('tagsdiv-docfi_docs_group', 'docfi_docs', 'normal');
-	// }
-	// add_action('admin_menu', 'remove_custom_taxonomy_meta_box');
+	/*Remove Taxonomy Group*/
+	add_action( 'admin_init', 'rt_remove_metabox' );
+	function rt_remove_metabox() {
+		if ( is_admin() ) {
+			add_filter( 'get_user_option_meta-box-order_docfi_docs', 'rt_remove_group_taxonomy_div' );
+        }
+	}
+	function rt_remove_group_taxonomy_div() {
+		global $wp_meta_boxes;
+		unset( $wp_meta_boxes['docfi_docs']['side']['core']['docfi_docs_groupdiv'] );
+		return [];
+	}
+
+	// Remove and add Docs Column
+	
+	function custom_remove_default_columns($columns) {
+		unset($columns['date']); // Remove the "Date" column
+		unset($columns['taxonomy-docfi_docs_group']);
+		$columns['docs_group'] = __( 'Docs Groups', 'docfi' );
+		$columns['date'] = __( 'Date', 'docfi' );
+		return $columns;
+	}
+	add_filter('manage_docfi_docs_posts_columns', 'custom_remove_default_columns');
+
+
+	// Add Select Custom Group
+
+	add_action( 'manage_docfi_docs_posts_custom_column', 'docfi_docs_posts_column', 10, 2 );
+		function docfi_docs_posts_column( $column, $post_id ) {
+		 if ( 'docs_group' === $column ) {
+			$select_group = get_post_meta( $post_id, 'group_post_select', true );
+			if ( ! $select_group ) {
+				_e( 'n/a' );  
+			} else {
+				$title = get_term_by('id', $select_group, 'docfi_docs_group')->name;
+				$url = admin_url() . 'term.php?taxonomy=docfi_docs_group&tag_ID=' . $select_group;
+				echo '<a href=' . esc_url( $url ) . '>' . esc_html( $title ) . '</a>';
+			}
+		}	
+	}
+
+
+
+
+	

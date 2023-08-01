@@ -330,8 +330,7 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 				$nav_menu_args = array( 'theme_location' => 'primary','container' => 'nav' );
 			}
 			return $nav_menu_args;		
-		}
-				
+		}	
 		public static function has_footer(){
 				
 			if ( DocfiTheme::$footer_style == 2  ) {
@@ -367,7 +366,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 				}
 				return false;
 			}
-			
 		}
 		
 		public static function get_img( $img ){
@@ -429,7 +427,7 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 	        return $current_url;
 	    }
 
-	public static function shop_list_page_url()
+		public static function shop_list_page_url()
 	    {
 	        global $wp;
 	        $current_url = add_query_arg($wp->query_string, '&shopview=list', home_url($wp->request));
@@ -485,19 +483,21 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			return $css;
 		}
 
-		
-		public static function custom_group_list(){
-			$group_list = array();
-			$terms = get_terms('docfi_docs_group');
-			if ( $terms ) {
-				foreach ( $terms as $term ) {
-					$group_list[$term['id']] = $term->name;
+		public static function docs_group_name() {
+			$terms = get_terms( "docfi_docs_group" , [
+				'hide_empty' => false
+			]);
+			if(!empty($terms) && ! is_wp_error( $terms ) ){
+				$category_links = array();
+				foreach ($terms as $key => $value) {
+					$category_links[$value->term_id] = $value->name;
 				}
+				return $category_links;
 			}
-			return $group_list;
 		}
-
+		
 		public static function custom_sidebar_fields(){
+			
 			$sidebar_fields = array();
 			$sidebar_fields['sidebar'] = esc_html__( 'Sidebar', 'docfi' );
 			$sidebars = get_option( 'docfi_custom_sidebars', array() );

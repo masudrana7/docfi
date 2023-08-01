@@ -85,3 +85,10 @@ div.icon-wrapper > span {
 .wp-admin .wp-list-table .rt_term_image img{
 	max-width: 40px;
 }
+/* body .column-taxonomy-docfi_docs_group,
+.taxonomy-docfi_docs_group span,
+.taxonomy-docfi_docs_group a,
+.taxonomy-docfi_docs_group,
+#taxonomy-docfi_docs_group{
+	font-size: 0;
+} */
