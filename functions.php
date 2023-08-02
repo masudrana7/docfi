@@ -87,15 +87,20 @@ $docfi_theme_data = wp_get_theme();
 	}
 
 	// Remove and add Docs Column
-	
-	function custom_remove_default_columns($columns) {
+	function custom_remove_docfi_docs_default_columns($columns) {
 		unset($columns['date']); // Remove the "Date" column
 		unset($columns['taxonomy-docfi_docs_group']);
 		$columns['docs_group'] = __( 'Docs Groups', 'docfi' );
 		$columns['date'] = __( 'Date', 'docfi' );
 		return $columns;
 	}
-	add_filter('manage_docfi_docs_posts_columns', 'custom_remove_default_columns');
+	add_filter('manage_docfi_docs_posts_columns', 'custom_remove_docfi_docs_default_columns');
+
+	function custom_remove_docfi_group_columns($columns){
+		unset($columns['posts']);
+		return $columns;
+	}
+	add_filter('manage_edit-docfi_docs_group_columns', 'custom_remove_docfi_group_columns');
 
 
 	// Add Select Custom Group
@@ -113,6 +118,21 @@ $docfi_theme_data = wp_get_theme();
 			}
 		}	
 	}
+
+	// Docs Post Count Views 
+	function rt_docs_post_views() {
+		if (is_singular('docfi_docs')) {
+			$post_id = get_the_ID();
+			$count_key = 'post_views_count';
+			$count = get_post_meta($post_id, $count_key, true);
+			if ($count == '') {
+				$count = 0;
+			}
+			$count++;
+			update_post_meta($post_id, $count_key, $count);
+		}
+	}
+	add_action('wp', 'rt_docs_post_views');
 
 
 

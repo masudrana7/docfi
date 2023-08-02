@@ -17,23 +17,26 @@ else{
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
-			<?php if ( DocfiTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
-				<div class="<?php echo esc_attr( $docfi_layout_class );?>">
+			<div class="col-md-3">
+				<?php get_template_part('template-parts/docs-single', 'sidebar'); ?>
+			</div>
+			<?php // if ( DocfiTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
+				<div class="<?php // echo esc_attr( $docfi_layout_class );?> col-md-9">
 					<main id="main" class="site-main">
 						<?php							
 							while ( have_posts() ) : the_post();
-								get_template_part( 'template-parts/content-single', 'portfolio' );
+								get_template_part( 'template-parts/content-single', 'docs' );
 							endwhile;						
 						?>
 					</main>
 				</div>
-			<?php if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
+			<?php // if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
 		</div>
 	</div>	
 </div>
-<?php if( DocfiTheme::$options['show_related_portfolio'] == '1' ) { ?>
+<?php if( DocfiTheme::$options['show_related_docs'] == '1' ) { ?>
 	<div class="portfolio-related">
-		<div class="container"><?php docfi_related_portfolio(); ?></div>
+		<div class="container"><?php docfi_related_docs(); ?></div>
 	</div>
 <?php } ?>
 <?php get_footer(); ?>

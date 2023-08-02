@@ -43,10 +43,10 @@ DocfiTheme_Helper::requires( 'customizer/settings/search-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/error-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/team-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/team-single-layout.php' );
-DocfiTheme_Helper::requires( 'customizer/settings/service-layout.php' );
-DocfiTheme_Helper::requires( 'customizer/settings/service-single-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/docs-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/docs-single-layout.php' );
+DocfiTheme_Helper::requires( 'customizer/settings/service-layout.php' );
+DocfiTheme_Helper::requires( 'customizer/settings/service-single-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/woo-shop-layout.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/woo-product-layout.php' );
 

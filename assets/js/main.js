@@ -856,7 +856,7 @@ function docfi_content_load_scripts() {
     });
 
     /*Portfolio move title with cursor*/
-    function mousemove_portfolio_hover_effect() {
+    function mousemove_docs_hover_effect() {
         if (jQuery( window ).width() > 0 ) {
             if ( jQuery('#content').find(".rt-portfolio-default").length > 0 ) {
                 jQuery(".rt-portfolio-default .portfolio-item").each(function() {
@@ -877,7 +877,7 @@ function docfi_content_load_scripts() {
 
     /*Button*/
     $(function() {
-        mousemove_portfolio_hover_effect();
+        mousemove_docs_hover_effect();
     });
 
     // Tooltip

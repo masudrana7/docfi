@@ -15,17 +15,17 @@ else{
 
 $iso						= 'g-4 no-equal-gallery';
 
-if ( DocfiTheme::$options['portfolio_archive_style'] == 'style1' ){
-	$portfolio_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
+if ( DocfiTheme::$options['docs_archive_style'] == 'style1' ){
+	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
 	$template 				 	= 'portfolio-1';
-}elseif( DocfiTheme::$options['portfolio_archive_style'] == 'style2' ){
-	$portfolio_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-2";
+}elseif( DocfiTheme::$options['docs_archive_style'] == 'style2' ){
+	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-2";
 	$template 				 	= 'portfolio-2';
-}elseif( DocfiTheme::$options['portfolio_archive_style'] == 'style3' ){
-	$portfolio_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-3";
+}elseif( DocfiTheme::$options['docs_archive_style'] == 'style3' ){
+	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-3";
 	$template 				 	= 'portfolio-3';
 }else{
-	$portfolio_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
+	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
 	$template 				 	= 'portfolio-1';
 }
 
@@ -46,10 +46,10 @@ else {
 	$paged = 1;
 }
 
-$portfolio_post_number = DocfiTheme::$options['portfolio_post_number'];
+$docs_post_number = DocfiTheme::$options['docs_post_number'];
 $args = array(
-	'posts_per_page'    => $portfolio_post_number,
-	'post_type'			=> 'docfi_portfolio',
+	'posts_per_page'    => $docs_post_number,
+	'post_type'			=> 'docfi_docs',
 	'post_status'		=> 'publish',
 	'paged'             => $paged,
 );
@@ -66,7 +66,7 @@ $query = new WP_Query( $args );
 					get_sidebar();
 				}
 			?>
-			<div class="<?php echo esc_attr( $portfolio_archive_layout );?> <?php echo esc_attr( $docfi_layout_class );?>">
+			<div class="<?php echo esc_attr( $docs_archive_layout );?> <?php echo esc_attr( $docfi_layout_class );?>">
 				<main id="main" class="site-main">	
 					<?php if ( $query->have_posts() ) :?>
 						<div class="row <?php echo esc_attr( $iso );?>">

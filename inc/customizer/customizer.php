@@ -287,18 +287,18 @@ class DocfiTheme_Customizer {
         );
 
         // Add Portfolio Layout Section
-        $wp_customize->add_section( 'portfolio_layout_section',
+        $wp_customize->add_section( 'docs_layout_section',
             array(
-                'title' => __( 'Portfolio Archive Layout', 'docfi' ),
+                'title' => __( 'Docs Archive Layout', 'docfi' ),
                 'priority' => 9,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
 
         // Add Portfolio Single Layout Section
-        $wp_customize->add_section( 'portfolio_single_layout_section',
+        $wp_customize->add_section( 'docs_single_layout_section',
             array(
-                'title' => __( 'Portfolio Single Layout', 'docfi' ),
+                'title' => __( 'Docs Single Layout', 'docfi' ),
                 'priority' => 11,
                 'panel' => 'rttheme_layouts_defaults',
             )
@@ -375,23 +375,25 @@ class DocfiTheme_Customizer {
             )
         );
 
-        // Add Service Section
-        $wp_customize->add_section( 'rttheme_service_settings',
+        // Add Portfolio Section
+        $wp_customize->add_section( 'rttheme_docs_settings',
             array(
-                'title' => __( 'Service Setting', 'docfi' ),
+                'title' => __( 'Docs Setting', 'docfi' ),
                 'priority' => 2,
                 'panel' => 'rttheme_cpt_settings',
             )
         );
 
-        // Add Portfolio Section
-        $wp_customize->add_section( 'rttheme_portfolio_settings',
+        // Add Service Section
+        $wp_customize->add_section( 'rttheme_service_settings',
             array(
-                'title' => __( 'Portfolio Setting', 'docfi' ),
+                'title' => __( 'Service Setting', 'docfi' ),
                 'priority' => 3,
                 'panel' => 'rttheme_cpt_settings',
             )
         );
+
+        
         
         // Add Error Page Section
         $wp_customize->add_section( 'error_section',

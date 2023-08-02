@@ -21,7 +21,7 @@ elseif ( is_home() ) {
 }
 elseif (is_post_type_archive('docfi_team')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Teams', 'docfi' ) );
-} elseif (is_post_type_archive('docfi_portfolio')) {
+} elseif (is_post_type_archive('docfi_docs')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Portfolios', 'docfi' ) );
 } elseif (is_post_type_archive('docfi_service')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Services', 'docfi' ) );
@@ -29,7 +29,7 @@ elseif (is_post_type_archive('docfi_team')) {
 	$docfi_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'docfi' ) );
 } elseif (is_singular('docfi_team')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Team Details', 'docfi' ) );
-} elseif (is_singular('docfi_portfolio')) {
+} elseif (is_singular('docfi_docs')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Portfolio Details', 'docfi' ) );
 } elseif (is_singular('docfi_service')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Service Details', 'docfi' ) );

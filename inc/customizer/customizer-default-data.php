@@ -93,6 +93,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'team_cat_slug' 			=> 'team-category',		
             'service_cat_slug'          => 'service-category',     
             'docs_cat_slug'             => 'docs-category',     
+            'docs_group_slug'           => 'docs-group',     
 			
             // Page Layout Setting 
             'page_layout'        => 'full-width',
@@ -364,7 +365,6 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'docs_ar_excerpt'        => 0,
             'docs_ar_category'       => 1,
             'docs_ar_action'         => 1,
-
             'single_docs_cat'        => 1,
             'single_docs_client'     => 1,
             'single_docs_startdate'  => 1,

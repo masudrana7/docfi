@@ -5,23 +5,23 @@
  * @version 1.0
  */
 
-if( ! function_exists( 'docfi_related_portfolio' )){
+if( ! function_exists( 'docfi_related_docs' )){
 	
-	function docfi_related_portfolio(){
+	function docfi_related_docs(){
 		$thumb_size 			= 'docfi-size5';
 		$post_id = get_the_id();	
 		$number_of_avail_post = '';
 		$current_post = array( $post_id );
-		$title_length = DocfiTheme::$options['related_portfolio_title_limit'] ? DocfiTheme::$options['related_portfolio_title_limit'] : '';
-		$related_post_number = DocfiTheme::$options['related_portfolio_number'];
+		$title_length = DocfiTheme::$options['related_docs_title_limit'] ? DocfiTheme::$options['related_docs_title_limit'] : '';
+		$related_post_number = DocfiTheme::$options['related_docs_number'];
 		
-		$portfolio_related_title  = get_post_meta( get_the_ID(), 'portfolio_related_title', true );
+		$docs_related_title  = get_post_meta( get_the_ID(), 'docs_related_title', true );
 
 		# Making ready to the Query ...
 		$query_type = DocfiTheme::$options['related_post_query'];
 
 		$args = array(
-			'post_type'				 => 'docfi_portfolio',
+			'post_type'				 => 'docfi_docs',
 			'post__not_in'           => $current_post,
 			'posts_per_page'         => $related_post_number,
 			'no_found_rows'          => true,
@@ -83,7 +83,7 @@ if( ! function_exists( 'docfi_related_portfolio' )){
 		# Get related posts by categories ----------
 		else{
 			
-			$terms = get_the_terms( $post_id, 'docfi_portfolio_category' );
+			$terms = get_the_terms( $post_id, 'docfi_docs_category' );
 			if ( $terms && ! is_wp_error( $terms ) ) {
 			 
 				$port_cat_links = array();
@@ -95,7 +95,7 @@ if( ! function_exists( 'docfi_related_portfolio' )){
 			
 			$args['tax_query'] = array (
 				array (
-					'taxonomy' => 'docfi_portfolio_category',
+					'taxonomy' => 'docfi_docs_category',
 					'field'    => 'ID',
 					'terms'    => $port_cat_links,
 				)
@@ -136,7 +136,7 @@ if( ! function_exists( 'docfi_related_portfolio' )){
 			<div class="rt-swiper-slider" data-xld = '<?php echo esc_attr( $swiper_data ); ?>'>
 				<div class="rt-related-title">
 					<div class="title-holder">
-						<h3 class="entry-title has-animation"><?php echo wp_kses( DocfiTheme::$options['portfolio_related_title'] , 'alltext_allow' ); ?><span class="titleline"></span></h3>
+						<h3 class="entry-title has-animation"><?php echo wp_kses( DocfiTheme::$options['docs_related_title'] , 'alltext_allow' ); ?><span class="titleline"></span></h3>
 					</div>
 					<div class="swiper-button">
 		                <div class="swiper-button-prev">
@@ -179,20 +179,20 @@ if( ! function_exists( 'docfi_related_portfolio' )){
 							<div class="portfolio-content">
 								<div class="content-info">
 									<h3 class="entry-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $trimmed_title ); ?></a></h3>
-									<?php if ( DocfiTheme::$options['portfolio_ar_category'] ) { ?>
+									<?php if ( DocfiTheme::$options['docs_ar_category'] ) { ?>
 									<span class="portfolio-cat"><?php
 										$i = 1;
-										$term_lists = get_the_terms( get_the_ID(), 'docfi_portfolio_category' );
+										$term_lists = get_the_terms( get_the_ID(), 'docfi_docs_category' );
 										if( $term_lists ) {
 										foreach ( $term_lists as $term_list ){ 
-										$link = get_term_link( $term_list->term_id, 'docfi_portfolio_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
+										$link = get_term_link( $term_list->term_id, 'docfi_docs_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
 									</span>
 									<?php } ?>				
-									<?php if ( DocfiTheme::$options['portfolio_ar_excerpt'] ) { ?>
+									<?php if ( DocfiTheme::$options['docs_ar_excerpt'] ) { ?>
 										<p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p>
 									<?php } ?>
 								</div>
-								<?php if ( DocfiTheme::$options['portfolio_ar_action'] ) { ?>
+								<?php if ( DocfiTheme::$options['docs_ar_action'] ) { ?>
 								<div class="content-action">
 									<a href="<?php the_permalink();?>"><i class="icon-docfi-right-arrow"></i></a>
 								</div>

@@ -3691,15 +3691,15 @@ CSS INDEX
 #. EL: Portfolio Grid & Slider
 ---------------------------------------*/
 @media(max-width: 1024px) {
-    .post-type-archive-docfi_portfolio .content-area,
-    .single-docfi_portfolio .content-area {
+    .post-type-archive-docfi_docs .content-area,
+    .single-docfi_docs .content-area {
         padding-top: 100px;
         padding-bottom: 100px;
     }
 }
 @media(max-width: 767px) {
-    .post-type-archive-docfi_portfolio .content-area,
-    .single-docfi_portfolio .content-area {
+    .post-type-archive-docfi_docs .content-area,
+    .single-docfi_docs .content-area {
         padding-top: 70px;
         padding-bottom: 70px;
     }

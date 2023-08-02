@@ -29,7 +29,6 @@ $youtube_link = get_post_meta( get_the_ID(), 'docfi_youtube_link', true );
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="main-wrap">
-		
 		<div class="entry-header">			
 			<?php if ( $docfi_has_entry_meta ) { ?>
 			<ul class="entry-meta">				

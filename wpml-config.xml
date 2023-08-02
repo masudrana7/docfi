@@ -22,29 +22,29 @@
             <key name="team_related_title" />
             <key name="team_related_subtitle" />
             <key name="team_related_shadowtitle" />
-            <key name="portfolio_related_title" />
-            <key name="portfolio_related_subtitle" />
-            <key name="portfolio_related_shadowtitle" />
+            <key name="docs_related_title" />
+            <key name="docs_related_subtitle" />
+            <key name="docs_related_shadowtitle" />
             <key name="error_text1" />
             <key name="error_text2" />
             <key name="error_buttontext" />            
             <key name="team_slug" />          			
             <key name="service_slug" />
-            <key name="portfolio_slug" />
+            <key name="docs_slug" />
             <key name="team_cat_slug" />
             <key name="service_cat_slug" />
-            <key name="portfolio_cat_slug" />
+            <key name="docs_cat_slug" />
         </key>
     </admin-texts>
 	<custom-types>
         <custom-type translate="1">docfi_team</custom-type>
         <custom-type translate="1">docfi_service</custom-type>
-        <custom-type translate="1">docfi_portfolio</custom-type>
+        <custom-type translate="1">docfi_docs</custom-type>
     </custom-types>
     <taxonomies>
         <taxonomy translate="1">docfi_team_category</taxonomy>
         <taxonomy translate="1">docfi_service_category</taxonomy>
-        <taxonomy translate="1">docfi_portfolio_category</taxonomy>
+        <taxonomy translate="1">docfi_docs_category</taxonomy>
     </taxonomies>
 	<custom-fields>
        <custom-field action="translate">docfi_youtube_link</custom-field>

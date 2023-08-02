@@ -30,8 +30,8 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 case 'docfi_service':
                 $prefix = 'service';
                 break;        
-                case 'docfi_portfolio':
-                $prefix = 'portfolio';
+                case 'docfi_docs':
+                $prefix = 'docs';
                 break; 
             }
 			
@@ -105,8 +105,8 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $prefix = 'team_archive'; 
             } elseif( is_post_type_archive( "docfi_service" ) || is_tax( "docfi_service_category" ) ) {
                 $prefix = 'service_archive';            
-            } elseif( is_post_type_archive( "docfi_portfolio" ) || is_tax( "docfi_portfolio_category" ) ) {
-                $prefix = 'portfolio_archive'; 
+            } elseif( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
+                $prefix = 'docs_archive'; 
             } else {
                 $prefix = 'blog';
             }

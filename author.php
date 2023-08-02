@@ -85,7 +85,7 @@ $docfi_author_designation = get_user_meta( $author, 'docfi_author_designation', 
 							endwhile;
 							echo '</div>';
 						} else if ( class_exists( 'Docfi_Core' ) ) {
-							if ( is_tax( 'docfi_portfolio_category' ) ) {
+							if ( is_tax( 'docfi_docs_category' ) ) {
 								echo '<div class="row rt-masonry-grid">';
 								while ( have_posts() ) : the_post();
 									get_template_part( 'template-parts/content-1', get_post_format() );

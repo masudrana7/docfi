@@ -225,11 +225,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
     }
 
     /* Portfolio related option */
-    if (!function_exists('rttheme_is_related_portfolio_enabled')) {
-        function rttheme_is_related_portfolio_enabled()
+    if (!function_exists('rttheme_is_related_docs_enabled')) {
+        function rttheme_is_related_docs_enabled()
         {
-            $show_related_portfolio = get_theme_mod('show_related_portfolio');
-            if (empty($show_related_portfolio)) {
+            $show_related_docs = get_theme_mod('show_related_docs');
+            if (empty($show_related_docs)) {
                 return false;
             }
             return true;

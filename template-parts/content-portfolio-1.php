@@ -9,7 +9,7 @@ $thumb_size 			= 'docfi-size4';
 $id = get_the_ID();
 $content = get_the_content();
 $content = apply_filters( 'the_content', $content );
-$content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['portfolio_arexcerpt_limit'], '' );
+$content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['docs_arexcerpt_limit'], '' );
 
 ?>
 <article id="post-<?php the_ID(); ?>">
@@ -32,20 +32,20 @@ $content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['portfolio_are
 		<div class="portfolio-content">
 			<div class="content-info">
 				<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-				<?php if ( DocfiTheme::$options['portfolio_ar_category'] ) { ?>
+				<?php if ( DocfiTheme::$options['docs_ar_category'] ) { ?>
 				<span class="portfolio-cat"><?php
 					$i = 1;
-					$term_lists = get_the_terms( get_the_ID(), 'docfi_portfolio_category' );
+					$term_lists = get_the_terms( get_the_ID(), 'docfi_docs_category' );
 					if( $term_lists ) {
 					foreach ( $term_lists as $term_list ){ 
-					$link = get_term_link( $term_list->term_id, 'docfi_portfolio_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
+					$link = get_term_link( $term_list->term_id, 'docfi_docs_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
 				</span>
 				<?php } ?>				
-				<?php if ( DocfiTheme::$options['portfolio_ar_excerpt'] ) { ?>
+				<?php if ( DocfiTheme::$options['docs_ar_excerpt'] ) { ?>
 					<p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p>
 				<?php } ?>
 			</div>
-			<?php if ( DocfiTheme::$options['portfolio_ar_action'] ) { ?>
+			<?php if ( DocfiTheme::$options['docs_ar_action'] ) { ?>
 			<div class="content-action">
 				<a href="<?php the_permalink();?>"><i class="icon-docfi-right-arrow"></i></a>
 			</div>

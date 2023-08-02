@@ -111,6 +111,21 @@ class DocfiTheme_Slug_Settings extends DocfiTheme_Customizer {
                 'section' => 'slug_layout_section',
                 'type' => 'text',
             )
+        ); 
+
+		$wp_customize->add_setting( 'docs_group_slug',
+            array(
+                'default' => $this->defaults['docs_group_slug'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization'
+            )
+        );
+        $wp_customize->add_control( 'docs_group_slug',
+            array(
+                'label' => __( 'Docs Group Slug', 'docfi' ),
+                'section' => 'slug_layout_section',
+                'type' => 'text',
+            )
         );        
 
     }

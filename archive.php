@@ -22,7 +22,7 @@ if ( is_post_type_archive( "docfi_service" ) || is_tax( "docfi_service_category"
 		get_template_part( 'template-parts/archive', 'service' );
 	return;
 }
-if ( is_post_type_archive( "docfi_portfolio" ) || is_tax( "docfi_portfolio_category" ) ) {
+if ( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
 		get_template_part( 'template-parts/archive', 'portfolio' );
 	return;
 }
@@ -66,7 +66,7 @@ if ( is_post_type_archive( "docfi_portfolio" ) || is_tax( "docfi_portfolio_categ
 							endwhile;
 							echo '</div>';
 						} else if ( class_exists( 'Docfi_Core' ) ) {
-							if ( is_tax( 'docfi_portfolio_category' ) ) {
+							if ( is_tax( 'docfi_docs_category' ) ) {
 								echo '<div class="row rt-masonry-grid">';
 								while ( have_posts() ) : the_post();
 									get_template_part( 'template-parts/content-1', get_post_format() );
