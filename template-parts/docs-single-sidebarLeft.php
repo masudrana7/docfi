@@ -16,7 +16,6 @@
             $get_image = get_term_meta( $docs_group->term_id, 'rt_term_image', true );
             $image_id = wp_get_attachment_image_src( $get_image, 'full' );
         ?>
-        
         <div class="rt-single-sidebar-list" style="--docfi-red2: <?php echo absint( $r ); ?>;--docfi-green2: <?php echo absint( $g ); ?>;--docfi-blue2: <?php echo absint( $b ); ?>">
             <div class="explore-topics-header">
                 <div class="title-area d-flex align-items-center">

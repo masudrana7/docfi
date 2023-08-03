@@ -1,5 +1,46 @@
 jQuery(document).ready(function ($) {
     "use strict";
+
+    // Menu expand on scroll and active/remove class on scroll content height
+    var sections = $('.content-area .docfi_docs_category-docfi section');
+    var parentLayout = $(".docfi_docs_category-docfi section > .elementor-container");
+    $(window).on('scroll', function () {
+        var current_position = $(this).scrollTop();
+        //add active or remove class according content height
+        sections.each(function () {
+            var top = $(this).offset().top - 160;
+            var bottom = top + $(this).outerHeight();
+            var sectionId = $(this).attr('id');
+
+            if (current_position >= top && current_position <= bottom) {
+                $(".rt-single-sidebar-list .title a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').addClass("active");
+            } else {
+                $(".rt-single-sidebar-list .title a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').removeClass("active");
+            }
+        })
+
+        //line on scroll
+        parentLayout.each(function () {
+            var divHeight = $(this).outerHeight();
+            var widgetTop = $(this).offset().top - 160;
+            var widgetBottom = widgetTop + divHeight;
+            var widthPercentage = 0;
+            var widgetId = $(this).attr('id');
+            if (current_position >= widgetTop && current_position <= widgetBottom) {
+                var storeY = current_position - widgetTop;
+                widthPercentage = (storeY / divHeight) * 100;
+                $(".explore-topics-list li a[href*=" + widgetId + "]").addClass("active").css("backgroundImage", "linear-gradient( to right, #15C590 " + widthPercentage + "%, #6B707F " + 0 + "% )");
+                $(".active .progress-indicator").width(widthPercentage + "%");
+            } else {
+                $(".explore-topics-list li a[href*=" + widgetId + "]").removeClass("active").css("backgroundImage", "unset");
+            }
+        })
+    })
+
+
+
+
+
     //mouse-parallax
     var parallaxInstances = [];
     $('.rt-mouse-parallax').each(function (index, element) {
@@ -10,7 +51,6 @@ jQuery(document).ready(function ($) {
             // relativeInput: true,
         });
     })
-
 
     // End JS
 

@@ -26,7 +26,7 @@ $count = get_post_meta($post_id, $count_key, true);
 <div id="post-<?php the_ID();?>" <?php post_class( 'portfolio-single' );?>>	
 	<div class="portfolio-single-content">
 		<div class="row">
-			<div class="col-lg-8 col-12">
+			<div class="col-lg-12">
 				<div class="rt-single-docs-meta head-title-area d-flex flex-wrap">
 					<div class="icon">
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,12 +36,9 @@ $count = get_post_meta($post_id, $count_key, true);
 							<path d="M20.002 42.502H40.0019" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
 						</svg>
 					</div>
-
 					<div class="head-title-text-wrapper">
 						<h2 class="head-title"><?php the_title(); ?></h2>
-
 						<ul class="meta-list d-flex align-items-center flex-wrap">
-							
 							<li>
 								<span>
 									<svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,11 +85,6 @@ $count = get_post_meta($post_id, $count_key, true);
 					<?php 
 						the_post_thumbnail( $thumb_size );
 					} ?>
-				</div>
-			</div>
-			<div class="col-lg-4 col-12">
-				<div class="portfolio-info">
-					
 				</div>
 			</div>
 		</div>
