@@ -274,44 +274,6 @@ h6 {
 	font-style: normal;
 }
 
-<?php
-/*-------------------------------------
-#. Top Bar
----------------------------------------*/
-$top_bar_bgcolor = DocfiTheme::$options['top_bar_bgcolor'];
-$top_bar_color = DocfiTheme::$options['top_bar_color'];
-$top_link_color = DocfiTheme::$options['top_link_color'];
-$top_hover_color = DocfiTheme::$options['top_hover_color'];
-?>
-<?php if ( $top_bar_bgcolor ) { ?>
-	.header-top-bar {
-		background-color: <?php echo esc_html( $top_bar_bgcolor ); ?> !important;
-	}
-<?php } ?>
-<?php if ( $top_bar_color ) { ?>
-	.header-top-bar {
-		color: <?php echo esc_html( $top_bar_color ); ?>;
-	}
-<?php } ?>
-<?php if ( $top_link_color ) { ?>
-	.header-top-bar a,
-	.header-top-bar .tophead-social li a {
-		color: <?php echo esc_html( $top_link_color ); ?>;
-	}
-<?php } ?>
-<?php if ( $top_hover_color ) { ?>
-	.header-top-bar a:hover,
-	.header-top-bar .tophead-social li a:hover {
-		color: <?php echo esc_html( $top_hover_color ); ?>;
-	}
-<?php } ?>
-
-<?php
-/*-------------------------------------
-#. Header
----------------------------------------*/
-?>
-<?php // Main Menu ?>
 .site-header .main-navigation nav ul li a,
 .additional-menu-area .sidenav ul li a,
 .rt-slide-nav .offscreen-navigation ul li > a {
@@ -416,7 +378,6 @@ $breadcrumb_link_color = DocfiTheme::$options['breadcrumb_link_color'];
 $breadcrumb_link_hover_color = DocfiTheme::$options['breadcrumb_link_hover_color'];
 $breadcrumb_seperator_color = DocfiTheme::$options['breadcrumb_seperator_color'];
 $breadcrumb_active_color = DocfiTheme::$options['breadcrumb_active_color'];
-$banner_shape_color = DocfiTheme::$options['banner_shape_color'];
 ?>
 
 <?php if ( $breadcrumb_link_color ) { ?>
@@ -448,13 +409,6 @@ $banner_shape_color = DocfiTheme::$options['banner_shape_color'];
 	}
 <?php } ?>
 
-<?php if ( $banner_shape_color ) { ?>
-	.entry-banner .banner-shape1,
-	.entry-banner .banner-shape2 {
-		background-color: <?php echo esc_html( $banner_shape_color ); ?>;
-	}
-<?php } ?>
-
 .entry-banner.opacity-on {
     background-color: rgba(235, 237, 255, <?php echo esc_html( DocfiTheme::$options['banner_bg_opacity'] ); ?>);
 }
@@ -462,26 +416,6 @@ $banner_shape_color = DocfiTheme::$options['banner_shape_color'];
 	padding-top: <?php  echo esc_html( DocfiTheme::$options['banner_top_padding'] ); ?>px;
 	padding-bottom: <?php  echo esc_html( DocfiTheme::$options['banner_bottom_padding'] ); ?>px;
 }
-
-<?php
-/*-------------------------------------
-#. Post Progress Bar
----------------------------------------*/
-$scroll_indicator_bgcolor = DocfiTheme::$options['scroll_indicator_bgcolor'];
-$scroll_indicator_bgcolor2 = DocfiTheme::$options['scroll_indicator_bgcolor2'];
-$scroll_indicator_height = DocfiTheme::$options['scroll_indicator_height'];
-?>
-
-<?php if ( $scroll_indicator_bgcolor && $scroll_indicator_bgcolor2 ) { ?>
-	.single .docfi-progress-bar {
-		background: linear-gradient(90deg, <?php echo esc_html( $scroll_indicator_bgcolor ); ?> 0%, <?php echo esc_html( $scroll_indicator_bgcolor2 ); ?> 100%);
-	}
-<?php } ?>
-<?php if ( $scroll_indicator_height ) { ?>
-	.single .docfi-progress-bar {
-		height: <?php echo esc_html( $scroll_indicator_height ); ?>px;
-	}
-<?php } ?>
 
 <?php
 /*-------------------------------------

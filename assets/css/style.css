@@ -9690,6 +9690,9 @@ p.return-to-shop {
 }
 .rt-single-sidebar-list .explore-topics-header .title-area .title {
 	margin-bottom: 0;
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--docfi-heading-color);
 }
 .rt-single-sidebar-list .explore-topics-header .title-area {
 	gap: 10px;
@@ -9742,6 +9745,11 @@ p.return-to-shop {
 .rt-group-single-list .explore-topics-body ul.explore-topics-list li a:hover {
 	color: var(--docfi-primary-color);
 }
+.rt-group-single-list .explore-topics-body ul.explore-topics-list li .active {
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
 .rt-single-sidebar-list .explore-topics-body ul.explore-topics-list li svg {
 	position: relative;
 	top: -2px;
@@ -9756,12 +9764,7 @@ p.return-to-shop {
 .rt-single-sidebar-list:hover .explore-topics-header .title-area .icon {
 	border-radius: 50px 0px 50px 50px;
 }
-.rt-sticky-post-ceontent,
 .rt-group-lists{
-	position: sticky;
-	top: 115px;
-}
-.rt-group-single-list{
 	background: #FFFFFF;
 	-webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
 	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
@@ -9787,14 +9790,39 @@ p.return-to-shop {
 	z-index: 1;
 	right: 20px;
 	top: 10px;
-}
-.rt-single-sidebar-list .explore-topics-header.active::before{
-	content: url(../img/arror_top.svg);
+	transition: 0.4s;
 }
 .rt-group-single-list .explore-topics-body{
 	padding-left: 50px;
-	-webkit-transition: opacity 1s ease-out;
-	transition: opacity 1s ease-out;
+	/* -webkit-transition: opacity 1s ease-out;
+	transition: opacity 1s ease-out; */
 	overflow: hidden;
 	padding-bottom: 20px;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+.rt-single-sidebar-list.active .explore-topics-body{
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+}
+.rt-single-sidebar-list.active .explore-topics-header::before{
+	transform: rotate(-180deg);
+}
+.explore-topics-list .rt-group-list .active .progress-indicator {
+	position: absolute;
+	background: var(--docfi-primary-color);
+	width: 0;
+	height: 1px;
+	bottom: -1px;
+	left: 0;
+	z-index: 1;
+}
+@media (min-width: 1025px) {
+	.docfi-column-sticky{
+		align-self: flex-start !important;
+		position: sticky !important;
+		top: 115px !important;
+	}
 }

@@ -615,6 +615,35 @@ CSS INDEX
     -webkit-animation: fadeInUp 1s forwards;
     animation: fadeInUp 1s forwards;
 }
+.rt-info-box5 {
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
+    padding: 44px 20px;
+}
+.rt-info-box5 .icon{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    background: var(--docfi-primary-color);
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.rt-info-box5:hover .icon {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.rt-info-box5:hover .icon i,
+.rt-info-box5:hover .icon img,
+.rt-info-box5:hover .icon svg{
+    -webkit-animation: fadeInUp 0.4s forwards;
+    animation: fadeInUp 0.4s forwards;
+}
+.rt-info-box5 .card-title{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
 
 /*-------------------------------------
 #. EL: Contact Info

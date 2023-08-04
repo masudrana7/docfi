@@ -17,11 +17,8 @@ else{
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<?php get_template_part('template-parts/docs-single', 'sidebarLeft'); ?>
-			</div>
-			<?php // if ( DocfiTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
-				<div class="<?php // echo esc_attr( $docfi_layout_class );?> col-md-6">
+			<?php if ( DocfiTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
+				<div class="<?php echo esc_attr( $docfi_layout_class );?>">
 					<main id="main" class="site-main">
 						<?php							
 							while ( have_posts() ) : the_post();
@@ -30,12 +27,7 @@ else{
 						?>
 					</main>
 				</div>
-			<?php // if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
-			<div class="col-md-3">
-				<div class="rt-group-single-list ">
-					<?php dynamic_sidebar( 'docs-right-sidebar' ); ?>
-				</div>
-			</div>
+			<?php if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
 		</div>
 	</div>	
 </div>

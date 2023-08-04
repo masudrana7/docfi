@@ -2,20 +2,21 @@ jQuery(document).ready(function ($) {
     "use strict";
 
     // Menu expand on scroll and active/remove class on scroll content height
-    var sections = $('.content-area .docfi_docs_category-docfi section');
-    var parentLayout = $(".docfi_docs_category-docfi section > .elementor-container");
+    var sections = $('.rt-group-single-list .rt-single-sidebar-list');
+    var parentLayout = $(".rt-group-single-list .rt-single-sidebar-list .rt-single-content-wrapper");
     $(window).on('scroll', function () {
+        
         var current_position = $(this).scrollTop();
         //add active or remove class according content height
         sections.each(function () {
             var top = $(this).offset().top - 160;
             var bottom = top + $(this).outerHeight();
             var sectionId = $(this).attr('id');
-
             if (current_position >= top && current_position <= bottom) {
-                $(".rt-single-sidebar-list .title a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').addClass("active");
+
+                $(".explore-topics-header a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').addClass("active");
             } else {
-                $(".rt-single-sidebar-list .title a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').removeClass("active");
+                $(".explore-topics-header a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').removeClass("active");
             }
         })
 
