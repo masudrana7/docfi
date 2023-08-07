@@ -13,7 +13,7 @@ CSS INDEX
 #. EL: Contact Info
 #. EL: Button
 #. EL: Feature Post Tab
-
+#. EL: RT Docs Title
 #. EL: Section Title
 #. EL: Title WITH Text
 #. EL: Hero Banner
@@ -782,6 +782,7 @@ CSS INDEX
 }
 .rt-accordion .rt-accordion-icon-left {
     position: absolute;
+    left: 15px;
 }
 .rt-accordion .rt-accordion-icon-right {
     position: absolute;
@@ -807,7 +808,12 @@ CSS INDEX
 }
 .rt-accordion-item{
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
-        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+.rt-accordion-button .rt-accordion-icon-opened{
+    position: relative;
+    top: -7px;
 }
 /*accordion style 01*/
 
@@ -848,14 +854,6 @@ CSS INDEX
     transition: all ease 0.31s;
     display: flex;
     align-items: center;
-}
-.rt-accordion-style-2 .rt-accordion-button .rt-accordion-icon-opened {
-    background-color: var(--docfi-primary-color);
-    color: var(--docfi-white-color);
-}
-.rt-accordion-style-2 .rt-accordion-button.collapsed .rt-accordion-icon-closed {
-    color: var(--docfi-primary-color);
-    background-color: var(--docfi-grey-color-1);
 }
 @media(max-width: 425px) {
     .rt-accordion-style-1 .rt-accordion-header .rt-accordion-button,
@@ -1578,15 +1576,6 @@ CSS INDEX
     position: relative;
     padding-bottom: 15px;
 }
-.elementor-widget-container > h5:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    width: 40px;
-    background-color: var(--docfi-primary-color);
-}
 .product-categories li a {
     position: relative;
     display: inline-flex;
@@ -1786,9 +1775,116 @@ div.rt-cat-list .logo-card:hover svg{
     stroke: var(--docfi-white-color);
 }
 
+/*-------------------------------------
+#. EL: RT Docs Title
+-------------------------------------*/
+.rt-docs-title .entry-title{
+    margin-bottom: 3px;
+}
 
+/*-------------------------------------
+#. EL: RT Table
+-------------------------------------*/
+.rt-table-area .table{
+    margin: 0;
+}
+.rt-table-area td,
+.rt-table-area th{
+    font-weight: 400;
+    text-align: left;
+}
+.rt-table-area thead{
+    background: #0CC8EE;
+}
+.rt-table-area .table>:not(:first-child){
+    border-top: none;
+}
+.rt-table-area .table-hover>tbody>tr td,
+.rt-table-area .table-hover>tbody>tr th{
+    transition: 0.4s;
+}
+.rt-table-area .table-hover>tbody>tr:hover>*{
+    background: #00000013;
+}
 
-
+/*-------------------------------------
+#. EL: RT TimeLine
+.
+-------------------------------------*/
+.rt-timeline {
+    position: relative;
+    margin-bottom: 30px;
+}
+.rt-timeline ul{
+    margin: 0;
+    padding: 0;
+}
+.rt-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: var(--docfi-primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+}
+.rt-timeline .left {
+    left: 0;
+}
+.rt-timeline .right {
+    left: 50%;
+}
+.rt-timeline .right .content::after {
+    left: -50px;
+}
+.rt-timeline .content-container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+.rt-timeline .content-container .content {
+    padding: 15px 20px;
+    background-color: var(--docfi-white-color);
+    position: relative;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.rt-timeline .content-container .content::after {
+    content: "✓";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -55px;
+    background-color: var(--docfi-primary-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    top: -10px;
+    border-radius: 50%;
+    z-index: 1;
+    color: White;
+}
+.rt-timeline .content-container .content h3 {
+    color: gray;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.rt-timeline .content-container .content ul {
+    margin-left: 16px;
+}
+.rt-timeline .content-container .content ul li {
+    list-style: disc;
+}
+.rt-timeline .content-container .content ul li::marker {
+    color: var(--docfi-primary-color);
+}
 
 
 

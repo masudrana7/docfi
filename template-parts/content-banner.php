@@ -30,7 +30,7 @@ elseif (is_post_type_archive('docfi_team')) {
 } elseif (is_singular('docfi_team')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Team Details', 'docfi' ) );
 } elseif (is_singular('docfi_docs')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Portfolio Details', 'docfi' ) );
+	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Element Details', 'docfi' ) );
 } elseif (is_singular('docfi_service')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Service Details', 'docfi' ) );
 } elseif (is_single()) {

@@ -22,6 +22,8 @@ $post_id = get_the_ID();
 $count_key = 'post_views_count';
 $count = get_post_meta($post_id, $count_key, true);
 
+$published_date = get_the_date('Y-m-d H:i');
+
 ?>
 <div id="post-<?php the_ID();?>" <?php post_class( 'portfolio-single' );?>>	
 	<div class="portfolio-single-content">
@@ -64,6 +66,17 @@ $count = get_post_meta($post_id, $count_key, true);
 										<path d="M4.45312 2.75H8.67188V1.57812C8.67188 1.19727 8.96484 0.875 9.375 0.875C9.75586 0.875 10.0781 1.19727 10.0781 1.57812V2.75H11.25C12.2754 2.75 13.125 3.59961 13.125 4.625V14C13.125 15.0547 12.2754 15.875 11.25 15.875H1.875C0.820312 15.875 0 15.0547 0 14V4.625C0 3.59961 0.820312 2.75 1.875 2.75H3.04688V1.57812C3.04688 1.19727 3.33984 0.875 3.75 0.875C4.13086 0.875 4.45312 1.19727 4.45312 1.57812V2.75ZM1.40625 8.14062H3.75V6.5H1.40625V8.14062ZM1.40625 9.54688V11.4219H3.75V9.54688H1.40625ZM5.15625 9.54688V11.4219H7.96875V9.54688H5.15625ZM9.375 9.54688V11.4219H11.7188V9.54688H9.375ZM11.7188 6.5H9.375V8.14062H11.7188V6.5ZM11.7188 12.8281H9.375V14.4688H11.25C11.4844 14.4688 11.7188 14.2637 11.7188 14V12.8281ZM7.96875 12.8281H5.15625V14.4688H7.96875V12.8281ZM3.75 12.8281H1.40625V14C1.40625 14.2637 1.61133 14.4688 1.875 14.4688H3.75V12.8281ZM7.96875 6.5H5.15625V8.14062H7.96875V6.5Z" fill="#6C6C6C"></path>
 									</svg>
 									<?php echo get_the_date(); ?>
+									<?php
+										// Get the post's published timestamp
+										$published_timestamp = get_the_time('U');
+
+										// Calculate the difference in minutes between current time and published time
+										$current_timestamp = current_time('timestamp');
+										$minutes_elapsed = round(($current_timestamp - $published_timestamp) / 60);
+
+										// Display the minutes elapsed
+										echo 'Published ' . $minutes_elapsed . ' minutes ago';
+									?>
 								</span>
 							</li>
 							<?php } ?>
