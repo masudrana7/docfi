@@ -1,4 +1,4 @@
-<div class="rt-group-single-list">
+<div class="rt-group-single-list rt-group-lists">
 <?php 
     $args = array(
         'taxonomy'   => 'docfi_docs_group',
@@ -16,7 +16,7 @@
             $get_image = get_term_meta( $docs_group->term_id, 'rt_term_image', true );
             $image_id = wp_get_attachment_image_src( $get_image, 'full' );
         ?>
-        <div class="rt-single-sidebar-list" style="--docfi-red2: <?php echo absint( $r ); ?>;--docfi-green2: <?php echo absint( $g ); ?>;--docfi-blue2: <?php echo absint( $b ); ?>">
+        <div class="rt-single-sidebar-list rs-docs-click" style="--docfi-red2: <?php echo absint( $r ); ?>;--docfi-green2: <?php echo absint( $g ); ?>;--docfi-blue2: <?php echo absint( $b ); ?>">
             <div class="explore-topics-header">
                 <div class="title-area d-flex align-items-center">
                     <div style="background:#<?php echo esc_attr( $get_color ); ?>" class="icon d-flex justify-content-center align-items-center rt-color-shade12-bg">
@@ -65,7 +65,6 @@
                 </ul>
             </div>
         </div>
-        
         <?php  }
     }
     ?> 

@@ -38,7 +38,27 @@ jQuery(document).ready(function ($) {
         })
     })
 
+    if ($(".rt-docs-single-content").length) {
+        var minusFont = $(".font-size-minus");
+        var plusFont = $(".font-size-plus");
+        var normalFont = $(".font-size-normal");
+        $(plusFont).on("click", function () {
+            $(".rt-docs-single-content p").css({ "font-size": "+=2", "line-height": "+=1px" });
+        });
 
+        $(normalFont).on("click", function () {
+            $(".rt-docs-single-content p").css({ "font-size": "16px" });
+        });
+
+        $(minusFont).on("click", function () {
+            $(".rt-docs-single-content p").css({ "font-size": "-=2", "line-height": "-=1px" });
+        });
+    }
+    if ($(".rs-docs-click").length) {
+        $(".rs-docs-click").on("click", function () {
+            $(this).toggleClass("active", 1000, "easeOutSine");
+        });
+    }
 
 
 
@@ -52,7 +72,6 @@ jQuery(document).ready(function ($) {
             // relativeInput: true,
         });
     })
-
     // End JS
 
     $('a[href=\\#]').on('click', function (e) {

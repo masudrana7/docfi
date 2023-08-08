@@ -133,7 +133,7 @@ img {
 }
 p,
 .wp-block-image {
-	margin: 0 0 30px;
+	margin: 0 0 20px;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family: 'Roboto', sans-serif;
@@ -2920,7 +2920,7 @@ body .rt-cover {
 	padding: 0;
 	list-style: none;
 }
-.rt_footer_social_widget .footer-social li a{
+.rt_footer_social_widget .footer-social a{
 	width: 40px;
 	height: 40px;
 	border-radius: 50px;
@@ -2936,14 +2936,14 @@ body .rt-cover {
 	background-color: #F2F8FF;
 	transition: 0.4s;
 }
-.rt_footer_social_widget .footer-social li i{
+.rt_footer_social_widget .footer-social i{
 	color: #1877F2;
 }
-.rt_footer_social_widget .footer-social li a:hover{
+.rt_footer_social_widget .footer-social a:hover{
 	background-color: #d4e7fc;
 }
 
-.rt_footer_social_widget .footer-social li a:hover i{
+.rt_footer_social_widget .footer-social a:hover i{
 	-webkit-animation: toBottomFromTop 0.5s forwards;
 	animation: toBottomFromTop 0.5s forwards;
 }
@@ -2974,6 +2974,12 @@ body .rt-cover {
 .rt_footer_social_widget .footer-social li.pinterest a:hover {
 	background-color: #fac0ca;
 }
+.rt-social-widget{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
 .rt-footer-line{
 	width: 100%;
 	height: 1px;

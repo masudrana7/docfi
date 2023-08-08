@@ -1324,9 +1324,6 @@ CSS INDEX
     border: 1px solid var(--docfi-border-color);
     transition: all 0.31s ease-in-out;
 }
-.rt-post-grid-default .rt-item:hover {
-    box-shadow: 0 4px 50px 0 rgb(0 0 0 / 10%);
-}
 .rt-post-grid-default .rt-item .entry-title {
     font-size: 22px;
     line-height: 1.4;
@@ -1376,10 +1373,13 @@ CSS INDEX
 }
 .rt-post-grid-default .rt-item .rt-image img {
     width: 100%;
-    transition: 0.31s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
 }
 .rt-post-grid-default .rt-item:hover .rt-image img {
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 .rt-post-grid-default .rt-item .post_excerpt {
     margin-top: 10px;
@@ -1885,9 +1885,36 @@ div.rt-cat-list .logo-card:hover svg{
 .rt-timeline .content-container .content ul li::marker {
     color: var(--docfi-primary-color);
 }
+/*-------------------------------------
+#. EL: RT Font-Size Controller
+.
+-------------------------------------*/
+.font-size-controller-btn-area {
+    background: #F5F5F5;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    padding: 15px 37px;
+    display: inline-block;
+    max-width: 153px;
+}
+.font-size-controller-btn-area .font-size-controller-btn-wrapper {
+    gap: 14px;
+}
 
+.font-size-controller-btn-area .font-size-controller-btn-wrapper button {
+    background: transparent;
+    border: none;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+    padding: 0;
+}
 
-
+.font-size-controller-btn-area .font-size-controller-btn-wrapper button.active {
+    color: #3948D2;
+}
 
 
 
