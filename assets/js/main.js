@@ -5,8 +5,6 @@ jQuery(document).ready(function ($) {
     var sections = $('.rt-group-single-list .rt-single-sidebar-list');
     var parentLayout = $(".rt-group-single-list .rt-single-sidebar-list .rt-single-content-wrapper");
     $(window).on('scroll', function () {
-
-        
         var current_position = $(this).scrollTop();
         //add active or remove class according content height
         sections.each(function () {
@@ -36,8 +34,7 @@ jQuery(document).ready(function ($) {
                 $(".explore-topics-list li a[href*=" + widgetId + "]").removeClass("active").css("backgroundImage", "unset");
             }
         })
-    })
-
+    });
     if ($(".rt-docs-single-content").length) {
         var minusFont = $(".font-size-minus");
         var plusFont = $(".font-size-plus");
@@ -153,6 +150,9 @@ jQuery(document).ready(function ($) {
             });
         })
     }
+
+    //nice-select
+    $('select').niceSelect();
 
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {

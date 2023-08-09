@@ -51,6 +51,9 @@ if ( !function_exists( 'docfi_register_scripts' ) ) {
 		// parallax scroll js
 		wp_register_script( 'rt-parallax',   	 DOCFI_ASSETS_URL . 'js/rt-parallax.js', array( 'jquery' ), DOCFI_VERSION, true );
 		
+		// nice select js
+		wp_register_script( 'nice-select',   	 DOCFI_ASSETS_URL . 'js/jquery.nice-select.js', array( 'jquery' ), DOCFI_VERSION, true );
+		
 		
 		// wow js
 		wp_register_script( 'rt-wow',   		 DOCFI_ASSETS_URL . 'js/wow.min.js', array( 'jquery' ), DOCFI_VERSION, true );
@@ -110,6 +113,7 @@ if ( !function_exists( 'docfi_enqueue_scripts' ) ) {
 		wp_enqueue_script( 'magnific-popup' );
 		wp_enqueue_script( 'rt-wow' );
 		wp_enqueue_script( 'rt-parallax' );
+		wp_enqueue_script( 'nice-select' );
 		wp_enqueue_script( 'isotope-pkgd' );
 		wp_enqueue_script( 'swiper-min' );
 		wp_enqueue_script( 'masonry' );
