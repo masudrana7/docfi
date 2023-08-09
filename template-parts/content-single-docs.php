@@ -21,10 +21,9 @@ $post_id = get_the_ID();
 $count_key = 'post_views_count';
 $count = get_post_meta($post_id, $count_key, true);
 $published_date = get_the_date('Y-m-d H:i');
-
 ?>
-<div id="post-<?php the_ID();?>" <?php post_class( 'portfolio-single' );?>>	
-	<div class="portfolio-single-content">
+<div id="rt-post-<?php the_ID();?>" <?php post_class( 'docs-single' );?>>	
+	<div class="docs-single-content rt-docs-single-content">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="rt-single-docs-meta head-title-area d-flex flex-wrap">
@@ -80,7 +79,7 @@ $published_date = get_the_date('Y-m-d H:i');
 						</ul>
 					</div>
 				</div>
-				<div class="portfolio-thumbnail">
+				<div class="docs-thumbnail">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<?php 
 						the_post_thumbnail( $thumb_size );
@@ -88,7 +87,7 @@ $published_date = get_the_date('Y-m-d H:i');
 				</div>
 			</div>
 		</div>
-		<div class="portfolio-content">
+		<div class="docs-content">
 			<?php the_content();?>
 		</div>
 	</div>	

@@ -47,7 +47,7 @@ $docfi_theme_data = wp_get_theme();
 		// Includes Modules
 		require_once DOCFI_INC_DIR . 'modules/rt-post-related.php';
 		require_once DOCFI_INC_DIR . 'modules/rt-team-related.php';
-		require_once DOCFI_INC_DIR . 'modules/rt-portfolio-related.php';
+		require_once DOCFI_INC_DIR . 'modules/rt-docs-related.php';
 		require_once DOCFI_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 
@@ -133,6 +133,45 @@ $docfi_theme_data = wp_get_theme();
 		}
 	}
 	add_action('wp', 'rt_docs_post_views');
+
+
+	// Ajax Query
+	function enqueue_custom_scripts() {
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('custom-search', get_template_directory_uri() . '/assets/js/custom-search.js', array('jquery'), '1.0', true);
+
+		wp_localize_script('custom-search', 'customSearch', array(
+			'ajaxurl' => admin_url('admin-ajax.php')
+		));
+	}
+
+	add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+	function custom_search_results() {
+    $category = isset($_POST['category']) ? $_POST['category'] : '';
+    $search_term = isset($_POST['search_term']) ? $_POST['search_term'] : '';
+    $args = array(
+        'post_type' => 'docfi_docs',
+        'post_status' => 'publish',
+        's' => $search_term,
+        'cat' => $category
+    );
+
+    $query = new WP_Query($args);
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            // Display your search results here
+        }
+    } else {
+        echo 'No results found.';
+    }
+    wp_reset_postdata();
+    die();
+}
+
+add_action('wp_ajax_custom_search_results', 'custom_search_results');
+add_action('wp_ajax_nopriv_custom_search_results', 'custom_search_results');
+
 
 
 

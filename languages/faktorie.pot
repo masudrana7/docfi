@@ -203,8 +203,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:110
 #: inc/customizer/settings/error-layout.php:69
 #: inc/customizer/settings/page-layout.php:110
-#: inc/customizer/settings/portfolio-layout.php:110
-#: inc/customizer/settings/portfolio-single-layout.php:110
+#: inc/customizer/settings/docs-layout.php:110
+#: inc/customizer/settings/docs-single-layout.php:110
 #: inc/customizer/settings/search-layout.php:110
 #: inc/customizer/settings/service-layout.php:110
 #: inc/customizer/settings/service-single-layout.php:110
@@ -219,8 +219,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:187
 #: inc/customizer/settings/error-layout.php:146
 #: inc/customizer/settings/page-layout.php:187
-#: inc/customizer/settings/portfolio-layout.php:187
-#: inc/customizer/settings/portfolio-single-layout.php:187
+#: inc/customizer/settings/docs-layout.php:187
+#: inc/customizer/settings/docs-single-layout.php:187
 #: inc/customizer/settings/search-layout.php:187
 #: inc/customizer/settings/service-layout.php:187
 #: inc/customizer/settings/service-single-layout.php:187
@@ -235,8 +235,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:159
 #: inc/customizer/settings/error-layout.php:118
 #: inc/customizer/settings/page-layout.php:159
-#: inc/customizer/settings/portfolio-layout.php:159
-#: inc/customizer/settings/portfolio-single-layout.php:159
+#: inc/customizer/settings/docs-layout.php:159
+#: inc/customizer/settings/docs-single-layout.php:159
 #: inc/customizer/settings/search-layout.php:159
 #: inc/customizer/settings/service-layout.php:159
 #: inc/customizer/settings/service-single-layout.php:159
@@ -255,8 +255,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:139
 #: inc/customizer/settings/error-layout.php:98
 #: inc/customizer/settings/page-layout.php:139
-#: inc/customizer/settings/portfolio-layout.php:139
-#: inc/customizer/settings/portfolio-single-layout.php:139
+#: inc/customizer/settings/docs-layout.php:139
+#: inc/customizer/settings/docs-single-layout.php:139
 #: inc/customizer/settings/search-layout.php:139
 #: inc/customizer/settings/service-layout.php:139
 #: inc/customizer/settings/service-single-layout.php:139
@@ -299,8 +299,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:240
 #: inc/customizer/settings/footer.php:307
 #: inc/customizer/settings/page-layout.php:145
-#: inc/customizer/settings/portfolio-layout.php:145
-#: inc/customizer/settings/portfolio-single-layout.php:145
+#: inc/customizer/settings/docs-layout.php:145
+#: inc/customizer/settings/docs-single-layout.php:145
 #: inc/customizer/settings/search-layout.php:145
 #: inc/customizer/settings/service-layout.php:145
 #: inc/customizer/settings/service-single-layout.php:145
@@ -318,8 +318,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:241
 #: inc/customizer/settings/footer.php:308
 #: inc/customizer/settings/page-layout.php:144
-#: inc/customizer/settings/portfolio-layout.php:144
-#: inc/customizer/settings/portfolio-single-layout.php:144
+#: inc/customizer/settings/docs-layout.php:144
+#: inc/customizer/settings/docs-single-layout.php:144
 #: inc/customizer/settings/search-layout.php:144
 #: inc/customizer/settings/service-layout.php:144
 #: inc/customizer/settings/service-single-layout.php:144
@@ -407,8 +407,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:124
 #: inc/customizer/settings/error-layout.php:83
 #: inc/customizer/settings/page-layout.php:124
-#: inc/customizer/settings/portfolio-layout.php:124
-#: inc/customizer/settings/portfolio-single-layout.php:124
+#: inc/customizer/settings/docs-layout.php:124
+#: inc/customizer/settings/docs-single-layout.php:124
 #: inc/customizer/settings/search-layout.php:124
 #: inc/customizer/settings/service-layout.php:124
 #: inc/customizer/settings/service-single-layout.php:124
@@ -482,10 +482,10 @@ msgstr[1] ""
 #: inc/customizer/settings/general.php:232
 #: inc/customizer/settings/page-layout.php:165
 #: inc/customizer/settings/page-layout.php:210
-#: inc/customizer/settings/portfolio-layout.php:165
-#: inc/customizer/settings/portfolio-layout.php:210
-#: inc/customizer/settings/portfolio-single-layout.php:165
-#: inc/customizer/settings/portfolio-single-layout.php:210
+#: inc/customizer/settings/docs-layout.php:165
+#: inc/customizer/settings/docs-layout.php:210
+#: inc/customizer/settings/docs-single-layout.php:165
+#: inc/customizer/settings/docs-single-layout.php:210
 #: inc/customizer/settings/search-layout.php:165
 #: inc/customizer/settings/search-layout.php:210
 #: inc/customizer/settings/service-layout.php:165
@@ -524,10 +524,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:237
 #: inc/customizer/settings/page-layout.php:170
 #: inc/customizer/settings/page-layout.php:215
-#: inc/customizer/settings/portfolio-layout.php:170
-#: inc/customizer/settings/portfolio-layout.php:215
-#: inc/customizer/settings/portfolio-single-layout.php:170
-#: inc/customizer/settings/portfolio-single-layout.php:215
+#: inc/customizer/settings/docs-layout.php:170
+#: inc/customizer/settings/docs-layout.php:215
+#: inc/customizer/settings/docs-single-layout.php:170
+#: inc/customizer/settings/docs-single-layout.php:215
 #: inc/customizer/settings/search-layout.php:170
 #: inc/customizer/settings/search-layout.php:215
 #: inc/customizer/settings/service-layout.php:170
@@ -610,8 +610,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:95
 #: inc/customizer/settings/error-layout.php:54
 #: inc/customizer/settings/page-layout.php:95
-#: inc/customizer/settings/portfolio-layout.php:95
-#: inc/customizer/settings/portfolio-single-layout.php:95
+#: inc/customizer/settings/docs-layout.php:95
+#: inc/customizer/settings/docs-single-layout.php:95
 #: inc/customizer/settings/search-layout.php:95
 #: inc/customizer/settings/service-layout.php:95
 #: inc/customizer/settings/service-single-layout.php:95
@@ -626,8 +626,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:80
 #: inc/customizer/settings/error-layout.php:39
 #: inc/customizer/settings/page-layout.php:80
-#: inc/customizer/settings/portfolio-layout.php:80
-#: inc/customizer/settings/portfolio-single-layout.php:80
+#: inc/customizer/settings/docs-layout.php:80
+#: inc/customizer/settings/docs-single-layout.php:80
 #: inc/customizer/settings/search-layout.php:80
 #: inc/customizer/settings/service-layout.php:80
 #: inc/customizer/settings/service-single-layout.php:80
@@ -697,10 +697,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:233
 #: inc/customizer/settings/page-layout.php:166
 #: inc/customizer/settings/page-layout.php:211
-#: inc/customizer/settings/portfolio-layout.php:166
-#: inc/customizer/settings/portfolio-layout.php:211
-#: inc/customizer/settings/portfolio-single-layout.php:166
-#: inc/customizer/settings/portfolio-single-layout.php:211
+#: inc/customizer/settings/docs-layout.php:166
+#: inc/customizer/settings/docs-layout.php:211
+#: inc/customizer/settings/docs-single-layout.php:166
+#: inc/customizer/settings/docs-single-layout.php:211
 #: inc/customizer/settings/search-layout.php:166
 #: inc/customizer/settings/search-layout.php:211
 #: inc/customizer/settings/service-layout.php:166
@@ -950,8 +950,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:48
 #: inc/customizer/settings/blog-single-layout.php:48
 #: inc/customizer/settings/page-layout.php:48
-#: inc/customizer/settings/portfolio-layout.php:48
-#: inc/customizer/settings/portfolio-single-layout.php:48
+#: inc/customizer/settings/docs-layout.php:48
+#: inc/customizer/settings/docs-single-layout.php:48
 #: inc/customizer/settings/search-layout.php:48
 #: inc/customizer/settings/service-layout.php:48
 #: inc/customizer/settings/service-single-layout.php:48
@@ -1172,8 +1172,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:44
 #: inc/customizer/settings/blog-single-layout.php:44
 #: inc/customizer/settings/page-layout.php:44
-#: inc/customizer/settings/portfolio-layout.php:44
-#: inc/customizer/settings/portfolio-single-layout.php:44
+#: inc/customizer/settings/docs-layout.php:44
+#: inc/customizer/settings/docs-single-layout.php:44
 #: inc/customizer/settings/search-layout.php:44
 #: inc/customizer/settings/service-layout.php:44
 #: inc/customizer/settings/service-single-layout.php:44
@@ -1355,7 +1355,7 @@ msgstr ""
 #: template-parts/content-1.php:75 template-parts/content-2.php:75
 #: template-parts/content-3.php:92 template-parts/content-single-2.php:71
 #: template-parts/content-single.php:70
-#: inc/modules/rt-portfolio-related.php:143 inc/modules/rt-post-related.php:137
+#: inc/modules/rt-docs-related.php:143 inc/modules/rt-post-related.php:137
 #: inc/modules/rt-team-related.php:147
 #: woocommerce/single-product/related.php:49
 msgid "Next"
@@ -1382,10 +1382,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:235
 #: inc/customizer/settings/page-layout.php:168
 #: inc/customizer/settings/page-layout.php:213
-#: inc/customizer/settings/portfolio-layout.php:168
-#: inc/customizer/settings/portfolio-layout.php:213
-#: inc/customizer/settings/portfolio-single-layout.php:168
-#: inc/customizer/settings/portfolio-single-layout.php:213
+#: inc/customizer/settings/docs-layout.php:168
+#: inc/customizer/settings/docs-layout.php:213
+#: inc/customizer/settings/docs-single-layout.php:168
+#: inc/customizer/settings/docs-single-layout.php:213
 #: inc/customizer/settings/search-layout.php:168
 #: inc/customizer/settings/search-layout.php:213
 #: inc/customizer/settings/service-layout.php:168
@@ -1504,8 +1504,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:231
 #: inc/customizer/settings/error-layout.php:190
 #: inc/customizer/settings/page-layout.php:231
-#: inc/customizer/settings/portfolio-layout.php:231
-#: inc/customizer/settings/portfolio-single-layout.php:231
+#: inc/customizer/settings/docs-layout.php:231
+#: inc/customizer/settings/docs-single-layout.php:231
 #: inc/customizer/settings/search-layout.php:231
 #: inc/customizer/settings/service-layout.php:231
 #: inc/customizer/settings/service-single-layout.php:231
@@ -1520,8 +1520,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:204
 #: inc/customizer/settings/error-layout.php:163
 #: inc/customizer/settings/page-layout.php:204
-#: inc/customizer/settings/portfolio-layout.php:204
-#: inc/customizer/settings/portfolio-single-layout.php:204
+#: inc/customizer/settings/docs-layout.php:204
+#: inc/customizer/settings/docs-single-layout.php:204
 #: inc/customizer/settings/search-layout.php:204
 #: inc/customizer/settings/service-layout.php:204
 #: inc/customizer/settings/service-single-layout.php:204
@@ -1716,7 +1716,7 @@ msgstr ""
 #: template-parts/content-1.php:74 template-parts/content-2.php:74
 #: template-parts/content-3.php:91 template-parts/content-single-2.php:70
 #: template-parts/content-single.php:69
-#: inc/modules/rt-portfolio-related.php:142 inc/modules/rt-post-related.php:136
+#: inc/modules/rt-docs-related.php:142 inc/modules/rt-post-related.php:136
 #: inc/modules/rt-team-related.php:146
 #: woocommerce/single-product/related.php:48
 msgid "Prev"
@@ -1874,10 +1874,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:234
 #: inc/customizer/settings/page-layout.php:167
 #: inc/customizer/settings/page-layout.php:212
-#: inc/customizer/settings/portfolio-layout.php:167
-#: inc/customizer/settings/portfolio-layout.php:212
-#: inc/customizer/settings/portfolio-single-layout.php:167
-#: inc/customizer/settings/portfolio-single-layout.php:212
+#: inc/customizer/settings/docs-layout.php:167
+#: inc/customizer/settings/docs-layout.php:212
+#: inc/customizer/settings/docs-single-layout.php:167
+#: inc/customizer/settings/docs-single-layout.php:212
 #: inc/customizer/settings/search-layout.php:167
 #: inc/customizer/settings/search-layout.php:212
 #: inc/customizer/settings/service-layout.php:167
@@ -1906,8 +1906,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:52
 #: inc/customizer/settings/blog-single-layout.php:52
 #: inc/customizer/settings/page-layout.php:52
-#: inc/customizer/settings/portfolio-layout.php:52
-#: inc/customizer/settings/portfolio-single-layout.php:52
+#: inc/customizer/settings/docs-layout.php:52
+#: inc/customizer/settings/docs-single-layout.php:52
 #: inc/customizer/settings/search-layout.php:52
 #: inc/customizer/settings/service-layout.php:52
 #: inc/customizer/settings/service-single-layout.php:52
@@ -2005,14 +2005,14 @@ msgstr ""
 #: inc/customizer/settings/page-layout.php:169
 #: inc/customizer/settings/page-layout.php:209
 #: inc/customizer/settings/page-layout.php:214
-#: inc/customizer/settings/portfolio-layout.php:164
-#: inc/customizer/settings/portfolio-layout.php:169
-#: inc/customizer/settings/portfolio-layout.php:209
-#: inc/customizer/settings/portfolio-layout.php:214
-#: inc/customizer/settings/portfolio-single-layout.php:164
-#: inc/customizer/settings/portfolio-single-layout.php:169
-#: inc/customizer/settings/portfolio-single-layout.php:209
-#: inc/customizer/settings/portfolio-single-layout.php:214
+#: inc/customizer/settings/docs-layout.php:164
+#: inc/customizer/settings/docs-layout.php:169
+#: inc/customizer/settings/docs-layout.php:209
+#: inc/customizer/settings/docs-layout.php:214
+#: inc/customizer/settings/docs-single-layout.php:164
+#: inc/customizer/settings/docs-single-layout.php:169
+#: inc/customizer/settings/docs-single-layout.php:209
+#: inc/customizer/settings/docs-single-layout.php:214
 #: inc/customizer/settings/search-layout.php:164
 #: inc/customizer/settings/search-layout.php:169
 #: inc/customizer/settings/search-layout.php:209
@@ -2047,8 +2047,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:39
 #: inc/customizer/settings/blog-single-layout.php:39
 #: inc/customizer/settings/page-layout.php:39
-#: inc/customizer/settings/portfolio-layout.php:39
-#: inc/customizer/settings/portfolio-single-layout.php:39
+#: inc/customizer/settings/docs-layout.php:39
+#: inc/customizer/settings/docs-single-layout.php:39
 #: inc/customizer/settings/search-layout.php:39
 #: inc/customizer/settings/service-layout.php:39
 #: inc/customizer/settings/service-single-layout.php:39
@@ -2302,8 +2302,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:38
 #: inc/customizer/settings/blog-single-layout.php:38
 #: inc/customizer/settings/page-layout.php:38
-#: inc/customizer/settings/portfolio-layout.php:38
-#: inc/customizer/settings/portfolio-single-layout.php:38
+#: inc/customizer/settings/docs-layout.php:38
+#: inc/customizer/settings/docs-single-layout.php:38
 #: inc/customizer/settings/search-layout.php:38
 #: inc/customizer/settings/service-layout.php:38
 #: inc/customizer/settings/service-single-layout.php:38
@@ -2514,8 +2514,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:237
 #: inc/customizer/settings/footer.php:304
 #: inc/customizer/settings/page-layout.php:141
-#: inc/customizer/settings/portfolio-layout.php:141
-#: inc/customizer/settings/portfolio-single-layout.php:141
+#: inc/customizer/settings/docs-layout.php:141
+#: inc/customizer/settings/docs-single-layout.php:141
 #: inc/customizer/settings/search-layout.php:141
 #: inc/customizer/settings/service-layout.php:141
 #: inc/customizer/settings/service-single-layout.php:141
@@ -2543,10 +2543,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:226
 #: inc/customizer/settings/page-layout.php:160
 #: inc/customizer/settings/page-layout.php:205
-#: inc/customizer/settings/portfolio-layout.php:160
-#: inc/customizer/settings/portfolio-layout.php:205
-#: inc/customizer/settings/portfolio-single-layout.php:160
-#: inc/customizer/settings/portfolio-single-layout.php:205
+#: inc/customizer/settings/docs-layout.php:160
+#: inc/customizer/settings/docs-layout.php:205
+#: inc/customizer/settings/docs-single-layout.php:160
+#: inc/customizer/settings/docs-single-layout.php:205
 #: inc/customizer/settings/search-layout.php:160
 #: inc/customizer/settings/search-layout.php:205
 #: inc/customizer/settings/service-layout.php:160

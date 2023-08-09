@@ -13,8 +13,8 @@ $content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['docs_arexcerp
 
 ?>
 <article id="post-<?php the_ID(); ?>">
-	<div class="portfolio-item">
-		<div class="portfolio-figure">
+	<div class="docs-item">
+		<div class="docs-figure">
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ){
@@ -29,11 +29,11 @@ $content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['docs_arexcerp
 				?>
 			</a>
 		</div>
-		<div class="portfolio-content">
+		<div class="docs-content">
 			<div class="content-info">
 				<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 				<?php if ( DocfiTheme::$options['docs_ar_category'] ) { ?>
-				<span class="portfolio-cat"><?php
+				<span class="docs-cat"><?php
 					$i = 1;
 					$term_lists = get_the_terms( get_the_ID(), 'docfi_docs_category' );
 					if( $term_lists ) {

@@ -16,17 +16,17 @@ else{
 $iso						= 'g-4 no-equal-gallery';
 
 if ( DocfiTheme::$options['docs_archive_style'] == 'style1' ){
-	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
-	$template 				 	= 'portfolio-1';
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-1";
+	$template 				 	= 'docs-1';
 }elseif( DocfiTheme::$options['docs_archive_style'] == 'style2' ){
-	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-2";
-	$template 				 	= 'portfolio-2';
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-2";
+	$template 				 	= 'docs-2';
 }elseif( DocfiTheme::$options['docs_archive_style'] == 'style3' ){
-	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-3";
-	$template 				 	= 'portfolio-3';
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-3";
+	$template 				 	= 'docs-3';
 }else{
-	$docs_archive_layout 	= "rt-portfolio-default rt-portfolio-multi-layout-1";
-	$template 				 	= 'portfolio-1';
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-1";
+	$template 				 	= 'docs-1';
 }
 
 $post_classes = "";
