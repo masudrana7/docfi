@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
     "use strict";
-
     // Menu expand on scroll and active/remove class on scroll content height
     var sections = $('.rt-group-single-list .rt-single-sidebar-list');
     var parentLayout = $(".rt-group-single-list .rt-single-sidebar-list .rt-single-content-wrapper");
@@ -17,7 +16,6 @@ jQuery(document).ready(function ($) {
                 $(".explore-topics-header a[href*=" + sectionId + "]").parents('.rt-single-sidebar-list').removeClass("active");
             }
         })
-
         //line on scroll
         parentLayout.each(function () {
             var divHeight = $(this).outerHeight();
@@ -35,6 +33,7 @@ jQuery(document).ready(function ($) {
             }
         })
     });
+    // Single Docs p tags Font-size controller
     if ($(".rt-docs-single-content").length) {
         var minusFont = $(".font-size-minus");
         var plusFont = $(".font-size-plus");
@@ -42,15 +41,80 @@ jQuery(document).ready(function ($) {
         $(plusFont).on("click", function () {
             $(".rt-docs-single-content p").css({ "font-size": "+=2", "line-height": "+=1px" });
         });
-
         $(normalFont).on("click", function () {
             $(".rt-docs-single-content p").css({ "font-size": "16px" });
         });
-
         $(minusFont).on("click", function () {
             $(".rt-docs-single-content p").css({ "font-size": "-=2", "line-height": "-=1px" });
         });
     }
+
+    // Search ajax
+    if ($("#rt_datafetch").length) {
+        $('#searchInput').on('keyup', function () {
+            fetchResults();
+        });
+        $(document).on('docfi_search_input_change', function () {
+            fetchResults();
+            $('#searchInput').focus();
+        });
+        function fetchResults() {
+            var keyword = $('#searchInput').val();
+            var meta = $('#categories').val();
+            var searchkey = $('.rt-search-key .keyword a').val();
+            var searchTerm = $('#searchInput').val();
+            $('#cleanText').on('click', function () {
+                $('#searchInput').val('');
+                $('#rt_datafetch').removeClass('rs-search-key');
+            });
+            if (searchTerm.length > 0) {
+                $('#rt_datafetch').addClass('rs-search-key');
+                
+            } else {
+                $('#rt_datafetch').removeClass('rs-search-key');
+            }
+            if (keyword.length < 3) {
+                $('#rt_datafetch').html("<span class='letters'>Minimum 3 Latters</span>");
+                return;
+            }
+            $.ajax({
+                url: docfiObj.ajaxURL,
+                type: 'post',
+                data: {
+                    action: 'data_fetch',
+                    keyword: keyword,
+                    meta: meta,
+                    searchkey: searchkey,
+                },
+                success: function (data) {
+                    $('#rt_datafetch').html(data);
+                }
+            });
+        }
+        //Search Keyword
+        $(".rt-search-key .keyword").on("click", function() {
+            var keyword = $(this).text();
+            $('.rt-input-wrap #searchInput').val(keyword);
+            $(document).trigger('docfi_search_input_change');
+        });
+    }
+    //Search Focusin & Focusout Add Class
+    if ($(".rt-hero-section-content-wrapper").length) {
+        $('.rt-hero-section-content-wrapper').focusin(function () {
+            $('body').addClass('rt-search-active');
+            $(this).css('z-index', '11111')
+        })
+        $('.rt-hero-section-content-wrapper').focusout(function () {
+            $('body').removeClass('rt-search-active');
+            $(this).attr('style', '')
+        })
+    }
+
+    //nice-select
+    if ($(".rt-searchbox-form").length) {
+        $('select').niceSelect();
+    }
+
     // Docs Single Sidebar Click add fuction
     if ($(".rs-docs-click").length) {
         $(".rs-docs-click").on("click", function () {
@@ -150,10 +214,6 @@ jQuery(document).ready(function ($) {
             });
         })
     }
-
-    //nice-select
-    $('select').niceSelect();
-
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
@@ -1011,8 +1071,7 @@ function docfi_content_load_scripts() {
         }).viewer(options);
     }
 
-
-
+    
 })(jQuery);
 
 

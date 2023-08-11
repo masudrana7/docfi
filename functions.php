@@ -29,6 +29,7 @@ $docfi_theme_data = wp_get_theme();
 	require_once DOCFI_INC_DIR . 'helper-functions.php';
 	require_once DOCFI_INC_DIR . 'docfi.php';
 	require_once DOCFI_INC_DIR . 'general.php';
+	require_once DOCFI_INC_DIR . 'ajax-search.php'; 
 	require_once DOCFI_INC_DIR . 'ajax-tab.php'; 
 	require_once DOCFI_INC_DIR . 'ajax-loadmore.php'; 
 	require_once DOCFI_INC_DIR . 'scripts.php';
@@ -119,127 +120,7 @@ $docfi_theme_data = wp_get_theme();
 		}	
 	}
 
-	// Docs Post Count Views 
-	function rt_docs_post_views() {
-		if (is_singular('docfi_docs')) {
-			$post_id = get_the_ID();
-			$count_key = 'post_views_count';
-			$count = get_post_meta($post_id, $count_key, true);
-			if ($count == '') {
-				$count = 0;
-			}
-			$count++;
-			update_post_meta($post_id, $count_key, $count);
-		}
-	}
-	add_action('wp', 'rt_docs_post_views');
-
-	/**
-	 	* Ajax Search
-	*/
-
- 	// the ajax function
-	add_action('wp_ajax_data_fetch' , 'data_fetch');
-	add_action('wp_ajax_nopriv_data_fetch','data_fetch');
-	function data_fetch(){
-
-
-		$args = array(
-			'post_type' => 'docfi_docs',
-			'posts_per_page' => 4,
-			's' => esc_attr( $_POST['keyword'] ?? '' ),
-		);
-
-		$meta_value = $_POST['meta'] ?? '' ;
-		if( ( $meta_value ) ){
-			$args['meta_query'] = array(
-				array(
-					'key'     => 'group_post_select', 
-					'value'   => esc_attr( $meta_value ), 
-					'compare' => 'LIKE', 
-					'type'    => 'CHAR', 
-				),
-			);
-		}
-		$the_query = new WP_Query( $args );
-		if( $the_query->have_posts() ) :
-			while( $the_query->have_posts() ): 
-			$the_query->the_post();?>
-			<div class="rt-search-result-list">
-				<a class="rt-top-title" href="<?php echo esc_url( post_permalink() ); ?>">
-					<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.96799 10L10.5 5.5L5.96799 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10L5.53201 5.5L1 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> <?php the_title();?>
-				</a>
-				<ul class="rt-search-breadcrumb">
-				<?php
-
-					$term_lists = get_the_terms( get_the_ID(), 'docfi_docs_category' );
-					if( $term_lists ) {
-						foreach ( $term_lists as $term_list ){ 
-							$link = get_term_link( $term_list->term_id, 'docfi_docs_category' ); ?>
-							<li><a href="<?php echo esc_url( $link ); ?>">
-							<?php echo esc_html( $term_list->name ); ?></a></li><?php 
-						}
-					} 
-
-					$terms = get_terms( array('taxonomy' => 'docfi_docs_group' ) );
-					$category_dropdown = array(  0 => __( 'All', 'docfi-core' ) );
-					foreach ( $terms as $category ) {
-						$category_dropdown[$category->slug] = $category->name;
-					}
-
-				?>
-				<li><i class="fas fa-chevron-right"></i> <a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></li>
-				</ul>
-			</div>
-			<?php endwhile;
-			wp_reset_postdata();  
-			else: 
-			echo '<h3 class="rt-no-found">No Results Found</h3>';
-		endif;
-		die();
-	}
-
-	// add the ajax fetch js
-	add_action( 'wp_footer', 'ajax_fetch' );
-	function ajax_fetch() {
-	?>
-	<script type="text/javascript">
-		jQuery('#searchInput').on('keyup', function() {
-			fetchResults();
-		});
-		function fetchResults(){
-			var keyword = jQuery('#searchInput').val();
-			var meta = jQuery('#categories').val();
-			var searchkey = jQuery('.rt-search-key li a').val();
-			var searchTerm = jQuery('#searchInput').val();
-
-			if (searchTerm.length > 0) {
-				jQuery('#rt_datafetch').addClass('rs-search-key');
-			} else {
-				jQuery('#rt_datafetch').removeClass('rs-search-key');
-			}
-			
-			if( keyword.length < 3 ){
-				jQuery('#rt_datafetch').html("<span class='letters'>Minimum 3 Latters</span>");
-				return;
-			}
-			jQuery.ajax({
-				url: '<?php echo admin_url('admin-ajax.php'); ?>',
-				type: 'post',
-				data: { 
-					action: 'data_fetch', 
-					keyword: keyword,
-					meta: meta,  
-					searchkey: searchkey,  
-				},
-				success: function(data) {
-					jQuery('#rt_datafetch').html( data );
-				}
-			});
-		}
-		</script>
-	<?php
-	}
+	
 
 
 

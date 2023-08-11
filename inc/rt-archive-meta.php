@@ -5,6 +5,22 @@
 		add Docfi category color meta
 	--------------------*/
 
+	// Docs Post Count Views 
+	function rt_docs_post_views() {
+		if (is_singular('docfi_docs')) {
+			$post_id = get_the_ID();
+			$count_key = 'post_views_count';
+			$count = get_post_meta($post_id, $count_key, true);
+			if ($count == '') {
+				$count = 0;
+			}
+			$count++;
+			update_post_meta($post_id, $count_key, $count);
+		}
+	}
+	add_action('wp', 'rt_docs_post_views');
+	
+
 	function docfi_colorpicker_field_add_new_category( $taxonomy ) { ?>
 		<div class="form-field term-colorpicker-wrap">
 			<label for="term-colorpicker"><?php esc_html_e( 'Category Color', 'docfi' ); ?></label>

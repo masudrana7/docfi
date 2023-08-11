@@ -39,7 +39,7 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 			<?php }	            
 		}
 	?>
-	
+	<div class="rt-focus"></div>
 	<div id="page" class="site">		
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'docfi' ); ?></a>		
 		<header id="masthead" class="site-header">
