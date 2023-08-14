@@ -49,6 +49,18 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    //Search Focusin & Focusout Add Class
+    if ($(".rt-hero-section-content-wrapper").length) {
+        $('.rt-hero-section-content-wrapper').focusin(function () {
+            $('body').addClass('rt-search-active');
+            $(this).css('z-index', '11111')
+        });
+        $('.rt-hero-section-content-wrapper').focusout(function () {
+            $('body').removeClass('rt-search-active');
+            $(this).attr('style', '')
+        });
+    }
+
     // Search ajax
     if ($("#rt_datafetch").length) {
         $('#searchInput').on('keyup', function () {
@@ -65,14 +77,15 @@ jQuery(document).ready(function ($) {
             var searchTerm = $('#searchInput').val();
             $('#cleanText').on('click', function () {
                 $('#searchInput').val('');
-                $('#rt_datafetch').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rs-search-key');
             });
             if (searchTerm.length > 0) {
-                $('#rt_datafetch').addClass('rs-search-key');
+                $('.rt-searchbox-container').addClass('rs-search-key');
                 
             } else {
-                $('#rt_datafetch').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rs-search-key');
             }
+
             if (keyword.length < 3) {
                 $('#rt_datafetch').html("<span class='letters'>Minimum 3 Latters</span>");
                 return;
@@ -98,17 +111,7 @@ jQuery(document).ready(function ($) {
             $(document).trigger('docfi_search_input_change');
         });
     }
-    //Search Focusin & Focusout Add Class
-    if ($(".rt-hero-section-content-wrapper").length) {
-        $('.rt-hero-section-content-wrapper').focusin(function () {
-            $('body').addClass('rt-search-active');
-            $(this).css('z-index', '11111')
-        })
-        $('.rt-hero-section-content-wrapper').focusout(function () {
-            $('body').removeClass('rt-search-active');
-            $(this).attr('style', '')
-        })
-    }
+    
 
     //nice-select
     if ($(".rt-searchbox-form").length) {

@@ -39,6 +39,7 @@ if( DocfiTheme::$options['display_no_preview_image'] == '1' ) {
 }
 
 ?>
+
 <div id="post-<?php the_ID(); ?>" <?php post_class( "blog-layout-1 " . $wow . ' ' . $effect ); ?> data-wow-duration="1.5s">
 	<div class="blog-box <?php echo esc_attr($img_class); ?> <?php echo esc_attr($preview); ?>">
 		<div class="blog-img-holder">

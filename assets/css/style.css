@@ -65,6 +65,7 @@ CSS INDEX
 #. Woocommerce
 
 #. Docs Single 
+#. Forum Style
 ---------------------------------------*/
 /*-------------------------------------
 #. Defaults
@@ -9844,7 +9845,7 @@ p.return-to-shop {
 }
 
 /* Search Ajax */
-.rt-hero-section-content-wrapper .searchbox-container {
+.rt-hero-section-content-wrapper .rt-searchbox-container {
 	margin-bottom: 15px;
 }
 .rt-hero-section-content-wrapper .search-text {
@@ -9875,7 +9876,7 @@ p.return-to-shop {
 	color: var(--docfi-primary-color);
 	font-weight: 500;
 }
-.searchbox-container {
+.rt-searchbox-container {
 	width: 100%;
 	padding: 17px 22px 17px 30px;
 	background: var(--docfi-white-color);
@@ -10015,66 +10016,66 @@ p.return-to-shop {
 .no-csspointerevents .nice-select.open .list {
 	display: block;
 }
-.searchbox-container .category-selector {
+.rt-searchbox-container .category-selector {
 	width: 165px;
 	position: relative;
 }
-.searchbox-container .category-selector select{
+.rt-searchbox-container .category-selector select{
 	border: none;
 	cursor: pointer;
 	width: 100%;
 }
-.searchbox-container .category-selector::before,
-.searchbox-container .category-selector::after {
+.rt-searchbox-container .category-selector::before,
+.rt-searchbox-container .category-selector::after {
 	content: "";
 	position: absolute;
 }
-.searchbox-container .category-selector::before {
+.rt-searchbox-container .category-selector::before {
 	width: 1px;
 	height: 31px;
 	left: -12px;
 	top: 0;
 	background: #D9D9D9;
 }
-.searchbox-container .category-selector .nice-select span {
+.rt-searchbox-container .category-selector .nice-select span {
 	font-weight: 500;
 	font-size: 0.9375rem;
 	line-height: 18px;
 	color: #1D2746;
 }
-.searchbox-container .category-selector .nice-select .list {
+.rt-searchbox-container .category-selector .nice-select .list {
 	left: 0;
 }
-.searchbox-container .searchbox-textfield {
+.rt-searchbox-container .searchbox-textfield {
 	width: 52%;
 }
-.searchbox-container .searchbox-textfield svg{
+.rt-searchbox-container .searchbox-textfield svg{
 	position: relative;
 	top: -1px;
 }
-.searchbox-container .searchbox-textfield .searchbox-input {
+.rt-searchbox-container .searchbox-textfield .searchbox-input {
 	border: none;
 	background: var(--docfi-white-color);
 	width: 100%;
 	position: relative;
 	height: 40px;
 }
-.searchbox-container .searchbox-textfield .searchbox-input::-webkit-input-placeholder,
-.searchbox-container .searchbox-textfield .searchbox-input::-moz-placeholder,
-.searchbox-container .searchbox-textfield .searchbox-input:-ms-input-placeholder,
-.searchbox-container .searchbox-textfield .searchbox-input::-ms-input-placeholder,
-.searchbox-container .searchbox-textfield .searchbox-input::placeholder {
+.rt-searchbox-container .searchbox-textfield .searchbox-input::-webkit-input-placeholder,
+.rt-searchbox-container .searchbox-textfield .searchbox-input::-moz-placeholder,
+.rt-searchbox-container .searchbox-textfield .searchbox-input:-ms-input-placeholder,
+.rt-searchbox-container .searchbox-textfield .searchbox-input::-ms-input-placeholder,
+.rt-searchbox-container .searchbox-textfield .searchbox-input::placeholder {
 	font-size: 1rem;
 	line-height: 19px;
 	color: #8D8D8D;
 }
-.searchbox-container .searchbox-textfield .rt-searchbox-form .input-area {
+.rt-searchbox-container .searchbox-textfield .rt-searchbox-form .input-area {
 	gap: 6px;
 }
-.searchbox-container .searchbox-textfield .rt-searchbox-form .input-area svg {
+.rt-searchbox-container .searchbox-textfield .rt-searchbox-form .input-area svg {
 	margin-top: -2px;
 }
-.searchbox-container .searchbox-submit .rt-searchbox-btn {
+.rt-searchbox-container .searchbox-submit .rt-searchbox-btn {
 	font-weight: 500;
 	font-size: 1.25rem;
 	line-height: 23px;
@@ -10085,7 +10086,7 @@ p.return-to-shop {
 	color: var(--docfi-white-color);
 	
 }
-.searchbox-container .searchbox-submit .rt-searchbox-btn:hover {
+.rt-searchbox-container .searchbox-submit .rt-searchbox-btn:hover {
 	background-color: var(--docfi-white-color);
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
@@ -10103,6 +10104,15 @@ p.return-to-shop {
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	transition: 0.4s;
+	opacity: 0;
+	visibility: hidden;
+	color: var(--docfi-primary-color);
+	z-index: 13;
+}
+.rs-search-key .rt-searchbox-form #cleanText {
+	opacity: 1;
+	visibility: visible;
 }
 .rt-hero-section-content-wrapper .rt-searchbox-form{
 	position: relative;
@@ -10114,7 +10124,7 @@ p.return-to-shop {
 .rt-hero-section-content-wrapper input{
 	color: var(--docfi-body-color);
 }
-.rt-hero-section-content-wrapper .rt-searchbox-form #rt_datafetch{
+.rt-hero-section-content-wrapper .rt-searchbox-container #rt_datafetch{
 	position: absolute;
 	width: 100%;
 	left: 50%;
@@ -10123,16 +10133,16 @@ p.return-to-shop {
 	padding: 20px;
 	transform: translateX(-50%);
 }
-.rt-hero-section-content-wrapper .rt-searchbox-form #rt_datafetch:not(.rs-search-key){
+.rt-hero-section-content-wrapper .rt-searchbox-container:not(.rs-search-key) #rt_datafetch{
 	opacity: 0;
 	visibility: hidden;
 }
-.rt-hero-section-content-wrapper .rt-searchbox-form .rs-search-key {
+.rt-hero-section-content-wrapper .rs-search-key #rt_datafetch{
 	background: #fff;
 	opacity: 1;
 	visibility: visible;
 }
-.rt-hero-section-content-wrapper .rt-searchbox-form .rs-search-key:after {
+.rt-hero-section-content-wrapper .rs-search-key #rt_datafetch:after {
 	content: "";
 	top: -6px;
 	left: 30px;
@@ -10144,7 +10154,7 @@ p.return-to-shop {
 	border-top: 1px solid #e6eeef;
 	transform: rotate(45deg);
 }
-#rt_datafetch:not(.rs-search-key) .letters{
+.rt-searchbox-container .rt-searchbox-container:not(.rs-search-key) .letters{
 	display: none;
 }
 .rt-search-breadcrumb{
@@ -10227,9 +10237,77 @@ p.return-to-shop {
 	transition: all .3s linear;
 	opacity: 0;
 	visibility: hidden;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .7);
 }
 .rt-search-active .rt-focus{
 	opacity: 1;
 	visibility: visible;
+}
+/*======================================
+// #. Forum Style
+====================================*/
+.forum-widget-wrapper {
+	background: var(--docfi-white-color);
+	-webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+	border-radius: 20px;
+	padding: 38px 44px 68px 42px;
+}
+.forum-widget-wrapper .widgettitle {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--docfi-heading-color);
+	margin-bottom: 20px;
+}
+.widget-forum ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.widget-forum ul li{
+	display: block;
+	overflow: hidden;
+}
+.widget-forum ul li a{
+	line-height: 21px;
+	color: #6B707F;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #D9D9D9;
+	position: relative;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	display: block;
+}
+.widget-forum ul li a:after {
+	content: "";
+	position: absolute;
+	border-bottom: 1px solid var(--docfi-primary-color);
+	left: 0;
+	bottom: 0;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	width: 0;
+}
+.widget-forum ul li a:hover {
+	color: var(--docfi-primary-color);
+}
+.widget-forum ul li a:hover:after {
+	width: 100%;
+}
+.widget-forum ul li .count{
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #ededed;
+	text-align: center;
+	line-height: 20px;
+	font-weight: 300;
+	font-size: 12px;
+}
+.widget-forum ul li:last-child a{
+	margin-bottom: 0;
 }

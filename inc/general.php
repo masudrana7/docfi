@@ -150,6 +150,14 @@ if ( !function_exists( 'docfi_widgets_register' ) ) {
 			'before_title'  => '<div class="rt-widget-title-holder"><h3 class="widgettitle has-animation">',
 			'after_title'   => '</h3></div>',
 		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Forum Sidebar', 'docfi' ),
+			'id'            => 'forum-sidebar',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<div class="rt-widget-title-holder"><h3 class="widgettitle has-animation">',
+			'after_title'   => '</h3></div>',
+		) );
 
 		register_sidebar( array(
 			'name'          => 'Docs Left Sidebar',

@@ -13,22 +13,15 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 }
 ?>
 <?php get_header(); ?>
-<div id="primary" class="content-area">
+<div id="primary" class="content-area ppppppppppp">
 	<div class="container">
 		<div class="row">
 			<?php
-			//if ( DocfiTheme::$layout == 'left-sidebar' ) {
-				//get_sidebar();
-			//}
+			if ( DocfiTheme::$layout == 'left-sidebar' ) {
+				get_sidebar();
+			}
 			?>
-			<?php if (is_active_sidebar('forum-sidebar')) { ?>			
-				<div class="col-md-4 docfi-column-sticky">
-					<div class="forum-widget-wrapper">
-						<?php dynamic_sidebar('forum-sidebar'); ?>
-					</div>
-				</div>
-			<?php } ?>
-			<div class="<?php //echo esc_attr( $docfi_layout_class );?> col-md-8 docfi-column-sticky">
+			<div class="<?php echo esc_attr( $docfi_layout_class );?>">
 				<main id="main" class="site-main">
 					<?php while ( have_posts() ) : the_post(); ?>					
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -41,9 +34,9 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 				</main>
 			</div>
 			<?php
-			//if( DocfiTheme::$layout == 'right-sidebar' ){				
-				//get_sidebar();
-			//}
+			if( DocfiTheme::$layout == 'right-sidebar' ){				
+				get_sidebar();
+			}
 			?>
 		</div>
 	</div>
