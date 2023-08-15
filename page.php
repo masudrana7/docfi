@@ -23,7 +23,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 			?>
 			<?php if (is_active_sidebar('forum-sidebar')) { ?>			
 				<div class="col-md-4 docfi-column-sticky">
-					<div class="forum-widget-wrapper">
+					<div class="rt-forum-widget-wrapper">
 						<?php dynamic_sidebar('forum-sidebar'); ?>
 					</div>
 				</div>
