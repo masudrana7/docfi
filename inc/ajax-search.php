@@ -66,6 +66,5 @@ class RTsearchAjax{
 		die();
 	}
 }
-
 new RTsearchAjax();
  	

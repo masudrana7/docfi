@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<div id="bbpress-forums" class="bbpress-wrapper">
+<div id="bbpress-forums" class="docfi-wrapper-forums bbpress-wrapper">
 
 	<?php if ( bbp_allow_search() ) : ?>
 

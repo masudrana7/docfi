@@ -15,7 +15,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 <?php get_header(); ?>
 <div id="primary" class="content-area">
 	<div class="container">
-		<div class="row">
+		<div class="row rt-page-wrapper">
 			<?php
 			//if ( DocfiTheme::$layout == 'left-sidebar' ) {
 				//get_sidebar();

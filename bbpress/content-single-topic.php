@@ -13,7 +13,6 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div id="bbpress-forums" class="docfi-wrapper-forums bbpress-wrapper">
-	<?php do_action( 'bbp_template_before_single_topic' ); ?>
 	<?php if ( post_password_required() ) : ?>
 		<?php bbp_get_template_part( 'form', 'protected' ); ?>
 	<?php else : ?>
@@ -35,67 +34,105 @@ defined( 'ABSPATH' ) || exit;
 	</div>	
 	<?php endif; ?>
 
-	<div class="topic-details-footer d-flex flex-wrap justify-content-between align-items-center wow animate__fadeInUp animate__animated animate__animated" data-wow-duration="1200ms" data-wow-delay="800ms" style="visibility: visible; animation-duration: 1200ms; animation-delay: 800ms; animation-name: fadeInUp;">
-    <div class="topic-author d-flex align-items-center flex-wrap">
-        <div class="avatar">
-            
+	<div class="topic-details-footer d-flex flex-wrap justify-content-between align-items-center wow animate__fadeInUp animate__animated animate__animated" data-wow-duration="1200ms" data-wow-delay="800ms">
+        <div class="topic-author d-flex align-items-center flex-wrap">
+            <div class="avatar">
+                <?php echo get_avatar( get_the_author_meta( 'ID' ), 40 ); ?>
+            </div>
+            <div class="author-info">
+                <h3 class="name mb-0">
+                    <a href="<?php echo bbp_get_topic_author_url(); ?>">
+                        <?php echo get_the_author_meta( 'display_name' ); ?>
+                    </a>
+                </h3>
+                <div class="entry-meta">
+                    <ul class="entry-meta d-flex align-items-center flex-wrap">
+                        <li class="post-by d-flex align-items-center">
+                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.7578 6.87695C15.1758 3.27344 12.0117 0.8125 8.4375 0.8125C4.83398 0.8125 1.66992 3.27344 0.0878906 6.87695C0.0292969 7.02344 0 7.22852 0 7.375C0 7.52148 0.0292969 7.75586 0.0878906 7.90234C1.66992 11.5059 4.83398 13.9375 8.4375 13.9375C12.0117 13.9375 15.1758 11.5059 16.7578 7.90234C16.8164 7.75586 16.875 7.52148 16.875 7.375C16.875 7.22852 16.8164 7.02344 16.7578 6.87695ZM8.4375 12.5312C5.50781 12.5312 2.8125 10.5684 1.40625 7.4043C2.8418 4.21094 5.50781 2.21875 8.4375 2.21875C11.3379 2.21875 14.0332 4.21094 15.4395 7.375C14.0039 10.5684 11.3379 12.5312 8.4375 12.5312ZM8.4375 3.625C6.35742 3.625 4.6875 5.32422 4.6875 7.375C4.6875 9.45508 6.35742 11.125 8.4375 11.125C10.4883 11.125 12.1875 9.45508 12.1875 7.4043C12.1875 5.32422 10.4883 3.625 8.4375 3.625ZM8.4375 9.71875C7.11914 9.71875 6.09375 8.69336 6.09375 7.375C6.09375 7.375 6.09375 7.3457 6.09375 7.31641C6.24023 7.375 6.38672 7.375 6.5625 7.375C7.58789 7.375 8.4375 6.55469 8.4375 5.5C8.4375 5.35352 8.4082 5.20703 8.34961 5.06055C8.37891 5.06055 8.4082 5.03125 8.4375 5.03125C9.72656 5.03125 10.7812 6.08594 10.7812 7.4043C10.7812 8.69336 9.72656 9.71875 8.4375 9.71875Z" fill="#6C6C6C"></path>
+                            </svg>
+                            <span class="para-text">
+                                <?php 
+                                    if( !function_exists('get_wpbbp_post_view') ) :
+                                    // get bbpress topic view counter
+                                    function get_wpbbp_post_view($postID){
+                                    $count_key = 'post_views_count';
+                                    $count = get_post_meta($postID, $count_key, true);
+                                    if($count==''){
+                                        delete_post_meta($postID, $count_key);
+                                        add_post_meta($postID, $count_key, '0');
+                                        return "0";
+                                    }
+                                    return $count;
+                                    }
+                                    function set_wpbbp_post_view($postID) {
+                                        $count_key = 'post_views_count';
+                                        $count = get_post_meta($postID, $count_key, true);
+                                        if( $count == '' ){
+                                            add_post_meta($postID, $count_key, '1');
+                                        } else {
+                                            $new_count = $count + 1;
+                                            update_post_meta($postID, $count_key, $new_count);
+                                        }
+                                    }
+                                    endif;
+                                    if( !function_exists('add_wpbbp_topic_counter') ) :
+                                    function add_wpbbp_topic_counter() {
+                                    global $wp_query;
+                                    $bbp = bbpress();
+                                    $active_topic = $bbp->current_topic_id;
+                                    set_wpbbp_post_view( $active_topic );
+                                    }
+                                    add_action('bbp_template_after_single_topic', 'add_wpbbp_topic_counter');
+                                    endif;
+                                    echo get_wpbbp_post_view( bbp_get_topic_id() ); echo esc_html(' views', 'docfi');
+                                ?>
+                            </span> 
+                        </li>             
+                        <li class="post-date d-flex align-items-center">
+                            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.45312 2.75H8.67188V1.57812C8.67188 1.19727 8.96484 0.875 9.375 0.875C9.75586 0.875 10.0781 1.19727 10.0781 1.57812V2.75H11.25C12.2754 2.75 13.125 3.59961 13.125 4.625V14C13.125 15.0547 12.2754 15.875 11.25 15.875H1.875C0.820312 15.875 0 15.0547 0 14V4.625C0 3.59961 0.820312 2.75 1.875 2.75H3.04688V1.57812C3.04688 1.19727 3.33984 0.875 3.75 0.875C4.13086 0.875 4.45312 1.19727 4.45312 1.57812V2.75ZM1.40625 8.14062H3.75V6.5H1.40625V8.14062ZM1.40625 9.54688V11.4219H3.75V9.54688H1.40625ZM5.15625 9.54688V11.4219H7.96875V9.54688H5.15625ZM9.375 9.54688V11.4219H11.7188V9.54688H9.375ZM11.7188 6.5H9.375V8.14062H11.7188V6.5ZM11.7188 12.8281H9.375V14.4688H11.25C11.4844 14.4688 11.7188 14.2637 11.7188 14V12.8281ZM7.96875 12.8281H5.15625V14.4688H7.96875V12.8281ZM3.75 12.8281H1.40625V14C1.40625 14.2637 1.61133 14.4688 1.875 14.4688H3.75V12.8281ZM7.96875 6.5H5.15625V8.14062H7.96875V6.5Z" fill="#6C6C6C"></path>
+                            </svg>
+                            <span class="para-text"><?php bbp_topic_post_date( get_the_ID() ); ?></span> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="author-info">
-            <h3 class="name">
-                
-            </h3>
+        <div class="topic-details-action-meta">
             <div class="entry-meta">
-                <ul class="entry-meta d-flex align-items-center flex-wrap">
+                <ul class="entry-meta d-flex align-items-center">
                     <li class="post-by d-flex align-items-center">
-                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.7578 6.87695C15.1758 3.27344 12.0117 0.8125 8.4375 0.8125C4.83398 0.8125 1.66992 3.27344 0.0878906 6.87695C0.0292969 7.02344 0 7.22852 0 7.375C0 7.52148 0.0292969 7.75586 0.0878906 7.90234C1.66992 11.5059 4.83398 13.9375 8.4375 13.9375C12.0117 13.9375 15.1758 11.5059 16.7578 7.90234C16.8164 7.75586 16.875 7.52148 16.875 7.375C16.875 7.22852 16.8164 7.02344 16.7578 6.87695ZM8.4375 12.5312C5.50781 12.5312 2.8125 10.5684 1.40625 7.4043C2.8418 4.21094 5.50781 2.21875 8.4375 2.21875C11.3379 2.21875 14.0332 4.21094 15.4395 7.375C14.0039 10.5684 11.3379 12.5312 8.4375 12.5312ZM8.4375 3.625C6.35742 3.625 4.6875 5.32422 4.6875 7.375C4.6875 9.45508 6.35742 11.125 8.4375 11.125C10.4883 11.125 12.1875 9.45508 12.1875 7.4043C12.1875 5.32422 10.4883 3.625 8.4375 3.625ZM8.4375 9.71875C7.11914 9.71875 6.09375 8.69336 6.09375 7.375C6.09375 7.375 6.09375 7.3457 6.09375 7.31641C6.24023 7.375 6.38672 7.375 6.5625 7.375C7.58789 7.375 8.4375 6.55469 8.4375 5.5C8.4375 5.35352 8.4082 5.20703 8.34961 5.06055C8.37891 5.06055 8.4082 5.03125 8.4375 5.03125C9.72656 5.03125 10.7812 6.08594 10.7812 7.4043C10.7812 8.69336 9.72656 9.71875 8.4375 9.71875Z" fill="#6C6C6C"></path>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.8514 12.6225L14.1439 14.9925C14.2189 15.615 13.5514 16.05 13.0189 15.7275L9.87641 13.86C9.53141 13.86 9.19391 13.8375 8.86391 13.7925C9.41891 13.14 9.74891 12.315 9.74891 11.4225C9.74891 9.29249 7.90391 7.56752 5.62391 7.56752C4.75391 7.56752 3.95141 7.815 3.28391 8.25C3.26141 8.0625 3.25391 7.87499 3.25391 7.67999C3.25391 4.26749 6.21641 1.5 9.87641 1.5C13.5364 1.5 16.4989 4.26749 16.4989 7.67999C16.4989 9.70499 15.4564 11.4975 13.8514 12.6225Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9.75 11.4226C9.75 12.3151 9.42001 13.1401 8.86501 13.7926C8.12251 14.6926 6.945 15.2701 5.625 15.2701L3.6675 16.4326C3.3375 16.6351 2.9175 16.3576 2.9625 15.9751L3.15 14.4976C2.145 13.8001 1.5 12.6826 1.5 11.4226C1.5 10.1026 2.205 8.94011 3.285 8.25011C3.9525 7.81511 4.755 7.56763 5.625 7.56763C7.905 7.56763 9.75 9.29259 9.75 11.4226Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                        <span class="para-text"><a href="" class="para-text">1923 views</a></span> 
+                        <a href="<?php bbp_topic_permalink(); ?>">
+                            <span class="para-text"><?php bbp_topic_reply_count(); echo esc_html(' Comments', 'docfi');
+                            ?></span> 
+                        </a>
                     </li>             
                     <li class="post-date d-flex align-items-center">
-                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.8125 5.5C3.31055 5.5 3.75 5.93945 3.75 6.4375V12.9414C3.75 13.4395 3.31055 13.8496 2.8125 13.8496H0.9375C0.410156 13.8496 0 13.4395 0 12.9414V6.4082C0 5.91016 0.410156 5.5 0.9375 5.5H2.8125ZM15 6.52539C15 7.22852 14.6191 7.81445 14.0918 8.16602C14.1211 8.3418 14.1504 8.48828 14.1504 8.63477C14.1504 9.30859 13.7988 9.89453 13.3008 10.2461C13.3008 10.334 13.3008 10.4219 13.3008 10.5098C13.3008 11.1836 12.9785 11.7695 12.4512 12.1211C12.3926 13.1465 11.543 13.9375 10.5176 13.9375H8.96484C7.91016 13.9375 6.88477 13.6152 6.03516 12.9707L4.95117 12.1797C4.77539 12.0332 4.6582 11.8281 4.6582 11.5938C4.6582 11.2422 4.98047 10.8906 5.39062 10.8906C5.53711 10.8906 5.68359 10.9492 5.80078 11.0371L6.88477 11.8574C7.4707 12.2969 8.20312 12.5605 8.96484 12.5605H10.5176C10.8105 12.5605 11.0742 12.2969 11.0742 12.0039C11.0742 11.8867 11.0156 11.8574 11.0156 11.7109C11.0156 10.9199 11.8945 11.1836 11.8945 10.5098C11.8945 10.2461 11.7188 10.1875 11.7188 9.86523C11.7188 8.98633 12.7441 9.36719 12.7441 8.63477C12.7441 8.25391 12.3926 8.25391 12.3926 7.78516C12.3926 7.43359 12.6855 7.11133 13.0664 7.08203C13.3594 7.08203 13.5938 6.81836 13.5938 6.52539C13.5938 6.23242 13.3301 5.99805 13.0078 5.96875H8.99414C8.61328 5.96875 8.29102 5.70508 8.29102 5.29492C8.29102 5.17773 8.32031 5.06055 8.37891 4.94336C8.90625 4.00586 9.14062 3.06836 9.14062 2.83398C9.14062 2.59961 8.96484 2.24805 8.4668 2.24805C7.5 2.24805 8.05664 4.03516 5.80078 5.82227C5.68359 5.93945 5.53711 5.96875 5.39062 5.96875C4.98047 5.96875 4.6875 5.64648 4.6875 5.26562C4.6875 4.47461 5.50781 4.91406 6.44531 2.54102C6.73828 1.7793 7.11914 0.841797 8.4668 0.841797C9.75586 0.841797 10.5469 1.83789 10.5469 2.83398C10.5469 3.21484 10.3711 3.85938 10.1074 4.5918H13.0371C14.0918 4.5918 15 5.4707 15 6.52539Z" fill="#6C6C6C"></path>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.7188 4.62744C14.2187 5.66994 15.2538 7.32744 15.4638 9.23994" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2.61914 9.2773C2.81414 7.3723 3.83414 5.7148 5.31914 4.66479" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6.13867 15.7046C7.00867 16.1471 7.99867 16.3946 9.04117 16.3946C10.0462 16.3946 10.9912 16.1696 11.8387 15.7571" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9.04399 5.77522C10.1955 5.77522 11.129 4.84174 11.129 3.69022C11.129 2.53871 10.1955 1.60522 9.04399 1.60522C7.89247 1.60522 6.95898 2.53871 6.95898 3.69022C6.95898 4.84174 7.89247 5.77522 9.04399 5.77522Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3.62016 14.9398C4.77167 14.9398 5.70516 14.0063 5.70516 12.8548C5.70516 11.7033 4.77167 10.7698 3.62016 10.7698C2.46864 10.7698 1.53516 11.7033 1.53516 12.8548C1.53516 14.0063 2.46864 14.9398 3.62016 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M14.3741 14.9398C15.5256 14.9398 16.4591 14.0063 16.4591 12.8548C16.4591 11.7033 15.5256 10.7698 14.3741 10.7698C13.2225 10.7698 12.2891 11.7033 12.2891 12.8548C12.2891 14.0063 13.2225 14.9398 14.3741 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                        <span class="para-text">128</span> 
-                    </li>
-                    <li class="post-date d-flex align-items-center">
-                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.45312 2.75H8.67188V1.57812C8.67188 1.19727 8.96484 0.875 9.375 0.875C9.75586 0.875 10.0781 1.19727 10.0781 1.57812V2.75H11.25C12.2754 2.75 13.125 3.59961 13.125 4.625V14C13.125 15.0547 12.2754 15.875 11.25 15.875H1.875C0.820312 15.875 0 15.0547 0 14V4.625C0 3.59961 0.820312 2.75 1.875 2.75H3.04688V1.57812C3.04688 1.19727 3.33984 0.875 3.75 0.875C4.13086 0.875 4.45312 1.19727 4.45312 1.57812V2.75ZM1.40625 8.14062H3.75V6.5H1.40625V8.14062ZM1.40625 9.54688V11.4219H3.75V9.54688H1.40625ZM5.15625 9.54688V11.4219H7.96875V9.54688H5.15625ZM9.375 9.54688V11.4219H11.7188V9.54688H9.375ZM11.7188 6.5H9.375V8.14062H11.7188V6.5ZM11.7188 12.8281H9.375V14.4688H11.25C11.4844 14.4688 11.7188 14.2637 11.7188 14V12.8281ZM7.96875 12.8281H5.15625V14.4688H7.96875V12.8281ZM3.75 12.8281H1.40625V14C1.40625 14.2637 1.61133 14.4688 1.875 14.4688H3.75V12.8281ZM7.96875 6.5H5.15625V8.14062H7.96875V6.5Z" fill="#6C6C6C"></path>
-                        </svg>
-                        <span class="para-text">May 5, 2022</span> 
+                        <span class="para-text">Share</span> 
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="topic-details-action-meta">
-        <div class="entry-meta">
-            <ul class="entry-meta d-flex align-items-center">
-                <li class="post-by d-flex align-items-center">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.8514 12.6225L14.1439 14.9925C14.2189 15.615 13.5514 16.05 13.0189 15.7275L9.87641 13.86C9.53141 13.86 9.19391 13.8375 8.86391 13.7925C9.41891 13.14 9.74891 12.315 9.74891 11.4225C9.74891 9.29249 7.90391 7.56752 5.62391 7.56752C4.75391 7.56752 3.95141 7.815 3.28391 8.25C3.26141 8.0625 3.25391 7.87499 3.25391 7.67999C3.25391 4.26749 6.21641 1.5 9.87641 1.5C13.5364 1.5 16.4989 4.26749 16.4989 7.67999C16.4989 9.70499 15.4564 11.4975 13.8514 12.6225Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M9.75 11.4226C9.75 12.3151 9.42001 13.1401 8.86501 13.7926C8.12251 14.6926 6.945 15.2701 5.625 15.2701L3.6675 16.4326C3.3375 16.6351 2.9175 16.3576 2.9625 15.9751L3.15 14.4976C2.145 13.8001 1.5 12.6826 1.5 11.4226C1.5 10.1026 2.205 8.94011 3.285 8.25011C3.9525 7.81511 4.755 7.56763 5.625 7.56763C7.905 7.56763 9.75 9.29259 9.75 11.4226Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span class="para-text"><a href="" class="para-text">1 Comment</a></span> 
-                </li>             
-                <li class="post-date d-flex align-items-center">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.7188 4.62744C14.2187 5.66994 15.2538 7.32744 15.4638 9.23994" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M2.61914 9.2773C2.81414 7.3723 3.83414 5.7148 5.31914 4.66479" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M6.13867 15.7046C7.00867 16.1471 7.99867 16.3946 9.04117 16.3946C10.0462 16.3946 10.9912 16.1696 11.8387 15.7571" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M9.04399 5.77522C10.1955 5.77522 11.129 4.84174 11.129 3.69022C11.129 2.53871 10.1955 1.60522 9.04399 1.60522C7.89247 1.60522 6.95898 2.53871 6.95898 3.69022C6.95898 4.84174 7.89247 5.77522 9.04399 5.77522Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M3.62016 14.9398C4.77167 14.9398 5.70516 14.0063 5.70516 12.8548C5.70516 11.7033 4.77167 10.7698 3.62016 10.7698C2.46864 10.7698 1.53516 11.7033 1.53516 12.8548C1.53516 14.0063 2.46864 14.9398 3.62016 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M14.3741 14.9398C15.5256 14.9398 16.4591 14.0063 16.4591 12.8548C16.4591 11.7033 15.5256 10.7698 14.3741 10.7698C13.2225 10.7698 12.2891 11.7033 12.2891 12.8548C12.2891 14.0063 13.2225 14.9398 14.3741 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span class="para-text">Share</span> 
-                </li>
-            </ul>
+        <div class="rt-replies-wrapper">
+            <?php if ( bbp_has_replies() ) : ?>
+                <?php bbp_get_template_part( 'loop', 'replies' ); ?>
+            <?php endif; ?>
         </div>
     </div>
-</div>
-
+    <?php bbp_get_template_part( 'form', 'reply' ); ?>
 	<?php bbp_get_template_part( 'alert', 'topic-lock' ); ?>
-
 	<?php do_action( 'bbp_template_after_single_topic' ); ?>
-
 </div>
