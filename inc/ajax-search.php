@@ -67,4 +67,38 @@ class RTsearchAjax{
 	}
 }
 new RTsearchAjax();
+
+// Banner Search Ajax
+
+class RTBannerAjax{
+	// the ajax function __construct
+	function __construct(){
+		add_action('wp_ajax_banner_data_fetch', [$this, 'banner_data_fetch']);
+		add_action('wp_ajax_nopriv_banner_data_fetch', [$this, 'banner_data_fetch']); 
+	}
+	public function banner_data_fetch(){
+		$args = array(
+			'post_type' => 'topic',
+			'posts_per_page' => 4,
+			's' => esc_attr( $_POST['keyword'] ?? '' ),
+			'searchkey' => esc_attr( $_POST['searchkey'] ?? '' ),
+		);
+		$the_query = new WP_Query( $args );
+		if( $the_query->have_posts() ) :
+			while( $the_query->have_posts() ): 
+			$the_query->the_post();?>
+			<div class="rt-search-result-list">
+				<a class="rt-top-title" href="<?php echo esc_url( post_permalink() ); ?>">
+					<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.96799 10L10.5 5.5L5.96799 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10L5.53201 5.5L1 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> <?php the_title();?>
+				</a>
+			</div>
+			<?php endwhile;
+			wp_reset_postdata();  
+			else: ?>
+			<h3 class="rt-no-found"><?php echo esc_html('No Results Found', 'docfi'); ?></h3>
+		<?php endif;
+		die();
+	}
+}
+new RTBannerAjax();
  	

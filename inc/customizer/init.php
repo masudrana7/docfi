@@ -23,6 +23,7 @@ DocfiTheme_Helper::requires( 'customizer/settings/color.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/header.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/footer.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/banner.php' );
+DocfiTheme_Helper::requires( 'customizer/settings/forum.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/blog.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/single.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/postshare.php' );

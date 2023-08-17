@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php else : ?>
 	<div class="rt-single-topics-wrapper">
 		<div class="question-title">
-			<span class="rt-topics-question" title="Question">Q:</span>
+			<span class="rt-topics-question" title="Question"><?php echo esc_html('Q1', 'docfi'); ?></span>
 			<h3 class="rt-q-title">
 				<?php
 				the_title();

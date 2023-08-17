@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
-<div id="bbpress-forums" class="docfi-wrapper-forums bbpress-wrapper">
+<div id="bbpress-forums" class="docfi-wrapper-forums d bbpress-wrapper">
 	<?php do_action( 'bbp_template_before_single_forum' ); ?>
 	<?php if ( post_password_required() ) : ?>
 		<?php bbp_get_template_part( 'form', 'protected' ); ?>

@@ -141,8 +141,8 @@ class DocfiTheme_Banner_Settings extends DocfiTheme_Customizer {
                 'type' => 'number',
             )
         );
-
     }
+    
 
 }
 

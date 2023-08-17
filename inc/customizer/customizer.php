@@ -215,6 +215,14 @@ class DocfiTheme_Customizer {
             )
         );
 
+		// Add Forum Section
+        $wp_customize->add_section( 'forum_section',
+            array(
+                'title' => __( 'Forum', 'docfi' ),
+                'priority' => 8,
+            )
+        );
+
         // Add Pages Slug Section       
         $wp_customize->add_section( 'slug_layout_section',
             array(

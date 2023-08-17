@@ -417,6 +417,7 @@ $breadcrumb_active_color = DocfiTheme::$options['breadcrumb_active_color'];
 	padding-bottom: <?php  echo esc_html( DocfiTheme::$options['banner_bottom_padding'] ); ?>px;
 }
 
+
 <?php
 /*-------------------------------------
 #. Footer
@@ -429,6 +430,7 @@ $copyright_text_color = DocfiTheme::$options['copyright_text_color'];
 $copyright_link_color = DocfiTheme::$options['copyright_link_color'];
 $copyright_hover_color = DocfiTheme::$options['copyright_hover_color'];
 $copyright_bg_color = DocfiTheme::$options['copyright_bg_color'];
+
 ?>
 
 <?php if ( DocfiTheme::$options['footer_title_color'] ) { ?>
@@ -511,3 +513,20 @@ $error_text2_color = DocfiTheme::$options['error_text2_color'];
 		color: <?php echo esc_html( $error_text2_color ); ?>;
 	}
 <?php } ?>
+
+<?php 
+$attch_urlb = wp_get_attachment_image_src( DocfiTheme::$options['forum_bgimage'], 'full', true );
+$banbgimg = $attch_urlb[0]; ?>
+<?php if ($banbgimg) { ?>
+body.bbpress .entry-banner{
+	background: url(<?php echo $banbgimg;?>) no-repeat scroll top center / 100%;
+}
+<?php } ?>
+
+<?php if ( DocfiTheme::$options['forum_bgcolor'] ) { ?>
+body.bbpress .entry-banner{
+	background-color: <?php echo esc_html( DocfiTheme::$options['forum_bgcolor'] ); ?>;
+}
+<?php } ?>
+
+

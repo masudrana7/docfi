@@ -197,6 +197,8 @@ function docfi_template_style(){
 		<?php } ?>
 	}
 	<?php } ?>	
+
+
 	
 	<?php
 	return ob_get_clean();

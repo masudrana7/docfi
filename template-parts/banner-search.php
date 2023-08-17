@@ -10,7 +10,7 @@
                         </svg>
                     </span>
                     <div class="input-group-addon rt-input-wrap flex-grow-1">
-                        <input type="text" class="searchbox-input" name="search" id="searchInput" placeholder="Search in..." autocomplete="off">
+                        <input type="text" class="searchbox-input" name="search" id="rtsearchInput" placeholder="Search in..." autocomplete="off">
                         <span id="cleanText">x</span>
                     </div>   
                 </div>
@@ -22,12 +22,12 @@
         </form>
     </div>
     <div class="search-text d-sm-flex wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="900ms">
-        <p><span>Popular:</span> 
-            <ul class="rt-search-key">
-                <li class="keyword"><a href="#">Code</a></li>
-                <li class="keyword"><a href="#">Basic</a></li>
-                <li class="keyword"><a href="#">Price</a></li>
-                <li class="keyword"><a href="#">WordPress</a></li>
+        <p><span><?php echo esc_html( DocfiTheme::$options['banner_popular_text'] ); ?></span> 
+            <ul class="rt-banner-search-key rt-search-key">
+                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag1'] ); ?></a></li>
+                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag2'] ); ?></a></li>
+                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag3'] ); ?></a></li>
+                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag4'] ); ?></a></li>
             </ul>
         </p>
     </div>

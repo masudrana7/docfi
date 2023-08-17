@@ -85,6 +85,15 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'banner_top_padding'    	=> 200,
             'banner_bottom_padding' 	=> 185,
             'breadcrumb_active' 		=> 0,
+
+            //Forum
+            'banner_popular_text' 		=> 'Popular:',
+            'banner_popular_tag1' 		=> 'Code',
+            'banner_popular_tag2' 		=> 'Basic',
+            'banner_popular_tag3' 		=> 'Price',
+            'banner_popular_tag4' 		=> 'WordPress',
+            'forum_bgcolor' 		    => '',
+            'forum_bgimage' 	        => '',
 			
 			// Post Type Slug
 			'team_slug' 				=> 'team',

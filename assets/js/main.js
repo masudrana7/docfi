@@ -61,8 +61,9 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    // Search ajax
+    // Search ajax 
     if ($("#rt_datafetch").length) {
+
         $('#searchInput').on('keyup', function () {
             fetchResults();
         });
@@ -105,10 +106,61 @@ jQuery(document).ready(function ($) {
             });
         }
         //Search Keyword
-        $(".rt-search-key .keyword").on("click", function() {
+        $(".rt-search-key .keyword").on("click", function () {
             var keyword = $(this).text();
             $('.rt-input-wrap #searchInput').val(keyword);
-            $(document).trigger('docfi_search_input_change');
+            $(document).trigger('docfi_banner_search_change');
+        });
+
+        // Banner Search Ajax
+        $('#rtsearchInput').on('keyup', function () {
+            bannerFetchResults();
+        });
+        $(document).on('docfi_banner_search_change', function () {
+            bannerFetchResults();
+            $('#rtsearchInput').focus();
+        });
+
+        function bannerFetchResults() {
+            var keyword = $('#rtsearchInput').val();
+            var meta = $('#categories').val();
+            var searchkey = $('.rt-search-key .keyword a').val();
+            var searchTerm = $('#rtsearchInput').val();
+            $('#cleanText').on('click', function () {
+                $('#rtsearchInput').val('');
+                $('.rt-searchbox-container').removeClass('rs-search-key');
+            });
+            if (searchTerm.length > 0) {
+                $('.rt-searchbox-container').addClass('rs-search-key');
+
+            } else {
+                $('.rt-searchbox-container').removeClass('rs-search-key');
+            }
+
+            if (keyword.length < 3) {
+                $('#rt_datafetch').html("<span class='letters'>Minimum 3 Latter</span>");
+                return;
+            }
+            $.ajax({
+                url: docfiObj.ajaxURL,
+                type: 'post',
+                data: {
+                    action: 'banner_data_fetch',
+                    keyword: keyword,
+                    meta: meta,
+                    searchkey: searchkey,
+                },
+                success: function (data) {
+                    $('#rt_datafetch').html(data);
+                }
+            });
+        }
+
+        //Banner Search Keyword
+        $(".rt-banner-search-key .keyword").on("click", function() {
+            var keyword = $(this).text();
+            $('.rt-input-wrap #rtsearchInput').val(keyword);
+            $(document).trigger('docfi_banner_search_change');
         });
     }
     
