@@ -64,7 +64,6 @@ CSS INDEX
 #. Fluent form
 #. Gutenberg Support
 #. Woocommerce
-
 #. Docs Single 
 #. Forum Style
 ---------------------------------------*/
@@ -6610,7 +6609,7 @@ div.fluentform .rt-submit-form .ff-btn-submit{
 	color: var(--docfi-white-color) !important;
 	border-style: none;
 	border-radius: 50px 50px 50px 50px;
-	padding: 24px 24px 24px 24px;
+	padding: 20px 24px;
 	margin-top: 0px;
 	font-size: 20px;
 	font-weight: 700;
@@ -9895,6 +9894,9 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 	margin: 0 auto;
 	position: relative;
 }
+.rt-banner-search.rt-hero-section-content-wrapper{
+	margin-bottom: -75px;
+}
 .nice-select {
 	box-sizing: border-box;
 	clear: both;
@@ -10124,7 +10126,7 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 .rt-banner-search .rt-searchbox-form #cleanText{
 	right: 0;
 }
-.rs-search-key .rt-searchbox-form #cleanText {
+.rt-search-container .rt-searchbox-form #cleanText {
 	opacity: 1;
 	visibility: visible;
 }
@@ -10148,17 +10150,17 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 	transform: translateX(-50%);
 	z-index: 2;
 }
-.rt-hero-section-content-wrapper .rt-searchbox-container:not(.rs-search-key) #rt_datafetch{
+.rt-hero-section-content-wrapper .rt-searchbox-container:not(.rt-search-container) #rt_datafetch{
 	opacity: 0;
 	visibility: hidden;
 }
-.rt-hero-section-content-wrapper .rs-search-key #rt_datafetch{
+.rt-hero-section-content-wrapper .rt-search-container #rt_datafetch{
 	background: #fff;
 	opacity: 1;
 	visibility: visible;
 	text-align: left;
 }
-.rt-hero-section-content-wrapper .rs-search-key #rt_datafetch:after {
+.rt-hero-section-content-wrapper .rt-search-container #rt_datafetch:after {
 	content: "";
 	top: -6px;
 	left: 30px;
@@ -10170,7 +10172,7 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 	border-top: 1px solid #e6eeef;
 	transform: rotate(45deg);
 }
-.rt-searchbox-container .rt-searchbox-container:not(.rs-search-key) .letters{
+.rt-searchbox-container .rt-searchbox-container:not(.rt-search-container) .letters{
 	display: none;
 }
 .rt-search-breadcrumb{
@@ -10409,7 +10411,7 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 	justify-content: space-between;
 }
 #bbpress-forums.docfi-wrapper-forums .bbp-header li{
-	font-weight: 500;
+	font-weight: 600;
 	color: var(--docfi-heading-color);
 	font-size: 18px;
 }
@@ -10428,18 +10430,19 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 	padding: 18px 50px;
 	padding-right: 30px;
 }
-.docfi-wrapper-forums li.bbp-forum-freshness,
-.docfi-wrapper-forums li.bbp-topic-freshness {
+
+.rt-tofics-info li.bbp-forum-freshness,
+.rt-tofics-info li.bbp-topic-freshness {
 	width: 20%;
 }
-.docfi-wrapper-forums li.bbp-forum-info,
-.docfi-wrapper-forums li.bbp-topic-title {
+.rt-tofics-info li.bbp-forum-info,
+.rt-tofics-info li.bbp-topic-title {
 	width: 62%;
 }
-.docfi-wrapper-forums li.bbp-forum-reply-count,
-.docfi-wrapper-forums li.bbp-forum-topic-count,
-.docfi-wrapper-forums li.bbp-topic-reply-count,
-.docfi-wrapper-forums li.bbp-topic-voice-count {
+.rt-tofics-info li.bbp-forum-reply-count,
+.rt-tofics-info li.bbp-forum-topic-count,
+.rt-tofics-info li.bbp-topic-reply-count,
+.rt-tofics-info li.bbp-topic-voice-count {
 	width: 9%;
 }
 .docfi-wrapper-forums .topics-meta{
@@ -10816,4 +10819,51 @@ body #bbpress-forums{
 	font-style: 15px;
 	font-weight: 700;
 	color: var(--docfi-heading-color);
+}
+#bbpress-forums .rt-forum-info .bbp-forum-info .bbp-forum-title{
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--docfi-heading-color);
+	transition: 0.3s;
+}
+#bbpress-forums .rt-forum-info .bbp-forum-info .bbp-forum-title:hover{
+	color: var(--docfi-primary-color);
+}
+#bbpress-forums .rt-forum-info .bbp-forum-content{
+	margin: 0;
+	font-size: 15px;
+	color: var(--docfi-body-color);
+}
+
+.rt-forum-info li.bbp-forum-freshness,
+.rt-forum-info li.bbp-topic-freshness {
+	width: 27%;
+}
+.rt-forum-info li.bbp-forum-info,
+.rt-forum-info li.bbp-topic-title {
+	width: 50%;
+}
+.rt-forum-info li.bbp-forum-reply-count,
+.rt-forum-info li.bbp-forum-topic-count,
+.rt-forum-info li.bbp-topic-reply-count,
+.rt-forum-info li.bbp-topic-voice-count {
+	width: 11%;
+}
+.rt-title-inner{
+	display: flex;
+}
+.rt-title-inner .rt-author-image{
+	min-width: 60px;
+	margin-right: 12px;
+	max-width: 60px;
+}
+.rt-title-inner .rt-author-image img{
+	position: relative;
+	top: 8px;
+}
+.single-forum .docfi-column-sticky .entry-thumbnail{
+	display: none;
+}
+.docfi-wrapper-forums .rt-forum-info .bbp-forum-freshness{
+	padding-left: 30px;
 }

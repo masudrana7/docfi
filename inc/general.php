@@ -22,6 +22,9 @@ if ( !function_exists( 'docfi_setup' ) ) {
 		remove_theme_support('widgets-block-editor');
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video', 'audio' ) );
+		
+		// Forum Feature Image
+		add_post_type_support('forum', array('thumbnail'));
 		// for gutenberg support
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'editor-color-palette', array(

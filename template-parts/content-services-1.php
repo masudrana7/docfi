@@ -29,7 +29,7 @@ $content = wp_trim_words( get_the_excerpt(), DocfiTheme::$options['service_excer
 			<?php if ( DocfiTheme::$options['service_ar_excerpt'] ) { ?>
 			<div class="service-text"><?php echo wp_kses( $content , 'alltext_allow' ); ?></div>
 			<?php } if ( DocfiTheme::$options['service_ar_action'] ) { ?>
-			<div class="service-action"><a class="button-style-3 btn-common" href="<?php the_permalink();?>"><?php esc_html_e( 'See Details', 'docfi' );?><i class="icon-docfi-right-arrow"></i></a>
+			<div class="service-action"><a class="button-style-3 btn-common" href="<?php the_permalink();?>"><?php esc_html_e( 'See Details', 'docfi' );?></a>
       		</div>	
 			<?php } ?>
 		</div>

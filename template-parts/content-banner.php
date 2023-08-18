@@ -22,7 +22,7 @@ elseif ( is_home() ) {
 elseif (is_post_type_archive('docfi_team')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Teams', 'docfi' ) );
 } elseif (is_post_type_archive('docfi_docs')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Portfolios', 'docfi' ) );
+	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Docs', 'docfi' ) );
 } elseif (is_post_type_archive('docfi_service')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Services', 'docfi' ) );
 } elseif ( is_archive() ) {
@@ -59,7 +59,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 	<div class="entry-banner">
 		<div class="container">
 			<div class="entry-banner-content">
-				<?php if (  is_singular( 'topic' ) || bbp_is_forum_archive() ) { 
+				<?php if (  is_singular( 'forum' ) || is_singular( 'topic' ) || bbp_is_forum_archive() ) { 
 					get_template_part( 'template-parts/banner', 'search' ); 
 				} elseif (is_single()) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>

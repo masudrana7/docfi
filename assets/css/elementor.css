@@ -14,6 +14,8 @@ CSS INDEX
 #. EL: Button
 #. EL: Feature Post Tab
 #. EL: RT Docs Title
+#. EL: Forum Slider
+#. EL: RT Image
 #. EL: Section Title
 #. EL: Title WITH Text
 #. EL: Hero Banner
@@ -38,7 +40,6 @@ CSS INDEX
 #. EL: Logo Slider
 #. EL: Marquee Slider
 #. EL: Theia Sticky Sidebar
-
 
 #. EL: Custom css
 ---------------------------------------*/
@@ -130,6 +131,9 @@ CSS INDEX
 }
 .rt-swiper-slider .icon-docfi-right-arrow {
     font-size: 12px;
+}
+.rt-swiper-nav .swiper-navigation>div{
+
 }
 /*top right*/
 .top-right .rt-swiper-slider .swiper-navigation {
@@ -1780,6 +1784,117 @@ div.rt-cat-list .logo-card:hover svg{
 -------------------------------------*/
 .rt-docs-title .entry-title{
     margin-bottom: 3px;
+}
+/*-------------------------------------
+#. EL: Forum Slider
+-------------------------------------*/
+.rt-forum-wrapper{
+    position: relative;
+}
+.rt-forum-wrapper .swiper-navigation>div{
+    background: #fff;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.07);
+}
+.rt-forum-wrapper .swiper-navigation .swiper-button-prev{
+    left: -30px;
+} 
+.rt-forum-wrapper .swiper-navigation .swiper-button-next{
+    right: -30px;
+} 
+.rt-forum-wrapper.rt-swiper-nav .swiper-navigation>div{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+.rt-card--style-4 {
+    border: 1px solid #E1E1E1;
+    border-radius: 20px;
+    padding: 68px 20px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.rt-card--style-4 .icon {
+    margin-bottom: 20px;
+}
+
+.rt-card--style-4 .card-btn {
+    border: 1px solid #D9D9D9;
+    border-radius: 100px;
+    padding: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 35px;
+    height: 35px;
+}
+
+.rt-card--style-4 .card-btn:hover {
+    background: var(--docfi-primary-color);
+    border: 1px solid transparent;
+}
+
+.rt-card--style-4 .card-btn:hover svg {
+    fill: var(--docfi-white-color);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.rt-card--style-4 .card-title {
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+.rt-card--style-4 .card-title a {
+    font-weight: 600;
+    font-size: 1.3125rem;
+}
+.rt-card--style-4 .card-title a:hover {
+    color: #8a58f3;
+}
+.rt-card--style-4 .card-info {
+    margin-bottom: 17px;
+}
+.rt-card--style-4:hover {
+    border: 1px solid #fab6eb;
+    background: var(--docfi-white-color);
+}
+.rt-card--style-4:hover .icon {
+    -webkit-animation: fadeInDown 1s forwards;
+    animation: fadeInDown 1s forwards;
+}
+/*-------------------------------------
+#. EL: RT Image
+-------------------------------------*/
+.rt-banner-flicker-animation .rt-image{
+    left: 0;
+    top: 0;
+    -webkit-animation: flickerAnimation3 2s infinite;
+    animation: flickerAnimation3 2s infinite;
+}
+@-webkit-keyframes flickerAnimation3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flickerAnimation3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*-------------------------------------

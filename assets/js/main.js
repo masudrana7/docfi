@@ -74,17 +74,17 @@ jQuery(document).ready(function ($) {
         function fetchResults() {
             var keyword = $('#searchInput').val();
             var meta = $('#categories').val();
-            var searchkey = $('.rt-search-key .keyword a').val();
+            var searchkey = $('.rt-addon-search .keyword a').val();
             var searchTerm = $('#searchInput').val();
             $('#cleanText').on('click', function () {
                 $('#searchInput').val('');
-                $('.rt-searchbox-container').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rt-search-container');
             });
             if (searchTerm.length > 0) {
-                $('.rt-searchbox-container').addClass('rs-search-key');
+                $('.rt-searchbox-container').addClass('rt-search-container');
                 
             } else {
-                $('.rt-searchbox-container').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rt-search-container');
             }
 
             if (keyword.length < 3) {
@@ -106,10 +106,10 @@ jQuery(document).ready(function ($) {
             });
         }
         //Search Keyword
-        $(".rt-search-key .keyword").on("click", function () {
+        $(".rt-addon-search .keyword").on("click", function () {
             var keyword = $(this).text();
             $('.rt-input-wrap #searchInput').val(keyword);
-            $(document).trigger('docfi_banner_search_change');
+            $(document).trigger('docfi_search_input_change');
         });
 
         // Banner Search Ajax
@@ -124,17 +124,17 @@ jQuery(document).ready(function ($) {
         function bannerFetchResults() {
             var keyword = $('#rtsearchInput').val();
             var meta = $('#categories').val();
-            var searchkey = $('.rt-search-key .keyword a').val();
+            var searchkey = $('.rt-banner-search-key .keyword a').val();
             var searchTerm = $('#rtsearchInput').val();
             $('#cleanText').on('click', function () {
                 $('#rtsearchInput').val('');
-                $('.rt-searchbox-container').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rt-search-container');
             });
             if (searchTerm.length > 0) {
-                $('.rt-searchbox-container').addClass('rs-search-key');
+                $('.rt-searchbox-container').addClass('rt-search-container');
 
             } else {
-                $('.rt-searchbox-container').removeClass('rs-search-key');
+                $('.rt-searchbox-container').removeClass('rt-search-container');
             }
 
             if (keyword.length < 3) {

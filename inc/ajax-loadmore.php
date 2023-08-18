@@ -113,7 +113,7 @@ class AjaxLoadMore {
 					<div class="entry-text"><p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p></div>
 					<?php } ?>	
 					<?php if ( DocfiTheme::$options['blog_read_more'] ) { ?>
-					<div class="post-read-more"><a class="button-style-3 btn-common" href="<?php the_permalink();?>"><?php esc_html_e( 'Continue Reading', 'docfi' );?><i class="icon-docfi-right-arrow"></i></a>
+					<div class="post-read-more"><a class="button-style-3 btn-common" href="<?php the_permalink();?>"><?php esc_html_e( 'Continue Reading', 'docfi' );?></a>
 		          	</div>	
 		          	<?php } ?>
 				</div>

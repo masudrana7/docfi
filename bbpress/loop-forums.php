@@ -10,7 +10,7 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 do_action( 'bbp_template_before_forums_loop' ); ?>
-<ul id="forums-list-<?php bbp_forum_id(); ?>" class="bbp-forums">
+<ul id="forums-list-<?php bbp_forum_id(); ?>" class="rt-forum-info bbp-forums">
 	<li class="bbp-header">
 		<ul class="forum-titles">
 			<li class="bbp-forum-info"><?php esc_html_e( 'Forum', 'bbpress' ); ?></li>
