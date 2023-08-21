@@ -11,13 +11,14 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 		
 		use IconTrait;  
 
-		public static function pagination() {
-			
-			if( is_singular() )
-				return;
+		public static function pagination( $wp_query = null  ) {
+			// if( is_singular() )
+			// 	return;
 
-			global $wp_query;
 
+			if ( ! $wp_query ) {
+				global $wp_query;
+			}
 			/** Stop execution if there's only 1 page */
 			if( $wp_query->max_num_pages <= 1 )
 				return;
@@ -34,7 +35,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 				$links[] = $paged - 1;
 				$links[] = $paged - 2;
 			}
-
 			if ( ( $paged + 2 ) <= $max ) {
 				$links[] = $paged + 2;
 				$links[] = $paged + 1;
@@ -45,7 +45,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 		public static function comments_callback( $comment, $args, $depth ){
 			include DOCFI_INC_DIR . 'views/comments-callback.php';
 		}
-
 
 		public static function hex2rgb($hex) {
 			$hex = str_replace("#", "", $hex);
@@ -61,7 +60,6 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			$rgb = "$r, $g, $b";
 			return $rgb;
 		}
-
 		public static function filter_social( $args ){
 			return ( $args['url'] != '' );
 		}

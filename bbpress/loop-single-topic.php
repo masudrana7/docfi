@@ -33,8 +33,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</li>
 	<li class="bbp-topic-voice-count"><?php bbp_topic_voice_count(); ?></li>
-
-	<li class="bbp-topic-reply-count"><?php bbp_show_lead_topic() ? bbp_topic_reply_count() : bbp_topic_post_count(); ?></li>
+	<li class="bbp-topic-reply-count"><?php bbp_topic_reply_count(); ?></li>
 	<li class="bbp-topic-freshness">
 		<?php echo bbp_get_forum_last_active_time(bbp_get_topic_forum_id()) ?>
 		<p class="bbp-topic-meta">

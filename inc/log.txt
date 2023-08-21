@@ -1,0 +1,298 @@
+WP_Query Object
+(
+    [query] => Array
+        (
+            [post_type] => topic
+            [posts_per_page] => 1
+            [paged] => 1
+        )
+
+    [query_vars] => Array
+        (
+            [post_type] => topic
+            [posts_per_page] => 1
+            [paged] => 1
+            [error] => 
+            [m] => 
+            [p] => 0
+            [post_parent] => 
+            [subpost] => 
+            [subpost_id] => 
+            [attachment] => 
+            [attachment_id] => 0
+            [name] => 
+            [pagename] => 
+            [page_id] => 0
+            [second] => 
+            [minute] => 
+            [hour] => 
+            [day] => 0
+            [monthnum] => 0
+            [year] => 0
+            [w] => 0
+            [category_name] => 
+            [tag] => 
+            [cat] => 
+            [tag_id] => 
+            [author] => 
+            [author_name] => 
+            [feed] => 
+            [tb] => 
+            [meta_key] => 
+            [meta_value] => 
+            [preview] => 
+            [s] => 
+            [sentence] => 
+            [title] => 
+            [fields] => 
+            [menu_order] => 
+            [embed] => 
+            [category__in] => Array
+                (
+                )
+
+            [category__not_in] => Array
+                (
+                )
+
+            [category__and] => Array
+                (
+                )
+
+            [post__in] => Array
+                (
+                )
+
+            [post__not_in] => Array
+                (
+                )
+
+            [post_name__in] => Array
+                (
+                )
+
+            [tag__in] => Array
+                (
+                )
+
+            [tag__not_in] => Array
+                (
+                )
+
+            [tag__and] => Array
+                (
+                )
+
+            [tag_slug__in] => Array
+                (
+                )
+
+            [tag_slug__and] => Array
+                (
+                )
+
+            [post_parent__in] => Array
+                (
+                )
+
+            [post_parent__not_in] => Array
+                (
+                )
+
+            [author__in] => Array
+                (
+                )
+
+            [author__not_in] => Array
+                (
+                )
+
+            [search_columns] => Array
+                (
+                )
+
+            [ignore_sticky_posts] => 
+            [suppress_filters] => 
+            [cache_results] => 1
+            [update_post_term_cache] => 1
+            [update_menu_item_cache] => 
+            [lazy_load_term_meta] => 1
+            [update_post_meta_cache] => 1
+            [nopaging] => 
+            [comments_per_page] => 50
+            [no_found_rows] => 
+            [order] => DESC
+        )
+
+    [tax_query] => WP_Tax_Query Object
+        (
+            [queries] => Array
+                (
+                )
+
+            [relation] => AND
+            [table_aliases:protected] => Array
+                (
+                )
+
+            [queried_terms] => Array
+                (
+                )
+
+            [primary_table] => wp_posts
+            [primary_id_column] => ID
+        )
+
+    [meta_query] => WP_Meta_Query Object
+        (
+            [queries] => Array
+                (
+                )
+
+            [relation] => 
+            [meta_table] => 
+            [meta_id_column] => 
+            [primary_table] => 
+            [primary_id_column] => 
+            [table_aliases:protected] => Array
+                (
+                )
+
+            [clauses:protected] => Array
+                (
+                )
+
+            [has_or_relation:protected] => 
+        )
+
+    [date_query] => 
+    [request] => 
+					SELECT SQL_CALC_FOUND_ROWS  wp_posts.ID
+					FROM wp_posts 
+					WHERE 1=1  AND ((wp_posts.post_type = 'topic' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'closed' 
+OR wp_posts.post_status = 'private' 
+OR wp_posts.post_status = 'hidden')))
+					
+					ORDER BY wp_posts.post_date DESC
+					LIMIT 0, 1
+				
+    [posts] => Array
+        (
+            [0] => WP_Post Object
+                (
+                    [ID] => 3095
+                    [post_author] => 1
+                    [post_date] => 2023-08-14 09:18:45
+                    [post_date_gmt] => 2023-08-14 09:18:45
+                    [post_content] => Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the as integer quam dolor nunc semper. Ornare non nulla faucibus pulvinar vulputate neque. The as Suscipit the tristique nam enim the mauris any more dummy ready consectetur platea.
+
+The Cras aliquet accumsan. Egestas ut eget egestas as ultrices diam. Sem fusce pretium ultrices mauris magnis as nunc.Malesuada commodo pellente in pretium tincidunt.
+                    [post_title] => WooCommerce Setup has no available for selection
+                    [post_excerpt] => 
+                    [post_status] => publish
+                    [comment_status] => closed
+                    [ping_status] => open
+                    [post_password] => 
+                    [post_name] => woocommerce-setup-has-no-available-for-selection
+                    [to_ping] => 
+                    [pinged] => 
+                    [post_modified] => 2023-08-16 07:24:25
+                    [post_modified_gmt] => 2023-08-16 07:24:25
+                    [post_content_filtered] => 
+                    [post_parent] => 3066
+                    [guid] => http://docfi.local/?post_type=topic&#038;p=3095
+                    [menu_order] => 0
+                    [post_type] => topic
+                    [post_mime_type] => 
+                    [comment_count] => 0
+                    [filter] => raw
+                )
+
+        )
+
+    [post_count] => 1
+    [current_post] => -1
+    [before_loop] => 
+    [in_the_loop] => 
+    [post] => WP_Post Object
+        (
+            [ID] => 3095
+            [post_author] => 1
+            [post_date] => 2023-08-14 09:18:45
+            [post_date_gmt] => 2023-08-14 09:18:45
+            [post_content] => Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris nullam the as integer quam dolor nunc semper. Ornare non nulla faucibus pulvinar vulputate neque. The as Suscipit the tristique nam enim the mauris any more dummy ready consectetur platea.
+
+The Cras aliquet accumsan. Egestas ut eget egestas as ultrices diam. Sem fusce pretium ultrices mauris magnis as nunc.Malesuada commodo pellente in pretium tincidunt.
+            [post_title] => WooCommerce Setup has no available for selection
+            [post_excerpt] => 
+            [post_status] => publish
+            [comment_status] => closed
+            [ping_status] => open
+            [post_password] => 
+            [post_name] => woocommerce-setup-has-no-available-for-selection
+            [to_ping] => 
+            [pinged] => 
+            [post_modified] => 2023-08-16 07:24:25
+            [post_modified_gmt] => 2023-08-16 07:24:25
+            [post_content_filtered] => 
+            [post_parent] => 3066
+            [guid] => http://docfi.local/?post_type=topic&#038;p=3095
+            [menu_order] => 0
+            [post_type] => topic
+            [post_mime_type] => 
+            [comment_count] => 0
+            [filter] => raw
+        )
+
+    [comment_count] => 0
+    [current_comment] => -1
+    [found_posts] => 6
+    [max_num_pages] => 6
+    [max_num_comment_pages] => 0
+    [is_single] => 
+    [is_preview] => 
+    [is_page] => 
+    [is_archive] => 1
+    [is_date] => 
+    [is_year] => 
+    [is_month] => 
+    [is_day] => 
+    [is_time] => 
+    [is_author] => 
+    [is_category] => 
+    [is_tag] => 
+    [is_tax] => 
+    [is_search] => 
+    [is_feed] => 
+    [is_comment_feed] => 
+    [is_trackback] => 
+    [is_home] => 
+    [is_privacy_policy] => 
+    [is_404] => 
+    [is_embed] => 
+    [is_paged] => 
+    [is_admin] => 
+    [is_attachment] => 
+    [is_singular] => 
+    [is_robots] => 
+    [is_favicon] => 
+    [is_posts_page] => 
+    [is_post_type_archive] => 1
+    [query_vars_hash:WP_Query:private] => b7816258817d0f9a5ed5ff32489b8a45
+    [query_vars_changed:WP_Query:private] => 
+    [thumbnails_cached] => 
+    [allow_query_attachment_by_filename:protected] => 
+    [stopwords:WP_Query:private] => 
+    [compat_fields:WP_Query:private] => Array
+        (
+            [0] => query_vars_hash
+            [1] => query_vars_changed
+        )
+
+    [compat_methods:WP_Query:private] => Array
+        (
+            [0] => init_query_flags
+            [1] => parse_tax_query
+        )
+
+)

@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
                 <?php the_post_thumbnail('full'); ?>
             </div>
         <?php endif; ?>
-
+		
 		<div class="rt-forum-title">
 			<?php do_action( 'bbp_theme_before_forum_title' ); ?>
 			<a class="bbp-forum-title" href="<?php bbp_forum_permalink(); ?>"><?php bbp_forum_title(); ?></a>
@@ -33,11 +33,9 @@ defined( 'ABSPATH' ) || exit;
 			<?php do_action( 'bbp_theme_after_forum_sub_forums' ); ?>
 			<?php bbp_forum_row_actions(); ?>
 		</div>
-
-
 	</li>
 	<li class="bbp-forum-topic-count"><?php bbp_forum_topic_count(); ?></li>
-	<li class="bbp-forum-reply-count"><?php bbp_show_lead_topic() ? bbp_forum_reply_count() : bbp_forum_post_count(); ?></li>
+	<li class="bbp-forum-reply-count"><?php bbp_forum_reply_count(); ?></li>
 	<li class="bbp-forum-freshness">
 		<div class="rt-bbp-forum-author">
 			<?php if(bbp_get_forum_last_active_id()){?>

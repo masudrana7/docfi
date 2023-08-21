@@ -16,13 +16,11 @@ CSS INDEX
 #. EL: RT Docs Title
 #. EL: Forum Slider
 #. EL: RT Image
+#. EL: RT Forum Status
 #. EL: Section Title
 #. EL: Title WITH Text
 #. EL: Hero Banner
 #. EL: About Author
-#. EL: Social Link
-#. EL: Skill Bar
-#. EL: Banner slider
 #. EL: Image Addon
 #. EL: Shape Animation
 #. EL: Video Addon
@@ -40,7 +38,6 @@ CSS INDEX
 #. EL: Logo Slider
 #. EL: Marquee Slider
 #. EL: Theia Sticky Sidebar
-
 #. EL: Custom css
 ---------------------------------------*/
 /*-----------------------
@@ -573,6 +570,7 @@ CSS INDEX
     border-radius: 20px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    background: #fbfbff;
 }
 .rt-card--style-8 .card-title {
     gap: 10px;
@@ -1788,6 +1786,11 @@ div.rt-cat-list .logo-card:hover svg{
 /*-------------------------------------
 #. EL: Forum Slider
 -------------------------------------*/
+.rt-forum-list-wrapper ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .rt-forum-wrapper{
     position: relative;
 }
@@ -2030,6 +2033,33 @@ div.rt-cat-list .logo-card:hover svg{
 .font-size-controller-btn-area .font-size-controller-btn-wrapper button.active {
     color: #3948D2;
 }
+/*-------------------------------------
+#. RT Forum Status
+.
+-------------------------------------*/
+.rt-forum-status {
+    background: #F8F8FF;
+    border-radius: 20px;
+    padding: 60px 20px;
+    margin-bottom: 24px;
+}
+.rt-forum-status .icon {
+    margin-bottom: 28px;
+}
+.rt-forum-status .title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--docfi-heading-color);
+    margin-bottom: 10px;
+}
+.rt-forum-status .para-text{
+    font-style: italic;
+    font-size: 18px;
+    line-height: 21px;
+    color: #7A7B7C;
+}
+
 
 
 

@@ -120,6 +120,29 @@ $docfi_theme_data = wp_get_theme();
 		}	
 	}
 
+	function custom_login_form() {
+		if (is_user_logged_in()) {
+			// Display a message if the user is already logged in
+			echo 'You are already logged in.';
+			return;
+		}
+
+		$output = '<form name="loginform" id="loginform" action="' . esc_url(wp_login_url()) . '" method="post">';
+		$output .= '<p><label for="user_login">Username or Email<br />';
+		$output .= '<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label></p>';
+		$output .= '<p><label for="user_pass">Password<br />';
+		$output .= '<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label></p>';
+		$output .= '<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>';
+		$output .= '<p class="submit">';
+		$output .= '<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />';
+		$output .= '<input type="hidden" name="redirect_to" value="' . esc_url(home_url('/')) . '" />';
+		$output .= '<input type="hidden" name="testcookie" value="1" />';
+		$output .= '</p></form>';
+
+		return $output;
+	}
+add_shortcode('custom_login', 'custom_login_form');
+
 	
 
 

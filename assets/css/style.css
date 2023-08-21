@@ -6355,11 +6355,12 @@ nav ul.pagination li .page-link {
     color: var(--docfi-heading-color);
     background: var(--docfi-grey-color-1);
     padding: 0;
-    height: 48px;
-    width: 48px;
-    font-size: 18px;
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
     font-weight: 600;
-	border-radius: 48px;
+	border-radius: 5px;
+	transition: 0.4s !important;
 }
 .pagination-area ul li i {
 	font-size: 13px;
@@ -10429,8 +10430,12 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 .docfi-wrapper-forums#bbpress-forums li.bbp-body ul.topic{
 	padding: 18px 50px;
 	padding-right: 30px;
+	display: flex;
+	align-items: center;
 }
-
+.docfi-wrapper-forums#bbpress-forums .pagination-area li + li{
+	margin-left: 4px;
+}
 .rt-tofics-info li.bbp-forum-freshness,
 .rt-tofics-info li.bbp-topic-freshness {
 	width: 20%;
@@ -10834,7 +10839,9 @@ body #bbpress-forums{
 	font-size: 15px;
 	color: var(--docfi-body-color);
 }
-
+.rt-forum-info .bbp-forum-content p{
+	margin-bottom: 0;
+}
 .rt-forum-info li.bbp-forum-freshness,
 .rt-forum-info li.bbp-topic-freshness {
 	width: 27%;
@@ -10851,19 +10858,42 @@ body #bbpress-forums{
 }
 .rt-title-inner{
 	display: flex;
+	align-items: center;
 }
 .rt-title-inner .rt-author-image{
 	min-width: 60px;
 	margin-right: 12px;
 	max-width: 60px;
 }
-.rt-title-inner .rt-author-image img{
-	position: relative;
-	top: 8px;
-}
 .single-forum .docfi-column-sticky .entry-thumbnail{
 	display: none;
 }
 .docfi-wrapper-forums .rt-forum-info .bbp-forum-freshness{
 	padding-left: 30px;
+}
+.rt-forum-list-wrapper .rt-forum-info .bbp-forum-freshness {
+	padding-left: 60px;
+}
+/*======================================
+// #. Login & Register
+====================================*/
+.docfi-login-section .rt-page-wrapper{
+	height: 100vh;
+}
+.docfi-login-section .docfi-login-wrapper{
+	height: 100%;
+}
+.docfi-login-wrapper{
+	display: flex;
+}
+.docfi-login-wrapper .docfi-login-left-sidebar{
+	background: var(--docfi-primary-color);
+	width: 30%;
+}
+.docfi-login-wrapper .docfi-login-right-sidebar{
+	width: 70%;
+}
+.docfi-login-wrapper .docfi-form-inner{
+	max-width: 450px;
+	margin: 0 auto;
 }
