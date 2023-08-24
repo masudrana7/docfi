@@ -17,26 +17,9 @@ CSS INDEX
 #. EL: Forum Slider
 #. EL: RT Image
 #. EL: RT Forum Status
-#. EL: Section Title
-#. EL: Title WITH Text
-#. EL: Hero Banner
-#. EL: About Author
 #. EL: Image Addon
-#. EL: Shape Animation
-#. EL: Video Addon
-#. EL: Progress Bar
-#. EL: Pricing Table
-#. EL: Team Grid & Slider
-#. EL: Team Single
-#. EL: Service Grid & Slider
-#. EL: Service Tab
-#. EL: Service Single
-#. EL: Portfolio Grid & Slider
-#. EL: Portfolio Single
 #. EL: Post Grid
 #. EL: Post Slider
-#. EL: Logo Slider
-#. EL: Marquee Slider
 #. EL: Theia Sticky Sidebar
 #. EL: Custom css
 ---------------------------------------*/
@@ -815,7 +798,7 @@ CSS INDEX
 }
 .rt-accordion-button .rt-accordion-icon-opened{
     position: relative;
-    top: -7px;
+    top: -4px;
 }
 /*accordion style 01*/
 
@@ -1079,6 +1062,7 @@ CSS INDEX
     box-shadow: none;
     border-radius: 20px;
     padding: 69px 85px;
+    margin-top: 30px;
 }
 
 .testimonial-item--style-2 .quotation-icon {
@@ -1193,8 +1177,11 @@ CSS INDEX
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .swiper-arrow:hover svg {
     fill: var(--docfi-white-color);
 }
+.testimonial-section--style-2 .slider-navigation-btn-wrapper .next,
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .prev {
-    top: 73%;
+    top: 78%;
+}
+.testimonial-section--style-2 .slider-navigation-btn-wrapper .prev {
     left: 72%;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1204,7 +1191,6 @@ CSS INDEX
     }
 }
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .next {
-    top: 73%;
     right: 21%;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1698,7 +1684,7 @@ div.rt-cat-list .logo-card:hover svg{
     margin-top: 12px;
 }
 .logo-card {
-    padding: 34px 48px 35px 30px;
+    padding: 28px 48px 30px 30px;
     border: 1px solid #CDCDCD;
     border-radius: 10px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -1872,6 +1858,9 @@ div.rt-cat-list .logo-card:hover svg{
     -webkit-animation: flickerAnimation3 2s infinite;
     animation: flickerAnimation3 2s infinite;
 }
+.rt-banner-flicker-animation .rt-image img{
+    opacity: 0.25;
+}
 @-webkit-keyframes flickerAnimation3 {
     0% {
         opacity: 0;
@@ -1900,6 +1889,80 @@ div.rt-cat-list .logo-card:hover svg{
     }
 }
 
+/*-------------------------------------
+#. EL: RT Tab
+-------------------------------------*/
+.rt-normal-tab-wrapper nav,
+.rt-normal-tab-wrapper .nav-pills {
+    gap: 5px;
+}
+.rt-normal-tab-wrapper nav .nav-item .nav-link,
+.rt-normal-tab-wrapper .nav-pills .nav-item .nav-link {
+    background: #F2FFFB;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: #15C590;
+    padding: 7px 21px;
+    border-radius: 0;
+}
+.rt-normal-tab-wrapper nav .nav-item .nav-link.active,
+.rt-normal-tab-wrapper .nav-pills .nav-item .nav-link.active {
+    background: #15C590;
+    color: var(--docfi-white-color);
+}
+.rt-normal-tab-wrapper .tab-content {
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    margin-top: -1px;
+}
+.rt-normal-tab-wrapper .tab-content .tab-pane {
+    padding: 25px 47px 20px 20px;
+}
+/* Tab Style Two */
+.rt-number-tab-wrapper nav,
+.rt-number-tab-wrapper .nav-pills {
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.rt-number-tab-wrapper nav .nav-item .nav-link,
+.rt-number-tab-wrapper .nav-pills .nav-item .nav-link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--docfi-heading-color);
+    border-radius: 0;
+    background: #F5F5F5;
+    border-radius: 50px;
+    padding: 11px 15px 11px 0px;
+}
+.rt-number-tab-wrapper nav .nav-item .nav-link span,
+.rt-number-tab-wrapper .nav-pills .nav-item .nav-link span {
+    background: var(--docfi-white-color);
+    border-radius: 50%;
+    padding: 6px 11px 6px 11px;
+    margin: 3px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--docfi-heading-color);
+}
+.rt-number-tab-wrapper nav .nav-item .nav-link.active,
+.rt-number-tab-wrapper .nav-pills .nav-item .nav-link.active {
+    background: var(--docfi-primary-color);
+    color: var(--docfi-white-color);
+}
+.rt-number-tab-wrapper nav .nav-item .nav-link.active span,
+.rt-number-tab-wrapper .nav-pills .nav-item .nav-link.active span {
+    color: var(--docfi-primary-color);
+}
+.rt-number-tab-wrapper .tab-content {
+    background: #F5F5F5;
+    border-radius: 10px;
+}
+.rt-number-tab-wrapper .tab-content .tab-pane {
+    padding: 23px 33px 27px 33px;
+}
 /*-------------------------------------
 #. EL: RT Table
 -------------------------------------*/

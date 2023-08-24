@@ -12,11 +12,11 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 else{
 	$docfi_layout_class = 'col-xl-8';
 }
-$docfi_is_post_archive = is_home() || ( is_archive() && get_post_type() == 'post' ) ? true : false;
 
+$docfi_is_post_archive = is_home() || ( is_archive() && get_post_type() == 'post' ) ? true : false;
 $docfi_author_bio      = get_the_author_meta( 'description' );
-$subtitle = get_post_meta( get_the_ID(), 'docfi_subtitle', true );
-$author = $post->post_author;
+$subtitle 			   = get_post_meta( get_the_ID(), 'docfi_subtitle', true );
+$author 			   = $post->post_author;
 
 $news_author_fb = get_user_meta( $author, 'docfi_facebook', true );
 $news_author_tw = get_user_meta( $author, 'docfi_twitter', true );
@@ -24,8 +24,6 @@ $news_author_ld = get_user_meta( $author, 'docfi_linkedin', true );
 $news_author_pr = get_user_meta( $author, 'docfi_pinterest', true );
 $news_author_ins = get_user_meta( $author, 'docfi_instagram', true );
 $docfi_author_designation = get_user_meta( $author, 'docfi_author_designation', true );
-
-
 ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">

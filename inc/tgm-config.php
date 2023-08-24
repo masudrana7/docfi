@@ -50,16 +50,6 @@ function docfi_register_required_plugins() {
 			'slug'     => 'fluentform',
 			'required' => false,
 		),
-		array(
-			'name'     => 'ShopBuilder',
-			'slug'     => 'shopbuilder',
-			'required' => true,
-		),
-		array(
-			'name'     => 'WooCommerce',
-			'slug'     => 'woocommerce',
-			'required' => false,
-		),
 	);
 
 	$config = array(

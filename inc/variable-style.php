@@ -430,6 +430,8 @@ $copyright_text_color = DocfiTheme::$options['copyright_text_color'];
 $copyright_link_color = DocfiTheme::$options['copyright_link_color'];
 $copyright_hover_color = DocfiTheme::$options['copyright_hover_color'];
 $copyright_bg_color = DocfiTheme::$options['copyright_bg_color'];
+$login_left_bgcolor = DocfiTheme::$options['login_left_bgcolor'];
+$register_left_bgcolor = DocfiTheme::$options['register_left_bgcolor'];
 
 ?>
 
@@ -492,6 +494,18 @@ $copyright_bg_color = DocfiTheme::$options['copyright_bg_color'];
 <?php if ( DocfiTheme::$options['copyright_bg_color'] ) { ?>
 	.footer-area .footer-copyright-area {
 		background-color: <?php echo esc_html( $copyright_bg_color ); ?>;
+	}
+<?php } ?>
+
+<?php if ( DocfiTheme::$options['login_left_bgcolor'] ) { ?>
+	.docfi-login-wrapper .docfi-login-left-sidebar {
+		background-color: <?php echo esc_html( $login_left_bgcolor ); ?>;
+	}
+<?php } ?>
+
+<?php if ( DocfiTheme::$options['register_left_bgcolor'] ) { ?>
+	.docfi-register-section .docfi-login-left-sidebar {
+		background-color: <?php echo esc_html( $register_left_bgcolor ); ?>;
 	}
 <?php } ?>
 

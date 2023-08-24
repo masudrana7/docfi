@@ -13,11 +13,8 @@ defined( 'ABSPATH' ) || exit;
 if ( bbp_is_forum_edit() ) : ?>
 
 <div id="bbpress-forums" class="bbpress-wrapper">
-
 	<?php bbp_breadcrumb(); ?>
-
 	<?php bbp_single_forum_description( array( 'forum_id' => bbp_get_forum_id() ) ); ?>
-
 <?php endif; ?>
 
 <?php if ( bbp_current_user_can_access_create_forum_form() ) : ?>
@@ -184,9 +181,7 @@ if ( bbp_is_forum_edit() ) : ?>
 			</ul>
 		</div>
 	</div>
-
 <?php else : ?>
-
 	<div id="no-forum-<?php bbp_forum_id(); ?>" class="bbp-no-forum">
 		<div class="bbp-template-notice">
 			<ul>
@@ -197,11 +192,7 @@ if ( bbp_is_forum_edit() ) : ?>
 			</ul>
 		</div>
 	</div>
-
 <?php endif; ?>
-
 <?php if ( bbp_is_forum_edit() ) : ?>
-
 </div>
-
 <?php endif;

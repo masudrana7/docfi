@@ -17,7 +17,6 @@ $docfi_theme_data = wp_get_theme();
 	define( 'DOCFI_BASE_DIR',    get_template_directory(). '/' );
 	define( 'DOCFI_INC_DIR',     DOCFI_BASE_DIR . 'inc/' );
 	define( 'DOCFI_ASSETS_DIR',  DOCFI_BASE_DIR . 'assets/' );
-	define( 'DOCFI_WOO_DIR',     DOCFI_BASE_DIR . 'woocommerce/' );
 
 	// URL
 	define( 'DOCFI_BASE_URL',    get_template_directory_uri(). '/' );

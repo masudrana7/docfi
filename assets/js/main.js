@@ -50,6 +50,8 @@ jQuery(document).ready(function ($) {
     }
 
     //Search Focusin & Focusout Add Class
+
+    
     if ($(".rt-hero-section-content-wrapper").length) {
         $('.rt-hero-section-content-wrapper').focusin(function () {
             $('body').addClass('rt-search-active');
@@ -190,17 +192,7 @@ jQuery(document).ready(function ($) {
         $parent.find('input[name="docfi_docs_group"]').val(cat);
     });
 
-    //mouse-parallax
-    var parallaxInstances = [];
-    $('.rt-mouse-parallax').each(function (index, element) {
-        var $this = $(this);
-        $this.attr('id', "rt-parallax-instance-" + index);
-        parallaxInstances[index] = new Parallax($("#rt-parallax-instance-" + index).get(0), {
-            // hoverOnly: true,
-            // relativeInput: true,
-        });
-    })
-    // End JS
+
 
     $('a[href=\\#]').on('click', function (e) {
         e.preventDefault();
@@ -246,29 +238,6 @@ jQuery(document).ready(function ($) {
         })
     }
 
-    // product cat menu
-    var classHandler = true;
-    $("#cat-button").on('click', function(){
-        if(classHandler){
-            $(".cat-menu-close").addClass('cat-menu-open');
-        }else {
-            $(".cat-menu-close").removeClass('cat-menu-open');
-        }
-        classHandler = !classHandler;
-    });
-
-    /*---------------------------------------
-    Background Parallax
-    --------------------------------------- */
-    if ($(".rt-parallax-bg-yes").length) {
-        $(".rt-parallax-bg-yes").each(function () {
-            var speed = $(this).data('speed');
-            $(this).parallaxie({
-                speed: speed ? speed : 0.5,
-                offset: 0,
-            });
-        })
-    }
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
@@ -308,7 +277,7 @@ jQuery(document).ready(function ($) {
                 percentPosition: true,
                 isAnimated: true,
                 masonry: {
-                    columnWidth: ".rt-grid-item",                        
+                    columnWidth: ".rt-grid-item",
                 },
                 animationOptions: {
                     duration: 700,
@@ -318,6 +287,18 @@ jQuery(document).ready(function ($) {
             });
         });
     }
+
+    //mouse-parallax
+    var parallaxInstances = [];
+    $('.rt-mouse-parallax').each(function (index, element) {
+        var $this = $(this);
+        $this.attr('id', "rt-parallax-instance-" + index);
+        parallaxInstances[index] = new Parallax($("#rt-parallax-instance-" + index).get(0), {
+            // hoverOnly: true,
+            // relativeInput: true,
+        });
+    })
+    // End JS
 
     /* Isotope */
     if (typeof $.fn.isotope == 'function') {
@@ -480,15 +461,18 @@ jQuery(document).ready(function ($) {
             // Sticky header
             var stickyPlaceHolder = $("#sticky-placeholder"),
                 menu = $("#header-menu"),
+                body = $("body"),
                 menuH = menu.outerHeight(),
                 topHeaderH = $('#tophead').outerHeight() || 0,
                 middleHeaderH = $('#header-middlebar').outerHeight() || 0,
                 targrtScroll = topHeaderH + middleHeaderH;
             if ($(window).scrollTop() > targrtScroll) {
                 menu.addClass('rt-sticky');
+                body.addClass('body-sticky');
                 stickyPlaceHolder.height(menuH);
             } else {
                 menu.removeClass('rt-sticky');
+                body.removeClass('body-sticky');
                 stickyPlaceHolder.height(0);
             }
 
@@ -537,106 +521,6 @@ jQuery(document).ready(function ($) {
             });
         }
     }
-
-    /* when product quantity changes, update quantity attribute on add-to-cart button */
-    $("form.cart").on("change", "input.qty", function () {
-        var isgroup = $(this).parents('.woocommerce-grouped-product-list');
-        if (this.value === "0"){
-            if( ! isgroup.length > 0 ){
-                this.value = "1";
-            }
-        }
-        $(this.form).find("button[data-quantity]").data("quantity", this.value);
-    });
-
-    /* remove old "view cart" text, only need latest one thanks! */
-    $(document.body).on("adding_to_cart", function () {
-        $("a.added_to_cart").remove();
-    });
-
-    /*Quantity Product*/
-    $(document).on('click', '.quantity .input-group-btn .quantity-btn', function () {
-        var $input = $(this).closest('.quantity').find('.input-text');
-        if ($(this).hasClass('quantity-plus')) {
-            $input.trigger('stepUp').trigger('change');
-        }
-        if ($(this).hasClass('quantity-minus')) {
-            $input.trigger('stepDown').trigger('change');
-        }
-    });
-
-    $('.quantity-btn').on('click', function(){
-        $("button[name='update_cart']").prop('disabled', false);
-    });
-
-    if( $('.header-shop-cart').length ){
-        $( document ).on('click', '.remove-cart-item', function(){
-          var product_id = $(this).attr("data-product_id");
-          var loader_url = $(this).attr("data-url");
-          var main_parent = $(this).parents('li.menu-item.dropdown');
-          var parent_li = $(this).parents('li.cart-item');
-          parent_li.find('.remove-item-overlay').css({'display':'block'});
-          $.ajax({
-            type: 'post',
-            dataType: 'json',
-            url: docfiObj.ajaxURL,
-            data: { action: "docfi_product_remove", 
-                product_id: product_id
-            },success: function(data){
-              main_parent.html( data["mini_cart"] );
-              $( document.body ).trigger( 'wc_fragment_refresh' );
-            },error: function(xhr, status, error) {
-              $('.header-shop-cart').children('ul.minicart').html('<li class="cart-item"><p class="cart-update-pbm text-center">'+ docfiObj.cart_update_pbm +'</p></li>');
-            }
-          });
-          return false;
-        }); 
-    }
-
-    //Wishlist
-    $(document).on('click', '.rdtheme-wishlist-icon', function () {
-        if ($(this).hasClass('rdtheme-add-to-wishlist') && typeof yith_wcwl_l10n != "undefined") {
-            var $obj = $(this),
-                productId = $obj.data('product-id'),
-                afterTitle = $obj.data('title-after');
-            var data = {
-                'action': 'docfi_add_to_wishlist',
-                'context': 'frontend',
-                'nonce': $obj.data('nonce'),
-                'add_to_wishlist': productId
-            };
-
-            $.ajax({
-                url: yith_wcwl_l10n.ajax_url,
-                type: 'POST',
-                data: data,
-                success: function success(data) {
-                    if (data['result'] != 'error') {
-                        $obj.removeClass('ajaxloading');
-                        $obj.find('.wishlist-icon').removeClass('fa fa-heart').addClass('fas fa-heart').show();
-                        $obj.removeClass('rdtheme-add-to-wishlist').addClass('rdtheme-remove-from-wishlist');
-                        $obj.find('span').html(afterTitle);
-                        $('body').trigger('rt_added_to_wishlist', [productId]);
-                         $('body').trigger('added_to_wishlist', [productId]);
-                    } else {
-                        console.log(data['message']);
-                    }
-                }
-            });
-
-            return false;
-        }
-    });
-
-   $(document).on( 'added_to_wishlist removed_from_wishlist', function(){
-        $.get( yith_wcwl_l10n.ajax_url, {
-          action: 'yith_wcwl_update_wishlist_count'
-        }, function( data ) {
-            console.log(data);
-          $('.wishlist-icon span.wishlist-icon-num').html( data.count );
-        } );
-    });
-
 });
 
 function docfi_load_content_area_scripts($) {
@@ -846,41 +730,7 @@ function docfi_content_load_scripts() {
                 },
             });
         }
-    });
-
-    //ajx-tab
-    $('.rt_ajax_tab a').on('click', function(e){
-        e.preventDefault();
-        var cat_id = $(this).data('id');
-        var args = $(this).parents().data('args'); 
-        var layout = $(this).parents().data('layout'); 
-        if ( cat_id == '*' ) {
-            cat_id = null;
-        }
-        var tab_content_id = $(this).closest('.rt_ajax_tab_section').next();
-        $('.rt_ajax_tab a').removeClass('current');
-        $(this).addClass('current');
-        $.ajax({
-            method: "POST",
-            url: docfiObj.ajaxURL,
-            data: {
-                action: 'rt_ajax_tab',
-                cat_id: cat_id,
-                layout: layout,
-                args: args 
-            },
-            dataType: "json",
-            beforeSend: function(){ 
-                tab_content_id.prepend('<div class="preloader fa-3x"><i class="fas fa-spinner fa-spin"></i></div>'); 
-            },
-            success:function(res){ 
-                if ( res.success ) {
-                    tab_content_id.html('');
-                    $(res.data).appendTo(tab_content_id).hide().fadeIn(500); 
-                }
-            }
-        });
-    });    
+    });   
 }
 
 (function ($) {
@@ -888,12 +738,10 @@ function docfi_content_load_scripts() {
 
     // Window Load+Resize
     $(window).on('load resize', function () {
-
         // Define the maximum height for mobile menu
         var wHeight = $(window).height();
         wHeight = wHeight - 50;
         $('.mean-nav > ul').css('max-height', wHeight + 'px');
-
         // Elementor Frontend Load
         $(window).on('elementor/frontend/init', function () {
             if (elementorFrontend.isEditMode()) {
@@ -1068,63 +916,6 @@ function docfi_content_load_scripts() {
     // Tooltip
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)) 
-
-    // Footer gallery viewer Function
-    if (typeof ($.fn.viewer) !== "undefined") {
-        var console = window.console || { log: function () {} };
-        var $images = $('.viewer-enabler');
-        var $toggles = $('.docs-toggles');
-        var $buttons = $('.docs-buttons');
-        var options = {
-            // inline: true,
-            url: 'data-original',
-            ready: function (e) {
-            console.log(e.type);
-            },
-            show: function (e) {
-            console.log(e.type);
-            },
-            shown: function (e) {
-            console.log(e.type);
-            },
-            hide: function (e) {
-            console.log(e.type);
-            },
-            hidden: function (e) {
-            console.log(e.type);
-            },
-            view: function (e) {
-            console.log(e.type);
-            },
-            viewed: function (e) {
-            console.log(e.type);
-            }
-        };
-
-        $images.on({
-            ready:  function (e) {
-                console.log(e.type);
-            },
-            show:  function (e) {
-                console.log(e.type);
-            },
-            shown:  function (e) {
-                console.log(e.type);
-            },
-            hide:  function (e) {
-                console.log(e.type);
-            },
-            hidden: function (e) {
-                console.log(e.type);
-            },
-            view:  function (e) {
-                console.log(e.type);
-            },
-            viewed: function (e) {
-                console.log(e.type);
-            }
-        }).viewer(options);
-    }
 
     
 })(jQuery);

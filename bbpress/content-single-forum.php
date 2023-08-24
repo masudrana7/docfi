@@ -32,3 +32,4 @@ defined( 'ABSPATH' ) || exit;
 	<?php endif; ?>
 	<?php do_action( 'bbp_template_after_single_forum' ); ?>
 </div>
+

@@ -54,7 +54,6 @@ defined( 'ABSPATH' ) || exit;
                             <span class="para-text">
                                 <?php 
                                     if( !function_exists('get_wpbbp_post_view') ) :
-                                    // get bbpress topic view counter
                                     function get_wpbbp_post_view($postID){
                                     $count_key = 'post_views_count';
                                     $count = get_post_meta($postID, $count_key, true);
@@ -112,7 +111,7 @@ defined( 'ABSPATH' ) || exit;
                             ?></span> 
                         </a>
                     </li>             
-                    <li class="post-date d-flex align-items-center">
+                    <li class="rt-share-icons post-date d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#rt-share-box">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.7188 4.62744C14.2187 5.66994 15.2538 7.32744 15.4638 9.23994" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M2.61914 9.2773C2.81414 7.3723 3.83414 5.7148 5.31914 4.66479" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -121,7 +120,8 @@ defined( 'ABSPATH' ) || exit;
                             <path d="M3.62016 14.9398C4.77167 14.9398 5.70516 14.0063 5.70516 12.8548C5.70516 11.7033 4.77167 10.7698 3.62016 10.7698C2.46864 10.7698 1.53516 11.7033 1.53516 12.8548C1.53516 14.0063 2.46864 14.9398 3.62016 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M14.3741 14.9398C15.5256 14.9398 16.4591 14.0063 16.4591 12.8548C16.4591 11.7033 15.5256 10.7698 14.3741 10.7698C13.2225 10.7698 12.2891 11.7033 12.2891 12.8548C12.2891 14.0063 13.2225 14.9398 14.3741 14.9398Z" stroke="#6C6C6C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                        <span class="para-text">Share</span> 
+                        <span class="para-text"><?php echo esc_html('Share', 'docfi'); ?></span> 
+                        <!-- Modal -->
                     </li>
                 </ul>
             </div>
@@ -136,3 +136,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php bbp_get_template_part( 'alert', 'topic-lock' ); ?>
 	<?php do_action( 'bbp_template_after_single_topic' ); ?>
 </div>
+
+
+
+

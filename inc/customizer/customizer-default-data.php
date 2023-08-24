@@ -94,6 +94,24 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'banner_popular_tag4' 		=> 'WordPress',
             'forum_bgcolor' 		    => '',
             'forum_bgimage' 	        => '',
+
+            //Login
+            'login_logo'                => '',
+            'login_title'               => 'Welcome Back',
+            'login_description'         => 'To keep connected with us please login with your personal info',
+            'right_title'               => 'Log In your Account',
+            'sign_up_text'              => 'Already have an account? Please Signin now',
+            'login_left_bgcolor'        => '',
+            'left_bgimage'              => '',
+
+            //Register
+            'register_logo'                => '',
+            'register_title'               => 'Welcome Back',
+            'register_description'         => 'To keep connected with us please login with your personal info',
+            'rg_right_title'               => 'Register your Account',
+            'rg_sign_up_text'              => 'Don’t have an account yet? Please Signin now',
+            'register_left_bgcolor'        => '',
+            'rg_left_bgimage'              => '',
 			
 			// Post Type Slug
 			'team_slug' 				=> 'team',

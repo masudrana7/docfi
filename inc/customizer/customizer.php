@@ -339,11 +339,29 @@ class DocfiTheme_Customizer {
             )
         );
 		
+		// Add Login Section
+        $wp_customize->add_section( 'login_layout_section',
+            array(
+                'title' => __( 'Login Layout', 'docfi' ),
+                'priority' => 15,
+                'panel' => 'rttheme_layouts_defaults',
+            )
+        );
+
+		// Add Register Section
+        $wp_customize->add_section( 'register_layout_section',
+            array(
+                'title' => __( 'Register Layout', 'docfi' ),
+                'priority' => 15,
+                'panel' => 'rttheme_layouts_defaults',
+            )
+        );
+
 		// Add Error Layout Section
         $wp_customize->add_section( 'error_layout_section',
             array(
                 'title' => __( 'Error Layout', 'docfi' ),
-                'priority' => 15,
+                'priority' => 16,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );

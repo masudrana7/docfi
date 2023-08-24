@@ -55,7 +55,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 ?>
 
-<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' ) { ?>
+<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || bbp_is_single_user_profile() ) { ?>
 	<div class="entry-banner">
 		<div class="container">
 			<div class="entry-banner-content">

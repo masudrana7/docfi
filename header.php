@@ -21,6 +21,9 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
+
+
+
 	<?php
 		// Preloader	
 		if ( DocfiTheme::$options['preloader'] ) {	
@@ -28,14 +31,21 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 				$pre_bg = wp_get_attachment_image_src( DocfiTheme::$options['preloader_image'], 'full', true );
 				$preloader_img = $pre_bg[0];
 				echo '<div id="preloader" style="background-image:url(' . esc_url($preloader_img) . ');"></div>';
-			}else { ?>				
-				<div id="preloader" class="loader">
-			      	<div class="cssload-loader">
-				        <div class="cssload-inner cssload-one"></div>
-				        <div class="cssload-inner cssload-two"></div>
-				        <div class="cssload-inner cssload-three"></div>
-			      	</div>
-			    </div>
+			}else { ?>	
+			<div class="pre-loader" id="preloader">
+				<div class="loading-wrapper">
+					<!-- <div class="loading-text">LOADING</div> -->
+					<div class="loading-circle circle"></div>
+					<div class="loading-circle-small circle">
+						<div class="doc-icon">
+							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="200ms"></div>
+							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="600ms"></div>
+							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="800ms"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<?php }	            
 		}
 	?>
@@ -45,10 +55,8 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 		<header id="masthead" class="site-header">
 
 			<div id="rt-header-header" class="header-area">
-				<?php if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" ){ ?>
-
+				<?php if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" || bbp_is_single_user_profile() ){ ?>
 				<?php get_template_part( 'template-parts/header/header', '1' ); ?>
-
 				<?php } ?>			
 			</div>
 		</header>		
@@ -65,8 +73,8 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 
 		<div id="content" class="site-content <?php echo esc_attr($blend); ?>">			
 			<?php
-				if ( DocfiTheme::$has_banner === 1 || DocfiTheme::$has_banner === "on" ) { 
+				 if ( DocfiTheme::$has_banner === 1 || DocfiTheme::$has_banner === "on" || bbp_is_single_user_profile()) { 
 					get_template_part('template-parts/content', 'banner');
-				}
+				 }
 			?>
 			

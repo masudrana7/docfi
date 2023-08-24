@@ -78,7 +78,7 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( DocfiTheme::$options[$prefix . '_bgimg'], 'full', true );
                 DocfiTheme::$bgimg = $attch_url[0];
             } else {
-                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.jpg';
+                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.png';
             }
 			
             DocfiTheme::$pagebgcolor = empty( $layout_settings['docfi_page_bgcolor'] ) ? DocfiTheme::$options[$prefix . '_page_bgcolor'] : $layout_settings['docfi_page_bgcolor'];			
@@ -130,7 +130,7 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( DocfiTheme::$options[$prefix . '_bgimg'], 'full', true );
                 DocfiTheme::$bgimg = $attch_url[0];
             } else {
-                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.jpg';
+                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.png';
             }
 			
             DocfiTheme::$pagebgcolor = DocfiTheme::$options[$prefix . '_page_bgcolor'];

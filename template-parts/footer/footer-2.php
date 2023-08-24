@@ -25,10 +25,7 @@ if( !empty( DocfiTheme::$options['footer_logo_light'] ) ) {
 if( !empty( DocfiTheme::$options['fbgimg2'] ) ) {
 	$f1_bg = wp_get_attachment_image_src( DocfiTheme::$options['fbgimg2'], 'full', true );
 	$footer_bg_img = $f1_bg[0];
-}else {
-	$footer_bg_img = DOCFI_ASSETS_URL . 'img/footer_bg.jpg';
 }
-
 if ( DocfiTheme::$options['footer_bgtype2'] == 'fbgcolor2' ) {
 	$docfi_bg = DocfiTheme::$options['fbgcolor2'];
 } else {
@@ -61,7 +58,7 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 			<div class="row">
 				<?php
 				for ( $i = 1; $i <= $docfi_footer_column; $i++ ) {
-					echo '<div class="rt-widget-list ' . $docfi_footer_class . '">';
+					echo '<div class="rt-widget-list ' . $docfi_footer_class . ' wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">';
 					dynamic_sidebar( 'footer-style-2-'. $i );
 					echo '</div>';
 				}
@@ -74,8 +71,7 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 	<?php if ( DocfiTheme::$copyright_area == 1 ) { ?>
 	<div class="footer-copyright-area">
 		<div class="container">
-			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?>">
-
+			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
 				<div class="copyright-menu-wrap">
 					<?php if ( DocfiTheme::$options['copyright_text'] ) { ?>
 					<div class="copyright"><?php echo wp_kses( DocfiTheme::$options['copyright_text'] , 'allow_link' );?></div>

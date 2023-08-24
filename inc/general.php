@@ -137,13 +137,6 @@ if ( !function_exists( 'docfi_widgets_register' ) ) {
 			'4' => esc_html__( 'Footer (Style 2) 4', 'docfi' ),
 		);
 
-		$footer_widget_titles3 = array(
-			'1' => esc_html__( 'Footer (Style 3) 1', 'docfi' ),
-			'2' => esc_html__( 'Footer (Style 3) 2', 'docfi' ),
-			'3' => esc_html__( 'Footer (Style 3) 3', 'docfi' ),
-			'4' => esc_html__( 'Footer (Style 3) 4', 'docfi' ),
-		);
-
 		// Register Widget Areas ( Common )
 		register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar', 'docfi' ),
@@ -258,23 +251,7 @@ if ( !function_exists( 'docfi_widgets_register' ) ) {
 				'before_title'  => '<h3 class="widgettitle has-animation '. DocfiTheme::$footer_style .'">',
 				'after_title'   => '</h3>',
 			) );
-		}		
-		/*footer 3 register*/
-		if ( !empty(DocfiTheme::$options['footer_column_3']) ){
-			$item_widget = DocfiTheme::$options['footer_column_3'];
-		} else {
-			$item_widget = 4;
-		}		
-		for ( $i = 1; $i <= $item_widget; $i++ ) {
-			register_sidebar( array(
-				'name'          => $footer_widget_titles3[$i],
-				'id'            => 'footer-style-3-'. $i,
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3 class="widgettitle has-animation '. DocfiTheme::$footer_style .'">',
-				'after_title'   => '</h3>',
-			) );
-		}		
+		}				
 		
 	}
 }

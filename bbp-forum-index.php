@@ -13,7 +13,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 }
 ?>
 <?php get_header(); ?>
-<div id="primary" class="content-area ppppppppppp">
+<div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
 			<?php
