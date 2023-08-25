@@ -38,10 +38,10 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 					<div class="loading-circle circle"></div>
 					<div class="loading-circle-small circle">
 						<div class="doc-icon">
-							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="200ms"></div>
-							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
-							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="600ms"></div>
-							<div class="line wow animate__fadeInUp animate__animated" data-wow-duration="1000ms" data-wow-delay="800ms"></div>
+							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
+							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
+							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
+							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
 						</div>
 					</div>
 				</div>

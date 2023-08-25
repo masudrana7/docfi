@@ -1474,9 +1474,6 @@ header.site-header {
 	position: relative;
 	z-index: 99;
 }
-.body-sticky header.site-header {
-	z-index: 119;
-}
 .tr-header .header-top-bar {
 	border-bottom: none;
 }
@@ -6888,7 +6885,7 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	background: var(--docfi-white-color);
 	float: none;
 	position: relative;
-	padding: 10px 12px;
+	padding: 15px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -6917,7 +6914,7 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
     text-transform: capitalize;
 }
 .mean-container .mean-bar .mobile-logo img {
-	max-width: 100px;
+	max-width: 134px;
 }
 .mean-container .mean-bar .minicart {
 	list-style: none;
@@ -9249,7 +9246,13 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 	max-width: 786px;
 	margin: 0 auto;
 	position: relative;
-	z-index: 111;
+	z-index: 2;
+	width: 100% !important;
+}
+.rt-search-active .elementor-widget-rt-docs-search{
+	z-index: 99999 !important;
+	position: relative !important;
+	width: 100% !important;
 }
 .rt-banner-search.rt-hero-section-content-wrapper{
 	margin-bottom: -75px;
@@ -9478,7 +9481,7 @@ body:not(.rt-search-active) .rt-banner-search .search-text p span {
 	opacity: 0;
 	visibility: hidden;
 	color: var(--docfi-primary-color);
-	z-index: 13;
+	z-index: 999999;
 }
 .rt-banner-search .rt-searchbox-form #cleanText{
 	right: 0;
@@ -9835,13 +9838,14 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 	color: var(--docfi-primary-color);
 	transition: 0.3s !important;
 }
-#bbpress-forums div.odd,
-#bbpress-forums ul.odd {
-	background-color: #fff;
-}
+
 #bbpress-forums div.even,
-#bbpress-forums ul.even {
+#bbpress-forums ul:nth-child(even) {
 	background-color: #FAFAFA;
+}
+#bbpress-forums div.odd,
+#bbpress-forums ul:nth-child(odd) {
+	background-color: #fff;
 }
 #bbpress-forums.docfi-wrapper-forums .bbp-topic-reply-count,
 #bbpress-forums.docfi-wrapper-forums .bbp-topic-voice-count{
@@ -10268,6 +10272,10 @@ body #bbpress-forums{
 	color: #fff;
 	margin: 35px 0 15px;
 }
+.bbp-login-form .bbp-submit-wrapper {
+	float: none;
+	text-align: left;
+}
 .docfi-login-wrapper .light-logo{
 	display: block;
 }
@@ -10281,6 +10289,7 @@ body #bbpress-forums{
 	border: none;
 	background: var(--docfi-white-color);
 }
+.bbp-login-form .bbp-form,
 .docfi-login-wrapper .bbp-login-form .bbp-form{
 	margin: 0;
 	padding: 0;
@@ -10289,6 +10298,7 @@ body #bbpress-forums{
 .docfi-login-wrapper .docfi-form-inner label{
 	display: inline-block;
 }
+.bbp-login-form input:not(#rememberme),
 .docfi-login-wrapper .docfi-form-inner input:not(#rememberme){
 	width: 100%;
 	height: 50px;
@@ -10436,6 +10446,7 @@ body #bbpress-forums{
 .docfi-topic-form-wrapper div.bbp-submit-wrapper{
 	float: none;
 }
+.bbp-login-form .bbp-submit-wrapper button,
 .docfi-login-wrapper .bbp-submit-wrapper button,
 .docfi-topic-form-wrapper button[type="submit"]{
 	position: relative;
@@ -10447,8 +10458,6 @@ body #bbpress-forums{
 	border-radius: 500px;
 	display: inline-block;
 	border: none;
-	width: 180px;
-	padding: 19px 30px;
 	margin-left: 16px;
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
@@ -10457,6 +10466,17 @@ body #bbpress-forums{
 	margin-left: 0;
 	z-index: 2;
 }
+.bbp-login-form .bbp-submit-wrapper button {
+	width: 108px;
+	padding: 14px 20px;
+}
+.docfi-login-wrapper .bbp-submit-wrapper button,
+.docfi-topic-form-wrapper button[type="submit"]{
+	width: 180px;
+	padding: 19px 30px;
+}
+
+.bbp-login-form .bbp-submit-wrapper button::before,
 .docfi-login-wrapper .bbp-submit-wrapper button::before,
 .docfi-topic-form-wrapper button[type="submit"]::before {
 	content: "";
@@ -10477,6 +10497,7 @@ body #bbpress-forums{
 	-webkit-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
+.bbp-login-form .bbp-submit-wrapper button:hover:before,
 .docfi-login-wrapper .bbp-submit-wrapper button:hover:before,
 .docfi-topic-form-wrapper button[type="submit"]:hover::before {
 	height: 100%;
@@ -10536,4 +10557,109 @@ body #bbpress-forums{
 }
 .docfi-register-section .docfi-login-left-sidebar{
 	background-color: #F8851C;
+}
+@media (max-width: 1440px) {
+	.footer-top-area .shapes ul li:nth-child(1) {
+		left: 70px;
+		max-width: 115px;
+	}
+}
+@media (max-width: 1024px) {
+	.best-online-documentation-section .tab-content{
+		margin-top: 20px;
+	}
+	.call-to-action-section .section-text-content .section-heading{
+		margin-bottom: 30px;
+	}
+	.faq-section .faq-nav-wrapper {
+		padding: 35px 30px;
+	}
+	.best-online-documentation-section .best-documentation-info-wrapper {
+		padding: 60px 40px 20px 40px;
+	}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+	.call-to-action-section .frm-fluent-form .ff-t-container {
+		display: flex;
+		gap: 15px;
+		width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	.footer-area .footer-top-area {
+		padding: 0 10px;
+	}
+		.rt-hero-section-content-wrapper .rt-search-key{
+			margin-left: 0;
+		}
+	.rt-hero-section-content-wrapper .search-text p{
+		margin-bottom: 5px;
+		width: 100%;
+	}
+	.rt-searchbox-container .nice-select::after {
+		right: 12px;
+	}
+	.rt-card--style-1 {
+		padding: 40px 30px;
+	}
+	.rt-isotope-tab a{
+		margin-bottom: 10px;
+	}
+	.explore-topics-card {
+		padding: 40px 30px;
+	}
+	.best-online-documentation-section .best-documentation-info-wrapper {
+		padding: 45px 30px 5px;
+	}
+	.call-to-action-section .call-to-cation-form-wrapper form input {
+		padding: 19px 25px;
+	}
+	div.fluentform .rt-submit-form .ff-btn-submit {
+		padding: 15px 30px;
+		min-width: 100% !important;
+		text-align: left;
+	}
+	.rt-footer-line {
+		margin-top: 40px;
+	}
+	.footer-content-area .rt-widget-list + .rt-widget-list{
+		margin-top: 20px;
+	}
+}
+@media (max-width: 480px) {
+	.call-to-action-section .fluentform .ff-text-right{
+		text-align: left;
+	}
+	.rt-hero-section-content-wrapper .rt-searchbox-form{
+		display: block !important;
+	}
+	.rt-hero-section-content-wrapper .rt-searchbox-form > div{
+		width: 100%;
+	}
+	.rt-searchbox-container .category-selector::before{
+		display: none;
+	}
+	.rt-hero-section-content-wrapper .rt-searchbox-container {
+		border-radius: 10px;
+		padding: 10px 20px 20px;
+	}
+	.rt-searchbox-container .category-selector {
+		border-top: 1px solid #0000001a;
+		border-bottom: 1px solid #0000001a;
+		padding: 10px 0 8px;
+		margin: 8px 0 15px;
+	}
+	.rt-hero-section-content-wrapper .search-text {
+		padding-left: 0;
+	}
+	.rt-card--style-3 {
+		width: 100%;
+	}
+	.call-to-action-section .section-text-content .section-heading {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.call-to-action-section {
+		padding: 55px 5px 70px;
+	}
 }

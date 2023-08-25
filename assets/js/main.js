@@ -461,18 +461,15 @@ jQuery(document).ready(function ($) {
             // Sticky header
             var stickyPlaceHolder = $("#sticky-placeholder"),
                 menu = $("#header-menu"),
-                body = $("body"),
                 menuH = menu.outerHeight(),
                 topHeaderH = $('#tophead').outerHeight() || 0,
                 middleHeaderH = $('#header-middlebar').outerHeight() || 0,
                 targrtScroll = topHeaderH + middleHeaderH;
             if ($(window).scrollTop() > targrtScroll) {
                 menu.addClass('rt-sticky');
-                body.addClass('body-sticky');
                 stickyPlaceHolder.height(menuH);
             } else {
                 menu.removeClass('rt-sticky');
-                body.removeClass('body-sticky');
                 stickyPlaceHolder.height(0);
             }
 

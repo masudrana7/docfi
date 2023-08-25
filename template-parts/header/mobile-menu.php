@@ -27,6 +27,7 @@ if( !empty( DocfiTheme::$options['logo_light'] ) ) {
 <div class="rt-header-menu mean-container" id="meanmenu"> 
     <div class="mobile-mene-bar">
         <div class="mean-bar">
+            <a class="mobile-logo dark-logo" aria-label="Mobile Logo" href="<?php echo esc_url(home_url('/'));?>"><?php echo wp_kses( $docfi_dark_logo, 'alltext_allow' ); ?></a>
             <div class="mean-bar-search">
                 <span class="sidebarBtn ">
                     <span class="bar"></span>
@@ -34,7 +35,6 @@ if( !empty( DocfiTheme::$options['logo_light'] ) ) {
                     <span class="bar"></span>
                 </span>
             </div>
-            <a class="mobile-logo dark-logo" aria-label="Mobile Logo" href="<?php echo esc_url(home_url('/'));?>"><?php echo wp_kses( $docfi_dark_logo, 'alltext_allow' ); ?></a>
         </div>    
         <div class="rt-slide-nav">
             <div class="offscreen-navigation">

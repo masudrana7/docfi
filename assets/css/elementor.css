@@ -1650,7 +1650,7 @@ CSS INDEX
 }
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card:hover .icon {
     border: 1px solid transparent;
-    background: var(--docfi-post-color);
+    background: #F97267;
 }
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card {
     margin-bottom: 40px;
