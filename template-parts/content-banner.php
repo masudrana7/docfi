@@ -59,7 +59,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 	<div class="entry-banner">
 		<div class="container">
 			<div class="entry-banner-content">
-				<?php if (  is_singular( 'forum' ) || is_singular( 'topic' ) || bbp_is_forum_archive() ) { 
+				<?php if (  is_singular( 'forum' ) || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) { 
 					get_template_part( 'template-parts/banner', 'search' ); 
 				} elseif (is_single()) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>

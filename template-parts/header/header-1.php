@@ -40,27 +40,22 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 <div class="header-menu" id="header-menu">
 	<div class="container">
 		<div class="menu-full-wrap">
-
 			<div class="site-branding">
 				<?php if(!empty($customlogo)){ ?>
-				
-				<?php if(!empty($customlogo)){ ?>		
-					<a class="custom-logo custom-norlam-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
-						<img src="<?php echo $customlogo; ?>" alt="Custom Image">
+					<?php if(!empty($customlogo)){ ?>		
+						<a class="custom-logo custom-norlam-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
+							<img src="<?php echo $customlogo; ?>" alt="Custom Image">
+						</a>
+					<?php } ?>
+					<?php if(!empty($ctstickylogo)){ ?>	
+					<a class="custom-logo custom-sticky-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
+						<img src="<?php echo $ctstickylogo; ?>" alt="Custom Image">
 					</a>
-				<?php } ?>
-
-				<?php if(!empty($ctstickylogo)){ ?>	
-				<a class="custom-logo custom-sticky-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
-					<img src="<?php echo $ctstickylogo; ?>" alt="Custom Image">
-				</a>
-				<?php } ?>
-
+					<?php } ?>
 				<?php } else { ?>
 					<a class="dark-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>"><?php echo wp_kses( $docfi_dark_logo, 'allow_link' ); ?></a>
 					<a class="light-logo" aria-label="Light Logo" href="<?php echo esc_url( home_url( '/' ) );?>"><?php echo wp_kses( $docfi_light_logo, 'allow_link' ); ?></a>
 				<?php } ?>
-
 			</div>
 
 			<div class="menu-wrap">

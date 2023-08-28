@@ -5,13 +5,13 @@ switch ( $docfi_footer_column ) {
 	$docfi_footer_class = 'col-12';
 	break;
 	case '2':
-	$docfi_footer_class = 'col-xl-6 col-md-6';
+	$docfi_footer_class = 'col-lg-6 col-md-6';
 	break;
 	case '3':
-	$docfi_footer_class = 'col-xl-4 col-md-6';
+	$docfi_footer_class = 'col-lg-4 col-md-6';
 	break;		
 	default:
-	$docfi_footer_class = 'col-xl-3 col-md-6';
+	$docfi_footer_class = 'col-lg-3 col-md-6';
 	break;
 }
 
@@ -63,11 +63,11 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 	<div class="call-to-action-section" style="background-image:url(<?php echo esc_url( $footer_news_img ); ?>);">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-xl-11">
+				<div class="col-xl-11 col-lg-12">
 					<div class="row justify-content-between align-items-center">
 
 						<?php if (!empty(DocfiTheme::$options['newsletter_title'])) { ?>
-							<div class="col-xl-5">
+							<div class="col-lg-5 col-lg-6">
 								<div class="section-text-content">
 									<h2 class="section-heading wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
 										<?php echo esc_html( DocfiTheme::$options['newsletter_title'] ); ?>
@@ -75,7 +75,7 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 								</div>
 							</div>
 						<?php }  if (!empty(DocfiTheme::$options['nws_shortcode'])) { ?>
-							<div class="col-xl-6 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="500ms">
+							<div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="500ms">
 								<div class="call-to-cation-form-wrapper">
 									<?php echo do_shortcode( DocfiTheme::$options['nws_shortcode'] ); ?>
 								</div>

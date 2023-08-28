@@ -5,13 +5,13 @@ switch ( $docfi_footer_column ) {
 	$docfi_footer_class = 'col-12';
 	break;
 	case '2':
-	$docfi_footer_class = 'col-xl-6 col-md-6';
+	$docfi_footer_class = 'col-lg-6 col-md-6';
 	break;
 	case '3':
-	$docfi_footer_class = 'col-xl-4 col-md-6';
+	$docfi_footer_class = 'col-lg-4 col-md-6';
 	break;		
 	default:
-	$docfi_footer_class = 'col-xl-3 col-md-6';
+	$docfi_footer_class = 'col-lg-3 col-md-6';
 	break;
 }
 // Logo

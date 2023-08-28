@@ -264,15 +264,6 @@ svg path{
     padding-left: 24px;
     padding-right: 0;
 }
-@media (min-width: 992px) and (max-width: 1400px ) {
-	.container, 
-	.container-lg, 
-	.container-md, 
-	.container-sm, 
-	.container-xl {
-	    max-width: 1290px;
-	}
-}
 .blend img {
   filter: brightness( 100% ) contrast( 100% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg ) !important;
 }
@@ -2395,6 +2386,11 @@ body .rt-cover {
 }
 @media (min-width: 992px) {
 	.footer-content-area .rt-widget-list+.rt-widget-list {
+		padding-left: 40px;
+	}
+}
+@media (min-width: 1200px) {
+	.footer-content-area .rt-widget-list+.rt-widget-list {
 		padding-left: 120px;
 	}
 }
@@ -2432,8 +2428,13 @@ body .rt-cover {
 	position: relative;
 	font-size: 16px;
 	border-top: none;
-	padding: 100px 0 0;
+	padding: 120px 0 0;
 	color: var(--docfi-body-color);
+}
+@media (max-width: 991px) {
+	.footer-content-area {
+		padding: 95px 0 0;
+	}
 }
 .footer-content-area a,
 .footer-content-area .widget ul li a {
@@ -2467,7 +2468,6 @@ body .rt-cover {
 	}
 	.footer-content-area {
 		padding-top: 80px;
-		padding-bottom: 20px;
 	}
 }
 .footer-top-area .widget_archive.widget > select {
@@ -2812,6 +2812,17 @@ body .rt-cover {
 @media(max-width:991px) {
 	.footer-top-area .widget_tag_cloud a {
 		padding: 8px;
+	}
+	.rt-card--style-8 {
+		padding: 40px 25px;
+	}
+	.rt-card--style-8 .card-title {
+		line-height: 32px;
+		font-size: 26px;
+	}
+	.rt-forum-status .title {
+		font-size: 26px;
+		line-height: 32px;
 	}
 }
 .footer-top-area .widget_tag_cloud a:hover {
@@ -6978,12 +6989,12 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	margin: 0px;
 	padding: 0;
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1025px){
   	#meanmenu {
 	 	display: none;
   	}
 }
-@media only screen and (max-width: 1199px){
+@media only screen and (max-width: 1024px){
   	.header-area {
 		display: none;
   	}
@@ -9190,11 +9201,37 @@ p.return-to-shop {
 	left: 0;
 	z-index: 1;
 }
-@media (min-width: 1025px) {
-	.docfi-column-sticky{
+@media (max-width: 991px) {
+	.rt-group-single-list .explore-topics-body {
+		padding-left: 20px;
+	}
+	.rt-timeline .content-container .content::after {
+		top: 0;
+	}
+	.rt-timeline .content-container {
+		padding: 10px 20px;
+	}
+}
+@media (min-width: 768px) {
+	.docfi-column-sticky {
 		align-self: flex-start !important;
 		position: sticky !important;
 		top: 115px !important;
+	}
+}
+@media (min-width: 1025px) {
+	.docfi-column-sticky-min-1024{
+		align-self: flex-start !important;
+		position: sticky !important;
+		top: 115px !important;
+	}
+}
+@media (max-width: 991px) {
+	.docfi-column-sticky {
+		top: 0 !important;
+	}
+	.rt-single-sidebar-list .explore-topics-header .title-area .title {
+		font-size: 18px;
 	}
 }
 
@@ -9792,6 +9829,16 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 	display: flex;
 	align-items: center;
 }
+@media (max-width: 991px) {
+	#bbpress-forums.docfi-wrapper-forums .bbp-header,
+	.docfi-wrapper-forums#bbpress-forums li.bbp-body ul.forum,
+	.docfi-wrapper-forums#bbpress-forums li.bbp-body ul.topic {
+		padding: 18px 20px;
+		padding-right: 20px;
+	}
+}
+
+
 .docfi-wrapper-forums#bbpress-forums .pagination-area li + li{
 	margin-left: 4px;
 }
@@ -9847,6 +9894,11 @@ body:not(.rt-search-active) .rt-banner-search .rt-search-key li a{
 #bbpress-forums ul:nth-child(odd) {
 	background-color: #fff;
 }
+#bbpress-forums .rt-tofics-infodiv.odd,
+#bbpress-forums .rt-tofics-info ul:nth-child(odd) {
+	background-color: transparent;
+}
+
 #bbpress-forums.docfi-wrapper-forums .bbp-topic-reply-count,
 #bbpress-forums.docfi-wrapper-forums .bbp-topic-voice-count{
 	font-size: 15px;
@@ -10558,24 +10610,44 @@ body #bbpress-forums{
 .docfi-register-section .docfi-login-left-sidebar{
 	background-color: #F8851C;
 }
+.call-to-cation-form-wrapper .frm-fluent-form .ff-t-cell:last-of-type {
+	flex-basis: 20% !important;
+}
 @media (max-width: 1440px) {
 	.footer-top-area .shapes ul li:nth-child(1) {
 		left: 70px;
 		max-width: 115px;
+	}
+	.call-to-action-section .section-text-content .section-heading {
+		font-size: 36px;
 	}
 }
 @media (max-width: 1024px) {
 	.best-online-documentation-section .tab-content{
 		margin-top: 20px;
 	}
-	.call-to-action-section .section-text-content .section-heading{
-		margin-bottom: 30px;
-	}
 	.faq-section .faq-nav-wrapper {
 		padding: 35px 30px;
 	}
 	.best-online-documentation-section .best-documentation-info-wrapper {
 		padding: 60px 40px 20px 40px;
+	}
+	.rt-footer-line {
+		margin-top: 60px;
+	}
+	.footer-area .widgettitle {
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 991px) {
+	.call-to-action-section .section-text-content .section-heading{
+		margin-bottom: 20px;
+	}
+	.rt-card--style-6 {
+		padding: 40px 25px;
+	}
+	.logo-card {
+		padding: 28px 30px 30px;
 	}
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -10624,6 +10696,45 @@ body #bbpress-forums{
 	}
 	.footer-content-area .rt-widget-list + .rt-widget-list{
 		margin-top: 20px;
+	}
+	#bbpress-forums.docfi-wrapper-forums .bbp-header,
+	.docfi-wrapper-forums#bbpress-forums li.bbp-body ul.forum,
+	.docfi-wrapper-forums#bbpress-forums li.bbp-body ul.topic {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#bbpress-forums.docfi-wrapper-forums .bbp-header li,
+	#bbpress-forums.docfi-wrapper-forums .bbp-body ul li {
+		display: none;
+	}
+		#bbpress-forums.docfi-wrapper-forums .bbp-header .bbp-topic-title,
+	#bbpress-forums.docfi-wrapper-forums .bbp-body ul .bbp-topic-title,
+	#bbpress-forums.docfi-wrapper-forums .bbp-header .bbp-forum-info,
+	#bbpress-forums.docfi-wrapper-forums .bbp-body ul .bbp-forum-info {
+		display: block;
+	}
+	.rt-tofics-info li.bbp-forum-info,
+	.rt-tofics-info li.bbp-topic-title,
+	.rt-forum-info li.bbp-forum-info,
+	.rt-forum-info li.bbp-topic-title {
+		width: 100%;
+	}
+	.rt-title-inner .rt-author-image {
+		margin: 0 0 10px;
+	}
+	.testimonial-item--style-2 {
+		padding: 60px 30px 50px;
+	}
+	.rt-footer-style2 .footer-content-area{
+		padding-top: 80px;
+		padding-bottom: 0;
+	}
+	.join-community-wrapper {
+		margin-bottom: 0;
+		padding: 55px 30px 85px;
+	}
+	.docfi-wrapper-forums .topics-meta {
+		margin-left: 0;
 	}
 }
 @media (max-width: 480px) {
