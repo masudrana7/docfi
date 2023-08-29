@@ -70,9 +70,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 				<?php } ?>
 			</div>
 		</div>
-		<?php if ( DocfiTheme::$has_breadcrumb == 1 ) { ?>
+		<?php if ( DocfiTheme::$has_breadcrumb == 1 || bbp_is_single_user_profile() ) { ?>
 			<?php get_template_part( 'template-parts/content', 'breadcrumb' );?>
 		<?php } ?>
-
 	</div>
 <?php } ?>

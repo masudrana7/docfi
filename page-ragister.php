@@ -8,7 +8,7 @@
 		$register_logo = wp_get_attachment_image_src( DocfiTheme::$options['register_logo'], 'full', true );
 		$logo_image = '<img src="'.$register_logo[0].'" alt="">';
 	}else {
-		$logo_image =  '<img src="'.DOCFI_ASSETS_URL.'img/light-logo.svg" />';
+		$logo_image =  '<img src="'.DOCFI_ASSETS_URL.'img/light-logo.svg" alt="Logo" />';
 	}
 
 	if( !empty( DocfiTheme::$options['rg_left_bgimage'] ) ) {

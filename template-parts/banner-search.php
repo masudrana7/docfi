@@ -16,19 +16,18 @@
                 </div>
             </div>
             <div class="searchbox-submit">
-                <button class="coolBeans btn-dark rt-searchbox-btn" type="submit" class="search-btn"><?php esc_html_e( 'submit', 'docfi-core' );?>  
+                <button class="search-btn coolBeans btn-dark rt-searchbox-btn" type="submit"><?php esc_html_e( 'submit', 'docfi-core' );?></button>
             </div>
             <div id="rt_datafetch"></div>
         </form>
     </div>
-    <div class="search-text d-sm-flex wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="900ms">
-        <p><span><?php echo esc_html( DocfiTheme::$options['banner_popular_text'] ); ?></span> 
-            <ul class="rt-banner-search-key rt-search-key">
-                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag1'] ); ?></a></li>
-                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag2'] ); ?></a></li>
-                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag3'] ); ?></a></li>
-                <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag4'] ); ?></a></li>
-            </ul>
-        </p>
+    <div class="search-text d-md-flex wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="900ms">
+        <p><span><?php echo esc_html( DocfiTheme::$options['banner_popular_text'] ); ?></span> </p>
+        <ul class="rt-banner-search-key rt-search-key">
+            <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag1'] ); ?></a></li>
+            <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag2'] ); ?></a></li>
+            <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag3'] ); ?></a></li>
+            <li class="keyword"><a href="#"><?php echo esc_html( DocfiTheme::$options['banner_popular_tag4'] ); ?></a></li>
+        </ul>
     </div>
 </div>

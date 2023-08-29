@@ -177,7 +177,7 @@ function docfi_template_style(){
 				background-color: <?php echo DocfiTheme::$bgcolor; ?>;
 			<?php } ?>
 		<?php else: ?>
-			background: url(<?php echo esc_url( DocfiTheme::$bgimg );?>) no-repeat scroll top center / 100%;
+			background: url(<?php echo esc_url( DocfiTheme::$bgimg );?>) no-repeat scroll top center / cover;
 		<?php endif; ?>
 	}
 

@@ -18,7 +18,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 		<div class="row rt-page-wrapper">
 
 			<?php if(bbp_is_single_user_profile() || DocfiTheme::$layout == 'full-width'){ ?>
-				<div class="col-md-12 docfi-column-sticky">
+				<div class="col-lg-12">
 					<main id="main" class="site-main">
 						<?php while ( have_posts() ) : the_post(); ?>					
 							<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -41,7 +41,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 
 
 			<?php if (is_active_sidebar('forum-sidebar')) { ?>			
-				<div class="col-md-4 docfi-column-sticky">
+				<div class="col-lg-4 docfi-column-sticky">
 					<div class="rt-forum-widget-wrapper">
 						<?php dynamic_sidebar('forum-sidebar'); ?>
 					</div>
@@ -49,7 +49,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 			<?php } ?>
 
 
-			<div class="<?php //echo esc_attr( $docfi_layout_class );?> col-md-8 docfi-column-sticky">
+			<div class="<?php //echo esc_attr( $docfi_layout_class );?> col-lg-8 docfi-column-sticky">
 				<main id="main" class="site-main">
 					<?php while ( have_posts() ) : the_post(); ?>					
 						<?php get_template_part( 'template-parts/content', 'page' ); ?>

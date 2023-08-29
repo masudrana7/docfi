@@ -768,7 +768,7 @@ CSS INDEX
 }
 .rt-accordion .rt-accordion-icon-left {
     position: absolute;
-    left: 15px;
+    left: 30px;
 }
 .rt-accordion .rt-accordion-icon-right {
     position: absolute;
@@ -797,10 +797,6 @@ CSS INDEX
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
-}
-.rt-accordion-button .rt-accordion-icon-opened{
-    position: relative;
-    top: -4px;
 }
 /*accordion style 01*/
 
@@ -1233,11 +1229,14 @@ CSS INDEX
     border-radius: 10px;
     padding: 65px 50px;
 }
-.faq-section .faq-nav-wrapper .top-title{
+.faq-section .faq-nav-wrapper .top-title {
     font-size: 30px;
-    margin-bottom: 35px;
 }
-
+@media (max-width: 767px) {
+    .faq-section .faq-nav-wrapper .top-title {
+        font-size: 26px;
+    }
+}
 .faq-section .faq-nav-wrapper .nav .nav-link {
     background: transparent;
     font-family: "Roboto";
@@ -1509,7 +1508,7 @@ CSS INDEX
 
 /* Post Grid layout 1 */
 .rt-post-slider-style1 .rt-item .entry-content {
-    padding: 25px 30px 30px;
+    padding: 15px 0px 15px;
 }
 /* Post Grid layout 2 */
 .rt-post-slider-style2 .rt-item {
