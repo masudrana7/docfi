@@ -36,7 +36,7 @@ class RTsearchAjax{
 			while( $the_query->have_posts() ): 
 			$the_query->the_post();?>
 			<div class="rt-search-result-list">
-				<a class="rt-top-title" href="<?php echo esc_url( post_permalink() ); ?>">
+				<a class="rt-top-title" href="<?php echo esc_url( get_permalink() ); ?>">
 					<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.96799 10L10.5 5.5L5.96799 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10L5.53201 5.5L1 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> <?php the_title();?>
 				</a>
 				<ul class="rt-search-breadcrumb">
@@ -55,7 +55,7 @@ class RTsearchAjax{
 						$category_dropdown[$category->slug] = $category->name;
 					}
 				?>
-				<li><i class="fas fa-chevron-right"></i> <a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></li>
+				<li><i class="fas fa-chevron-right"></i> <a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title();?></a></li>
 				</ul>
 			</div>
 			<?php endwhile;
@@ -88,7 +88,7 @@ class RTBannerAjax{
 			while( $the_query->have_posts() ): 
 			$the_query->the_post();?>
 			<div class="rt-search-result-list">
-				<a class="rt-top-title" href="<?php echo esc_url( post_permalink() ); ?>">
+				<a class="rt-top-title" href="<?php echo esc_url( get_permalink() ); ?>">
 					<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.96799 10L10.5 5.5L5.96799 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10L5.53201 5.5L1 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> <?php the_title();?>
 				</a>
 			</div>

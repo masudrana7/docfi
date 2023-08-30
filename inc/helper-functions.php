@@ -392,7 +392,7 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			if ( ( class_exists( 'WooCommerce' ) && is_shop() ) || ( class_exists( 'WooCommerce' ) && is_product_category() ) || ( class_exists( 'WooCommerce' ) && is_product_tag() ) || ( class_exists( 'WooCommerce' ) && is_product() ) ) {	
 				
 				if ( is_active_sidebar( 'shop-sidebar' ) ) {
-					$docfi_layout_class = 'col-xl-8';
+					$docfi_layout_class = 'col-lg-8';
 				} else {
 					$docfi_layout_class = 'col-sm-12 col-12';
 				}
@@ -401,13 +401,13 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 				
 				if ( DocfiTheme::$sidebar ) {
 					if ( is_active_sidebar( DocfiTheme::$sidebar ) ) {
-						$docfi_layout_class = 'col-xl-8';
+						$docfi_layout_class = 'col-lg-8';
 					} else {
 						$docfi_layout_class = 'col-sm-12 col-12';
 					}
 				} else {
 					if ( is_active_sidebar( 'sidebar' ) ) {
-						$docfi_layout_class = 'col-xl-8';
+						$docfi_layout_class = 'col-lg-8';
 					} else {
 						$docfi_layout_class = 'col-sm-12 col-12';
 					}

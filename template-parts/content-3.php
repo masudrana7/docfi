@@ -39,7 +39,7 @@ if (  DocfiTheme::$layout == 'right-sidebar' || DocfiTheme::$layout == 'left-sid
 	$post_classes = array( 'col-md-6 col-12 rt-grid-item blog-layout-3 ' . $wow . ' ' . $effect );
 	$ul_class = 'side_bar';
 } else {
-	$post_classes = array( 'col-md-4 col-12 rt-grid-item blog-layout-3 ' . $wow . ' ' . $effect );
+	$post_classes = array( 'col-xl-4 col-md-6  col-12 rt-grid-item blog-layout-3 ' . $wow . ' ' . $effect );
 	$ul_class = '';
 }
 

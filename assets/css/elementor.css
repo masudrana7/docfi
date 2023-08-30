@@ -837,10 +837,13 @@ CSS INDEX
     display: flex;
     align-items: center;
 }
-@media(max-width: 425px) {
+@media(max-width: 480px) {
     .rt-accordion-style-1 .rt-accordion-header .rt-accordion-button,
     .rt-accordion-style-2 .rt-accordion-header .rt-accordion-button {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .rt-accordion .accordion-body {
+        padding: 0 20px 10px;
     }
 }
 

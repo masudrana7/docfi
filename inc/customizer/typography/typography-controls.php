@@ -158,18 +158,24 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 */
 		public function rttheme_getGoogleFonts( $count = 30 ) {
 			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY
-			$fontFile = trailingslashit( get_template_directory() ) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json';
+			$fontFile = trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json';
 			if ( $this->fontOrderBy === 'popular' ) {
-				$fontFile = trailingslashit( get_template_directory() ) . 'inc/customizer/typography/google-fonts/google-fonts-popularity.json';
+				$fontFile = trailingslashit( get_template_directory_uri() ) . 'inc/customizer/typography/google-fonts/google-fonts-popularity.json';
 			}
 
-			$body = file_get_contents($fontFile);
-			$content = json_decode( $body );
+			$request = wp_remote_get( $fontFile );
+			if( is_wp_error( $request ) ) {
+				return "";
+			}
 
-			if( $count == 'all' ) {
-				return $content->items;
-			} else {
-				return array_slice( $content->items, 0, $count );
+			$body = wp_remote_retrieve_body( $request );
+			$content = json_decode( $body );
+			if( !empty($content) ) {
+				if( $count == 'all' ) {
+					return $content->items;
+				} else {
+					return array_slice( $content->items, 0, $count );
+				}
 			}
 		}
 	}

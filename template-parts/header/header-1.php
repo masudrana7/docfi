@@ -44,12 +44,12 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 				<?php if(!empty($customlogo)){ ?>
 					<?php if(!empty($customlogo)){ ?>		
 						<a class="custom-logo custom-norlam-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
-							<img src="<?php echo $customlogo; ?>" alt="Custom Image">
+							<img src="<?php echo esc_attr($customlogo); ?>" alt="Custom Image">
 						</a>
 					<?php } ?>
 					<?php if(!empty($ctstickylogo)){ ?>	
 					<a class="custom-logo custom-sticky-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
-						<img src="<?php echo $ctstickylogo; ?>" alt="Custom Image">
+						<img src="<?php echo esc_attr($ctstickylogo); ?>" alt="Custom Image">
 					</a>
 					<?php } ?>
 				<?php } else { ?>

@@ -14,7 +14,6 @@ switch ( $docfi_footer_column ) {
 	$docfi_footer_class = 'col-lg-3 col-md-6';
 	break;
 }
-// Logo
 if( !empty( DocfiTheme::$options['footer_logo_light'] ) ) {
 	$logo_lights = wp_get_attachment_image( DocfiTheme::$options['footer_logo_light'], 'full' );
 	$docfi_light_logo = $logo_lights;
@@ -31,13 +30,10 @@ if ( DocfiTheme::$options['footer_bgtype2'] == 'fbgcolor2' ) {
 } else {
 	$docfi_bg = 'url(' . $footer_bg_img . ') no-repeat center bottom / cover';
 }
-
-
 $bgc = $menu_on = $copyright_on = '';
 if ( DocfiTheme::$options['footer_bgtype2'] == 'fbgimg2' ) {
 	$bgc = 'footer-bg-opacity';
 }
-
 $menu_on = ( DocfiTheme::$options['copyright_menu'] ) ? "menu-on" : "menu-off";
 $copyright_on = ( DocfiTheme::$options['copyright_text'] ) ? "copyright-on" : "copyright-off";
 $logo_on = ( DocfiTheme::$options['logo_display'] ) ? "logo-on" : "logo-off";
@@ -47,9 +43,7 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 	$docfi_footer_logo = $footer_logo;
 }else {
 	$docfi_footer_logo = get_bloginfo( 'name' ); 
-}
-
-?>
+} ?>
 <?php get_template_part( 'template-parts/footer/news', 'letter' );?>
 <div class="rt-footer-style2 footer-top-area <?php echo esc_attr( $bgc ); ?>" style="background:<?php echo esc_html( $docfi_bg ); ?>">
 	<?php if ( DocfiTheme::$footer_area == 1 ) { ?>
@@ -63,14 +57,14 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 					echo '</div>';
 				}
 				?>
-			</div>
-			<div class="rt-footer-line"></div>		
+			</div>	
 		</div>	
 	</div>
 	<?php } ?>
 	<?php if ( DocfiTheme::$copyright_area == 1 ) { ?>
 	<div class="footer-copyright-area">
 		<div class="container">
+			<div class="rt-footer-line"></div>
 			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
 				<div class="copyright-menu-wrap">
 					<?php if ( DocfiTheme::$options['copyright_text'] ) { ?>

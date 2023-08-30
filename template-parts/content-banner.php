@@ -55,22 +55,23 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 ?>
 
-<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || bbp_is_single_user_profile() ) { ?>
+<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || ( class_exists('bbPress') && bbp_is_single_user_profile()) ) { ?>
 	<div class="entry-banner">
 		<div class="container">
 			<div class="entry-banner-content">
-				<?php if (  is_singular( 'forum' ) || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) { 
-					get_template_part( 'template-parts/banner', 'search' ); 
-				} elseif (is_single()) { ?>
+				<?php if (function_exists('bbpress') && ( is_singular( 'forum' ) || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) ) { 
+						get_template_part( 'template-parts/banner', 'search' ); 
+					} elseif (is_single()) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>
 				<?php } else if ( is_page() ) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>
 				<?php } else { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>
-				<?php } ?>
+				<?php } ?>	
+
 			</div>
 		</div>
-		<?php if ( DocfiTheme::$has_breadcrumb == 1 || bbp_is_single_user_profile() ) { ?>
+		<?php if ( DocfiTheme::$has_breadcrumb != 0 ) { ?>
 			<?php get_template_part( 'template-parts/content', 'breadcrumb' );?>
 		<?php } ?>
 	</div>

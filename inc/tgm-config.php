@@ -15,7 +15,7 @@ function docfi_register_required_plugins() {
 			'source'       => 'docfi-core.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '1.3'
+			'version'      => '1.0'
 		),
 		array(
 			'name'         => 'RT Framework',
@@ -44,6 +44,11 @@ function docfi_register_required_plugins() {
 			'name'     => 'Elementor Page Builder',
 			'slug'     => 'elementor',
 			'required' => true,
+		),
+		array(
+			'name'     => 'bbPress',
+			'slug'     => 'bbpress',
+			'required' => false,
 		),
 		array(
 			'name'     => 'WP Fluent Forms',

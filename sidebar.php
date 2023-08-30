@@ -12,7 +12,7 @@ if( is_active_sidebar( 'sidebar' )) {
 }
 
 ?>
-<div class="col-xl-4 mx-auto <?php echo esc_attr( $fixedbar ); ?>">
+<div class="col-lg-4 mx-auto <?php echo esc_attr( $fixedbar ); ?>">
 	<aside class="sidebar-widget-area">
 		<?php
 			if ( DocfiTheme::$sidebar ) {

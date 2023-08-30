@@ -533,7 +533,7 @@ $attch_urlb = wp_get_attachment_image_src( DocfiTheme::$options['forum_bgimage']
 $banbgimg = $attch_urlb[0]; ?>
 <?php if ($banbgimg) { ?>
 body.bbpress .entry-banner{
-	background: url(<?php echo $banbgimg;?>) no-repeat scroll top center / 100%;
+	background: url(<?php echo esc_html($banbgimg);?>) no-repeat scroll top center / cover;
 }
 <?php } ?>
 

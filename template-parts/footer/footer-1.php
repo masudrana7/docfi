@@ -92,7 +92,7 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 	<!-- end call-to-action-section -->
 <?php } } ?>
 <div class="footer-top-area <?php echo esc_attr( $bgc ); ?>" style="background:<?php echo esc_html( $docfi_bg ); ?>">
-	<?php if ( is_active_sidebar( 'footer-style-1-1' ) && DocfiTheme::$footer_area == 1 || bbp_is_single_user_profile() ) { ?>
+	<?php if ( is_active_sidebar( 'footer-style-1-1' ) && DocfiTheme::$footer_area == 1 || ( class_exists('bbPress') && bbp_is_single_user_profile()) ) { ?>
 	<div class="footer-content-area">
 		<div class="container">			
 			<div class="row">
@@ -104,14 +104,14 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 				}
 				?>
 			</div>	
-			<div class="rt-footer-line"></div>		
 		</div>
 	</div>
 	<?php } ?>
 
-	<?php if ( DocfiTheme::$copyright_area == 1 || bbp_is_single_user_profile() ) { ?>
+	<?php if ( DocfiTheme::$copyright_area == 1 || ( class_exists('bbPress') && bbp_is_single_user_profile()) ) { ?>
 	<div class="footer-copyright-area">
 		<div class="container">
+			<div class="rt-footer-line"></div>
 			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> <?php echo esc_attr( $menu_on ); ?>">
 				<div class="copyright-menu-wrap wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
 					<?php if ( DocfiTheme::$options['copyright_text'] ) { ?>

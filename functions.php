@@ -56,7 +56,7 @@ $docfi_theme_data = wp_get_theme();
 	// Update Breadcrumb Separator
 	add_action('bcn_after_fill', 'docfi_hseparator_breadcrumb_trail', 1);
 	function docfi_hseparator_breadcrumb_trail($object){
-		$object->opt['hseparator'] = '<span class="dvdr"> | </span>';
+		$object->opt['hseparator'] = '<span class="dvdr"> / </span>';
 		return $object;
 	}
 
@@ -104,13 +104,12 @@ $docfi_theme_data = wp_get_theme();
 
 
 	// Add Select Custom Group
-
 	add_action( 'manage_docfi_docs_posts_custom_column', 'docfi_docs_posts_column', 10, 2 );
 		function docfi_docs_posts_column( $column, $post_id ) {
 		 if ( 'docs_group' === $column ) {
 			$select_group = get_post_meta( $post_id, 'group_post_select', true );
 			if ( ! $select_group ) {
-				_e( 'n/a' );  
+				_e( 'n/a', 'docfi' );  
 			} else {
 				$title = get_term_by('id', $select_group, 'docfi_docs_group')->name;
 				$url = admin_url() . 'term.php?taxonomy=docfi_docs_group&tag_ID=' . $select_group;
@@ -118,33 +117,3 @@ $docfi_theme_data = wp_get_theme();
 			}
 		}	
 	}
-
-	function custom_login_form() {
-		if (is_user_logged_in()) {
-			// Display a message if the user is already logged in
-			echo 'You are already logged in.';
-			return;
-		}
-
-		$output = '<form name="loginform" id="loginform" action="' . esc_url(wp_login_url()) . '" method="post">';
-		$output .= '<p><label for="user_login">Username or Email<br />';
-		$output .= '<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label></p>';
-		$output .= '<p><label for="user_pass">Password<br />';
-		$output .= '<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label></p>';
-		$output .= '<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label></p>';
-		$output .= '<p class="submit">';
-		$output .= '<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Log In" />';
-		$output .= '<input type="hidden" name="redirect_to" value="' . esc_url(home_url('/')) . '" />';
-		$output .= '<input type="hidden" name="testcookie" value="1" />';
-		$output .= '</p></form>';
-
-		return $output;
-	}
-add_shortcode('custom_login', 'custom_login_form');
-
-	
-
-
-
-
-	

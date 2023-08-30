@@ -35,7 +35,7 @@ if( !empty( DocfiTheme::$options['logo_light'] ) ) {
 
             <?php if(!empty($customlogo)){ ?>
                 <a class="custom-logo mobile-logo dark-logo" aria-label="Dark Logo" href="<?php echo esc_url( home_url( '/' ) );?>">	
-                    <img src="<?php echo $customlogo; ?>" alt="Custom Image">
+                    <img src="<?php echo esc_attr($customlogo); ?>" alt="Custom Image">
                 </a>
             <?php } else { ?>
                 <a class="mobile-logo dark-logo" aria-label="Mobile Logo" href="<?php echo esc_url(home_url('/'));?>"><?php echo wp_kses( $docfi_dark_logo, 'alltext_allow' ); ?></a>
