@@ -16,7 +16,7 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row rt-page-wrapper">
-			<?php if(bbp_is_single_user_profile() || DocfiTheme::$layout == 'full-width'){ ?>
+			<?php if(( class_exists('bbPress') && bbp_is_single_user_profile()) || DocfiTheme::$layout == 'full-width'){ ?>
 				<div class="col-lg-12">
 					<main id="main" class="site-main">
 						<?php while ( have_posts() ) : the_post(); ?>					

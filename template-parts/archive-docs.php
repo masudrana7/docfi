@@ -13,24 +13,27 @@ else{
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
 }
 
-$iso						= 'g-4 no-equal-team';
+$iso						= 'g-4 no-equal-gallery';
 
-if ( DocfiTheme::$options['team_archive_style'] == 'style1' ){
-	$team_archive_layout 		= "rt-team-default rt-team-multi-layout-1";
-	$template 				 	= 'team-1';
-}elseif( DocfiTheme::$options['team_archive_style'] == 'style2' ){
-	$team_archive_layout 		= "rt-team-default rt-team-multi-layout-2";
-	$template 				 	= 'team-2';
+if ( DocfiTheme::$options['docs_archive_style'] == 'style1' ){
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-1";
+	$template 				 	= 'docs-1';
+}elseif( DocfiTheme::$options['docs_archive_style'] == 'style2' ){
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-2";
+	$template 				 	= 'docs-2';
+}elseif( DocfiTheme::$options['docs_archive_style'] == 'style3' ){
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-3";
+	$template 				 	= 'docs-3';
 }else{
-	$team_archive_layout 		= "rt-team-default rt-team-multi-layout-1";
-	$template 				 	= 'team-1';
+	$docs_archive_layout 	= "rt-docs-default rt-docs-multi-layout-1";
+	$template 				 	= 'docs-1';
 }
 
 $post_classes = "";
 if (  DocfiTheme::$layout == 'right-sidebar' || DocfiTheme::$layout == 'left-sidebar' ){
-	$post_classes = 'col-sm-6 col-lg-4';
+	$post_classes = 'col-sm-6 col-md-6';
 } else {
-	$post_classes = 'col-sm-6 col-xl-3 col-lg-4';
+	$post_classes = 'col-sm-6 col-xl-4';
 }
 
 if ( get_query_var('paged') ) {
@@ -43,10 +46,10 @@ else {
 	$paged = 1;
 }
 
-$team_post_number = DocfiTheme::$options['team_post_number'];
+$docs_post_number = DocfiTheme::$options['docs_post_number'];
 $args = array(
-	'posts_per_page'    => $team_post_number,
-	'post_type'			=> 'docfi_team',
+	'posts_per_page'    => $docs_post_number,
+	'post_type'			=> 'docfi_docs',
 	'post_status'		=> 'publish',
 	'paged'             => $paged,
 );
@@ -63,7 +66,8 @@ $query = new WP_Query( $args );
 					get_sidebar();
 				}
 			?>
-			<div class="<?php echo esc_attr( $team_archive_layout );?> <?php echo esc_attr( $docfi_layout_class );?>">
+
+			<div class="<?php echo esc_attr( $docs_archive_layout );?> <?php echo esc_attr( $docfi_layout_class );?>">
 				<main id="main" class="site-main">	
 					<?php if ( $query->have_posts() ) :?>
 						<div class="row <?php echo esc_attr( $iso );?>">
@@ -73,12 +77,13 @@ $query = new WP_Query( $args );
 								</div>
 							<?php endwhile; ?>
 						</div>
-					<?php else:?>
+					<?php DocfiTheme_Helper::pagination(); ?>	
+					<?php else: ?>
 						<?php get_template_part( 'template-parts/content', 'none' );?>
 					<?php endif;?>
-					<?php DocfiTheme_Helper::pagination(); ?>	
 				</main>
 			</div>
+
 			<?php
 				if( DocfiTheme::$layout == 'right-sidebar' ){				
 					get_sidebar();

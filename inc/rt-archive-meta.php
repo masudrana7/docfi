@@ -50,7 +50,6 @@
 				<p class="description"><?php esc_html_e( 'This is category background color.', 'docfi' ); ?></p>
 			</td>
 		</tr>
-
 		<tr class="form-field term-image-wrap">
 			<th scope="row"><label for="term-image"><?php esc_html_e( 'Category Image', 'docfi' ); ?></label></th>
 			<td> 
@@ -63,7 +62,6 @@
 						</div>
 					<?php } ?>
 				</div>
-				
 				<input type="button" id="upload_image_btn" class="button" value="<?php esc_html_e( 'Upload an Image', 'docfi' ); ?>" />
 			</td>
 		</tr>
@@ -160,13 +158,10 @@
 
 
 	function docfi_colorpicker_field_edit_group( $term ) {
-
 		$color = get_term_meta( $term->term_id, 'rt_group_color', true );
 		$color = ( ! empty( $color ) ) ? "#{$color}" : '#111111';
-
 		$item_bg = get_term_meta( $term->term_id, 'rt_item_bg', true );
 		$item_bg = ( ! empty( $item_bg ) ) ? "#{$item_bg}" : '#E7E7E7';
-
 		$image = get_term_meta( $term->term_id, 'rt_term_image', true );
 	?>
 		<tr class="form-field term-colorpicker-wrap">
@@ -225,8 +220,6 @@
 		}
 
 		if( ! empty( $_POST['rt_term_image'] ) ) {
-		
-		
 			update_term_meta( $term_id, 'rt_term_image', absint( $_POST['rt_term_image'] ) );
 		} else {
 			delete_term_meta( $term_id, 'rt_term_image' );
@@ -234,9 +227,6 @@
 	}
 	add_action( 'created_docfi_docs_group', 'docfi_group_save_termmeta' );
 	add_action( 'edited_docfi_docs_group',  'docfi_group_save_termmeta' );
-
-
-
 
 	function docfi_group_colorpicker_enqueue( $taxonomy ) {
 		if( null !== ( $screen = get_current_screen() ) && 'edit-docfi_docs_group' !== $screen->id ) {
@@ -262,21 +252,18 @@
 	// RENDER COLUMNS
 	add_filter( 'manage_docfi_docs_group_custom_column', 'docfi_group_manage_term_custom_column', 10, 3 );
 	function docfi_group_manage_term_custom_column( $out, $column, $term_id ) {
-
 		if ( 'rt_group_color' === $column ) {
 			$value  = get_term_meta( $term_id , 'rt_group_color', true );
 			if ( ! $value )
 				$value = '';
 			$out = sprintf( '<span class="term-meta-color-block" style="background:#%s" ></span>', esc_attr( $value ) );
 		}
-
 		if ( 'rt_item_bg' === $column ) {
 			$value  = get_term_meta( $term_id , 'rt_item_bg', true );
 			if ( ! $value )
 				$value = '';
 			$out = sprintf( '<span class="term-meta-color-block" style="background:#%s" ></span>', esc_attr( $value ) );
 		}
-
 		if ( 'rt_term_image' === $column ) {
 			$value  = get_term_meta( $term_id , 'rt_term_image', true );
 			if ( $value ) {

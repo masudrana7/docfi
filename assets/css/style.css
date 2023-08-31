@@ -1176,6 +1176,7 @@ a.button-style-5:hover::before {
 	font-size: 30px;
     font-weight: 700;
     text-transform: capitalize;
+	color: var(--docfi-primary-color);
 }
 .site-header .site-branding a img {
 	max-width: 179px;
@@ -5285,6 +5286,15 @@ textarea.form-control::placeholder {
 /* ------------------------
 #. Default Blog layout 
 ---------------------------*/
+.wp-block-post-comments-form input[type="submit"] {
+	padding: 14px 25px;
+	border-radius: 30px;
+	background: var(--docfi-primary-color);
+	transition: 0.4s;
+}
+.wp-block-post-comments-form input[type="submit"]:hover{
+	background: var(--docfi-heading-color);
+}
 @media(max-width: 1024px) {
 	body.blog .content-area,
 	body.single-post .content-area,
@@ -5558,7 +5568,7 @@ textarea.form-control::placeholder {
 	}
 }
 /*blog sticky*/
-.sticky .blog-box {
+.sticky .blog-box .entry-content {
 	background-color: var(--docfi-grey-color-2);
 }
 .sticky .blog-box .blog-img-holder {
@@ -6462,6 +6472,9 @@ blockquote.wp-block-quote[style="text-align:right"] cite {
 }
 .wp-block-pullquote blockquote {
 	background-color: transparent;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 33px;
 }
 blockquote.wp-block-pullquote {
 	background: var(--docfi-light-color);
@@ -6621,36 +6634,45 @@ p:last-child img.size-thumbnail.alignright {
 	text-align: center;
 }
 .wp-block-button .wp-block-button__link {
-    position: relative;
-    background-color: var(--docfi-primary-color);
-    color: var(--docfi-white-color);
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    border-radius: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 22px;
-    line-height: 1.4;
-    overflow: hidden;
-    z-index: 1;
+	position: relative;
+	background-color: var(--docfi-primary-color);
+	color: var(--docfi-white-color);
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	border-radius: 0;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 14px 22px;
+	line-height: 1.4;
+	overflow: hidden;
+	z-index: 1;
+	border-radius: 30px;
+	overflow: hidden;
 }
 .wp-block-button .wp-block-button__link:before {
-    display: block;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    height: 0;
-    border-radius: 50% 50% 0 0/75% 75% 0 0;
-    transition: height .35s;
-    background-color: var(--docfi-secondary-color);
+	content: "";
+	background-color: var(--docfi-heading-color);
+	height: 100%;
+	left: -100%;
+	z-index: -1;
+	top: 0;
+	width: 0;
+	bottom: 0;
+	position: absolute;
+	-webkit-transform: skew(50deg);
+	transform: skew(50deg);
+	-webkit-transition: width 0.6s;
+	transition: width 0.6s;
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 .wp-block-button .wp-block-button__link:hover:before {
-    height: 400%;
+	height: 100%;
+	width: 200%;
 }
 .wp-block-button.is-style-outline .wp-block-button__link {
 	background: transparent;

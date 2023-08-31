@@ -214,6 +214,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'service_page_bgcolor' => '',
 
             //docs Layout Setting 
+            
             'docs_archive_layout' => 'full-width',
             'docs_archive_sidebar'        => '',
             'docs_archive_padding_top'    => 120,
@@ -225,6 +226,9 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'docs_archive_bgimg' => '',
             'docs_archive_page_bgimg' => '',
             'docs_archive_page_bgcolor' => '',
+
+
+
             
             //docs Single Layout Setting 
             'docs_layout' => 'full-width',

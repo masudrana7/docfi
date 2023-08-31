@@ -13,17 +13,8 @@ else{
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
 }
 $docfi_is_post_archive = is_home() || ( is_archive() && get_post_type() == 'post' ) ? true : false;
-
-if ( is_post_type_archive( "docfi_team" ) || is_tax( "docfi_team_category" ) ) {
-		get_template_part( 'template-parts/archive', 'team' );
-	return;
-}
-if ( is_post_type_archive( "docfi_service" ) || is_tax( "docfi_service_category" ) ) {
-		get_template_part( 'template-parts/archive', 'service' );
-	return;
-}
 if ( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
-		get_template_part( 'template-parts/archive', 'portfolio' );
+		get_template_part( 'template-parts/archive', 'docs' );
 	return;
 }
 
