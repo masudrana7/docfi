@@ -14,7 +14,6 @@ defined( 'ABSPATH' ) || exit;
 
 <ul id="bbp-forum-<?php bbp_forum_id(); ?>" <?php bbp_forum_class(); ?>>
 	<li class="bbp-forum-info rt-title-inner">
-
 		<?php if ( has_post_thumbnail(get_the_ID()) ) : ?>
             <div class="rt-author-image">
                 <?php the_post_thumbnail('full'); ?>
@@ -48,12 +47,10 @@ defined( 'ABSPATH' ) || exit;
 				<?php do_action( 'bbp_theme_before_topic_author' ); ?>
 				<?php bbp_author_link( array( 'post_id' => bbp_get_forum_last_active_id(), 'type' => 'name' ) ); ?>
 				<?php do_action( 'bbp_theme_after_topic_author' ); ?>
-				
 				<?php do_action( 'bbp_theme_before_forum_freshness_link' ); ?>
 				<?php bbp_forum_freshness_link(); ?>
 				<?php do_action( 'bbp_theme_after_forum_freshness_link' ); ?>
 			</div>
-
 		</div>
 	</li>
 

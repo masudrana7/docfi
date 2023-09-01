@@ -30,7 +30,6 @@ DocfiTheme_Helper::requires( 'customizer/settings/blog.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/single.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/postshare.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/error.php' );
-DocfiTheme_Helper::requires( 'customizer/settings/team.php' );
 DocfiTheme_Helper::requires( 'customizer/settings/docs.php' );
 
 // Layout Setting

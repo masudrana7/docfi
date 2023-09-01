@@ -51,10 +51,6 @@ class DocfiTheme_Docs_Layout_Settings extends DocfiTheme_Customizer {
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-right.png',
                         'name' => __( 'Right Sidebar', 'docfi' )
                     ),
-                    'left-right-sidebar' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-left-right.png',
-                        'name' => __( 'Left & Right Sidebar', 'docfi' )
-                    )
                 )
             )
         ) );

@@ -42,34 +42,21 @@ class DocfiTheme_Docs_Post_Settings extends DocfiTheme_Customizer {
             'section' => 'rttheme_docs_settings',
         )));
 
-        $wp_customize->add_setting( 'docs_archive_style',
+        // Docs Archive Group
+        $wp_customize->add_setting( 'docs_group_number',
             array(
-                'default' => $this->defaults['docs_archive_style'],
+                'default' => $this->defaults['docs_group_number'],
                 'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_radio_sanitization'
+                'sanitize_callback' => 'rttheme_text_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'docs_archive_style',
+        $wp_customize->add_control( 'docs_group_number',
             array(
-                'label' => __( 'Docs Archive Layout', 'docfi' ),
-                'description' => esc_html__( 'Select the gallery layout for gallery page', 'docfi' ),
+                'label' => __( 'Docs Archive Group Limit', 'docfi' ),
                 'section' => 'rttheme_docs_settings',
-                'choices' => array(
-                    'style1' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog1.png',
-                        'name' => __( 'Layout 1', 'docfi' )
-                    ),
-                    'style2' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog3.png',
-                        'name' => __( 'Layout 2', 'docfi' )
-                    ),
-                    'style3' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog2.png',
-                        'name' => __( 'Layout 3', 'docfi' )
-                    ),
-                )
+                'type' => 'number',
             )
-        ) );
+        );
 
         // Docs Archive option
         $wp_customize->add_setting( 'docs_post_number',
@@ -86,49 +73,7 @@ class DocfiTheme_Docs_Post_Settings extends DocfiTheme_Customizer {
                 'type' => 'number',
             )
         );
-
-        $wp_customize->add_setting( 'docs_ar_category',
-            array(
-                'default' => $this->defaults['docs_ar_category'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'docs_ar_category',
-            array(
-                'label' => __( 'Show Category', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'docs_ar_action',
-            array(
-                'default' => $this->defaults['docs_ar_action'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'docs_ar_action',
-            array(
-                'label' => __( 'Show Action', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'docs_ar_excerpt',
-            array(
-                'default' => $this->defaults['docs_ar_excerpt'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'docs_ar_excerpt',
-            array(
-                'label' => __( 'Show Excerpt', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
+        
         $wp_customize->add_setting( 'docs_arexcerpt_limit',
             array(
                 'default' => $this->defaults['docs_arexcerpt_limit'],
@@ -155,90 +100,6 @@ class DocfiTheme_Docs_Post_Settings extends DocfiTheme_Customizer {
             'section' => 'rttheme_docs_settings',
         )));        
 
-        $wp_customize->add_setting( 'single_docs_cat',
-            array(
-                'default' => $this->defaults['single_docs_cat'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_cat',
-            array(
-                'label' => __( 'Docs Single Category', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'single_docs_client',
-            array(
-                'default' => $this->defaults['single_docs_client'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_client',
-            array(
-                'label' => __( 'Docs Single Client', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'single_docs_startdate',
-            array(
-                'default' => $this->defaults['single_docs_startdate'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_startdate',
-            array(
-                'label' => __( 'Docs Single Start Date', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'single_docs_enddate',
-            array(
-                'default' => $this->defaults['single_docs_enddate'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_enddate',
-            array(
-                'label' => __( 'Docs Single End Date', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'single_docs_weblink',
-            array(
-                'default' => $this->defaults['single_docs_weblink'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_weblink',
-            array(
-                'label' => __( 'Docs Single WebLink', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-
-        $wp_customize->add_setting( 'single_docs_rating',
-            array(
-                'default' => $this->defaults['single_docs_rating'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'single_docs_rating',
-            array(
-                'label' => __( 'Docs Single Rating', 'docfi' ),
-                'section' => 'rttheme_docs_settings',
-            )
-        ));
-        
         $wp_customize->add_setting( 'show_related_docs',
             array(
                 'default' => $this->defaults['show_related_docs'],
