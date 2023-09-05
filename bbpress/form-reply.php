@@ -27,7 +27,7 @@ if ( bbp_is_reply_edit() ) : ?>
 			<?php do_action( 'bbp_theme_before_reply_form' ); ?>
 
 			<fieldset class="bbp-form">
-				<legend><?php printf( esc_html__( 'Reply To: %s', 'bbpress' ), ( bbp_get_form_reply_to() ) ? sprintf( esc_html__( 'Reply #%1$s in %2$s', 'bbpress' ), bbp_get_form_reply_to(), bbp_get_topic_title() ) : bbp_get_topic_title() ); ?></legend>
+				<legend><?php printf( esc_html__( 'Reply To: %s', 'docfi' ), ( bbp_get_form_reply_to() ) ? sprintf( esc_html__( 'Reply #%1$s in %2$s', 'docfi' ), bbp_get_form_reply_to(), bbp_get_topic_title() ) : bbp_get_topic_title() ); ?></legend>
 
 				<?php do_action( 'bbp_theme_before_reply_form_notices' ); ?>
 
@@ -35,7 +35,7 @@ if ( bbp_is_reply_edit() ) : ?>
 
 					<div class="bbp-template-notice">
 						<ul>
-							<li><?php esc_html_e( 'This topic is marked as closed to new replies, however your posting capabilities still allow you to reply.', 'bbpress' ); ?></li>
+							<li><?php esc_html_e( 'This topic is marked as closed to new replies, however your posting capabilities still allow you to reply.', 'docfi' ); ?></li>
 						</ul>
 					</div>
 
@@ -45,7 +45,7 @@ if ( bbp_is_reply_edit() ) : ?>
 
 					<div class="bbp-template-notice">
 						<ul>
-							<li><?php esc_html_e( 'This forum is closed to new content, however your posting capabilities still allow you to post.', 'bbpress' ); ?></li>
+							<li><?php esc_html_e( 'This forum is closed to new content, however your posting capabilities still allow you to post.', 'docfi' ); ?></li>
 						</ul>
 					</div>
 
@@ -55,7 +55,7 @@ if ( bbp_is_reply_edit() ) : ?>
 
 					<div class="bbp-template-notice">
 						<ul>
-							<li><?php esc_html_e( 'Your account has the ability to post unrestricted HTML content.', 'bbpress' ); ?></li>
+							<li><?php esc_html_e( 'Your account has the ability to post unrestricted HTML content.', 'docfi' ); ?></li>
 						</ul>
 					</div>
 
@@ -76,7 +76,7 @@ if ( bbp_is_reply_edit() ) : ?>
 					<?php if ( ! ( bbp_use_wp_editor() || current_user_can( 'unfiltered_html' ) ) ) : ?>
 
 						<p class="form-allowed-tags">
-							<label><?php esc_html_e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label><br />
+							<label><?php esc_html_e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','docfi' ); ?></label><br />
 							<code><?php bbp_allowed_tags(); ?></code>
 						</p>
 
@@ -87,7 +87,7 @@ if ( bbp_is_reply_edit() ) : ?>
 						<?php do_action( 'bbp_theme_before_reply_form_tags' ); ?>
 
 						<p>
-							<label for="bbp_topic_tags"><?php esc_html_e( 'Tags:', 'bbpress' ); ?></label><br />
+							<label for="bbp_topic_tags"><?php esc_html_e( 'Tags:', 'docfi' ); ?></label><br />
 							<input type="text" value="<?php bbp_form_topic_tags(); ?>" size="40" name="bbp_topic_tags" id="bbp_topic_tags" <?php disabled( bbp_is_topic_spam() ); ?> />
 						</p>
 
@@ -105,11 +105,11 @@ if ( bbp_is_reply_edit() ) : ?>
 
 							<?php if ( bbp_is_reply_edit() && ( bbp_get_reply_author_id() !== bbp_get_current_user_id() ) ) : ?>
 
-								<label for="bbp_topic_subscription"><?php esc_html_e( 'Notify the author of follow-up replies via email', 'bbpress' ); ?></label>
+								<label for="bbp_topic_subscription"><?php esc_html_e( 'Notify the author of follow-up replies via email', 'docfi' ); ?></label>
 
 							<?php else : ?>
 
-								<label for="bbp_topic_subscription"><?php esc_html_e( 'Notify me of follow-up replies via email', 'bbpress' ); ?></label>
+								<label for="bbp_topic_subscription"><?php esc_html_e( 'Notify me of follow-up replies via email', 'docfi' ); ?></label>
 
 							<?php endif; ?>
 
@@ -126,7 +126,7 @@ if ( bbp_is_reply_edit() ) : ?>
 							<?php do_action( 'bbp_theme_before_reply_form_reply_to' ); ?>
 
 							<p class="form-reply-to">
-								<label for="bbp_reply_to"><?php esc_html_e( 'Reply To:', 'bbpress' ); ?></label><br />
+								<label for="bbp_reply_to"><?php esc_html_e( 'Reply To:', 'docfi' ); ?></label><br />
 								<?php bbp_reply_to_dropdown(); ?>
 							</p>
 
@@ -135,7 +135,7 @@ if ( bbp_is_reply_edit() ) : ?>
 							<?php do_action( 'bbp_theme_before_reply_form_status' ); ?>
 
 							<p>
-								<label for="bbp_reply_status"><?php esc_html_e( 'Reply Status:', 'bbpress' ); ?></label><br />
+								<label for="bbp_reply_status"><?php esc_html_e( 'Reply Status:', 'docfi' ); ?></label><br />
 								<?php bbp_form_reply_status_dropdown(); ?>
 							</p>
 
@@ -150,11 +150,11 @@ if ( bbp_is_reply_edit() ) : ?>
 							<fieldset class="bbp-form">
 								<legend>
 									<input name="bbp_log_reply_edit" id="bbp_log_reply_edit" type="checkbox" value="1" <?php bbp_form_reply_log_edit(); ?> />
-									<label for="bbp_log_reply_edit"><?php esc_html_e( 'Keep a log of this edit:', 'bbpress' ); ?></label><br />
+									<label for="bbp_log_reply_edit"><?php esc_html_e( 'Keep a log of this edit:', 'docfi' ); ?></label><br />
 								</legend>
 
 								<div>
-									<label for="bbp_reply_edit_reason"><?php printf( esc_html__( 'Optional reason for editing:', 'bbpress' ), bbp_get_current_user_name() ); ?></label><br />
+									<label for="bbp_reply_edit_reason"><?php printf( esc_html__( 'Optional reason for editing:', 'docfi' ), bbp_get_current_user_name() ); ?></label><br />
 									<input type="text" value="<?php bbp_form_reply_edit_reason(); ?>" size="40" name="bbp_reply_edit_reason" id="bbp_reply_edit_reason" />
 								</div>
 							</fieldset>
@@ -173,7 +173,7 @@ if ( bbp_is_reply_edit() ) : ?>
 
 						<?php bbp_cancel_reply_to_link(); ?>
 
-						<button type="submit" id="bbp_reply_submit" name="bbp_reply_submit" class="button submit"><?php esc_html_e( 'Submit', 'bbpress' ); ?></button>
+						<button type="submit" id="bbp_reply_submit" name="bbp_reply_submit" class="button submit"><?php esc_html_e( 'Submit', 'docfi' ); ?></button>
 
 						<?php do_action( 'bbp_theme_after_reply_form_submit_button' ); ?>
 
@@ -197,7 +197,7 @@ if ( bbp_is_reply_edit() ) : ?>
 	<div id="no-reply-<?php bbp_topic_id(); ?>" class="bbp-no-reply">
 		<div class="bbp-template-notice">
 			<ul>
-				<li><?php printf( esc_html__( 'The topic &#8216;%s&#8217; is closed to new replies.', 'bbpress' ), bbp_get_topic_title() ); ?></li>
+				<li><?php printf( esc_html__( 'The topic &#8216;%s&#8217; is closed to new replies.', 'docfi' ), bbp_get_topic_title() ); ?></li>
 			</ul>
 		</div>
 	</div>
@@ -207,7 +207,7 @@ if ( bbp_is_reply_edit() ) : ?>
 	<div id="no-reply-<?php bbp_topic_id(); ?>" class="bbp-no-reply">
 		<div class="bbp-template-notice">
 			<ul>
-				<li><?php printf( esc_html__( 'The forum &#8216;%s&#8217; is closed to new topics and replies.', 'bbpress' ), bbp_get_forum_title( bbp_get_topic_forum_id() ) ); ?></li>
+				<li><?php printf( esc_html__( 'The forum &#8216;%s&#8217; is closed to new topics and replies.', 'docfi' ), bbp_get_forum_title( bbp_get_topic_forum_id() ) ); ?></li>
 			</ul>
 		</div>
 	</div>
@@ -218,8 +218,8 @@ if ( bbp_is_reply_edit() ) : ?>
 		<div class="bbp-template-notice">
 			<ul>
 				<li><?php is_user_logged_in()
-					? esc_html_e( 'You cannot reply to this topic.',               'bbpress' )
-					: esc_html_e( 'You must be logged in to reply to this topic.', 'bbpress' );
+					? esc_html_e( 'You cannot reply to this topic.',               'docfi' )
+					: esc_html_e( 'You must be logged in to reply to this topic.', 'docfi' );
 				?></li>
 			</ul>
 		</div>

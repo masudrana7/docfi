@@ -24,36 +24,36 @@ defined( 'ABSPATH' ) || exit;
 
 				<fieldset class="bbp-form">
 
-					<legend><?php printf( esc_html__( 'Split topic "%s"', 'bbpress' ), bbp_get_topic_title() ); ?></legend>
+					<legend><?php printf( esc_html__( 'Split topic "%s"', 'docfi' ), bbp_get_topic_title() ); ?></legend>
 
 					<div>
 
 						<div class="bbp-template-notice info">
 							<ul>
-								<li><?php esc_html_e( 'When you split a topic, you are slicing it in half starting with the reply you just selected. Choose to use that reply as a new topic with a new title, or merge those replies into an existing topic.', 'bbpress' ); ?></li>
+								<li><?php esc_html_e( 'When you split a topic, you are slicing it in half starting with the reply you just selected. Choose to use that reply as a new topic with a new title, or merge those replies into an existing topic.', 'docfi' ); ?></li>
 							</ul>
 						</div>
 
 						<div class="bbp-template-notice">
 							<ul>
-								<li><?php esc_html_e( 'If you use the existing topic option, replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted.', 'bbpress' ); ?></li>
+								<li><?php esc_html_e( 'If you use the existing topic option, replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted.', 'docfi' ); ?></li>
 							</ul>
 						</div>
 
 						<fieldset class="bbp-form">
-							<legend><?php esc_html_e( 'Split Method', 'bbpress' ); ?></legend>
+							<legend><?php esc_html_e( 'Split Method', 'docfi' ); ?></legend>
 
 							<div>
 								<input name="bbp_topic_split_option" id="bbp_topic_split_option_reply" type="radio" checked="checked" value="reply" />
-								<label for="bbp_topic_split_option_reply"><?php printf( esc_html__( 'New topic in %s titled:', 'bbpress' ), bbp_get_forum_title( bbp_get_topic_forum_id( bbp_get_topic_id() ) ) ); ?></label>
-								<input type="text" id="bbp_topic_split_destination_title" value="<?php printf( esc_html__( 'Split: %s', 'bbpress' ), bbp_get_topic_title() ); ?>" size="35" name="bbp_topic_split_destination_title" />
+								<label for="bbp_topic_split_option_reply"><?php printf( esc_html__( 'New topic in %s titled:', 'docfi' ), bbp_get_forum_title( bbp_get_topic_forum_id( bbp_get_topic_id() ) ) ); ?></label>
+								<input type="text" id="bbp_topic_split_destination_title" value="<?php printf( esc_html__( 'Split: %s', 'docfi' ), bbp_get_topic_title() ); ?>" size="35" name="bbp_topic_split_destination_title" />
 							</div>
 
 							<?php if ( bbp_has_topics( array( 'show_stickies' => false, 'post_parent' => bbp_get_topic_forum_id( bbp_get_topic_id() ), 'post__not_in' => array( bbp_get_topic_id() ) ) ) ) : ?>
 
 								<div>
 									<input name="bbp_topic_split_option" id="bbp_topic_split_option_existing" type="radio" value="existing" />
-									<label for="bbp_topic_split_option_existing"><?php esc_html_e( 'Use an existing topic in this forum:', 'bbpress' ); ?></label>
+									<label for="bbp_topic_split_option_existing"><?php esc_html_e( 'Use an existing topic in this forum:', 'docfi' ); ?></label>
 
 									<?php
 										bbp_dropdown( array(
@@ -73,24 +73,24 @@ defined( 'ABSPATH' ) || exit;
 						</fieldset>
 
 						<fieldset class="bbp-form">
-							<legend><?php esc_html_e( 'Topic Extras', 'bbpress' ); ?></legend>
+							<legend><?php esc_html_e( 'Topic Extras', 'docfi' ); ?></legend>
 
 							<div>
 
 								<?php if ( bbp_is_subscriptions_active() ) : ?>
 
 									<input name="bbp_topic_subscribers" id="bbp_topic_subscribers" type="checkbox" value="1" checked="checked" />
-									<label for="bbp_topic_subscribers"><?php esc_html_e( 'Copy subscribers to the new topic', 'bbpress' ); ?></label><br />
+									<label for="bbp_topic_subscribers"><?php esc_html_e( 'Copy subscribers to the new topic', 'docfi' ); ?></label><br />
 
 								<?php endif; ?>
 
 								<input name="bbp_topic_favoriters" id="bbp_topic_favoriters" type="checkbox" value="1" checked="checked" />
-								<label for="bbp_topic_favoriters"><?php esc_html_e( 'Copy favoriters to the new topic', 'bbpress' ); ?></label><br />
+								<label for="bbp_topic_favoriters"><?php esc_html_e( 'Copy favoriters to the new topic', 'docfi' ); ?></label><br />
 
 								<?php if ( bbp_allow_topic_tags() ) : ?>
 
 									<input name="bbp_topic_tags" id="bbp_topic_tags" type="checkbox" value="1" checked="checked" />
-									<label for="bbp_topic_tags"><?php esc_html_e( 'Copy topic tags to the new topic', 'bbpress' ); ?></label><br />
+									<label for="bbp_topic_tags"><?php esc_html_e( 'Copy topic tags to the new topic', 'docfi' ); ?></label><br />
 
 								<?php endif; ?>
 
@@ -99,12 +99,12 @@ defined( 'ABSPATH' ) || exit;
 
 						<div class="bbp-template-notice error" role="alert" tabindex="-1">
 							<ul>
-								<li><?php esc_html_e( 'This process cannot be undone.', 'bbpress' ); ?></li>
+								<li><?php esc_html_e( 'This process cannot be undone.', 'docfi' ); ?></li>
 							</ul>
 						</div>
 
 						<div class="bbp-submit-wrapper">
-							<button type="submit" id="bbp_merge_topic_submit" name="bbp_merge_topic_submit" class="button submit"><?php esc_html_e( 'Submit', 'bbpress' ); ?></button>
+							<button type="submit" id="bbp_merge_topic_submit" name="bbp_merge_topic_submit" class="button submit"><?php esc_html_e( 'Submit', 'docfi' ); ?></button>
 						</div>
 					</div>
 
@@ -118,8 +118,8 @@ defined( 'ABSPATH' ) || exit;
 
 		<div id="no-topic-<?php bbp_topic_id(); ?>" class="bbp-no-topic">
 			<div class="entry-content"><?php is_user_logged_in()
-				? esc_html_e( 'You do not have permission to edit this topic.', 'bbpress' )
-				: esc_html_e( 'You cannot edit this topic.',                    'bbpress' );
+				? esc_html_e( 'You do not have permission to edit this topic.', 'docfi' )
+				: esc_html_e( 'You cannot edit this topic.',                    'docfi' );
 			?></div>
 		</div>
 

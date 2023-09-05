@@ -22,18 +22,18 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php do_action( 'bbp_theme_before_topic_title' ); ?>
 
-		<h3><?php esc_html_e( 'Topic:', 'bbpress' ); ?>
+		<h3><?php esc_html_e( 'Topic:', 'docfi' ); ?>
 		<a href="<?php bbp_topic_permalink(); ?>"><?php bbp_topic_title(); ?></a></h3>
 
 		<div class="bbp-topic-title-meta">
 
 			<?php if ( function_exists( 'bbp_is_forum_group_forum' ) && bbp_is_forum_group_forum( bbp_get_topic_forum_id() ) ) : ?>
 
-				<?php esc_html_e( 'in group forum ', 'bbpress' ); ?>
+				<?php esc_html_e( 'in group forum ', 'docfi' ); ?>
 
 			<?php else : ?>
 
-				<?php esc_html_e( 'in forum ', 'bbpress' ); ?>
+				<?php esc_html_e( 'in forum ', 'docfi' ); ?>
 
 			<?php endif; ?>
 

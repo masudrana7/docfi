@@ -698,6 +698,8 @@ CSS INDEX
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     height: 140px;
+    position: relative;
+    top: 0;
 }
 .rt-counter-box .item-title h3 {
     font-weight: 700;
@@ -716,8 +718,7 @@ CSS INDEX
 .rt-counter-box:hover {
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
+    top: -10px;
 }
 .rt-counter-box .rt-item {
     position: relative;
@@ -1100,7 +1101,7 @@ CSS INDEX
 }
 @media only screen and (min-width: 1200px) {
     .testimonial-section--style-2 .testimonial-item {
-        padding: 69px 85px;
+        padding: 85px;
     }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -1174,7 +1175,7 @@ CSS INDEX
 }
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .next,
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .prev {
-    top: 78%;
+    top: 84%;
 }
 .testimonial-section--style-2 .slider-navigation-btn-wrapper .prev {
     left: 72%;
@@ -1646,6 +1647,7 @@ CSS INDEX
 }
 .best-online-documentation-section .theme-logo-wrapper li {
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .best-online-documentation-section .theme-logo-wrapper{
     margin: 0;
@@ -1838,6 +1840,10 @@ div.rt-cat-list .logo-card:hover svg{
 
 .rt-card--style-4 .icon {
     margin-bottom: 20px;
+}
+.rt-card--style-4 .icon svg,
+.rt-card--style-4 .icon img{
+    max-width: 85px;
 }
 
 .rt-card--style-4 .card-btn {

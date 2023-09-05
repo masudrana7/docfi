@@ -161,62 +161,10 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'single_post_page_bgimg' => '',
             'single_post_page_bgcolor' => '',
 
-            //Team Layout Setting 
-			'team_archive_layout' => 'full-width',
-            'team_archive_sidebar'        => '',
-			'team_archive_padding_top'    => 120,
-            'team_archive_padding_bottom' => 120,
-            'team_archive_banner' => 1,
-            'team_archive_breadcrumb' => 0,			
-			'team_archive_bgtype' => 'bgcolor',
-            'team_archive_bgcolor' => '',
-            'team_archive_bgimg' => '',
-            'team_archive_page_bgimg' => '',
-            'team_archive_page_bgcolor' => '',
-			
-			//Team Single Layout Setting 
-			'team_layout' => 'full-width',
-            'team_sidebar'        => '',
-			'team_padding_top'    => 120,
-            'team_padding_bottom' => 120,
-            'team_banner' => 1,
-            'team_breadcrumb' => 0,			
-			'team_bgtype' => 'bgcolor',
-            'team_bgcolor' => '',
-            'team_bgimg' => '',
-            'team_page_bgimg' => '',
-            'team_page_bgcolor' => '',
-
-            //Service Layout Setting 
-            'service_archive_layout' => 'full-width',
-            'service_archive_sidebar'        => '',
-            'service_archive_padding_top'    => 120,
-            'service_archive_padding_bottom' => 120,
-            'service_archive_banner' => 1,
-            'service_archive_breadcrumb' => 0,         
-            'service_archive_bgtype' => 'bgcolor',
-            'service_archive_bgcolor' => '',
-            'service_archive_bgimg' => '',
-            'service_archive_page_bgimg' => '',
-            'service_archive_page_bgcolor' => '',
-            
-            //Service Single Layout Setting 
-            'service_layout' => 'full-width',
-            'service_sidebar'        => '',
-            'service_padding_top'    => 120,
-            'service_padding_bottom' => 120,
-            'service_banner' => 1,
-            'service_breadcrumb' => 0,         
-            'service_bgtype' => 'bgcolor',
-            'service_bgcolor' => '',
-            'service_bgimg' => '',
-            'service_page_bgimg' => '',
-            'service_page_bgcolor' => '',
-
+         
             //docs Layout Setting 
-            
             'docs_archive_layout' => 'full-width',
-            'docs_archive_sidebar'        => '',
+            'docs_archive_sidebar'  => '',
             'docs_archive_padding_top'    => 120,
             'docs_archive_padding_bottom' => 120,
             'docs_archive_banner' => 1,
@@ -242,6 +190,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'docs_bgimg' => '',
             'docs_page_bgimg' => '',
             'docs_page_bgcolor' => '',
+            'left-right-sidebar' => '',
 			
 			//Search Layout Setting 
 			'search_layout' => 'right-sidebar',

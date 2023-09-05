@@ -50,7 +50,6 @@ jQuery(document).ready(function ($) {
     }
 
     //Search Focusin & Focusout Add Class
-
     
     if ($(".rt-hero-section-content-wrapper").length) {
         $('.rt-hero-section-content-wrapper').focusin(function () {

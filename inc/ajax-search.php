@@ -50,7 +50,7 @@ class RTsearchAjax{
 						}
 					} 
 					$terms = get_terms( array('taxonomy' => 'docfi_docs_group' ) );
-					$category_dropdown = array(  0 => __( 'All Docs', 'docfi-core' ) );
+					$category_dropdown = array(  0 => __( 'All Docs', 'docfi' ) );
 					foreach ( $terms as $category ) {
 						$category_dropdown[$category->slug] = $category->name;
 					}

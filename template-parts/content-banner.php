@@ -19,20 +19,12 @@ elseif ( is_home() ) {
 		$docfi_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'docfi' ) );
 	}
 }
-elseif (is_post_type_archive('docfi_team')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Teams', 'docfi' ) );
-} elseif (is_post_type_archive('docfi_docs')) {
+elseif (is_post_type_archive('docfi_docs')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Docs', 'docfi' ) );
-} elseif (is_post_type_archive('docfi_service')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Services', 'docfi' ) );
 } elseif ( is_archive() ) {
 	$docfi_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'docfi' ) );
-} elseif (is_singular('docfi_team')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Team Details', 'docfi' ) );
 } elseif (is_singular('docfi_docs')) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Element Details', 'docfi' ) );
-} elseif (is_singular('docfi_service')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Service Details', 'docfi' ) );
 } elseif (is_single()) {
 	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Blog Details', 'docfi' ) );
 }  else {

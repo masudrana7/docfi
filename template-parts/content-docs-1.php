@@ -17,8 +17,10 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 		'number' => $docs_group_number,
 	);
 	$docs_groups = get_categories($args);
+	$post_count = 0;
 	if ($docs_groups) {
 		foreach ($docs_groups as $docs_group) {
+			$post_count = $docs_group->count;
 			$get_item_bg  = get_term_meta( $docs_group->term_id, 'rt_item_bg', true ); 
 			$get_color    = get_term_meta( $docs_group->term_id, 'rt_group_color', true ); 
 			$hexcolor     = DocfiTheme_Helper::hex2rgb( $get_item_bg );
@@ -31,6 +33,8 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 			$tl = $term_name->name;
 			$uid = strtolower(str_replace(array('%', ':', '\\', '/', '*', '?', '.', ';', ' '), '', $tl));
 			$current_inner_posts = [];
+			$group_link = get_category_link($docs_group->cat_ID);
+			
 		ob_start();
 		?>
 
@@ -41,9 +45,17 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 				$args = array(
 					'post_type' => 'docfi_docs',
 					'posts_per_page'    => $docs_post_number,
-					
+					'meta_query' => array(
+						array(
+							'key'     => 'group_post_select', 
+							'value'   => $docs_group->term_id, 
+							'compare' => 'LIKE', 
+							'type'    => 'CHAR', 
+						),
+					),
 				);
 				$query = new WP_Query( $args );
+				$post_count = $query->found_posts;
 				$page_id = get_the_ID();
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) {  
@@ -52,7 +64,7 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 						$current_inner_posts[] = $postid;
 						$add_active = ($page_id === $postid) ? " active": ""; ?>
 						<li>
-							<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.96799 10L10.5 5.5L5.96799 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M1 10L5.53201 5.5L1 1" stroke="#6B707F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+							<i class="fa-solid fa-angles-right"></i>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</li> 
 						<?php 
@@ -61,7 +73,6 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 			</ul>
 		</div>
 		<?php
-		
 		$post_list = ob_get_clean(); ?>
 		<div class="col-md-4">	
 			<div class="explore-topics-card " style="--docfi-red2: <?php echo absint( $r ); ?>;--docfi-green2: <?php echo absint( $g ); ?>;--docfi-blue2: <?php echo absint( $b ); ?>">
@@ -70,7 +81,7 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 						<div style="background:#<?php echo esc_attr( $get_color ); ?>" class="icon d-flex justify-content-center align-items-center rt-color-shade12-bg">
 							<?php 
 								if ( $image_id ) { ?>
-								<img src="<?php echo $image_id[0]; ?>" />
+								<img src="<?php echo esc_attr($image_id[0]); ?>" />
 								<?php } else { ?>
 									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M9.68998 1.69513L14.5725 4.32763C15.1425 4.63513 15.1425 5.51263 14.5725 5.82013L9.68998 8.45263C9.25498 8.68513 8.74498 8.68513 8.30998 8.45263L3.42748 5.82013C2.85748 5.51263 2.85748 4.63513 3.42748 4.32763L8.30998 1.69513C8.74498 1.46263 9.25498 1.46263 9.68998 1.69513Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -84,11 +95,12 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 							<?php echo esc_html( $docs_group->name );?>
 						</h3>
 					</div>
-					<a href="http://docfi.local/docs-group/blog-post/" class="number-of-article">
-						5 articles 
+					<a href="<?php echo esc_url($group_link); ?>" class="number-of-article">
+						<?php echo esc_html($post_count);  echo esc_html_e(' articles', 'docfi'); ?> 
 					</a>
 				</div>
-				<?php echo $post_list; ?>
+				<?php echo wp_kses_post($post_list); ?>
+				<a href="<?php echo esc_url($group_link); ?>" class="view-all-btn"><?php echo esc_html('View All', 'docfi');?></a>
 			</div>
 		</div>							
 		<?php 

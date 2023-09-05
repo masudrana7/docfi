@@ -52,7 +52,7 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 			<div class="row">
 				<?php
 				for ( $i = 1; $i <= $docfi_footer_column; $i++ ) {
-					echo '<div class="rt-widget-list ' . $docfi_footer_class . ' wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">';
+					echo '<div class="rt-widget-list ' . $docfi_footer_class . '">';
 					dynamic_sidebar( 'footer-style-2-'. $i );
 					echo '</div>';
 				}
@@ -65,7 +65,7 @@ if( !empty( DocfiTheme::$options['footer_logo2'] ) ) {
 	<div class="footer-copyright-area">
 		<div class="container">
 			<div class="rt-footer-line"></div>
-			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?>">
 				<div class="copyright-menu-wrap">
 					<?php if ( DocfiTheme::$options['copyright_text'] ) { ?>
 					<div class="copyright"><?php echo wp_kses( DocfiTheme::$options['copyright_text'] , 'allow_link' );?></div>

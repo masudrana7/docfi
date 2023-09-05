@@ -65,17 +65,16 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 			<div class="row justify-content-center">
 				<div class="col-xl-11 col-lg-12">
 					<div class="row justify-content-between align-items-center">
-
 						<?php if (!empty(DocfiTheme::$options['newsletter_title'])) { ?>
 							<div class="col-lg-5 col-lg-6">
 								<div class="section-text-content">
-									<h2 class="section-heading wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+									<h2 class="section-heading">
 										<?php echo esc_html( DocfiTheme::$options['newsletter_title'] ); ?>
 									</h2>
 								</div>
 							</div>
 						<?php }  if (!empty(DocfiTheme::$options['nws_shortcode'])) { ?>
-							<div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="500ms">
+							<div class="col-xl-6 col-lg-6">
 								<div class="call-to-cation-form-wrapper">
 									<?php echo do_shortcode( DocfiTheme::$options['nws_shortcode'] ); ?>
 								</div>
@@ -98,7 +97,7 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 			<div class="row">
 				<?php
 				for ( $i = 1; $i <= $docfi_footer_column; $i++ ) {
-					echo '<div class="rt-widget-list ' . $docfi_footer_class . ' wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">';
+					echo '<div class="rt-widget-list ' . $docfi_footer_class . '">';
 					dynamic_sidebar( 'footer-style-1-'. $i );
 					echo '</div>';
 				}
@@ -113,7 +112,7 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 		<div class="container">
 			<div class="rt-footer-line"></div>
 			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> <?php echo esc_attr( $menu_on ); ?>">
-				<div class="copyright-menu-wrap wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+				<div class="copyright-menu-wrap">
 					<?php if ( DocfiTheme::$options['copyright_text'] ) { ?>
 					<div class="copyright"><?php echo wp_kses( DocfiTheme::$options['copyright_text'] , 'allow_link' );?></div>
 					<?php } ?>
@@ -131,14 +130,14 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 		<ul>
 			<?php if(!empty($footer_bg_img1)) { ?>
 			<li>
-				<img src="<?php echo esc_url( $footer_bg_img1 ); ?>" alt="" class="wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+				<img src="<?php echo esc_url( $footer_bg_img1 ); ?>" alt="shape-image">
 			</li>
 			<?php } ?>
 
 		    <?php if(!empty($footer_bg_img2)) { ?>
 			<li class="rt-mouse-parallax">
 				<div data-depth="5.00">
-					<img src="<?php echo esc_url( $footer_bg_img2 ); ?>" alt="" class="wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms">
+					<img src="<?php echo esc_url( $footer_bg_img2 ); ?>" alt="shape-image">
 				</div>
 			</li>
 			<?php } ?>

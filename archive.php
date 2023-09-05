@@ -13,21 +13,22 @@ else{
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
 }
 $docfi_is_post_archive = is_home() || ( is_archive() && get_post_type() == 'post' ) ? true : false;
-if ( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
-		get_template_part( 'template-parts/archive', 'docs' );
+if ( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_group" ) || is_tax( "docfi_docs_category" ) ) {
+	get_template_part( 'template-parts/archive', 'docs' );
 	return;
 }
-
 ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
+
 			<?php
 			if ( DocfiTheme::$layout == 'left-sidebar' ) {
 				get_sidebar();
 			}
 			?>
+
 			<div class="<?php echo esc_attr( $docfi_layout_class );?>">
 				<main id="main" class="site-main">
 					<?php if( ! empty( category_description() ) ) { ?>
@@ -91,10 +92,12 @@ if ( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
 					</div>
 				</main>
 			</div>
+			
 			<?php
 			if( DocfiTheme::$layout == 'right-sidebar' ){				
 				get_sidebar();
 			}
+			
 			?>
 		</div>
 	</div>

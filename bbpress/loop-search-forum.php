@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="bbp-forum-header">
 	<div class="bbp-meta">
-		<span class="bbp-forum-post-date"><?php printf( esc_html__( 'Last updated %s', 'bbpress' ), bbp_get_forum_last_active_time() ); ?></span>
+		<span class="bbp-forum-post-date"><?php printf( esc_html__( 'Last updated %s', 'docfi' ), bbp_get_forum_last_active_time() ); ?></span>
 		<a href="<?php bbp_forum_permalink(); ?>" class="bbp-forum-permalink">#<?php bbp_forum_id(); ?></a>
 	</div><!-- .bbp-meta -->
 
@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php do_action( 'bbp_theme_before_forum_title' ); ?>
 
-		<h3><?php esc_html_e( 'Forum:', 'bbpress' ); ?>
+		<h3><?php esc_html_e( 'Forum:', 'docfi' ); ?>
 		<a href="<?php bbp_forum_permalink(); ?>"><?php bbp_forum_title(); ?></a></h3>
 
 		<?php do_action( 'bbp_theme_after_forum_title' ); ?>

@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'bbp_template_before_replies_loop' );
 $is_count = bbp_get_topic_reply_count(bbp_get_topic_id()); ?>
     <div id="topic-<?php bbp_topic_id(); ?>-replies" class="rt-all-replies">
-        <h3 class="rt-replies-title"> <?php esc_html_e('All Replies', 'docly'); ?> </h3>
+        <h3 class="rt-replies-title"> <?php esc_html_e('All Replies', 'docfi'); ?> </h3>
 
         <?php if ( bbp_thread_replies() ) : ?>
             <?php bbp_list_replies(); ?>

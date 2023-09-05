@@ -5,8 +5,11 @@
  * @version 1.0
  */
 // Layout class
+
 if ( DocfiTheme::$layout == 'full-width' ) {
 	$docfi_layout_class = 'col-sm-12 col-12';
+}elseif (DocfiTheme::$layout == 'left-right-sidebar' ) {
+	$docfi_layout_class = 'col-lg-6';
 }else{
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
 }
@@ -16,12 +19,8 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 <div id="primary" class="content-area docfi-dosc-single">
 	<div class="container">
 		<div class="row">
-
-
-
-			<?php //if ( DocfiTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
 			 
-			<?php if (DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('docs-left-sidebar')) { ?>			
+			<?php if ( (DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('docs-left-sidebar')) || DocfiTheme::$layout == 'left-right-sidebar' ) { ?>			
 				<div class="col-lg-3 col-md-5 docfi-column-sticky">
 					<?php dynamic_sidebar('docs-left-sidebar'); ?>
 				</div>
@@ -37,16 +36,13 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 				</main>
 			</div>
 
-			<?php if (DocfiTheme::$layout == 'right-sidebar' && is_active_sidebar('docs-right-sidebar')) { ?>
+			<?php if ( (DocfiTheme::$layout == 'right-sidebar' && is_active_sidebar('docs-right-sidebar'))  || DocfiTheme::$layout == 'left-right-sidebar') { ?>
 				<div class="col-lg-3 docfi-column-sticky-min-1024">
 					<div class="rt-right-docs-content">
 						<?php dynamic_sidebar('docs-right-sidebar'); ?>
 					</div>
 				</div>
 			<?php } ?>
-
-			<?php //if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
-
 
 		</div>
 	</div>	

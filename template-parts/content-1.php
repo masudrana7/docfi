@@ -104,9 +104,10 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 						?>
 						
 						</a>
+						<?php if ( has_post_thumbnail() ) { ?>
 						<?php if ( DocfiTheme::$options['blog_cats'] ) { ?>
 							<span class="entry-categories"><?php echo the_category( ', ' );?></span>
-						<?php } ?>
+						<?php } } ?>
 				<?php } ?>
 				
 			</div>				

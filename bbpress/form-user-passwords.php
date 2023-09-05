@@ -18,8 +18,8 @@ if ( apply_filters( 'show_password_fields', true, bbpress()->displayed_user ) ) 
 </script>
 
 <div id="password" class="user-pass1-wrap">
-	<label for="user_login"><?php esc_html_e( 'Password', 'bbpress' ); ?></label>
-	<button type="button" class="button wp-generate-pw hide-if-no-js"><?php esc_html_e( 'Generate Password', 'bbpress' ); ?></button>
+	<label for="user_login"><?php esc_html_e( 'Password', 'docfi' ); ?></label>
+	<button type="button" class="button wp-generate-pw hide-if-no-js"><?php esc_html_e( 'Generate Password', 'docfi' ); ?></button>
 
 	<fieldset class="bbp-form password wp-pwd hide-if-js">
 		<span class="password-input-wrapper">
@@ -27,12 +27,12 @@ if ( apply_filters( 'show_password_fields', true, bbpress()->displayed_user ) ) 
 		</span>
 
 		<span class="password-button-wrapper">
-			<button type="button" class="button wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'bbpress' ); ?>">
+			<button type="button" class="button wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'docfi' ); ?>">
 				<span class="dashicons dashicons-hidden"></span>
-				<span class="text"><?php esc_html_e( 'Hide', 'bbpress' ); ?></span>
-			</button><button type="button" class="button wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change', 'bbpress' ); ?>">
+				<span class="text"><?php esc_html_e( 'Hide', 'docfi' ); ?></span>
+			</button><button type="button" class="button wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change', 'docfi' ); ?>">
 				<span class="dashicons dashicons-no"></span>
-				<span class="text"><?php esc_html_e( 'Cancel', 'bbpress' ); ?></span>
+				<span class="text"><?php esc_html_e( 'Cancel', 'docfi' ); ?></span>
 			</button>
 		</span>
 
@@ -41,13 +41,13 @@ if ( apply_filters( 'show_password_fields', true, bbpress()->displayed_user ) ) 
 </div>
 
 <div class="user-pass2-wrap hide-if-js">
-	<label for="pass2"><?php esc_html_e( 'Repeat New Password', 'bbpress' ); ?></label>
+	<label for="pass2"><?php esc_html_e( 'Repeat New Password', 'docfi' ); ?></label>
 	<input name="pass2" type="password" id="pass2" class="regular-text" value="" autocomplete="off" />
-	<p class="description"><?php esc_html_e( 'Type your new password again.', 'bbpress' ); ?></p>
+	<p class="description"><?php esc_html_e( 'Type your new password again.', 'docfi' ); ?></p>
 </div>
 
 <div class="pw-weak">
-	<label for="pw_weak"><?php esc_html_e( 'Confirm', 'bbpress' ); ?></label>
+	<label for="pw_weak"><?php esc_html_e( 'Confirm', 'docfi' ); ?></label>
 	<input type="checkbox" name="pw_weak" id="pw_weak" class="pw-checkbox checkbox" />
 	<p class="description indicator-hint"><?php echo wp_get_password_hint(); ?></p>
 </div>

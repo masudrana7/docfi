@@ -16,7 +16,7 @@ do_action( 'bbp_template_before_user_replies' ); ?>
 
 	<?php bbp_get_template_part( 'form', 'reply-search' ); ?>
 
-	<h2 class="entry-title"><?php esc_html_e( 'Forum Replies Created', 'bbpress' ); ?></h2>
+	<h2 class="entry-title"><?php esc_html_e( 'Forum Replies Created', 'docfi' ); ?></h2>
 	<div class="bbp-user-section">
 
 		<?php if ( bbp_get_user_replies_created() ) : ?>

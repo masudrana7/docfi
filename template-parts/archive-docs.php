@@ -12,8 +12,6 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 else{
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
 }
-$iso = 'g-4 no-equal-gallery';
-$template = 'docs-1';
 
 $post_classes = "";
 if (  DocfiTheme::$layout == 'right-sidebar' || DocfiTheme::$layout == 'left-sidebar' ){
@@ -21,6 +19,7 @@ if (  DocfiTheme::$layout == 'right-sidebar' || DocfiTheme::$layout == 'left-sid
 } else {
 	$post_classes = 'col-sm-6 col-xl-4';
 }
+
 if ( get_query_var('paged') ) {
 	$paged = get_query_var('paged');
 }
@@ -38,30 +37,46 @@ $args = array(
 	'paged'             => $paged,
 );
 
+
+
+
 $query = new WP_Query( $args ); ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">
 	<div class="container">	
+
 		<div class="row">
-			<?php
-				if ( DocfiTheme::$layout == 'left-sidebar' ) {
-					get_sidebar();
-				}
-			?>
+
+		
+			<?php if ( DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('forum-sidebar') )  { ?>	
+				
+				
+				<div class="col-lg-4 docfi-column-sticky">
+					<div class="rt-forum-widget-wrapper">
+						<?php dynamic_sidebar('forum-sidebar'); ?>
+					</div>
+				</div>
+			<?php } ?>
+
+
 			<div class="<?php echo esc_attr( $docfi_layout_class );?>">
 				<?php if ( $query->have_posts() ) :?>
-					<?php get_template_part( 'template-parts/content', $template ); ?>	
-				<?php else: ?>
-					<?php get_template_part( 'template-parts/content', 'none' );?>
+					<?php get_template_part( 'template-parts/content', 'docs-1' ); ?>	
 				<?php endif;?>
 			</div>
 
-			<?php
-				if( DocfiTheme::$layout == 'right-sidebar' ){				
-					get_sidebar();
-				}
-			?>
+			<?php if ( DocfiTheme::$layout == 'right-sidebar' && is_active_sidebar('forum-sidebar') )  { ?>			
+				<div class="col-lg-4 docfi-column-sticky">
+					<div class="rt-forum-widget-wrapper">
+						<?php dynamic_sidebar('forum-sidebar'); ?>
+					</div>
+				</div>
+			<?php } ?>
+
+
+
 		</div>
+		
 	</div>
 </div>
 <?php get_footer(); ?>

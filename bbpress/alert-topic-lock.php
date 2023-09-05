@@ -18,8 +18,8 @@ do_action( 'bbp_theme_before_alert_topic_lock' ); ?>
 		<div class="bbp-alert-inner">
 			<p class="bbp-alert-description"><?php bbp_topic_lock_description(); ?></p>
 			<p class="bbp-alert-actions">
-				<a class="bbp-alert-back" href="<?php bbp_forum_permalink( bbp_get_topic_forum_id() ); ?>"><?php esc_html_e( 'Leave', 'bbpress' ); ?></a>
-				<a class="bbp-alert-close" href="#"><?php esc_html_e( 'Stay', 'bbpress' ); ?></a>
+				<a class="bbp-alert-back" href="<?php bbp_forum_permalink( bbp_get_topic_forum_id() ); ?>"><?php esc_html_e( 'Leave', 'docfi' ); ?></a>
+				<a class="bbp-alert-close" href="#"><?php esc_html_e( 'Stay', 'docfi' ); ?></a>
 			</p>
 		</div>
 	</div>

@@ -21,9 +21,6 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 </head>
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-
-
-
 	<?php
 		// Preloader	
 		if ( DocfiTheme::$options['preloader'] ) {	
@@ -34,14 +31,13 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 			}else { ?>	
 			<div class="pre-loader" id="preloader">
 				<div class="loading-wrapper">
-					<!-- <div class="loading-text">LOADING</div> -->
 					<div class="loading-circle circle"></div>
 					<div class="loading-circle-small circle">
 						<div class="doc-icon">
-							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
-							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
-							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
-							<div class="line wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
+							<div class="line fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="200ms"></div>
+							<div class="line fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="400ms"></div>
+							<div class="line fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="600ms"></div>
+							<div class="line fadeInUp animated" data-wow-duration="1200ms" data-wow-delay="800ms"></div>
 						</div>
 					</div>
 				</div>

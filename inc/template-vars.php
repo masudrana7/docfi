@@ -23,13 +23,7 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 break;
                 default:
                 $prefix = 'single_post';
-                break;              
-                case 'docfi_team':
-                $prefix = 'team';
-                break;
-                case 'docfi_service':
-                $prefix = 'service';
-                break;        
+                break;                     
                 case 'docfi_docs':
                 $prefix = 'docs';
                 break; 
@@ -99,20 +93,13 @@ if( !function_exists( 'docfi_template_vars' ) ) {
             } else if( is_404() ) {
                 $prefix                                = 'error';
                 DocfiTheme::$options[$prefix . '_layout'] = 'full-width';
-            } elseif( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
-                $prefix = 'shop';
-            } elseif( is_post_type_archive( "docfi_team" ) || is_tax( "docfi_team_category" ) ) {
-                $prefix = 'team_archive'; 
-            } elseif( is_post_type_archive( "docfi_service" ) || is_tax( "docfi_service_category" ) ) {
-                $prefix = 'service_archive';            
-            } elseif( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_category" ) ) {
+            } elseif( is_post_type_archive( "docfi_docs" ) || is_tax( "docfi_docs_group" ) || is_tax( "docfi_docs_category" )  ) {
                 $prefix = 'docs_archive'; 
             } else {
                 $prefix = 'blog';
             }
             
             DocfiTheme::$layout         		= DocfiTheme::$options[$prefix . '_layout'];
-
             DocfiTheme::$header_opt      	    = DocfiTheme::$options['header_opt'];
             DocfiTheme::$tr_header             = DocfiTheme::$options['tr_header'];
             DocfiTheme::$footer_shape     	    = DocfiTheme::$options['footer_shape'];
@@ -159,11 +146,9 @@ if( !function_exists( 'docfi_body_classes' ) ) {
         }
 				
         $classes[] = 'footer-style-'. DocfiTheme::$footer_style;
-        
         $classes[] = ( DocfiTheme::$layout == 'full-width' ) ? 'no-sidebar' : 'has-sidebar';
-		
+        $classes[] = ( DocfiTheme::$layout == 'left-right-sidebar' ) ? ('left-sidebar' && 'right-sidebar') : 'no-sidebar';
 		$classes[] = ( DocfiTheme::$layout == 'left-sidebar' ) ? 'left-sidebar' : 'right-sidebar';
-        
 		if ( is_singular('post') ) {
 			$classes[] =  ' post-detail-' . DocfiTheme::$options['post_style'];
         }

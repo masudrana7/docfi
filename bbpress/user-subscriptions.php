@@ -20,7 +20,7 @@ do_action( 'bbp_template_before_user_subscriptions' ); ?>
 
 			<?php bbp_get_template_part( 'form', 'topic-search' ); ?>
 
-			<h2 class="entry-title"><?php esc_html_e( 'Subscribed Forums', 'bbpress' ); ?></h2>
+			<h2 class="entry-title"><?php esc_html_e( 'Subscribed Forums', 'docfi' ); ?></h2>
 			<div class="bbp-user-section">
 
 				<?php if ( bbp_get_user_forum_subscriptions() ) : ?>
@@ -35,7 +35,7 @@ do_action( 'bbp_template_before_user_subscriptions' ); ?>
 
 			</div>
 
-			<h2 class="entry-title"><?php esc_html_e( 'Subscribed Topics', 'bbpress' ); ?></h2>
+			<h2 class="entry-title"><?php esc_html_e( 'Subscribed Topics', 'docfi' ); ?></h2>
 			<div class="bbp-user-section">
 
 				<?php if ( bbp_get_user_topic_subscriptions() ) : ?>

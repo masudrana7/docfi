@@ -16,11 +16,11 @@ do_action( 'bbp_template_before_search_results_loop' ); ?>
 
 	<li class="bbp-header">
 
-		<div class="bbp-search-author"><?php esc_html_e( 'Author',  'bbpress' ); ?></div><!-- .bbp-reply-author -->
+		<div class="bbp-search-author"><?php esc_html_e( 'Author',  'docfi' ); ?></div><!-- .bbp-reply-author -->
 
 		<div class="bbp-search-content">
 
-			<?php esc_html_e( 'Search Results', 'bbpress' ); ?>
+			<?php esc_html_e( 'Search Results', 'docfi' ); ?>
 
 		</div><!-- .bbp-search-content -->
 
@@ -38,11 +38,11 @@ do_action( 'bbp_template_before_search_results_loop' ); ?>
 
 	<li class="bbp-footer">
 
-		<div class="bbp-search-author"><?php esc_html_e( 'Author',  'bbpress' ); ?></div>
+		<div class="bbp-search-author"><?php esc_html_e( 'Author',  'docfi' ); ?></div>
 
 		<div class="bbp-search-content">
 
-			<?php esc_html_e( 'Search Results', 'bbpress' ); ?>
+			<?php esc_html_e( 'Search Results', 'docfi' ); ?>
 
 		</div><!-- .bbp-search-content -->
 

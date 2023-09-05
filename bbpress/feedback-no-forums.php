@@ -14,6 +14,6 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="bbp-template-notice">
 	<ul>
-		<li><?php esc_html_e( 'Oh, bother! No forums were found here.', 'bbpress' ); ?></li>
+		<li><?php esc_html_e( 'Oh, bother! No forums were found here.', 'docfi' ); ?></li>
 	</ul>
 </div>
