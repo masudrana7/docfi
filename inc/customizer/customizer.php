@@ -138,6 +138,14 @@ class DocfiTheme_Customizer {
                 'panel' => 'rttheme_general_panel',
             )
         );  
+        // Add Social Section
+        $wp_customize->add_section( 'social_section',
+            array(
+                'title' => __( 'Theme Social', 'docfi' ),
+                'priority' => 4,
+                'panel' => 'rttheme_general_panel',
+            )
+        );  
 
         // Add Header Top Section
         $wp_customize->add_section( 'header_top_section',
@@ -426,23 +434,6 @@ class DocfiTheme_Customizer {
             array(
                 'title' => __( 'Error Page', 'docfi' ),
                 'priority' => 16,
-            )
-        );
-        // Add our wooCommerce shop Section
-        $wp_customize->add_section('shop_layout_section',
-            array(
-               'title'    => esc_html__('Shop Archive Layout', 'docfi'),
-               'priority' => 1,
-               'panel'    => 'woocommerce',
-            )
-        );
-        
-        // Add our wooCommerce product Section
-        $wp_customize->add_section('product_layout_section',
-            array(
-               'title'    => esc_html__('Shop Single Layout', 'docfi'),
-               'priority' => 2,
-               'panel'    => 'woocommerce',
             )
         );
 

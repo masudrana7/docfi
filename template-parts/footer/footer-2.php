@@ -30,11 +30,10 @@ if ( DocfiTheme::$options['footer_bgtype2'] == 'fbgcolor2' ) {
 } else {
 	$docfi_bg = 'url(' . $footer_bg_img . ') no-repeat center bottom / cover';
 }
-$bgc = $menu_on = $copyright_on = '';
+$bgc = $copyright_on = '';
 if ( DocfiTheme::$options['footer_bgtype2'] == 'fbgimg2' ) {
 	$bgc = 'footer-bg-opacity';
 }
-$menu_on = ( DocfiTheme::$options['copyright_menu'] ) ? "menu-on" : "menu-off";
 $copyright_on = ( DocfiTheme::$options['copyright_text'] ) ? "copyright-on" : "copyright-off";
 $logo_on = ( DocfiTheme::$options['logo_display'] ) ? "logo-on" : "logo-off";
 

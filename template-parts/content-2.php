@@ -71,8 +71,8 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 								<?php } ?>
 							</div>
 							<div class="swiper-navigation">
-					            <div class="swiper-button-prev"><i class="icon-docfi-left-arrow"></i><?php echo esc_html__( 'Prev' , 'docfi' ) ?></div>
-					            <div class="swiper-button-next"><?php echo esc_html__( 'Next' , 'docfi' ) ?><i class="icon-docfi-right-arrow"></i></div>
+					            <div class="swiper-button-prev"><i class="icon-docfi-left-arrow"></i></div>
+					            <div class="swiper-button-next"><i class="icon-docfi-right-arrow"></i></div>
 					        </div>
 						</div>
 					<?php } else { ?>
@@ -108,7 +108,7 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 				<?php } if ( DocfiTheme::$options['blog_cats'] ) { ?>
 				<li class="entry-categories"><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['blog_date'] ) { ?>	
-				<li class="post-date"><i class="icon-docfi-calendar"></i><?php echo get_the_date(); ?></li>				
+				<li class="post-date"><i class="icon-docfi-calendar-alt"></i><?php echo get_the_date(); ?></li>				
 				<?php } if ( DocfiTheme::$options['blog_comment_num'] ) { ?>
 				<li class="post-comment"><i class="icon-docfi-comment"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo wp_kses( $docfi_comments_html , 'alltext_allow' );?></a></li>
 				<?php } if ( DocfiTheme::$options['blog_length'] && function_exists( 'docfi_reading_time' ) ) { ?>

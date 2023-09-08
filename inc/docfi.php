@@ -18,8 +18,10 @@ if ( !class_exists( 'DocfiTheme' ) ) {
 		public static $sticky_menu = null;
 		public static $layout = null;
 		public static $sidebar = null;
+		public static $header_style = null;
 		public static $tr_header = null;
 		public static $header_opt = null;
+		public static $header_width = null;
 		public static $footer_area = null;
 		public static $footer_newsletter = null;
 		public static $footer_shape = null;

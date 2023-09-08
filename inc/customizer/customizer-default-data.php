@@ -32,8 +32,11 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			
             'header_bg_color'           => '',
 			'header_opt'       			=> 1,
+			'header_style'       		=> 1,
+			'header_width'       		=> 0,
 			'sticky_menu'       		=> 1,
             'tr_header'                 => 0,
+            'email'                     => '',
 
             'online_button'             => 0,
             'online_button_text'        => esc_html__('Get a Quote', 'docfi'),
@@ -50,7 +53,6 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'nws_shortcode'             => '',
             'newsletter_title'          => '',
             'copyright_area'            => 1,
-            'copyright_menu'            => 1,
             'logo_display'              => 1,
 			'footer_bgtype' 			=> 'fbgcolor',
             'footer_bgtype2'            => 'fbgcolor2',
@@ -75,6 +77,20 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'footer_shape1'             => '',
             'footer_shape2'             => '',
             'footer_newsletter_image'   => '',
+
+            // Contact Socials            
+            'social_label'   	=> '',
+            'social_facebook'  	=> '',
+            'social_twitter'   	=> '',
+            'social_linkedin'   => '',
+            'social_behance' 	=> '',
+            'social_dribbble'  	=> '',
+            'social_youtube'    => '',
+            'social_pinterest'  => '',
+            'social_instagram'  => '',
+            'social_skype'      => '',
+            'social_rss'       	=> '',
+            'social_snapchat'   => '',
 			
 			// Banner 
 			'breadcrumb_link_color' 	=> '',
@@ -214,48 +230,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'error_bgcolor' => '',
             'error_bgimg' => '',
             'error_page_bgimg' => '',
-            'error_page_bgcolor' => '',
-			
-			//Shop Archive Layout Setting 
-			'shop_layout' => 'left-sidebar',
-            'shop_sidebar'        => '',
-			'shop_padding_top'    => 120,
-            'shop_padding_bottom' => 120,
-            'shop_banner' => 1,
-            'shop_breadcrumb' => 0,			
-			'shop_bgtype' => 'bgcolor',
-            'shop_bgcolor' => '',
-            'shop_bgimg' => '',
-            'shop_page_bgimg' => '',
-            'shop_page_bgcolor' => '',
-
-            'products_cols_width' => 4,
-			'products_per_page' => 8,
-			'wc_shop_cart_icon' => 1,
-			'wc_shop_quickview_icon' => 1,
-			'wc_shop_compare_icon' => 0,
-            'wc_shop_wishlist_icon' => 0,
-            'wc_shop_sale_flash' => 0,
-			'wc_shop_rating' => 0,
-			
-			//Product Single Layout Setting 
-			'product_layout' => 'full-width',
-            'product_sidebar'        => '',
-			'product_padding_top'    => 120,
-            'product_padding_bottom' => 120,
-            'product_banner' => 1,
-            'product_breadcrumb' => 0,			
-			'product_bgtype' => 'bgcolor',
-            'product_bgcolor' => '',
-            'product_bgimg' => '',
-            'product_page_bgimg' => '',
-            'product_page_bgcolor' => '',
-
-            'wc_product_meta' => 0,
-            'wc_product_wishlist_icon' => 0,
-            'wc_product_compare_icon' => 0,
-			'related_woo_product' => 1,
-			'related_product_title' => esc_html__('Related Products', 'docfi'),
+            'error_page_bgcolor' => '',	
 
             // Blog Archive
 			'blog_style'				=> 'style1',

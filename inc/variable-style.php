@@ -23,9 +23,8 @@ INDEX
 #. Pagination
 #. Fluent form
 #. Miscellaneous
-#. woocommerce
--------------------------------------*/
 
+-------------------------------------*/
 
 $metapr_color = get_post_meta(get_the_ID(), 'docfi_layout_settings', true);
 

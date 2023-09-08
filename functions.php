@@ -35,9 +35,6 @@ $docfi_theme_data = wp_get_theme();
 	require_once DOCFI_INC_DIR . 'template-vars.php';
 	require_once DOCFI_INC_DIR . 'rt-archive-meta.php';
 	require_once DOCFI_INC_DIR . 'includes.php';
-	// require_once DOCFI_INC_DIR . 'lc-helper.php';
-	// require_once DOCFI_INC_DIR . 'lc-utility.php';
-
 	
 	if( is_admin() ) {
 		// TGM Plugin Activation

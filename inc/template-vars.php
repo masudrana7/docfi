@@ -36,13 +36,14 @@ if( !function_exists( 'docfi_template_vars' ) ) {
             DocfiTheme::$sidebar = ( empty( $layout_settings['docfi_sidebar'] ) || $layout_settings['docfi_sidebar'] == 'default' ) ? DocfiTheme::$options[$prefix . '_sidebar'] : $layout_settings['docfi_sidebar'];
 			
 			DocfiTheme::$header_opt = ( empty( $layout_settings['docfi_header_opt'] ) || $layout_settings['docfi_header_opt'] == 'default' ) ? DocfiTheme::$options['header_opt'] : $layout_settings['docfi_header_opt'];
-
+            DocfiTheme::$header_width = ( empty( $layout_settings['docfi_header_width'] ) || $layout_settings['docfi_header_width'] == 'default' ) ? DocfiTheme::$options['header_width'] : $layout_settings['docfi_header_width'];
             DocfiTheme::$tr_header = ( empty( $layout_settings['docfi_tr_header'] ) || $layout_settings['docfi_tr_header'] == 'default' ) ? DocfiTheme::$options['tr_header'] : $layout_settings['docfi_tr_header'];
-			
-            DocfiTheme::$footer_style = ( empty( $layout_settings['docfi_footer'] ) || $layout_settings['docfi_footer'] == 'default' ) ? DocfiTheme::$options['footer_style'] : $layout_settings['docfi_footer'];
-			
-			DocfiTheme::$footer_area = ( empty( $layout_settings['docfi_footer_area'] ) || $layout_settings['docfi_footer_area'] == 'default' ) ? DocfiTheme::$options['footer_area'] : $layout_settings['docfi_footer_area'];
 
+            DocfiTheme::$header_style = ( empty( $layout_settings['docfi_header'] ) || $layout_settings['docfi_header'] == 'default' ) ? DocfiTheme::$options['header_style'] : $layout_settings['docfi_header'];
+
+
+            DocfiTheme::$footer_style = ( empty( $layout_settings['docfi_footer'] ) || $layout_settings['docfi_footer'] == 'default' ) ? DocfiTheme::$options['footer_style'] : $layout_settings['docfi_footer'];
+			DocfiTheme::$footer_area = ( empty( $layout_settings['docfi_footer_area'] ) || $layout_settings['docfi_footer_area'] == 'default' ) ? DocfiTheme::$options['footer_area'] : $layout_settings['docfi_footer_area'];
 			DocfiTheme::$footer_shape = ( empty( $layout_settings['docfi_footer_shape'] ) || $layout_settings['docfi_footer_shape'] == 'default' ) ? DocfiTheme::$options['footer_shape'] : $layout_settings['docfi_footer_shape'];
 
 			DocfiTheme::$footer_newsletter = ( empty( $layout_settings['docfi_footer_newsletter'] ) || $layout_settings['docfi_footer_newsletter'] == 'default' ) ? DocfiTheme::$options['footer_newsletter'] : $layout_settings['docfi_footer_newsletter'];
@@ -72,7 +73,7 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( DocfiTheme::$options[$prefix . '_bgimg'], 'full', true );
                 DocfiTheme::$bgimg = $attch_url[0];
             } else {
-                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.png';
+                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.jpg';
             }
 			
             DocfiTheme::$pagebgcolor = empty( $layout_settings['docfi_page_bgcolor'] ) ? DocfiTheme::$options[$prefix . '_page_bgcolor'] : $layout_settings['docfi_page_bgcolor'];			
@@ -101,10 +102,11 @@ if( !function_exists( 'docfi_template_vars' ) ) {
             
             DocfiTheme::$layout         		= DocfiTheme::$options[$prefix . '_layout'];
             DocfiTheme::$header_opt      	    = DocfiTheme::$options['header_opt'];
-            DocfiTheme::$tr_header             = DocfiTheme::$options['tr_header'];
+            DocfiTheme::$tr_header              = DocfiTheme::$options['tr_header'];
+            DocfiTheme::$header_style   		= DocfiTheme::$options['header_style'];
             DocfiTheme::$footer_shape     	    = DocfiTheme::$options['footer_shape'];
             DocfiTheme::$footer_area     	    = DocfiTheme::$options['footer_area'];
-            DocfiTheme::$copyright_area        = DocfiTheme::$options['copyright_area'];
+            DocfiTheme::$copyright_area         = DocfiTheme::$options['copyright_area'];
             DocfiTheme::$footer_style   		= DocfiTheme::$options['footer_style'];
             DocfiTheme::$padding_top    		= DocfiTheme::$options[$prefix . '_padding_top'];
             DocfiTheme::$padding_bottom 		= DocfiTheme::$options[$prefix . '_padding_bottom'];
@@ -117,7 +119,7 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( DocfiTheme::$options[$prefix . '_bgimg'], 'full', true );
                 DocfiTheme::$bgimg = $attch_url[0];
             } else {
-                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.png';
+                DocfiTheme::$bgimg = DOCFI_ASSETS_URL . 'img/banner.jpg';
             }
 			
             DocfiTheme::$pagebgcolor = DocfiTheme::$options[$prefix . '_page_bgcolor'];
@@ -144,7 +146,7 @@ if( !function_exists( 'docfi_body_classes' ) ) {
         if ( DocfiTheme::$tr_header === 1 || DocfiTheme::$tr_header === "on" ){
            $classes[] = 'tr-header';
         }
-				
+		$classes[] = 'header-style-'. DocfiTheme::$header_style;			
         $classes[] = 'footer-style-'. DocfiTheme::$footer_style;
         $classes[] = ( DocfiTheme::$layout == 'full-width' ) ? 'no-sidebar' : 'has-sidebar';
         $classes[] = ( DocfiTheme::$layout == 'left-right-sidebar' ) ? ('left-sidebar' && 'right-sidebar') : 'no-sidebar';

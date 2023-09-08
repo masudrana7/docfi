@@ -49,10 +49,9 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 	<div id="page" class="site">		
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'docfi' ); ?></a>		
 		<header id="masthead" class="site-header">
-
-			<div id="rt-header-header" class="header-area">
+			<div id="rt-header-header" class="header-area rt-header-style<?php echo esc_attr( DocfiTheme::$header_style ); ?>">
 				<?php if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" || bbp_is_single_user_profile() ){ ?>
-				<?php get_template_part( 'template-parts/header/header', '1' ); ?>
+					<?php get_template_part( 'template-parts/header/header', DocfiTheme::$header_style ); ?>	
 				<?php } ?>			
 			</div>
 		</header>		

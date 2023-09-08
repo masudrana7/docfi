@@ -254,6 +254,196 @@ class DocfiTheme_General_Settings extends DocfiTheme_Customizer {
 			)
 		));	
 
+        /*Theme Social*/
+        $wp_customize->add_setting('social_heading', array(
+            'default' => '',
+            'sanitize_callback' => 'esc_html',
+        ));
+        $wp_customize->add_control(new Customizer_Heading_Control($wp_customize, 'social_heading', array(
+            'label' => __( 'Theme Social', 'docfi' ),
+            'section' => 'social_section',
+        )));
+
+		$wp_customize->add_setting( 'social_label',
+            array(
+                'default' => $this->defaults['social_label'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_label',
+            array(
+                'label' => __( 'Social Label', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'text',
+            )
+        );
+        $wp_customize->add_setting( 'social_facebook',
+            array(
+                'default' => $this->defaults['social_facebook'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_facebook',
+            array(
+                'label' => __( 'Facebook', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+        $wp_customize->add_setting( 'social_twitter',
+            array(
+                'default' => $this->defaults['social_twitter'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_twitter',
+            array(
+                'label' => __( 'Twitter', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+				
+        $wp_customize->add_setting( 'social_linkedin',
+            array(
+                'default' => $this->defaults['social_linkedin'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_linkedin',
+            array(
+                'label' => __( 'Linkedin', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+        $wp_customize->add_setting( 'social_behance',
+            array(
+                'default' => $this->defaults['social_behance'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_behance',
+            array(
+                'label' => __( 'Behance', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+        $wp_customize->add_setting( 'social_dribbble',
+            array(
+                'default' => $this->defaults['social_dribbble'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_dribbble',
+            array(
+                'label' => __( 'Dribbble', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+        $wp_customize->add_setting( 'social_youtube',
+            array(
+                'default' => $this->defaults['social_youtube'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_youtube',
+            array(
+                'label' => __( 'Youtube', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+		$wp_customize->add_setting( 'social_pinterest',
+            array(
+                'default' => $this->defaults['social_pinterest'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_pinterest',
+            array(
+                'label' => __( 'Pinterest', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+		$wp_customize->add_setting( 'social_instagram',
+            array(
+                'default' => $this->defaults['social_instagram'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_instagram',
+            array(
+                'label' => __( 'Instagram', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+		$wp_customize->add_setting( 'social_skype',
+            array(
+                'default' => $this->defaults['social_skype'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_skype',
+            array(
+                'label' => __( 'Skype', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+		$wp_customize->add_setting( 'social_rss',
+            array(
+                'default' => $this->defaults['social_rss'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_rss',
+            array(
+                'label' => __( 'RSS', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+		
+		$wp_customize->add_setting( 'social_snapchat',
+            array(
+                'default' => $this->defaults['social_snapchat'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'social_snapchat',
+            array(
+                'label' => __( 'Snapchat', 'docfi' ),
+                'section' => 'social_section',
+                'type' => 'url',
+            )
+        );
+
+
         
 
     }

@@ -88,8 +88,8 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 								<?php } ?>
 							</div>
 							<div class="swiper-navigation">
-					            <div class="swiper-button-prev"><i class="icon-docfi-left-arrow"></i><?php echo esc_html__( 'Prev' , 'docfi' ) ?></div>
-					            <div class="swiper-button-next"><?php echo esc_html__( 'Next' , 'docfi' ) ?><i class="icon-docfi-right-arrow"></i></div>
+					            <div class="swiper-button-prev"><i class="icon-docfi-left-arrow"></i></div>
+					            <div class="swiper-button-next"><i class="icon-docfi-right-arrow"></i></div>
 					        </div>
 						</div>
 					<?php } else { ?>
@@ -111,6 +111,10 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 							}
 							?>
 						</a>
+						<?php if ( has_post_thumbnail() ) { ?>
+						<?php if ( DocfiTheme::$options['blog_cats'] ) { ?>
+							<span class="entry-categories"><?php echo the_category( ', ' );?></span>
+						<?php } } ?>
 				<?php } ?>
 			</div>
 		</div>
@@ -122,10 +126,10 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 			<ul class="entry-meta">
 				<?php if ( DocfiTheme::$options['blog_author_name'] ) { ?>
 				<li class="post-author"><i class="icon-docfi-user"></i><?php esc_html_e( 'by ', 'docfi' );?><?php the_author_posts_link(); ?></li>
-				<?php } if ( DocfiTheme::$options['blog_cats'] ) { ?>
+				<?php } if ( DocfiTheme::$options['blog_cats'] && empty(has_post_thumbnail() ) ) { ?>
 				<li class="entry-categories"><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['blog_date'] ) { ?>	
-				<li class="post-date"><i class="icon-docfi-calendar"></i><?php echo get_the_date(); ?></li>				
+				<li class="post-date"><i class="icon-docfi-calendar-alt"></i><?php echo get_the_date(); ?></li>				
 				<?php } if ( DocfiTheme::$options['blog_comment_num'] ) { ?>
 				<li class="post-comment"><i class="icon-docfi-comment"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo wp_kses( $docfi_comments_html , 'alltext_allow' );?></a></li>
 				<?php } if ( DocfiTheme::$options['blog_length'] && function_exists( 'docfi_reading_time' ) ) { ?>

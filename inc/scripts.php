@@ -217,17 +217,3 @@ function load_custom_wp_admin_script() {
 	
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_script' );
-
-/*Topbar menu function*/
-if ( !function_exists( 'docfi_top_menu' ) ) {
-	function docfi_top_menu() {
-	    $menus = wp_get_nav_menus();
-	    if(!empty($menus)){
-	      	$menu_links = array();
-	      	foreach ($menus as $key => $value) {
-	        	$menu_links[$value->slug] = $value->name;  
-	      	}
-	      	return $menu_links;
-	    }
-	}
-}

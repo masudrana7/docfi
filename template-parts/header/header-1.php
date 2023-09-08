@@ -34,11 +34,16 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 	$ctstickylogo = $attch_url[0];
 }
 
+ if ( DocfiTheme::$header_width == 1 || DocfiTheme::$header_width == "on" ){
+	$header_width ="container-fluid";
+ }else {
+	$header_width ="container";
+ }
 
 ?>
 <div id="sticky-placeholder"></div>
 <div class="header-menu" id="header-menu">
-	<div class="container">
+	<div class="<?php echo esc_attr($header_width); ?>">
 		<div class="menu-full-wrap">
 			<div class="site-branding">
 				<?php if(!empty($customlogo)){ ?>

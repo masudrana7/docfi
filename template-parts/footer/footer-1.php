@@ -32,7 +32,6 @@ $bgc = $menu_on = $copyright_on = '';
 if ( DocfiTheme::$options['footer_bgtype'] == 'fbgimg' ) {
 	$bgc = 'footer-bg-opacity';
 }
-$menu_on = ( DocfiTheme::$options['copyright_menu'] ) ? "menu-on" : "menu-off";
 $copyright_on = ( DocfiTheme::$options['copyright_text'] ) ? "copyright-on" : "copyright-off";
 
 
@@ -117,9 +116,6 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 					<div class="copyright"><?php echo wp_kses( DocfiTheme::$options['copyright_text'] , 'allow_link' );?></div>
 					<?php } ?>
 				</div>
-				<?php if ( DocfiTheme::$options['copyright_menu'] ) { ?>	
-					<div class="copyright-menu"><?php dynamic_sidebar('copyright-menu'); ?></div>
-				<?php } ?>
 			</div>
 		</div>
 	</div>

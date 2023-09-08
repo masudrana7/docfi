@@ -66,7 +66,7 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 		
 		public static function fonts_url(){
 			$fonts_url = '';
-			$subsets = 'latin';
+			$subsets = 'Roboto';
 			$bodyFont = 'Roboto';
 			$bodyFW = '500'; // Roboto:wght@300;400;500;600;700;800
 			$menuFont = 'Roboto';
@@ -247,65 +247,54 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			return esc_url_raw( $fonts_url );
 		}
 
-		public static function team_socials(){
-			$team_socials = array(
-				'facebook' => array(
-					'label' => esc_html__( 'Facebook', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-facebook-f',
+		public static function socials(){
+			$docfi_socials = array(
+				'social_facebook' => array(
+					'icon' => 'fa-facebook-f',
+					'url'  => DocfiTheme::$options['social_facebook'],
 				),
-				'twitter' => array(
-					'label' => esc_html__( 'Twitter', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-twitter',
+				'social_twitter' => array(
+					'icon' => 'fa-twitter',
+					'url'  => DocfiTheme::$options['social_twitter'],
 				),
-				'linkedin' => array(
-					'label' => esc_html__( 'Linkedin', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-linkedin-in',
+				'social_behance' => array(
+					'icon' => 'fa-behance',
+					'url'  => DocfiTheme::$options['social_behance'],
 				),
-				'behance' => array(
-					'label' => esc_html__( 'Behance', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-behance',
+				'social_dribbble' => array(
+					'icon' => 'fa-dribbble',
+					'url'  => DocfiTheme::$options['social_dribbble'],
 				),
-				'dribbble' => array(
-					'label' => esc_html__( 'Dribbble', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-dribbble',
+				'social_linkedin' => array(
+					'icon' => 'fa-linkedin-in',
+					'url'  => DocfiTheme::$options['social_linkedin'],
 				),
-				'skype' => array(
-					'label' => esc_html__( 'Skype', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-skype',
+				'social_youtube' => array(
+					'icon' => 'fa-youtube',
+					'url'  => DocfiTheme::$options['social_youtube'],
 				),
-				'youtube' => array(
-					'label' => esc_html__( 'Youtube', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-youtube',
+				'social_pinterest' => array(
+					'icon' => 'fa-pinterest-p',
+					'url'  => DocfiTheme::$options['social_pinterest'],
 				),
-				'pinterest' => array(
-					'label' => esc_html__( 'Pinterest', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-pinterest-p',
+				'social_instagram' => array(
+					'icon' => 'fa-instagram',
+					'url'  => DocfiTheme::$options['social_instagram'],
 				),
-				'instagram' => array(
-					'label' => esc_html__( 'Instagram', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-instagram',
+				'social_skype' => array(
+					'icon' => 'fa-skype',
+					'url'  => DocfiTheme::$options['social_skype'],
 				),
-				'github' => array(
-					'label' => esc_html__( 'Github', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-github',
+				'social_rss' => array(
+					'icon' => 'fas fa-rss',
+					'url'  => DocfiTheme::$options['social_rss'],
 				),
-				'stackoverflow' => array(
-					'label' => esc_html__( 'Stackoverflow', 'docfi' ),
-					'type'  => 'text',
-					'icon'  => 'fa-stack-overflow',
+				'social_snapchat' => array(
+					'icon' => 'fa-snapchat-ghost',
+					'url'  => DocfiTheme::$options['social_snapchat'],
 				),
 			);
-			return apply_filters( 'DocfiTheme_Helper', $team_socials );
+			return array_filter( $docfi_socials, array( 'DocfiTheme_Helper' , 'filter_social' ) );
 		}
 
 		public static function nav_menu_args(){
@@ -387,30 +376,18 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			return $file;
 		}
 		
-		public static function has_active_widget(){
-			
-			if ( ( class_exists( 'WooCommerce' ) && is_shop() ) || ( class_exists( 'WooCommerce' ) && is_product_category() ) || ( class_exists( 'WooCommerce' ) && is_product_tag() ) || ( class_exists( 'WooCommerce' ) && is_product() ) ) {	
-				
-				if ( is_active_sidebar( 'shop-sidebar' ) ) {
+		public static function has_active_widget(){				
+			if ( DocfiTheme::$sidebar ) {
+				if ( is_active_sidebar( DocfiTheme::$sidebar ) ) {
 					$docfi_layout_class = 'col-lg-8';
 				} else {
 					$docfi_layout_class = 'col-sm-12 col-12';
 				}
-				
 			} else {
-				
-				if ( DocfiTheme::$sidebar ) {
-					if ( is_active_sidebar( DocfiTheme::$sidebar ) ) {
-						$docfi_layout_class = 'col-lg-8';
-					} else {
-						$docfi_layout_class = 'col-sm-12 col-12';
-					}
+				if ( is_active_sidebar( 'sidebar' ) ) {
+					$docfi_layout_class = 'col-lg-8';
 				} else {
-					if ( is_active_sidebar( 'sidebar' ) ) {
-						$docfi_layout_class = 'col-lg-8';
-					} else {
-						$docfi_layout_class = 'col-sm-12 col-12';
-					}
+					$docfi_layout_class = 'col-sm-12 col-12';
 				}
 			}
 			return $docfi_layout_class;

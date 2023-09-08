@@ -53,6 +53,20 @@ class DocfiTheme_Header_Settings extends DocfiTheme_Customizer {
                 'section' => 'header_section',
             )
         ) );
+
+        $wp_customize->add_setting( 'header_width',
+            array(
+                'default' => $this->defaults['header_width'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'header_width',
+            array(
+                'label' => __( 'Header Container/Full Width container', 'docfi' ),
+                'section' => 'header_section',
+            )
+        ) );
 		
 		$wp_customize->add_setting( 'sticky_menu',
             array(
@@ -97,6 +111,48 @@ class DocfiTheme_Header_Settings extends DocfiTheme_Customizer {
                 'section' => 'header_section', 
             )
         ));
+
+        // Header Style
+        $wp_customize->add_setting( 'header_style',
+            array(
+                'default' => $this->defaults['header_style'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_radio_sanitization'
+            )
+        );
+        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'header_style',
+            array(
+                'label' => __( 'Header Layout', 'docfi' ),
+                'description' => esc_html__( 'You can override this settings only Mobile', 'docfi' ),
+                'section' => 'header_section',
+                'choices' => array(
+                    '1' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-1.jpg',
+                        'name' => __( 'Layout 1', 'docfi' )
+                    ),                  
+                    '2' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-2.jpg',
+                        'name' => __( 'Layout 2', 'docfi' )
+                    ),
+                )
+            )
+        ) );
+
+        $wp_customize->add_setting( 'email',
+            array(
+                'default' => $this->defaults['email'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'sanitize_textarea_field',
+            )
+        );
+        
+        $wp_customize->add_control( 'email',
+            array(
+                'label' => __( 'Email', 'docfi' ),
+                'section' => 'header_section',
+                'type' => 'text',
+            )
+        );
 
         
         /*header button*/

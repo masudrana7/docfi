@@ -31,20 +31,6 @@ elseif (is_post_type_archive('docfi_docs')) {
 	$docfi_title = get_the_title();	                   
 }
 
-if ( class_exists( 'WooCommerce' ) ) {
-	if (is_shop()) {
-		$docfi_title = esc_html__( 'Shop Page', 'docfi' );
-	} elseif(is_product_category()) {
-		$category = get_queried_object();
-		if ($category) {
-			$docfi_title = $category->name;
-		}		
-	} elseif(is_product()) {
-		$docfi_title = esc_html__( 'Shop Details', 'docfi' );
-	} else {
-		$docfi_title = $docfi_title;
-	}
-}
 ?>
 
 <?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || ( class_exists('bbPress') && bbp_is_single_user_profile()) ) { ?>

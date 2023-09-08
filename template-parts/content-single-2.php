@@ -100,7 +100,7 @@ $img_class = empty(has_post_thumbnail() ) ? 'no-image' : 'show-image';
 				<li class="item-author"><i class="icon-docfi-user"></i><?php esc_html_e( 'by ', 'docfi' );?><?php the_author_posts_link(); ?>
 				</li>
 				<?php } if ( DocfiTheme::$options['post_date'] ) { ?>	
-				<li><i class="icon-docfi-calendar"></i><?php echo get_the_date(); ?></li>
+				<li><i class="icon-docfi-calendar-alt"></i><?php echo get_the_date(); ?></li>
 				<?php } if ( DocfiTheme::$options['post_cats'] ) { ?>
 				<li><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['post_comment_num'] ) { ?>
@@ -110,7 +110,7 @@ $img_class = empty(has_post_thumbnail() ) ? 'no-image' : 'show-image';
 				<?php } if ( DocfiTheme::$options['post_view'] && function_exists( 'docfi_views' ) ) { ?>
 				<li><span class="meta-views meta-item "><i class="fa-regular fa-eye"></i><?php echo docfi_views(); ?></span></li>
 				<?php } if ( DocfiTheme::$options['post_published'] && function_exists( 'docfi_get_time' ) ) { ?>	
-				<li><i class="icon-docfi-calendar-alt"></i><?php echo docfi_get_time(); ?></li>
+				<li><i class="icon-docfi-calendar"></i><?php echo docfi_get_time(); ?></li>
 				<?php } ?>
 			</ul>
 			<?php } ?>

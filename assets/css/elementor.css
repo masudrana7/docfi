@@ -1822,6 +1822,13 @@ div.rt-cat-list .logo-card:hover svg{
     width: 60px;
     height: 60px;
     line-height: 60px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+.rt-forum-wrapper.rt-swiper-nav:hover .swiper-navigation>div{
+    opacity: 1;
+    visibility: visible;
 }
 @media (max-width: 767px) {
     .rt-forum-wrapper.rt-swiper-nav .swiper-navigation>div {

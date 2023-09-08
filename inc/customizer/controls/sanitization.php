@@ -85,18 +85,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         }
     }
 
-    /* Topbar check is enabled */
-    if (!function_exists('rttheme_is_topbar_enabled')) {
-        function rttheme_is_topbar_enabled()
-        {
-            $top_bar = get_theme_mod('top_bar');
-            if (empty($top_bar)) {
-                return false;
-            }
-            return true;
-        }
-    }
-
     /* Banner shape check is enabled */
     if (!function_exists('rttheme_is_banner_shape_enabled')) {
         function rttheme_is_banner_shape_enabled()
@@ -230,18 +218,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         {
             $show_related_docs = get_theme_mod('show_related_docs');
             if (empty($show_related_docs)) {
-                return false;
-            }
-            return true;
-        }
-    }
-
-    /* Woo related option */
-    if (!function_exists('rttheme_is_related_woo_enabled')) {
-        function rttheme_is_related_woo_enabled()
-        {
-            $related_woo_product = get_theme_mod('related_woo_product');
-            if (empty($related_woo_product)) {
                 return false;
             }
             return true;

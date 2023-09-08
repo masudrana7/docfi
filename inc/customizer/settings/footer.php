@@ -650,20 +650,6 @@ class DocfiTheme_Footer_Settings extends DocfiTheme_Customizer {
             )
         );
 
-        $wp_customize->add_setting( 'copyright_menu',
-            array(
-                'default' => $this->defaults['copyright_menu'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'copyright_menu',
-            array(
-                'label' => __( 'Copyright Menu Display', 'docfi' ),
-                'section' => 'footer_section',
-            )
-        ) );
-
         $wp_customize->add_setting( 'logo_display',
             array(
                 'default' => $this->defaults['logo_display'],
