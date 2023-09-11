@@ -33,16 +33,8 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 	$attch_url      = wp_get_attachment_image_src( $logo_settings['docfi_cutom_sticky_logo'], 'full', true );
 	$ctstickylogo = $attch_url[0];
 }
-
- if ( DocfiTheme::$header_width == 1 || DocfiTheme::$header_width == "on" ){
-	$header_width ="container-fluid";
- }else {
-	$header_width ="container";
- }
- $docfi_socials = DocfiTheme_Helper::socials();
-
-
-
+$class_width = ( DocfiTheme::$header_width === "on" || DocfiTheme::$header_width === 1 ) ? "container-fluid" : "container";
+$docfi_socials = DocfiTheme_Helper::socials();
 
 ?>
 <div id="sticky-placeholder"></div>
@@ -50,7 +42,7 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 
  	
 	<div class="rt-header-toparea">
-		<div class="<?php echo esc_attr($header_width); ?>">
+		<div class="<?php echo esc_attr($class_width); ?>">
 			<div class="rt-center-logo row align-items-center">
 				<?php if ( DocfiTheme::$options['email'] ) { ?>
 					<div class="rt-mail col-md">
@@ -87,7 +79,7 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 		</div>
 	</div>
 
-	<div class="<?php echo esc_attr($header_width); ?>">
+	<div class="<?php echo esc_attr($class_width); ?>">
 		<div class="menu-full-wrap">
 			<div class="menu-wrap">
 				<div id="site-navigation" class="main-navigation">

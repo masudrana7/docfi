@@ -30,6 +30,48 @@ defined( 'ABSPATH' ) || exit;
 			<div class="content">
 				<?php bbp_topic_content(); ?>
 			</div>
+            <div class="rt-topics-single-taxonomy forum-post-btm">
+                <?php if ( bbp_get_topic_tag_list( get_the_ID() ) ) : ?>
+                    <div class="taxonomy forum-post-tags">
+                        <?php
+                        bbp_topic_tag_list(
+                            '',
+                            [
+                                'before' => '<i class="fa-solid fa-tags"></i> <strong>' . esc_html__( 'Tagged:', 'docfi' ) . '</strong>&nbsp; <span class="tags">',
+                                'after'  => '</span>',
+                            ]
+                        );
+                        ?>
+                    </div>
+                <?php endif; ?>
+                <div class="taxonomy forum-post-cat">
+                    <?php echo get_the_post_thumbnail( bbp_get_topic_forum_id(), 'docfi_20x20' ); ?>
+                    <a href="<?php bbp_forum_permalink( bbp_get_topic_forum_id() ); ?>">
+                        <?php echo bbp_get_topic_forum_title(); ?>
+                    </a>
+                </div>
+            </div>
+            <div class="rt-topics-single-meta action-button-container">
+                <?php if ( is_user_logged_in() ) : ?>
+                    <ul class="list-unstyled d-flex bbp-admin-links">
+                        <?php
+                        $admin_link_args = [
+                            'before' => '<li>',
+                            'after'  => '</li>',
+                            'sep'    => '</li><li>',
+                        ];
+                        bbp_topic_admin_links( $admin_link_args );
+                        ?>
+                    </ul>
+                <?php endif; ?>
+                <?php
+                bbp_topic_favorite_link(
+                    [
+                        'before' => '',
+                    ]
+                );
+                ?>
+            </div>
 		</div>
 	</div>	
 	<?php endif; ?>

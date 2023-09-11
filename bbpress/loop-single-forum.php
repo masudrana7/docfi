@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="rt-bbp-forum-author">
 			<?php if(bbp_get_forum_last_active_id()){?>
 			<div class="rt-forum-image">
-				<?php bbp_author_link( array( 'post_id' => bbp_get_forum_last_active_id(), 'size' => 40, 'type' => 'avatar' ) ); ?>
+				<?php bbp_author_link( array( 'post_id' => bbp_get_forum_last_active_id(), 'size' => 100, 'type' => 'avatar' ) ); ?>
 			</div>
 			<?php } ?>
 

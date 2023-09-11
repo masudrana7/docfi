@@ -33,17 +33,12 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 	$attch_url      = wp_get_attachment_image_src( $logo_settings['docfi_cutom_sticky_logo'], 'full', true );
 	$ctstickylogo = $attch_url[0];
 }
-
- if ( DocfiTheme::$header_width == 1 || DocfiTheme::$header_width == "on" ){
-	$header_width ="container-fluid";
- }else {
-	$header_width ="container";
- }
+$class_width = ( DocfiTheme::$header_width === "on" || DocfiTheme::$header_width === 1 ) ? "container-fluid" : "container";
 
 ?>
 <div id="sticky-placeholder"></div>
 <div class="header-menu" id="header-menu">
-	<div class="<?php echo esc_attr($header_width); ?>">
+	<div class="<?php echo esc_attr($class_width); ?>">
 		<div class="menu-full-wrap">
 			<div class="site-branding">
 				<?php if(!empty($customlogo)){ ?>
