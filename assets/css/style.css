@@ -3279,20 +3279,13 @@ input:-webkit-autofill:active
 .sidebar-widget-area ul.wp-block-archives li a {
 	float: left;
 }
-.wp-block-categories,
-.wp-block-archives {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
 .wp-block-categories li ul.children, 
 .wp-block-archives li ul.children {
 	padding-left: 17px;
 	float: left;
 	width: 100%;
-	border-top: 1px solid var(--docfi-border-color);
-	margin-top: 10px;
-	padding-top: 10px;
+	margin-top: 9px;
+	padding-top: 9px;
 	margin-left: 0;
 	list-style: none;
 }
