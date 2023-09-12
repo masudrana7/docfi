@@ -170,6 +170,18 @@ function docfi_template_style(){
 	
 	ob_start();
 	?>
+
+
+	<?php if( !empty( DocfiTheme::$options['footer_newsletter_image'] ) ) {
+	$footer_newsletter_image = wp_get_attachment_image_src( DocfiTheme::$options['footer_newsletter_image'], 'full', true );
+	$footer_news_img = $footer_newsletter_image[0];
+	}else {
+		$footer_news_img = DOCFI_ASSETS_URL . 'img/cta.png';
+	} ?>
+
+	.call-to-action-section:before{
+		background: url(<?php echo esc_url( $footer_news_img ); ?>);
+	}
 	
 	.entry-banner {
 		<?php if ( DocfiTheme::$bgtype == 'bgcolor' ): ?>

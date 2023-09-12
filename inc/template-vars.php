@@ -132,7 +132,6 @@ if( !function_exists( 'docfi_template_vars' ) ) {
         }
     }
 }
-
 // Add body class
 add_filter( 'body_class', 'docfi_body_classes' );
 if( !function_exists( 'docfi_body_classes' ) ) {

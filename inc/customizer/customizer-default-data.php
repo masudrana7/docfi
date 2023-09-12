@@ -39,7 +39,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'email'                     => '',
 
             'online_button'             => 0,
-            'online_button_text'        => esc_html__('Get a Quote', 'docfi'),
+            'online_button_text'        => esc_html__('Free Trial', 'docfi'),
             'online_button_link'        => '#',
 
 			// Footer

@@ -361,7 +361,7 @@ CSS INDEX
     padding: 6px 21px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    border: 1px solid transparent;
+    border: 1px solid var(--docfi-heading-color);
 }
 .rt-card--style-1 {
     padding: 53px 45px;
@@ -549,22 +549,20 @@ CSS INDEX
     background-color: var(--docfi-primary-color);
 }
 .rt-card--style-8 {
-    padding: 57px 40px;
+    padding: 35px 40px 30px;
     border-radius: 20px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     background: #fbfbff;
 }
 .rt-card--style-8 .card-title {
-    gap: 10px;
     line-height: 35px;
     font-weight: 500;
     font-size: 30px;
 }
 .rt-card--style-8 .card-title .icon {
-    margin-bottom: 0;
+    margin-bottom: 15px;
     position: relative;
-    top: 1px;
 }
 .rt-card--style-8 .card-info {
     line-height: 30px;
@@ -692,12 +690,12 @@ CSS INDEX
 .rt-counter-box {
     background: #FFFFFF;
     border-radius: 20px;
-    padding: 38px 34px;
+    padding: 45px 34px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    height: 140px;
+    height: 150px;
     position: relative;
     top: 0;
 }
@@ -917,19 +915,21 @@ CSS INDEX
     padding: 0;
     list-style: none;
 }
-
 .explore-topics-card .explore-topics-header .title-area h3 a {
     font-weight: 500;
     font-size: 1.375rem;
     line-height: 26px;
     color: var(--docfi-heading-color);
 }
-
 .explore-topics-card .explore-topics-header .number-of-article {
     font-weight: 400;
     font-size: 0.9375rem;
     line-height: 18px;
     color: #777777;
+    transition: 0.4s;
+}
+.explore-topics-card .explore-topics-header .number-of-article:hover{
+    color: var(--docfi-heading-color);
 }
 
 .explore-topics-card .explore-topics-body {

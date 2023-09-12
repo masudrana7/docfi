@@ -49,21 +49,16 @@ if( !empty( DocfiTheme::$options['footer_shape2'] ) ) {
 }?>
 <?php
 
-if( !empty( DocfiTheme::$options['footer_newsletter_image'] ) ) {
-	$footer_newsletter_image = wp_get_attachment_image_src( DocfiTheme::$options['footer_newsletter_image'], 'full', true );
-	$footer_news_img = $footer_newsletter_image[0];
-}else {
-	$footer_news_img = DOCFI_ASSETS_URL . 'img/cta.jpg';
-} 
+
 
 if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nws_shortcode'] )) {
 	if ( DocfiTheme::$footer_newsletter == 1 || DocfiTheme::$footer_newsletter != 'off' ) { ?>
 	<!-- start call-to-action-section -->
-	<div class="call-to-action-section" style="background-image:url(<?php echo esc_url( $footer_news_img ); ?>);">
+	<div class="call-to-action-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-xl-11 col-lg-12">
-					<div class="row justify-content-between align-items-center">
+					<div class="row justify-content-between align-items-center rt-footer-cta">
 						<?php if (!empty(DocfiTheme::$options['newsletter_title'])) { ?>
 							<div class="col-lg-5 col-lg-6">
 								<div class="section-text-content">
@@ -121,7 +116,7 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 	</div>
 	<?php } ?>
 
-	<?php if ( DocfiTheme::$footer_shape == 1 || DocfiTheme::$footer_shape == 'on' ) { ?>				
+	<?php if ( DocfiTheme::$footer_shape === 1 || DocfiTheme::$footer_shape === 'on' ) { ?>				
 	<div class="shapes">
 		<ul>
 			<?php if(!empty($footer_bg_img1)) { ?>

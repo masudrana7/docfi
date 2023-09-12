@@ -431,9 +431,7 @@ $copyright_hover_color = DocfiTheme::$options['copyright_hover_color'];
 $copyright_bg_color = DocfiTheme::$options['copyright_bg_color'];
 $login_left_bgcolor = DocfiTheme::$options['login_left_bgcolor'];
 $register_left_bgcolor = DocfiTheme::$options['register_left_bgcolor'];
-
 ?>
-
 <?php if ( DocfiTheme::$options['footer_title_color'] ) { ?>
 	.footer-area .widgettitle,
 	.footer-style-3 .footer-area .widgettitle,
