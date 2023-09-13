@@ -374,34 +374,34 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
                     'regularweight' => '600',
                 )
             ),
-            'typo_h3_size' => '20px',
+            'typo_h3_size' => '28px',
             'typo_h3_height'=> '28px',
 
             //H4
             'typo_h4' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '500',
+                    'regularweight' => '600',
                 )
             ),
-            'typo_h4_size' => '18px',
+            'typo_h4_size' => '22px',
             'typo_h4_height'=> '26px',
 
             //H5
             'typo_h5' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '400',
+                    'regularweight' => '500',
                 )
             ),
-            'typo_h5_size' => '16px',
+            'typo_h5_size' => '18px',
             'typo_h5_height'=> '22px',
 
             //H6
             'typo_h6' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '400',
+                    'regularweight' => '500',
                 )
             ),
             'typo_h6_size' => '14px',
