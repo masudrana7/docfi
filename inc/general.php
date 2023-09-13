@@ -31,17 +31,17 @@ if ( !function_exists( 'docfi_setup' ) ) {
 			array(
 				'name' => esc_html__( 'Primary Color', 'docfi' ),
 				'slug' => 'docfi-primary',
-				'color' => '#fe5716',
+				'color' => '#15C590',
 			),
 			array(
 				'name' => esc_html__( 'Secondary Color', 'docfi' ),
 				'slug' => 'docfi-secondary',
-				'color' => '#e3550e',
+				'color' => '#3948D2',
 			),
 			array(
 				'name' => esc_html__( 'dark gray', 'docfi' ),
 				'slug' => 'docfi-button-dark-gray',
-				'color' => '#e7e7e7',
+				'color' => '#1d2746',
 			),
 			array(
 				'name' => esc_html__( 'light gray', 'docfi' ),
@@ -619,7 +619,7 @@ if ( !function_exists( 'docfi_post_links_next_prev' ) ) {
 			</div>
 		<?php } ?>
 		<?php if ( !empty( get_previous_post_link())){ ?>
-			<div class="<?php if ( empty( get_next_post_link())){ ?>offset-md-6<?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-right' ); } else { echo esc_attr( 'text-right' ); } ?>">
+			<div class="<?php if ( empty( get_next_post_link())){ ?>rt_first-post <?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-right' ); } else { echo esc_attr( 'text-right' ); } ?>">
 				<div class="pad-lr-15">
 				<span class="prev-article">
 					<?php previous_post_link( '%link', esc_html__('Next' , 'docfi' ) );?> <i class="icon-docfi-right-arrow"></i>

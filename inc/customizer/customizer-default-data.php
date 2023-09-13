@@ -354,8 +354,8 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
                     'regularweight' => '600',
                 )
             ),
-            'typo_h1_size' => '60px',
-            'typo_h1_height' => '76px',
+            'typo_h1_size' => '44px',
+            'typo_h1_height' => '54px',
 
             //H2
             'typo_h2' => json_encode(
@@ -371,7 +371,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'typo_h3' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '500',
+                    'regularweight' => '600',
                 )
             ),
             'typo_h3_size' => '20px',

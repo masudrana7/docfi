@@ -172,6 +172,10 @@ $youtube_link = get_post_meta( get_the_ID(), 'docfi_youtube_link', true );
 				<?php docfi_related_post(); ?>
 			</div>
 		<?php } ?>
+
+		<?php if ( comments_open() || get_comments_number() ){
+			comments_template();
+		} ?>
 		
 	</div>
 </div>

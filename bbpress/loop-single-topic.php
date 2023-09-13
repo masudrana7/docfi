@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php do_action( 'bbp_theme_after_topic_title' ); ?>
 			</h5>
 			<div class="user-meta">
-				<span class="author"><?php printf( esc_html__( '%1$s', 'docfi' ), bbp_get_topic_author_link( array( 'size' => '20' ) ) ); ?></span>
+				<span class="author"><?php printf( esc_html__( '%1$s', 'docfi' ), bbp_get_topic_author_link( array( 'size' => '80' ) ) ); ?></span>
 				<span class="topics-meta"><?php echo esc_html__('In:', 'docfi'); ?>
 					<a href="<?php bbp_forum_permalink(bbp_get_topic_forum_id()); ?>">
                             <?php bbp_forum_title(bbp_get_topic_forum_id()); ?>

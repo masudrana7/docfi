@@ -51,18 +51,6 @@ if ( empty(has_post_thumbnail() ) ) {
 					<?php if ( DocfiTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
 				</div>
 			</div>
-			<?php if ( comments_open() || get_comments_number() ){ ?>
-			<div class="rt-comments-area">
-				<div class="container">
-					<div class="col-xl-8">
-						<?php
-							comments_template();
-						?>	
-					</div>
-					
-				</div>
-			</div>
-			<?php } ?>
 		</div>
 	<?php } else if ( DocfiTheme::$options['post_style'] == 'style2' ) { ?>
 	<div id="contentHolder">

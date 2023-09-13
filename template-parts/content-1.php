@@ -113,8 +113,8 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 
 				<?php if ( DocfiTheme::$options['blog_author_name'] ) { ?>
 				<li class="post-author"><i class="icon-docfi-user"></i><?php the_author_posts_link(); ?></li>
-				<?php } if ( DocfiTheme::$options['blog_cats'] ) { ?>
-					
+				<?php } if ( DocfiTheme::$options['blog_cats'] && empty(has_post_thumbnail() ) ) { ?>
+				<li class="entry-categories"><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['blog_date'] ) { ?>	
 				<li class="post-date"><i class="icon-docfi-calendar-alt"></i>
 				<?php echo get_the_date(); ?></li>	
