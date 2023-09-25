@@ -52,6 +52,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'footer_area'				=> 1,
             'nws_shortcode'             => '',
             'newsletter_title'          => '',
+            'newsletter_subtitle'       => 'Subscribe',
             'copyright_area'            => 1,
             'logo_display'              => 1,
 			'footer_bgtype' 			=> 'fbgcolor',
@@ -76,6 +77,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'footer_shape'              =>  0,
             'footer_shape1'             => '',
             'footer_shape2'             => '',
+            'footer_shape3'             => '',
             'footer_newsletter_image'   => '',
 
             // Contact Socials            
@@ -343,15 +345,15 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             // Heading Typography
             'typo_heading' => json_encode(
                 array(
-                    'font' => 'Roboto',
-                    'regularweight' => '600',
+                    'font' => 'Barlow',
+                    'regularweight' => '700',
                 )
             ),
             //H1
             'typo_h1' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '600',
+                    'regularweight' => '700',
                 )
             ),
             'typo_h1_size' => '44px',
@@ -361,7 +363,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'typo_h2' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '600',
+                    'regularweight' => '700',
                 )
             ),
             'typo_h2_size' => '36px',
@@ -371,7 +373,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'typo_h3' => json_encode(
                 array(
                     'font' => '',
-                    'regularweight' => '600',
+                    'regularweight' => '700',
                 )
             ),
             'typo_h3_size' => '28px',

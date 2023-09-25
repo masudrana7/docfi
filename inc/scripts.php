@@ -176,7 +176,7 @@ function docfi_template_style(){
 	$footer_newsletter_image = wp_get_attachment_image_src( DocfiTheme::$options['footer_newsletter_image'], 'full', true );
 	$footer_news_img = $footer_newsletter_image[0];
 	}else {
-		$footer_news_img = DOCFI_ASSETS_URL . 'img/cta.png';
+		$footer_news_img = DOCFI_ASSETS_URL . 'img/cta.jpg';
 	} ?>
 
 	.call-to-action-section:before{

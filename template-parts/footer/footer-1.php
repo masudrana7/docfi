@@ -39,19 +39,26 @@ if( !empty( DocfiTheme::$options['footer_shape1'] ) ) {
 	$footer_shape1 = wp_get_attachment_image_src( DocfiTheme::$options['footer_shape1'], 'full', true );
 	$footer_bg_img1 = $footer_shape1[0];
 }else {
-	$footer_bg_img1 = DOCFI_ASSETS_URL . 'img/footer_shape1.png';
+	$footer_bg_img1 = DOCFI_ASSETS_URL . 'img/footer-shape1.png';
 }
 if( !empty( DocfiTheme::$options['footer_shape2'] ) ) {
 	$footer_shape2 = wp_get_attachment_image_src( DocfiTheme::$options['footer_shape2'], 'full', true );
 	$footer_bg_img2 = $footer_shape2[0];
 }else {
-	$footer_bg_img2 = DOCFI_ASSETS_URL . 'img/footer_shape2.svg';
-}?>
+	$footer_bg_img2 = DOCFI_ASSETS_URL . 'img/footer-shape2.png';
+}
+if( !empty( DocfiTheme::$options['footer_shape3'] ) ) {
+	$footer_shape3 = wp_get_attachment_image_src( DocfiTheme::$options['footer_shape3'], 'full', true );
+	$footer_bg_img3 = $footer_shape3[0];
+}else {
+	$footer_bg_img3 = DOCFI_ASSETS_URL . 'img/footer-shape3.png';
+}
+
+?>
 <?php
 
 
-
-if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nws_shortcode'] )) {
+if (!empty( DocfiTheme::$options['newsletter_subtitle'] || DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nws_shortcode'] )) {
 	if ( DocfiTheme::$footer_newsletter == 1 || DocfiTheme::$footer_newsletter != 'off' ) { ?>
 	<!-- start call-to-action-section -->
 	<div class="call-to-action-section">
@@ -62,6 +69,11 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 						<?php if (!empty(DocfiTheme::$options['newsletter_title'])) { ?>
 							<div class="col-lg-5 col-lg-6">
 								<div class="section-text-content">
+									<?php if (!empty(DocfiTheme::$options['newsletter_subtitle'])) { ?>
+										<span class="subtitle">
+											<?php echo esc_html( DocfiTheme::$options['newsletter_subtitle'] ); ?>
+										</span>
+									<?php } ?>
 									<h2 class="section-heading">
 										<?php echo esc_html( DocfiTheme::$options['newsletter_title'] ); ?>
 									</h2>
@@ -129,6 +141,14 @@ if (!empty( DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nw
 			<li class="rt-mouse-parallax">
 				<div data-depth="5.00">
 					<img src="<?php echo esc_url( $footer_bg_img2 ); ?>" alt="shape-image">
+				</div>
+			</li>
+			<?php } ?>
+
+		    <?php if(!empty($footer_bg_img3)) { ?>
+			<li class="rt-shape3">
+				<div data-depth="5.00">
+					<img src="<?php echo esc_url( $footer_bg_img3 ); ?>" alt="shape-image">
 				</div>
 			</li>
 			<?php } ?>

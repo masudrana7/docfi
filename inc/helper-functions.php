@@ -71,8 +71,8 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			$bodyFW = '500'; // Roboto:wght@300;400;500;600;700;800
 			$menuFont = 'Roboto';
 			$menuFontW = '600';
-			$hFont = 'Roboto';
-			$hFontW = '700';
+			$hFont = 'Barlow';
+			$hFontW = '600';
 			$h1Font = '';
 			$h2Font = '';
 			$h3Font = '';
@@ -101,7 +101,7 @@ if ( !class_exists( 'DocfiTheme_Helper' ) ) {
 			// Heading Font Settings
 			$h_font  = json_decode( DocfiTheme::$options['typo_heading'], true );
 			if ($h_font['font'] == 'Inherit') {
-				$hFont = 'Roboto';
+				$hFont = 'Barlow';
 			} else {
 				$hFont = $h_font['font'];
 			}

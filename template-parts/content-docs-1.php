@@ -5,12 +5,9 @@
  * @version 1.0
  */
 
-$docs_group_number = DocfiTheme::$options['docs_group_number'];
-?>
-
+$docs_group_number = DocfiTheme::$options['docs_group_number'];?>
 <div class="rt-docs-archive row">
 	<?php 
-	
 	$args = array(
 		'taxonomy'   => 'docfi_docs_group',
 		'hide_empty' => false, 
@@ -34,10 +31,8 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 			$uid = strtolower(str_replace(array('%', ':', '\\', '/', '*', '?', '.', ';', ' '), '', $tl));
 			$current_inner_posts = [];
 			$group_link = get_category_link($docs_group->cat_ID);
-			
 		ob_start();
 		?>
-
 		<div class="explore-topics-body">
 			<ul class="explore-topics-list">
 				<?php 
@@ -104,7 +99,8 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];
 			</div>
 		</div>							
 		<?php 
-		 }
+		}
 	} 
+	
 	?> 
 </div>	

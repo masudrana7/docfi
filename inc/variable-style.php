@@ -101,14 +101,14 @@ if ($typo_body['font'] == 'Inherit') {
 =======================================================*/
 $typo_menu = json_decode( DocfiTheme::$options['typo_menu'], true );
 if ($typo_menu['font'] == 'Inherit') {
-	$typo_menu['font'] = 'Spartan';
+	$typo_menu['font'] = 'Roboto';
 } else {
 	$typo_menu['font'] = $typo_menu['font'];
 }
 
 $typo_sub_menu = json_decode( DocfiTheme::$options['typo_sub_menu'], true );
 if ($typo_sub_menu['font'] == 'Inherit') {
-	$typo_sub_menu['font'] = 'Spartan';
+	$typo_sub_menu['font'] = 'Roboto';
 } else {
 	$typo_sub_menu['font'] = $typo_sub_menu['font'];
 }
@@ -117,43 +117,43 @@ if ($typo_sub_menu['font'] == 'Inherit') {
 =======================================================*/
 $typo_heading = json_decode( DocfiTheme::$options['typo_heading'], true );
 if ($typo_heading['font'] == 'Inherit') {
-	$typo_heading['font'] = 'Spartan';
+	$typo_heading['font'] = 'Barlow';
 } else {
 	$typo_heading['font'] = $typo_heading['font'];
 }
 $typo_h1 = json_decode( DocfiTheme::$options['typo_h1'], true );
 if ($typo_h1['font'] == 'Inherit') {
-	$typo_h1['font'] = 'Spartan';
+	$typo_h1['font'] = 'Barlow';
 } else {
 	$typo_h1['font'] = $typo_h1['font'];
 }
 $typo_h2 = json_decode( DocfiTheme::$options['typo_h2'], true );
 if ($typo_h2['font'] == 'Inherit') {
-	$typo_h2['font'] = 'Spartan';
+	$typo_h2['font'] = 'Barlow';
 } else {
 	$typo_h2['font'] = $typo_h2['font'];
 }
 $typo_h3 = json_decode( DocfiTheme::$options['typo_h3'], true );
 if ($typo_h3['font'] == 'Inherit') {
-	$typo_h3['font'] = 'Spartan';
+	$typo_h3['font'] = 'Barlow';
 } else {
 	$typo_h3['font'] = $typo_h3['font'];
 }
 $typo_h4 = json_decode( DocfiTheme::$options['typo_h4'], true );
 if ($typo_h4['font'] == 'Inherit') {
-	$typo_h4['font'] = 'Spartan';
+	$typo_h4['font'] = 'Barlow';
 } else {
 	$typo_h4['font'] = $typo_h4['font'];
 }
 $typo_h5 = json_decode( DocfiTheme::$options['typo_h5'], true );
 if ($typo_h5['font'] == 'Inherit') {
-	$typo_h5['font'] = 'Spartan';
+	$typo_h5['font'] = 'Barlow';
 } else {
 	$typo_h5['font'] = $typo_h5['font'];
 }
 $typo_h6 = json_decode( DocfiTheme::$options['typo_h6'], true );
 if ($typo_h6['font'] == 'Inherit') {
-	$typo_h6['font'] = 'Spartan';
+	$typo_h6['font'] = 'Barlow';
 } else {
 	$typo_h6['font'] = $typo_h6['font'];
 }

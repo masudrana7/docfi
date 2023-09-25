@@ -43,14 +43,10 @@ $args = array(
 $query = new WP_Query( $args ); ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">
-	<div class="container">	
-
+	<div class="container">
 		<div class="row">
 
-		
 			<?php if ( DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('forum-sidebar') )  { ?>	
-				
-				
 				<div class="col-lg-4 docfi-column-sticky">
 					<div class="rt-forum-widget-wrapper">
 						<?php dynamic_sidebar('forum-sidebar'); ?>
@@ -58,10 +54,9 @@ $query = new WP_Query( $args ); ?>
 				</div>
 			<?php } ?>
 
-
 			<div class="<?php echo esc_attr( $docfi_layout_class );?>">
 				<?php if ( $query->have_posts() ) :?>
-					<?php get_template_part( 'template-parts/content', 'docs-1' ); ?>	
+					<?php get_template_part( 'template-parts/content', 'docs-1' ); ?>
 				<?php endif;?>
 			</div>
 
@@ -73,10 +68,7 @@ $query = new WP_Query( $args ); ?>
 				</div>
 			<?php } ?>
 
-
-
 		</div>
-		
 	</div>
 </div>
 <?php get_footer(); ?>

@@ -42,6 +42,22 @@ class DocfiTheme_Footer_Settings extends DocfiTheme_Customizer {
         ) );
 
         // Newsletter Title
+        $wp_customize->add_setting( 'newsletter_subtitle',
+            array(
+                'default' => $this->defaults['newsletter_subtitle'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_textarea_sanitization',
+            )
+        );
+        $wp_customize->add_control( 'newsletter_subtitle',
+            array(
+                'label' => __( 'Newsletter SubTitle', 'docfi' ),
+                'section' => 'footer_section',
+                'type' => 'text',
+                'active_callback' => 'rttheme_is_footer_newsletter_enabled',
+            )
+        );
+
         $wp_customize->add_setting( 'newsletter_title',
             array(
                 'default' => $this->defaults['newsletter_title'],
@@ -352,6 +368,33 @@ class DocfiTheme_Footer_Settings extends DocfiTheme_Customizer {
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_shape2',
             array(
                 'label' => __( 'Footer Shape 2', 'docfi' ),
+                'description' => esc_html__( 'This is the description for the Media Control', 'docfi' ),
+                'section' => 'footer_section',
+                'mime_type' => 'image',
+                'button_labels' => array(
+                    'select' => __( 'Select File', 'docfi' ),
+                    'change' => __( 'Change File', 'docfi' ),
+                    'default' => __( 'Default', 'docfi' ),
+                    'remove' => __( 'Remove', 'docfi' ),
+                    'placeholder' => __( 'No file selected', 'docfi' ),
+                    'frame_title' => __( 'Select File', 'docfi' ),
+                    'frame_button' => __( 'Choose File', 'docfi' ),
+                ),
+                'active_callback'   => 'rttheme_is_footer1_enabled',
+            )
+        ) );
+
+        //Footer Shape 3
+        $wp_customize->add_setting( 'footer_shape3',
+            array(
+                'default' => $this->defaults['footer_shape3'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'absint',
+            )
+        );
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_shape3',
+            array(
+                'label' => __( 'Footer Shape 3', 'docfi' ),
                 'description' => esc_html__( 'This is the description for the Media Control', 'docfi' ),
                 'section' => 'footer_section',
                 'mime_type' => 'image',

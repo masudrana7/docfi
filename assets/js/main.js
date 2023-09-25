@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
     if ($(".rt-hero-section-content-wrapper").length) {
         $('.rt-hero-section-content-wrapper').focusin(function () {
             $('body').addClass('rt-search-active');
-            $(this).css('z-index', '11111')
+            $(this).css('z-index', '100')
         });
         $('.rt-hero-section-content-wrapper').focusout(function () {
             $('body').removeClass('rt-search-active');
