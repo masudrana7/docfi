@@ -4,9 +4,8 @@
  * @since   1.0
  * @version 1.0
  */
-
 // Layout class
-if (( class_exists('bbPress') && bbp_is_single_user_profile()) || DocfiTheme::$layout == 'full-width') {
+if (( class_exists('bbPress') && bbp_is_single_user_profile()) || ( class_exists('bbPress') && bbp_is_single_user()) || DocfiTheme::$layout == 'full-width') {
 	$docfi_layout_class = 'col-sm-12 col-12';
 } else {
 	$docfi_layout_class = DocfiTheme_Helper::has_active_widget();
@@ -17,7 +16,7 @@ if (( class_exists('bbPress') && bbp_is_single_user_profile()) || DocfiTheme::$l
 	<div class="container">
 		<div class="row rt-page-wrapper">
 			<?php if ( DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('forum-sidebar') )  { ?>			
-				<div class="col-lg-4 docfi-column-sticky">
+				<div class="col-lg-4 docfi-column-sticky ">
 					<div class="rt-forum-widget-wrapper">
 						<?php dynamic_sidebar('forum-sidebar'); ?>
 					</div>

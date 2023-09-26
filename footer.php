@@ -24,11 +24,7 @@
 <footer>
 	<div id="footer-<?php echo esc_attr( DocfiTheme::$footer_style ); ?>" class="footer-area">
 		<?php 
-			if(class_exists('bbPress') && bbp_is_single_user_profile()){ 
-				get_template_part( 'template-parts/footer/footer', '1' );
-		}else {
 			get_template_part( 'template-parts/footer/footer', DocfiTheme::$footer_style );
-		}
 		?>
 	</div>
 </footer>

@@ -33,7 +33,7 @@ elseif (is_post_type_archive('docfi_docs')) {
 
 ?>
 
-<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || ( class_exists('bbPress') && bbp_is_single_user_profile()) ) { ?>
+<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || class_exists('bbPress') ) { ?>
 	<div class="entry-banner">
 		<div class="container">
 			<div class="entry-banner-content">

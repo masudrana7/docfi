@@ -67,7 +67,7 @@ if (!empty( DocfiTheme::$options['newsletter_subtitle'] || DocfiTheme::$options[
 				<div class="col-xl-11 col-lg-12">
 					<div class="row justify-content-between align-items-center rt-footer-cta">
 						<?php if (!empty(DocfiTheme::$options['newsletter_title'])) { ?>
-							<div class="col-lg-5 col-lg-6">
+							<div class="col-xl-5 col-lg-6">
 								<div class="section-text-content">
 									<?php if (!empty(DocfiTheme::$options['newsletter_subtitle'])) { ?>
 										<span class="subtitle">
@@ -80,7 +80,7 @@ if (!empty( DocfiTheme::$options['newsletter_subtitle'] || DocfiTheme::$options[
 								</div>
 							</div>
 						<?php }  if (!empty(DocfiTheme::$options['nws_shortcode'])) { ?>
-							<div class="col-xl-6 col-lg-6">
+							<div class="col-xl-7 col-lg-6">
 								<div class="call-to-cation-form-wrapper">
 									<?php echo do_shortcode( DocfiTheme::$options['nws_shortcode'] ); ?>
 								</div>

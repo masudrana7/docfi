@@ -11,23 +11,22 @@ add_action( 'template_redirect', 'docfi_template_vars' );
 if( !function_exists( 'docfi_template_vars' ) ) {
     function docfi_template_vars() {
         // Single Pages
-        if( is_single() || is_page() ) {
+        if( is_single() || is_page()  ) {
             $post_type = get_post_type();
             $post_id   = get_the_id();
             switch( $post_type ) {
                 case 'page':
-                $prefix = 'page';
-                break;
-                case 'product':
-                $prefix = 'product';
-                break;
-                default:
-                $prefix = 'single_post';
-                break;                     
+                    $prefix = 'page';
+                    break;               
                 case 'docfi_docs':
-                $prefix = 'docs';
-                break; 
+                    $prefix = 'docs';
+                    break; 
+                default:
+                    $prefix = 'single_post';
+                    break; 
             }
+
+            
 			
 			$layout_settings    = get_post_meta( $post_id, 'docfi_layout_settings', true );
             
@@ -85,10 +84,12 @@ if( !function_exists( 'docfi_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( DocfiTheme::$options[$prefix . '_page_bgimg'], 'full', true );
                 DocfiTheme::$pagebgimg = $attch_url[0];
             }
+
         }
         
         // Blog and Archive
-        elseif( is_home() || is_archive() || is_search() || is_404() ) {
+        elseif( is_home() || is_archive() || is_search() || is_404() || bbp_is_single_user()) {
+
             if( is_search() ) {
                 $prefix = 'search';
             } else if( is_404() ) {

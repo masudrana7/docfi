@@ -50,9 +50,18 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'docfi' ); ?></a>		
 		<header id="masthead" class="site-header">
 			<div id="rt-header-header" class="header-area rt-header-style<?php echo esc_attr( DocfiTheme::$header_style ); ?>">
-				<?php if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" || bbp_is_single_user_profile() ){ ?>
-					<?php get_template_part( 'template-parts/header/header', DocfiTheme::$header_style ); ?>	
-				<?php } ?>			
+				
+				
+				<?php
+				
+				if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" ){ ?>
+
+					<?php get_template_part( 'template-parts/header/header', DocfiTheme::$header_style ); ?>
+					
+					
+				<?php } ?>		
+
+
 			</div>
 		</header>		
 		<?php get_template_part('template-parts/header/mobile', 'menu');?>
@@ -60,16 +69,19 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 			<div class="header-search-wrap">
             <button type="button" aria-label="close button" class="close"><i class="fa-solid fa-xmark"></i></button>
             <form role="search" method="get" class="header-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_html_e( 'Type your search........', 'docfi' ); ?>">
+                <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_html_e( 'Type your search...', 'docfi' ); ?>">
                 <button type="submit" aria-label="submit button" class="search-btn"><i class="icon-docfi-search"></i></button>
             </form>
             </div>
         </div>
 
+
 		<div id="content" class="site-content <?php echo esc_attr($blend); ?>">			
 			<?php
-				 if ( DocfiTheme::$has_banner === 1 || DocfiTheme::$has_banner === "on" || bbp_is_single_user_profile()) { 
+
+				if ( DocfiTheme::$has_banner === 1 || DocfiTheme::$has_banner === "on") { 
 					get_template_part('template-parts/content', 'banner');
-				 }
+				}
+
 			?>
 			
