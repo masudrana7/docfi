@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
             if (current_position >= widgetTop && current_position <= widgetBottom) {
                 var storeY = current_position - widgetTop;
                 widthPercentage = (storeY / divHeight) * 100;
-                $(".explore-topics-list li a[href*=" + widgetId + "]").addClass("active").css("backgroundImage", "linear-gradient( to right, #15C590 " + widthPercentage + "%, #6B707F " + 0 + "% )");
+                $(".explore-topics-list li a[href*=" + widgetId + "]").addClass("active").css("backgroundImage", "linear-gradient( to right, #1489f6 " + widthPercentage + "%, #6B707F " + 0 + "% )");
                 $(".active .progress-indicator").width(widthPercentage + "%");
             } else {
                 $(".explore-topics-list li a[href*=" + widgetId + "]").removeClass("active").css("backgroundImage", "unset");

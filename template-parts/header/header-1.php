@@ -34,6 +34,8 @@ if( !empty( $logo_settings['docfi_cutom_sticky_logo'] ) ) {
 	$ctstickylogo = $attch_url[0];
 }
 $class_width = ( DocfiTheme::$header_width === "on" || DocfiTheme::$header_width === 1 ) ? "container-fluid" : "container"; ?>
+
+
 <div id="sticky-placeholder"></div>
 
 <div class="header-menu" id="header-menu">

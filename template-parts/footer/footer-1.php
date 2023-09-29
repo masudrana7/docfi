@@ -58,7 +58,7 @@ if( !empty( DocfiTheme::$options['footer_shape3'] ) ) {
 <?php
 
 
-if (!empty( DocfiTheme::$options['newsletter_subtitle'] || DocfiTheme::$options['newsletter_title'] || DocfiTheme::$options['nws_shortcode'] )) {
+if (!empty( DocfiTheme::$options['newsletter_title'] && DocfiTheme::$options['nws_shortcode'] )) {
 	if ( DocfiTheme::$footer_newsletter == 1 || DocfiTheme::$footer_newsletter != 'off' ) { ?>
 	<!-- start call-to-action-section -->
 	<div class="call-to-action-section">

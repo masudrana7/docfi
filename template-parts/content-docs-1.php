@@ -59,7 +59,7 @@ $docs_group_number = DocfiTheme::$options['docs_group_number'];?>
 						$current_inner_posts[] = $postid;
 						$add_active = ($page_id === $postid) ? " active": ""; ?>
 						<li>
-							<i class="fa-solid fa-angles-right"></i>
+							<img src="<?php echo get_template_directory_uri();?>/assets/img/file-icon.svg" alt="icon">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</li> 
 						<?php 

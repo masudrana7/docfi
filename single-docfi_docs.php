@@ -19,13 +19,11 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 <div id="primary" class="content-area docfi-dosc-single">
 	<div class="container">
 		<div class="row">
-			 
 			<?php if ( (DocfiTheme::$layout == 'left-sidebar' && is_active_sidebar('docs-left-sidebar')) || DocfiTheme::$layout == 'left-right-sidebar' ) { ?>			
 				<div class="col-lg-3 col-md-5 docfi-column-sticky">
 					<?php dynamic_sidebar('docs-left-sidebar'); ?>
 				</div>
 			<?php } ?>
-
 			<div class="<?php echo esc_attr( $docfi_layout_class );?> docfi-column-sticky">
 				<main id="main" class="site-main">
 					<?php							
@@ -35,7 +33,6 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 					?>
 				</main>
 			</div>
-
 			<?php if ( (DocfiTheme::$layout == 'right-sidebar' && is_active_sidebar('docs-right-sidebar'))  || DocfiTheme::$layout == 'left-right-sidebar') { ?>
 				<div class="col-lg-3 docfi-column-sticky-min-1024">
 					<div class="rt-right-docs-content">
@@ -43,7 +40,6 @@ if ( DocfiTheme::$layout == 'full-width' ) {
 					</div>
 				</div>
 			<?php } ?>
-
 		</div>
 	</div>	
 </div>

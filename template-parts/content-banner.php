@@ -20,7 +20,7 @@ elseif ( is_home() ) {
 	}
 }
 elseif (is_post_type_archive('docfi_docs')) {
-	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Docs', 'docfi' ) );
+	$docfi_title  = apply_filters( 'theme_blog_title', esc_html__( 'Documentation', 'docfi' ) );
 } elseif ( is_archive() ) {
 	$docfi_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'docfi' ) );
 } elseif (is_singular('docfi_docs')) {
@@ -30,14 +30,15 @@ elseif (is_post_type_archive('docfi_docs')) {
 }  else {
 	$docfi_title = get_the_title();	                   
 }
+$class_width = ( DocfiTheme::$header_width === "on" || DocfiTheme::$header_width === 1 ) ? "container-fluid" : "container"; 
 
-?>
+$search_ajax = get_post_meta( get_the_ID(), 'docfi_layout_settings', true );
 
-<?php if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || class_exists('bbPress') ) { ?>
+if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || class_exists('bbPress') ) { ?>
 	<div class="entry-banner">
-		<div class="container">
+		<div class="<?php echo esc_attr($class_width); ?>">
 			<div class="entry-banner-content">
-				<?php if (function_exists('bbpress') && ( is_singular( 'forum' ) || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) ) { 
+<?php if (( function_exists('bbpress') && is_singular('forum') || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) || is_singular('docfi_docs') || (isset($search_ajax['docfi_search_ajax']) && $search_ajax['docfi_search_ajax'] == 'on') ) { 
 						get_template_part( 'template-parts/banner', 'search' ); 
 					} elseif (is_single()) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>
