@@ -365,6 +365,7 @@ class DocfiTheme_Footer_Settings extends DocfiTheme_Customizer {
                 'sanitize_callback' => 'absint',
             )
         );
+        
         $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'footer_shape2',
             array(
                 'label' => __( 'Footer Shape 2', 'docfi' ),

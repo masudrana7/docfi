@@ -20,10 +20,8 @@ if( !empty( DocfiTheme::$options['error_image2'] ) ) {
 }else{
 	$error_bg2 = "<img class='rt-error-image2 wow fadeInUp animated' data-wow-delay='.5s' data-wow-duration='1s' src='" . DOCFI_ASSETS_URL . 'img/404-2.png' . "' alt='" . esc_attr( get_bloginfo('name') ) . " '>";
 }
-
 ?>
-<?php get_header();?>
-<div id="primary" class="content-area error-page-area">
+<div id="primary" class="error-page-area">
 	<div class="container">
 		<div class="error-page-content">
 			<div class="item-img">
@@ -45,4 +43,3 @@ if( !empty( DocfiTheme::$options['error_image2'] ) ) {
 		</div>
 	</div>
 </div>
-<?php get_footer(); ?>

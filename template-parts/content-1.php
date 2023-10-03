@@ -117,7 +117,7 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 				<li class="entry-categories"><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['blog_date'] ) { ?>	
 				<li class="post-date"><i class="icon-docfi-calendar-alt"></i>
-				<?php echo get_the_date(); ?></li>	
+				<?php echo get_the_date( 'M j, Y' ); ?></li>	
 
 				<?php } if ( DocfiTheme::$options['blog_comment_num'] ) { ?>
 				<li class="post-comment"><i class="icon-docfi-comment"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo wp_kses( $docfi_comments_html , 'alltext_allow' );?></a></li>

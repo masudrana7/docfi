@@ -67,6 +67,17 @@ $published_date = get_the_date('Y-m-d H:i');
 							</li>
 							<?php } ?>
 						</ul>
+						<div class="rt-printer">
+							<button class="print-button" onclick="printPage()">
+							<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5742 10.2082H24.4284V7.2915C24.4284 4.37484 23.3346 2.9165 20.0534 2.9165H14.9492C11.668 2.9165 10.5742 4.37484 10.5742 7.2915V10.2082Z" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M23.3346 21.875V27.7083C23.3346 30.625 21.8763 32.0833 18.9596 32.0833H16.043C13.1263 32.0833 11.668 30.625 11.668 27.7083V21.875H23.3346Z" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M30.625 14.5835V21.8752C30.625 24.7918 29.1667 26.2502 26.25 26.2502H23.3333V21.8752H11.6667V26.2502H8.75C5.83333 26.2502 4.375 24.7918 4.375 21.8752V14.5835C4.375 11.6668 5.83333 10.2085 8.75 10.2085H26.25C29.1667 10.2085 30.625 11.6668 30.625 14.5835Z" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M24.7904 21.875H23.0258H10.207" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M10.207 16.0415H14.582" stroke="#1D2746" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div class="docs-thumbnail">

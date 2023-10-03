@@ -70,6 +70,21 @@ class DocfiTheme_Docs_Single_Layout_Settings extends DocfiTheme_Customizer {
             'settings' => 'separator_page',
             'section' => 'docs_single_layout_section',
         )));
+
+        // Header Light/Dark
+        $wp_customize->add_setting( 'docs_header_option',
+            array(
+                'default' => $this->defaults['docs_header_option'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'docs_header_option',
+            array(
+                'label' => __( 'Transparent Header', 'docfi' ),
+                'section' => 'docs_single_layout_section',
+            )
+        ) );
         
         // Content padding top
         $wp_customize->add_setting( 'docs_padding_top',

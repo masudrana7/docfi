@@ -943,6 +943,7 @@ CSS INDEX
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
+    text-align: left;
 }
 /*accordion style 01*/
 
@@ -1027,6 +1028,7 @@ CSS INDEX
     transition: all 0.4s ease-in-out;
     margin-bottom: 24px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    background: var(--docfi-white-color);
 }
 
 .explore-topics-card:hover {
@@ -1107,7 +1109,7 @@ CSS INDEX
     width: 16px;
 }
 .explore-topics-body ul.explore-topics-list li a{
-    color: var(--docfi-body-color);
+    color: #505052;
     transition: 0.4s;
     position: relative;
     font-weight: 500;
@@ -1164,6 +1166,8 @@ ul.explore-topics-list li i {
     padding: 50px 33px;
     -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 2;
 }
 .rt-testimonial-default .item-content .item-rating {
     list-style: none;
@@ -2294,7 +2298,7 @@ div.rt-cat-list .logo-card:hover svg{
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-.rt-timeline .content-container .content::after {
+.rt-timeline .content-container .content:after {
     content: "✓";
     position: absolute;
     width: 25px;
@@ -2314,6 +2318,30 @@ div.rt-cat-list .logo-card:hover svg{
     border-radius: 50%;
     z-index: 1;
     color: White;
+}
+.rt-timeline .content-container.right .content::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    border-top: 10px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #0000000a;
+}
+.rt-timeline .content-container.left .content::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 6px;
+    border-top: 10px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #0000000a;
+}
+@media(max-width: 480px) {
+    .rt-timeline .content-container.right .content::before,
+    .rt-timeline .content-container.left .content::before {
+        display: none;
+    }
 }
 .rt-timeline .content-container .content h3 {
     color: gray;

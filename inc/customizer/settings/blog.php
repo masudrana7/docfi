@@ -123,6 +123,22 @@ class DocfiTheme_Blog_Post_Settings extends DocfiTheme_Customizer {
             array(
                 'label' => __( 'Show Content', 'docfi' ),
                 'section' => 'blog_post_settings_section',
+                'active_callback' => 'rttheme_is_blog_style1_enabled',
+            )
+        ) );
+
+		$wp_customize->add_setting( 'blog_content3',
+            array(
+                'default' => $this->defaults['blog_content3'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'blog_content3',
+            array(
+                'label' => __( 'Show Content', 'docfi' ),
+                'section' => 'blog_post_settings_section',
+                'active_callback' => 'rttheme_is_blog_style3_enabled',
             )
         ) );
 		
@@ -235,8 +251,26 @@ class DocfiTheme_Blog_Post_Settings extends DocfiTheme_Customizer {
             array(
                 'label' => __( 'Show Read More', 'docfi' ),
                 'section' => 'blog_post_settings_section',
+                'active_callback' => 'rttheme_is_blog_style1_enabled',
             )
         ) );
+        
+        $wp_customize->add_setting( 'blog_read_more3',
+            array(
+                'default' => $this->defaults['blog_read_more3'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'blog_read_more3',
+            array(
+                'label' => __( 'Show Read More', 'docfi' ),
+                'section' => 'blog_post_settings_section',
+                'active_callback' => 'rttheme_is_blog_style3_enabled',
+            )
+        ) );
+
+
 
         /*Animation*/
         $wp_customize->add_setting( 'blog_animation',

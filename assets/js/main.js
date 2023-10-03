@@ -913,7 +913,13 @@ function docfi_content_load_scripts() {
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)) 
 
-    
+    /*Social print*/
+    $(document).on('click', '.print-button', function (e) {
+        console.log();
+        e.preventDefault();
+        window.print();
+        return false;
+    });
 })(jQuery);
 
 

@@ -129,7 +129,7 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 				<?php } if ( DocfiTheme::$options['blog_cats'] && empty(has_post_thumbnail() ) ) { ?>
 				<li class="entry-categories"><i class="icon-docfi-tags"></i><?php echo the_category( ', ' );?></li>
 				<?php } if ( DocfiTheme::$options['blog_date'] ) { ?>	
-				<li class="post-date"><i class="icon-docfi-calendar-alt"></i><?php echo get_the_date(); ?></li>				
+				<li class="post-date"><i class="icon-docfi-calendar-alt"></i><?php echo get_the_date( 'M j, Y' ); ?></li>				
 				<?php } if ( DocfiTheme::$options['blog_comment_num'] ) { ?>
 				<li class="post-comment"><i class="icon-docfi-comment"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo wp_kses( $docfi_comments_html , 'alltext_allow' );?></a></li>
 				<?php } if ( DocfiTheme::$options['blog_length'] && function_exists( 'docfi_reading_time' ) ) { ?>
@@ -140,10 +140,10 @@ $preview = DocfiTheme::$options['display_no_preview_image'] == '1' ? 'show-previ
 			</ul>
 			<?php } ?>	
 			<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-			<?php if ( DocfiTheme::$options['blog_content'] ) { ?>
+			<?php if ( DocfiTheme::$options['blog_content3'] ) { ?>
 			<div class="entry-text"><p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p></div>
 			<?php } ?>	
-			<?php if ( DocfiTheme::$options['blog_read_more'] ) { ?>
+			<?php if ( DocfiTheme::$options['blog_read_more3'] ) { ?>
 			<div class="post-read-more"><a class="button-style-3 btn-common" href="<?php the_permalink();?>"><?php esc_html_e( 'Continue Reading', 'docfi' );?></a>
           	</div>	
           	<?php } ?>		

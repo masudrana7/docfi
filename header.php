@@ -51,14 +51,10 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
 		<header id="masthead" class="site-header">
 			<div id="rt-header-header" class="header-area rt-header-style<?php echo esc_attr( DocfiTheme::$header_style ); ?>">
 				
-				
 				<?php
 				
 				if ( DocfiTheme::$header_opt == 1 || DocfiTheme::$header_opt === "on" ){ ?>
-
 					<?php get_template_part( 'template-parts/header/header', DocfiTheme::$header_style ); ?>
-					
-					
 				<?php } ?>		
 
 
@@ -74,8 +70,7 @@ if( DocfiTheme::$options['image_blend'] == 'normal' ) {
             </form>
             </div>
         </div>
-
-
+		
 		<div id="content" class="site-content <?php echo esc_attr($blend); ?>">			
 			<?php
 

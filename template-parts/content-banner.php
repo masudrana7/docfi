@@ -38,7 +38,7 @@ if ( DocfiTheme::$has_banner == 1 || DocfiTheme::$has_banner == 'on' || class_ex
 	<div class="entry-banner">
 		<div class="<?php echo esc_attr($class_width); ?>">
 			<div class="entry-banner-content">
-<?php if (( function_exists('bbpress') && is_singular('forum') || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() ) || is_singular('docfi_docs') || (isset($search_ajax['docfi_search_ajax']) && $search_ajax['docfi_search_ajax'] == 'on') ) { 
+<?php if (( function_exists('bbpress') && (is_singular('forum') || is_singular( 'topic' ) || is_singular( 'docfi_docs' ) || bbp_is_forum_archive() )) || is_singular('docfi_docs') || (isset($search_ajax['docfi_search_ajax']) && $search_ajax['docfi_search_ajax'] == 'on') ) { 
 						get_template_part( 'template-parts/banner', 'search' ); 
 					} elseif (is_single()) { ?>
 					<h1 class="entry-title wow animate__fadeInUp animate__animated" data-wow-duration="1200ms" data-wow-delay="400ms"><?php echo wp_kses( $docfi_title , 'alltext_allow' );?></h1>

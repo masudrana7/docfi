@@ -143,9 +143,19 @@ if( !function_exists( 'docfi_body_classes' ) ) {
 			$classes[] = 'sticky-header';
 		}
 
-        if ( DocfiTheme::$tr_header === 1 || DocfiTheme::$tr_header === "on" ){
-           $classes[] = 'tr-header';
+        if ( is_singular('docfi_docs') ) {
+            if( DocfiTheme::$options['docs_header_option'] == '1'){
+                $classes[] = 'tr-header';
+            }else {
+                $classes[] = '';
+            }
+            
+        }else {
+            if ( DocfiTheme::$tr_header === 1 || DocfiTheme::$tr_header === "on" ){
+                $classes[] = 'tr-header';
+            }
         }
+
 		$classes[] = 'header-style-'. DocfiTheme::$header_style;			
         $classes[] = 'footer-style-'. DocfiTheme::$footer_style;
         $classes[] = ( DocfiTheme::$layout == 'full-width' ) ? 'no-sidebar' : 'has-sidebar';

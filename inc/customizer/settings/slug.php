@@ -21,36 +21,6 @@ class DocfiTheme_Slug_Settings extends DocfiTheme_Customizer {
 	}
 
     public function register_slug_controls( $wp_customize ) {
-	
-		$wp_customize->add_setting( 'team_slug',
-            array(
-                'default' => $this->defaults['team_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'team_slug',
-            array(
-                'label' => __( 'Team Slug', 'docfi' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
-		
-		$wp_customize->add_setting( 'service_slug',
-            array(
-                'default' => $this->defaults['service_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'service_slug',
-            array(
-                'label' => __( 'Service Slug', 'docfi' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
 		
 		$wp_customize->add_setting( 'docs_slug',
             array(
@@ -62,37 +32,6 @@ class DocfiTheme_Slug_Settings extends DocfiTheme_Customizer {
         $wp_customize->add_control( 'docs_slug',
             array(
                 'label' => __( 'Docs Slug', 'docfi' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
-		
-		// Category
-		$wp_customize->add_setting( 'team_cat_slug',
-            array(
-                'default' => $this->defaults['team_cat_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'team_cat_slug',
-            array(
-                'label' => __( 'Team Category Slug', 'docfi' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
-		
-		$wp_customize->add_setting( 'service_cat_slug',
-            array(
-                'default' => $this->defaults['service_cat_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'service_cat_slug',
-            array(
-                'label' => __( 'Service Category Slug', 'docfi' ),
                 'section' => 'slug_layout_section',
                 'type' => 'text',
             )

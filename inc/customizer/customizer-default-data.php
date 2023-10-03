@@ -132,11 +132,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'rg_left_bgimage'              => '',
 			
 			// Post Type Slug
-			'team_slug' 				=> 'team',
-            'service_slug'              => 'service',
-            'docs_slug'                 => 'docs',
-			'team_cat_slug' 			=> 'team-category',		
-            'service_cat_slug'          => 'service-category',     
+            'docs_slug'                 => 'docs',     
             'docs_cat_slug'             => 'docs-category',     
             'docs_group_slug'           => 'docs-group',     
 			
@@ -199,6 +195,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             //docs Single Layout Setting 
             'docs_layout' => 'full-width',
             'docs_sidebar'        => '',
+            'docs_header_option'        => '',
             'docs_padding_top'    => 120,
             'docs_padding_bottom' => 120,
             'docs_banner' => 1,
@@ -241,6 +238,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'post_banner_title'  		=> '',
 			'post_content_limit'  		=> '20',
 			'blog_content'  			=> 1,
+			'blog_content3'  			=> 1,
 			'blog_date'  				=> 1,
 			'blog_author_name'  		=> 1,
 			'blog_comment_num'  		=> 0,
@@ -249,6 +247,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'blog_length'  				=> 0,
             'blog_video'                => 0,
             'blog_read_more'            => 1,
+            'blog_read_more3'            => 1,
 			'blog_animation'  			=> 'hide',
 			'blog_animation_effect'  	=> 'fadeInUp',
 			

@@ -229,3 +229,15 @@ function load_custom_wp_admin_script() {
 	
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_script' );
+
+function track_page_views() {
+    if (is_page()) { // Check if it's a page.
+        global $post;
+        $post_id = $post->ID;
+        $views = get_post_meta($post_id, 'page_views', true);
+        $views = $views ? $views : 0;
+        $views++;
+        update_post_meta($post_id, 'page_views', $views);
+    }
+}
+add_action('wp_head', 'track_page_views');
