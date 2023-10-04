@@ -1,6 +1,4 @@
-
-	<?php 
-	
+<?php 
 	/*------------------
 		add Docfi category color meta
 	--------------------*/

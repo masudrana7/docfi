@@ -3830,14 +3830,33 @@ input:-webkit-autofill:active
 	display: inline-block;
 	background: #F2F8FF;
 }
-
 .rt_footer_social_widget .footer-social a:hover {
-	background-color: #d4e7fc;
+	color: #1877F2;
 }
-
 .rt_footer_social_widget .footer-social a:hover i {
 	-webkit-animation: toBottomFromTop 0.5s forwards;
 	animation: toBottomFromTop 0.5s forwards;
+}
+.rt_footer_social_widget .footer-social .twitter a {
+	color: #1DA1F2;
+	background: #F3FBFF;
+}
+.rt_footer_social_widget .footer-social .twitter a:hover i{
+	color: #1DA1F2;
+}
+.rt_footer_social_widget .footer-social .pinterest a {
+	color: #833AB4;
+	background: #FCF7FF;
+}
+.rt_footer_social_widget .footer-social .pinterest a:hover i {
+	color: #833AB4;
+}
+.rt_footer_social_widget .footer-social .pinterest a {
+	color: #E60023;
+	background: #FFF9FA;
+}
+.rt_footer_social_widget .footer-social .pinterest a:hover i {
+	color: #E60023;
 }
 /*-------------------------------------
 #. EL: Custom widget Category
@@ -7288,14 +7307,14 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 }
 .rt-single-docs-meta .head-title{
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 34px;
 	line-height: 35px;
 	color: var(--docfi-heading-color);
-	margin-bottom: 6px;
+	margin-bottom: 8px;
 }
 .rt-single-docs-meta .icon svg{
 	position: relative;
-	top: 2px;
+	top: 3px;
 }
 .rt-single-sidebar-list .explore-topics-header .title-area .title {
 	margin-bottom: 0;
@@ -7760,7 +7779,7 @@ body:not(.rt-search-active,.tr-header) .rt-banner-search .search-text p span {
 }
 .rt-searchbox-container .searchbox-submit .rt-searchbox-btn i{
 	font-size: 15px;
-	margin-right: 2px;
+	margin-right: 5px;
 	position: relative;
 	top: -1px;
 }
@@ -7920,7 +7939,7 @@ body:not(.rt-search-active,.tr-header) .rt-banner-search .search-text p span {
 }
 .rt-hero-section-content-wrapper .rt-search-key li a{
 	display: block;
-	color: var(--docfi-white-color);
+	color: #FFFFFFC2;
 	transition: 0.3s;
 }
 .rt-hero-section-content-wrapper .rt-search-key li:hover::before,
@@ -9345,9 +9364,6 @@ div.bbp-template-notice.info ul{
 	}
 	.rt-number-tab-wrapper .tab-content .tab-pane {
 		padding: 23px 22px 27px;
-	}
-	.rt-single-docs-meta .head-title {
-		font-size: 26px;
 	}
 	#bbpress-forums.docfi-wrapper-forums .topic-author {
 		margin-bottom: 10px;

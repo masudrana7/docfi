@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="searchbox-submit">
-                <button class="search-btn coolBeans btn-dark rt-searchbox-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i><?php esc_html_e( 'Submit', 'docfi' );?></button>
+                <button class="search-btn coolBeans btn-dark rt-searchbox-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i><?php esc_html_e( 'Search', 'docfi' );?></button>
             </div>
             <div id="rt_datafetch"></div>
         </form>

@@ -64,7 +64,6 @@ jQuery(document).ready(function ($) {
 
     // Search ajax 
     if ($("#rt_datafetch").length) {
-
         $('#searchInput').on('keyup', function () {
             fetchResults();
         });
@@ -190,13 +189,9 @@ jQuery(document).ready(function ($) {
         $parent.find('.rt-cat').text(text);
         $parent.find('input[name="docfi_docs_group"]').val(cat);
     });
-
-
-
     $('a[href=\\#]').on('click', function (e) {
         e.preventDefault();
     })
-
     $('#myTab a').on('click', function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
@@ -237,6 +232,39 @@ jQuery(document).ready(function ($) {
         })
     }
 
+    // Code Syntax
+    if ($(".contains-code").length) {
+        hljs.initHighlightingOnLoad();
+        const copyCodeButtons = document.querySelectorAll(".copy-code-button");
+        const allCodes = document.getElementsByTagName("code");
+        for (var i = 0; i < copyCodeButtons.length; i++) {
+            copyCodeButtons[i].addEventListener("click", (e) => {
+                let code = e.target.parentElement.getElementsByTagName("code")[0];
+                let originalText = `COPY&nbsp;&nbsp;<i class="fas fa-copy"></i>`;
+                setTimeout(function () {
+                    e.target.innerHTML = originalText;
+                }, 2000);
+                e.target.innerHTML = `COPIED&nbsp;&nbsp;<i class="fas fa-check"></i>`;
+                let tempInput = document.createElement("textarea");
+                tempInput.style.opacity = "0";
+                document.body.appendChild(tempInput);
+                tempInput.value = code.textContent;
+                tempInput.select();
+                document.execCommand("copy");
+            });
+        }
+
+        function decreaseFontSize() {
+            defaultFontSize = defaultFontSize - 0.05;
+            defaultFontSize = parseFloat(defaultFontSize.toFixed(2));
+            console.log(defaultFontSize);
+            for (i = 0; i < allCodes.length; i++) {
+                allCodes[i].style.fontSize = defaultFontSize + "rem";
+            }
+        }
+    }
+
+
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
@@ -245,10 +273,10 @@ jQuery(document).ready(function ($) {
 
 
     if (typeof $.fn.theiaStickySidebar !== "undefined") {
-    $(".sticky-coloum-wrap .sticky-coloum-item").theiaStickySidebar({
-      additionalMarginTop: 130,
-    });
-  }
+        $(".sticky-coloum-wrap .sticky-coloum-item").theiaStickySidebar({
+        additionalMarginTop: 130,
+        });
+    }
 
     /* Header Search */
     $('a[href="#header-search"]').on("click", function (event) {
@@ -920,6 +948,8 @@ function docfi_content_load_scripts() {
         window.print();
         return false;
     });
+
+
 })(jQuery);
 
 
