@@ -232,39 +232,6 @@ jQuery(document).ready(function ($) {
         })
     }
 
-    // Code Syntax
-    if ($(".contains-code").length) {
-        hljs.initHighlightingOnLoad();
-        const copyCodeButtons = document.querySelectorAll(".copy-code-button");
-        const allCodes = document.getElementsByTagName("code");
-        for (var i = 0; i < copyCodeButtons.length; i++) {
-            copyCodeButtons[i].addEventListener("click", (e) => {
-                let code = e.target.parentElement.getElementsByTagName("code")[0];
-                let originalText = `COPY&nbsp;&nbsp;<i class="fas fa-copy"></i>`;
-                setTimeout(function () {
-                    e.target.innerHTML = originalText;
-                }, 2000);
-                e.target.innerHTML = `COPIED&nbsp;&nbsp;<i class="fas fa-check"></i>`;
-                let tempInput = document.createElement("textarea");
-                tempInput.style.opacity = "0";
-                document.body.appendChild(tempInput);
-                tempInput.value = code.textContent;
-                tempInput.select();
-                document.execCommand("copy");
-            });
-        }
-
-        function decreaseFontSize() {
-            defaultFontSize = defaultFontSize - 0.05;
-            defaultFontSize = parseFloat(defaultFontSize.toFixed(2));
-            console.log(defaultFontSize);
-            for (i = 0; i < allCodes.length; i++) {
-                allCodes[i].style.fontSize = defaultFontSize + "rem";
-            }
-        }
-    }
-
-
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
@@ -948,6 +915,38 @@ function docfi_content_load_scripts() {
         window.print();
         return false;
     });
+
+    // Code Syntax
+    if ($(".rt-code-syntax-area").length) {
+        hljs.initHighlightingOnLoad();
+        const copyCodeButtons = document.querySelectorAll(".copy-code-button");
+        const allCodes = document.getElementsByTagName("code");
+        for (var i = 0; i < copyCodeButtons.length; i++) {
+            copyCodeButtons[i].addEventListener("click", (e) => {
+                let code = e.target.parentElement.getElementsByTagName("code")[0];
+                let originalText = `COPY&nbsp;&nbsp;<i class="fas fa-copy"></i>`;
+                setTimeout(function () {
+                    e.target.innerHTML = originalText;
+                }, 2000);
+                e.target.innerHTML = `COPIED&nbsp;&nbsp;<i class="fas fa-check"></i>`;
+                let tempInput = document.createElement("textarea");
+                tempInput.style.opacity = "0";
+                document.body.appendChild(tempInput);
+                tempInput.value = code.textContent;
+                tempInput.select();
+                document.execCommand("copy");
+            });
+        }
+
+        function decreaseFontSize() {
+            defaultFontSize = defaultFontSize - 0.05;
+            defaultFontSize = parseFloat(defaultFontSize.toFixed(2));
+            console.log(defaultFontSize);
+            for (i = 0; i < allCodes.length; i++) {
+                allCodes[i].style.fontSize = defaultFontSize + "rem";
+            }
+        }
+    }
 
 
 })(jQuery);

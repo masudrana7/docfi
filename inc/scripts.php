@@ -93,6 +93,9 @@ if ( !function_exists( 'docfi_enqueue_scripts' ) ) {
 		wp_enqueue_style( 'animate',            	docfi_get_maybe_rtl('animate.min.css'), array(), DOCFI_VERSION );
 		// main CSS // @rtl
 		wp_enqueue_style( 'docfi-default',    	docfi_get_maybe_rtl('default.css'), array(), DOCFI_VERSION );
+
+		// main CSS // @rtl
+		wp_enqueue_style( 'highlight-code',    	docfi_get_maybe_rtl('highlight-code.min.css'), array(), DOCFI_VERSION );
 		// vc modules css
 		wp_enqueue_style( 'docfi-elementor',   docfi_get_maybe_rtl('elementor.css'), array(), DOCFI_VERSION );
 			

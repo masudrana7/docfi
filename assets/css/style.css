@@ -7297,9 +7297,8 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	list-style: none;
 }
 .rt-single-docs-meta ul li a{
-	font-size: 15px;
-	line-height: 18px;
 	color: #6C6C6C;
+	text-transform: capitalize;
 }
 .rt-single-docs-meta ul li svg{
 	position: relative;

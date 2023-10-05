@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Docfi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 04:22+0000\n"
+"POT-Creation-Date: 2023-10-05 11:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -133,7 +133,7 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: template-parts/header/header-1.php:66 template-parts/header/header-2.php:88
+#: template-parts/header/header-1.php:68 template-parts/header/header-2.php:88
 msgid "Add a menu"
 msgstr ""
 
@@ -168,15 +168,15 @@ msgstr ""
 msgid "All Replies"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:256 inc/customizer/settings/error.php:184
+#: inc/customizer/settings/blog.php:290 inc/customizer/settings/error.php:184
 msgid "Animation Off"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:255 inc/customizer/settings/error.php:183
+#: inc/customizer/settings/blog.php:289 inc/customizer/settings/error.php:183
 msgid "Animation On"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:251 inc/customizer/settings/error.php:179
+#: inc/customizer/settings/blog.php:285 inc/customizer/settings/error.php:179
 msgid "Animation On/Off"
 msgstr ""
 
@@ -222,20 +222,20 @@ msgid "Back to Top Arrow"
 msgstr ""
 
 #: inc/customizer/settings/footer.php:282
-#: inc/customizer/settings/footer.php:447
-#: inc/customizer/settings/footer.php:514
+#: inc/customizer/settings/footer.php:448
+#: inc/customizer/settings/footer.php:515
 msgid "Background Color"
 msgstr ""
 
 #: inc/customizer/settings/footer.php:298
-#: inc/customizer/settings/footer.php:464
-#: inc/customizer/settings/footer.php:531
+#: inc/customizer/settings/footer.php:465
+#: inc/customizer/settings/footer.php:532
 msgid "Background Image"
 msgstr ""
 
 #: inc/customizer/settings/footer.php:258
-#: inc/customizer/settings/footer.php:424
-#: inc/customizer/settings/footer.php:491
+#: inc/customizer/settings/footer.php:425
+#: inc/customizer/settings/footer.php:492
 msgid "Background Type"
 msgstr ""
 
@@ -243,7 +243,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:110
 #: inc/customizer/settings/blog-single-layout.php:110
 #: inc/customizer/settings/docs-layout.php:110
-#: inc/customizer/settings/docs-single-layout.php:114
+#: inc/customizer/settings/docs-single-layout.php:129
 #: inc/customizer/settings/error-layout.php:69
 #: inc/customizer/settings/page-layout.php:110
 #: inc/customizer/settings/search-layout.php:110
@@ -253,7 +253,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:187
 #: inc/customizer/settings/blog-single-layout.php:187
 #: inc/customizer/settings/docs-layout.php:187
-#: inc/customizer/settings/docs-single-layout.php:191
+#: inc/customizer/settings/docs-single-layout.php:206
 #: inc/customizer/settings/error-layout.php:146
 #: inc/customizer/settings/forum.php:119
 #: inc/customizer/settings/page-layout.php:187
@@ -264,7 +264,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:159
 #: inc/customizer/settings/blog-single-layout.php:159
 #: inc/customizer/settings/docs-layout.php:159
-#: inc/customizer/settings/docs-single-layout.php:163
+#: inc/customizer/settings/docs-single-layout.php:178
 #: inc/customizer/settings/error-layout.php:118
 #: inc/customizer/settings/forum.php:136 inc/customizer/settings/login.php:144
 #: inc/customizer/settings/page-layout.php:159
@@ -280,7 +280,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:139
 #: inc/customizer/settings/blog-single-layout.php:139
 #: inc/customizer/settings/docs-layout.php:139
-#: inc/customizer/settings/docs-single-layout.php:143
+#: inc/customizer/settings/docs-single-layout.php:158
 #: inc/customizer/settings/error-layout.php:98
 #: inc/customizer/settings/page-layout.php:139
 #: inc/customizer/settings/search-layout.php:139
@@ -299,11 +299,11 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:145
 #: inc/customizer/settings/blog-single-layout.php:145
 #: inc/customizer/settings/docs-layout.php:145
-#: inc/customizer/settings/docs-single-layout.php:149
+#: inc/customizer/settings/docs-single-layout.php:164
 #: inc/customizer/settings/error-layout.php:104
 #: inc/customizer/settings/footer.php:263
-#: inc/customizer/settings/footer.php:429
-#: inc/customizer/settings/footer.php:496
+#: inc/customizer/settings/footer.php:430
+#: inc/customizer/settings/footer.php:497
 #: inc/customizer/settings/page-layout.php:145
 #: inc/customizer/settings/search-layout.php:145
 msgid "BG Color"
@@ -312,11 +312,11 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:144
 #: inc/customizer/settings/blog-single-layout.php:144
 #: inc/customizer/settings/docs-layout.php:144
-#: inc/customizer/settings/docs-single-layout.php:148
+#: inc/customizer/settings/docs-single-layout.php:163
 #: inc/customizer/settings/error-layout.php:103
 #: inc/customizer/settings/footer.php:264
-#: inc/customizer/settings/footer.php:430
-#: inc/customizer/settings/footer.php:497
+#: inc/customizer/settings/footer.php:431
+#: inc/customizer/settings/footer.php:498
 #: inc/customizer/settings/page-layout.php:144
 #: inc/customizer/settings/search-layout.php:144
 msgid "BG Image"
@@ -375,34 +375,34 @@ msgstr ""
 msgid "Body Color"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:275 inc/customizer/settings/error.php:203
+#: inc/customizer/settings/blog.php:309 inc/customizer/settings/error.php:203
 msgid "bounce"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:288 inc/customizer/settings/error.php:216
+#: inc/customizer/settings/blog.php:322 inc/customizer/settings/error.php:216
 msgid "bounceIn"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:289 inc/customizer/settings/error.php:217
+#: inc/customizer/settings/blog.php:323 inc/customizer/settings/error.php:217
 msgid "bounceInDown"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:290 inc/customizer/settings/error.php:218
+#: inc/customizer/settings/blog.php:324 inc/customizer/settings/error.php:218
 msgid "bounceInLeft"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:291 inc/customizer/settings/error.php:219
+#: inc/customizer/settings/blog.php:325 inc/customizer/settings/error.php:219
 msgid "bounceInRight"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:292 inc/customizer/settings/error.php:220
+#: inc/customizer/settings/blog.php:326 inc/customizer/settings/error.php:220
 msgid "bounceInUp"
 msgstr ""
 
 #: inc/customizer/settings/blog-layout.php:124
 #: inc/customizer/settings/blog-single-layout.php:124
 #: inc/customizer/settings/docs-layout.php:124
-#: inc/customizer/settings/docs-single-layout.php:128
+#: inc/customizer/settings/docs-single-layout.php:143
 #: inc/customizer/settings/error-layout.php:83
 #: inc/customizer/settings/page-layout.php:124
 #: inc/customizer/settings/search-layout.php:124
@@ -444,11 +444,11 @@ msgstr ""
 msgid "Cancel password change"
 msgstr ""
 
-#: inc/rt-archive-meta.php:26 inc/rt-archive-meta.php:47
+#: inc/rt-archive-meta.php:23 inc/rt-archive-meta.php:44
 msgid "Category Color"
 msgstr ""
 
-#: inc/rt-archive-meta.php:54
+#: inc/rt-archive-meta.php:51
 msgid "Category Image"
 msgstr ""
 
@@ -458,19 +458,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:210
 #: inc/customizer/settings/docs-layout.php:165
 #: inc/customizer/settings/docs-layout.php:210
-#: inc/customizer/settings/docs-single-layout.php:169
-#: inc/customizer/settings/docs-single-layout.php:214
+#: inc/customizer/settings/docs-single-layout.php:184
+#: inc/customizer/settings/docs-single-layout.php:229
 #: inc/customizer/settings/error-layout.php:124
 #: inc/customizer/settings/error-layout.php:169
 #: inc/customizer/settings/error.php:57 inc/customizer/settings/error.php:82
 #: inc/customizer/settings/footer.php:110
 #: inc/customizer/settings/footer.php:304
 #: inc/customizer/settings/footer.php:349
-#: inc/customizer/settings/footer.php:376
-#: inc/customizer/settings/footer.php:403
-#: inc/customizer/settings/footer.php:470
-#: inc/customizer/settings/footer.php:537
-#: inc/customizer/settings/footer.php:727 inc/customizer/settings/forum.php:142
+#: inc/customizer/settings/footer.php:377
+#: inc/customizer/settings/footer.php:404
+#: inc/customizer/settings/footer.php:471
+#: inc/customizer/settings/footer.php:538
+#: inc/customizer/settings/footer.php:728 inc/customizer/settings/forum.php:142
 #: inc/customizer/settings/general.php:57
 #: inc/customizer/settings/general.php:82
 #: inc/customizer/settings/general.php:232 inc/customizer/settings/login.php:45
@@ -496,19 +496,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:215
 #: inc/customizer/settings/docs-layout.php:170
 #: inc/customizer/settings/docs-layout.php:215
-#: inc/customizer/settings/docs-single-layout.php:174
-#: inc/customizer/settings/docs-single-layout.php:219
+#: inc/customizer/settings/docs-single-layout.php:189
+#: inc/customizer/settings/docs-single-layout.php:234
 #: inc/customizer/settings/error-layout.php:129
 #: inc/customizer/settings/error-layout.php:174
 #: inc/customizer/settings/error.php:62 inc/customizer/settings/error.php:87
 #: inc/customizer/settings/footer.php:115
 #: inc/customizer/settings/footer.php:309
 #: inc/customizer/settings/footer.php:354
-#: inc/customizer/settings/footer.php:381
-#: inc/customizer/settings/footer.php:408
-#: inc/customizer/settings/footer.php:475
-#: inc/customizer/settings/footer.php:542
-#: inc/customizer/settings/footer.php:732 inc/customizer/settings/forum.php:147
+#: inc/customizer/settings/footer.php:382
+#: inc/customizer/settings/footer.php:409
+#: inc/customizer/settings/footer.php:476
+#: inc/customizer/settings/footer.php:543
+#: inc/customizer/settings/footer.php:733 inc/customizer/settings/forum.php:147
 #: inc/customizer/settings/general.php:62
 #: inc/customizer/settings/general.php:87
 #: inc/customizer/settings/general.php:237 inc/customizer/settings/login.php:50
@@ -522,7 +522,7 @@ msgstr ""
 msgid "Choose File"
 msgstr ""
 
-#: inc/rt-archive-meta.php:105 inc/customizer/customizer.php:60
+#: inc/rt-archive-meta.php:102 inc/customizer/customizer.php:60
 msgid "Color"
 msgstr ""
 
@@ -577,7 +577,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:95
 #: inc/customizer/settings/blog-single-layout.php:95
 #: inc/customizer/settings/docs-layout.php:95
-#: inc/customizer/settings/docs-single-layout.php:99
+#: inc/customizer/settings/docs-single-layout.php:114
 #: inc/customizer/settings/error-layout.php:54
 #: inc/customizer/settings/page-layout.php:95
 #: inc/customizer/settings/search-layout.php:95
@@ -587,7 +587,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:80
 #: inc/customizer/settings/blog-single-layout.php:80
 #: inc/customizer/settings/docs-layout.php:80
-#: inc/customizer/settings/docs-single-layout.php:84
+#: inc/customizer/settings/docs-single-layout.php:99
 #: inc/customizer/settings/error-layout.php:39
 #: inc/customizer/settings/page-layout.php:80
 #: inc/customizer/settings/search-layout.php:80
@@ -611,15 +611,15 @@ msgstr ""
 msgid "Copy topic tags to the new topic"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:674
+#: inc/customizer/settings/footer.php:675
 msgid "Copyright Background Color"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:656
+#: inc/customizer/settings/footer.php:657
 msgid "Copyright Hover Color"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:640
+#: inc/customizer/settings/footer.php:641
 msgid "Copyright Link Color"
 msgstr ""
 
@@ -627,11 +627,11 @@ msgstr ""
 msgid "Copyright Menu"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:690
+#: inc/customizer/settings/footer.php:691
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:624
+#: inc/customizer/settings/footer.php:625
 msgid "Copyright Text Color"
 msgstr ""
 
@@ -670,7 +670,7 @@ msgstr ""
 msgid "dark gray"
 msgstr ""
 
-#: functions.php:91
+#: inc/rt-archive-meta.php:308
 msgid "Date"
 msgstr ""
 
@@ -680,19 +680,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:211
 #: inc/customizer/settings/docs-layout.php:166
 #: inc/customizer/settings/docs-layout.php:211
-#: inc/customizer/settings/docs-single-layout.php:170
-#: inc/customizer/settings/docs-single-layout.php:215
+#: inc/customizer/settings/docs-single-layout.php:185
+#: inc/customizer/settings/docs-single-layout.php:230
 #: inc/customizer/settings/error-layout.php:125
 #: inc/customizer/settings/error-layout.php:170
 #: inc/customizer/settings/error.php:58 inc/customizer/settings/error.php:83
 #: inc/customizer/settings/footer.php:111
 #: inc/customizer/settings/footer.php:305
 #: inc/customizer/settings/footer.php:350
-#: inc/customizer/settings/footer.php:377
-#: inc/customizer/settings/footer.php:404
-#: inc/customizer/settings/footer.php:471
-#: inc/customizer/settings/footer.php:538
-#: inc/customizer/settings/footer.php:728 inc/customizer/settings/forum.php:143
+#: inc/customizer/settings/footer.php:378
+#: inc/customizer/settings/footer.php:405
+#: inc/customizer/settings/footer.php:472
+#: inc/customizer/settings/footer.php:539
+#: inc/customizer/settings/footer.php:729 inc/customizer/settings/forum.php:143
 #: inc/customizer/settings/general.php:58
 #: inc/customizer/settings/general.php:83
 #: inc/customizer/settings/general.php:233 inc/customizer/settings/login.php:46
@@ -747,7 +747,9 @@ msgid "Docfi"
 msgstr ""
 
 #. Description of the theme
-msgid "Docfi is an Documentation and Knowledgebase WordPress Theme."
+msgid ""
+"Docfi is an documentation, help center, helpdesk and knowledge base "
+"WordPress Theme."
 msgstr ""
 
 #: inc/customizer/settings/docs.php:86
@@ -770,15 +772,15 @@ msgstr ""
 msgid "Docs Archive Post Limit"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:110
+#: inc/customizer/settings/slug.php:49
 msgid "Docs Category Slug"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:125
+#: inc/customizer/settings/slug.php:64
 msgid "Docs Group Slug"
 msgstr ""
 
-#: functions.php:90
+#: inc/rt-archive-meta.php:307
 msgid "Docs Groups"
 msgstr ""
 
@@ -790,8 +792,12 @@ msgstr ""
 msgid "Docs Single Layout"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:64
+#: inc/customizer/settings/slug.php:34
 msgid "Docs Slug"
+msgstr ""
+
+#: template-parts/content-banner.php:23
+msgid "Documentation"
 msgstr ""
 
 #: inc/customizer/settings/general.php:350
@@ -824,7 +830,7 @@ msgstr ""
 msgid "Engagements"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:270 inc/customizer/settings/error.php:198
+#: inc/customizer/settings/blog.php:304 inc/customizer/settings/error.php:198
 msgid "Entrance Animation"
 msgstr ""
 
@@ -868,23 +874,23 @@ msgstr ""
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:283 inc/customizer/settings/error.php:211
+#: inc/customizer/settings/blog.php:317 inc/customizer/settings/error.php:211
 msgid "fadeIn"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:284 inc/customizer/settings/error.php:212
+#: inc/customizer/settings/blog.php:318 inc/customizer/settings/error.php:212
 msgid "fadeInDown"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:285 inc/customizer/settings/error.php:213
+#: inc/customizer/settings/blog.php:319 inc/customizer/settings/error.php:213
 msgid "fadeInLeft"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:286 inc/customizer/settings/error.php:214
+#: inc/customizer/settings/blog.php:320 inc/customizer/settings/error.php:214
 msgid "fadeInRight"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:287 inc/customizer/settings/error.php:215
+#: inc/customizer/settings/blog.php:321 inc/customizer/settings/error.php:215
 msgid "fadeInUp"
 msgstr ""
 
@@ -900,7 +906,7 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:276 inc/customizer/settings/error.php:204
+#: inc/customizer/settings/blog.php:310 inc/customizer/settings/error.php:204
 msgid "flash"
 msgstr ""
 
@@ -971,19 +977,19 @@ msgstr ""
 msgid "Footer Layout"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:592
+#: inc/customizer/settings/footer.php:593
 msgid "Footer Link Color"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:608
+#: inc/customizer/settings/footer.php:609
 msgid "Footer Link Hover Color"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:721
+#: inc/customizer/settings/footer.php:722
 msgid "Footer Logo"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:705
+#: inc/customizer/settings/footer.php:706
 msgid "Footer Logo Display"
 msgstr ""
 
@@ -999,19 +1005,19 @@ msgstr ""
 msgid "Footer Shape 1"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:370
+#: inc/customizer/settings/footer.php:371
 msgid "Footer Shape 2"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:397
+#: inc/customizer/settings/footer.php:398
 msgid "Footer Shape 3"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:576
+#: inc/customizer/settings/footer.php:577
 msgid "Footer Text Color"
 msgstr ""
 
-#: inc/customizer/settings/footer.php:560
+#: inc/customizer/settings/footer.php:561
 msgid "Footer Title Color"
 msgstr ""
 
@@ -1089,7 +1095,7 @@ msgstr ""
 msgid "Generate Password"
 msgstr ""
 
-#: inc/customizer/customizer-default-data.php:310
+#: inc/customizer/customizer-default-data.php:309
 msgid "Go Back To Home Page"
 msgstr ""
 
@@ -1106,11 +1112,11 @@ msgstr ""
 msgid "Grant this user super admin privileges for the Network."
 msgstr ""
 
-#: inc/rt-archive-meta.php:168
+#: inc/rt-archive-meta.php:163
 msgid "Group Color"
 msgstr ""
 
-#: inc/rt-archive-meta.php:176
+#: inc/rt-archive-meta.php:171
 msgid "Group Image"
 msgstr ""
 
@@ -1182,7 +1188,7 @@ msgstr ""
 msgid "Heading"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:281 inc/customizer/settings/error.php:209
+#: inc/customizer/settings/blog.php:315 inc/customizer/settings/error.php:209
 msgid "headShake"
 msgstr ""
 
@@ -1218,11 +1224,11 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: inc/rt-archive-meta.php:138
+#: inc/rt-archive-meta.php:134
 msgid "Icon BG"
 msgstr ""
 
-#: inc/rt-archive-meta.php:246
+#: inc/rt-archive-meta.php:238
 msgid "Icon Bg"
 msgstr ""
 
@@ -1239,7 +1245,7 @@ msgid ""
 "and date they were posted."
 msgstr ""
 
-#: inc/rt-archive-meta.php:106 inc/rt-archive-meta.php:248
+#: inc/rt-archive-meta.php:103 inc/rt-archive-meta.php:240
 msgid "Image"
 msgstr ""
 
@@ -1272,15 +1278,15 @@ msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
 
-#: inc/rt-archive-meta.php:247
+#: inc/rt-archive-meta.php:239
 msgid "Item Bg"
 msgstr ""
 
-#: inc/rt-archive-meta.php:150
+#: inc/rt-archive-meta.php:146
 msgid "Items Background"
 msgstr ""
 
-#: inc/rt-archive-meta.php:193
+#: inc/rt-archive-meta.php:188
 msgid "Items Color"
 msgstr ""
 
@@ -1530,7 +1536,7 @@ msgstr ""
 msgid "Moved: %s"
 msgstr ""
 
-#: functions.php:109
+#: inc/rt-archive-meta.php:326
 msgid "n/a"
 msgstr ""
 
@@ -1595,19 +1601,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:213
 #: inc/customizer/settings/docs-layout.php:168
 #: inc/customizer/settings/docs-layout.php:213
-#: inc/customizer/settings/docs-single-layout.php:172
-#: inc/customizer/settings/docs-single-layout.php:217
+#: inc/customizer/settings/docs-single-layout.php:187
+#: inc/customizer/settings/docs-single-layout.php:232
 #: inc/customizer/settings/error-layout.php:127
 #: inc/customizer/settings/error-layout.php:172
 #: inc/customizer/settings/error.php:60 inc/customizer/settings/error.php:85
 #: inc/customizer/settings/footer.php:113
 #: inc/customizer/settings/footer.php:307
 #: inc/customizer/settings/footer.php:352
-#: inc/customizer/settings/footer.php:379
-#: inc/customizer/settings/footer.php:406
-#: inc/customizer/settings/footer.php:473
-#: inc/customizer/settings/footer.php:540
-#: inc/customizer/settings/footer.php:730 inc/customizer/settings/forum.php:145
+#: inc/customizer/settings/footer.php:380
+#: inc/customizer/settings/footer.php:407
+#: inc/customizer/settings/footer.php:474
+#: inc/customizer/settings/footer.php:541
+#: inc/customizer/settings/footer.php:731 inc/customizer/settings/forum.php:145
 #: inc/customizer/settings/general.php:60
 #: inc/customizer/settings/general.php:85
 #: inc/customizer/settings/general.php:235 inc/customizer/settings/login.php:48
@@ -1625,7 +1631,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:274 inc/customizer/settings/error.php:202
+#: inc/customizer/settings/blog.php:308 inc/customizer/settings/error.php:202
 msgid "none"
 msgstr ""
 
@@ -1684,7 +1690,7 @@ msgstr ""
 msgid "Older Comments"
 msgstr ""
 
-#: inc/customizer/customizer-default-data.php:308
+#: inc/customizer/customizer-default-data.php:307
 msgid "Oops... Page Not Found!"
 msgstr ""
 
@@ -1692,14 +1698,10 @@ msgstr ""
 msgid "Optional reason for editing:"
 msgstr ""
 
-#: template-parts/content-banner.php:23
-msgid "Our Docs"
-msgstr ""
-
 #: inc/customizer/settings/blog-layout.php:231
 #: inc/customizer/settings/blog-single-layout.php:231
 #: inc/customizer/settings/docs-layout.php:231
-#: inc/customizer/settings/docs-single-layout.php:235
+#: inc/customizer/settings/docs-single-layout.php:250
 #: inc/customizer/settings/error-layout.php:190
 #: inc/customizer/settings/page-layout.php:231
 #: inc/customizer/settings/search-layout.php:231
@@ -1709,7 +1711,7 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:204
 #: inc/customizer/settings/blog-single-layout.php:204
 #: inc/customizer/settings/docs-layout.php:204
-#: inc/customizer/settings/docs-single-layout.php:208
+#: inc/customizer/settings/docs-single-layout.php:223
 #: inc/customizer/settings/error-layout.php:163
 #: inc/customizer/settings/page-layout.php:204
 #: inc/customizer/settings/search-layout.php:204
@@ -1842,7 +1844,7 @@ msgstr ""
 msgid "Protected"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:277 inc/customizer/settings/error.php:205
+#: inc/customizer/settings/blog.php:311 inc/customizer/settings/error.php:205
 msgid "pulse"
 msgstr ""
 
@@ -1900,7 +1902,7 @@ msgstr ""
 msgid "Registered: %s"
 msgstr ""
 
-#: inc/customizer/customizer-default-data.php:298
+#: inc/customizer/customizer-default-data.php:297
 msgid "Related Case"
 msgstr ""
 
@@ -1918,19 +1920,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:212
 #: inc/customizer/settings/docs-layout.php:167
 #: inc/customizer/settings/docs-layout.php:212
-#: inc/customizer/settings/docs-single-layout.php:171
-#: inc/customizer/settings/docs-single-layout.php:216
+#: inc/customizer/settings/docs-single-layout.php:186
+#: inc/customizer/settings/docs-single-layout.php:231
 #: inc/customizer/settings/error-layout.php:126
 #: inc/customizer/settings/error-layout.php:171
 #: inc/customizer/settings/error.php:59 inc/customizer/settings/error.php:84
 #: inc/customizer/settings/footer.php:112
 #: inc/customizer/settings/footer.php:306
 #: inc/customizer/settings/footer.php:351
-#: inc/customizer/settings/footer.php:378
-#: inc/customizer/settings/footer.php:405
-#: inc/customizer/settings/footer.php:472
-#: inc/customizer/settings/footer.php:539
-#: inc/customizer/settings/footer.php:729 inc/customizer/settings/forum.php:144
+#: inc/customizer/settings/footer.php:379
+#: inc/customizer/settings/footer.php:406
+#: inc/customizer/settings/footer.php:473
+#: inc/customizer/settings/footer.php:540
+#: inc/customizer/settings/footer.php:730 inc/customizer/settings/forum.php:144
 #: inc/customizer/settings/general.php:59
 #: inc/customizer/settings/general.php:84
 #: inc/customizer/settings/general.php:234 inc/customizer/settings/login.php:47
@@ -2015,7 +2017,7 @@ msgstr ""
 msgid "RSS"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:278 inc/customizer/settings/error.php:206
+#: inc/customizer/settings/blog.php:312 inc/customizer/settings/error.php:206
 msgid "rubberBand"
 msgstr ""
 
@@ -2032,7 +2034,8 @@ msgid "Scroll Post Limit"
 msgstr ""
 
 #: bbpress/form-reply-search.php:20 bbpress/form-search.php:21
-#: bbpress/form-topic-search.php:20 template-parts/header/icon-search.php:10
+#: bbpress/form-topic-search.php:20 template-parts/banner-search.php:13
+#: template-parts/header/icon-search.php:10
 msgid "Search"
 msgstr ""
 
@@ -2108,10 +2111,10 @@ msgstr ""
 #: inc/customizer/settings/docs-layout.php:169
 #: inc/customizer/settings/docs-layout.php:209
 #: inc/customizer/settings/docs-layout.php:214
-#: inc/customizer/settings/docs-single-layout.php:168
-#: inc/customizer/settings/docs-single-layout.php:173
-#: inc/customizer/settings/docs-single-layout.php:213
-#: inc/customizer/settings/docs-single-layout.php:218
+#: inc/customizer/settings/docs-single-layout.php:183
+#: inc/customizer/settings/docs-single-layout.php:188
+#: inc/customizer/settings/docs-single-layout.php:228
+#: inc/customizer/settings/docs-single-layout.php:233
 #: inc/customizer/settings/error-layout.php:123
 #: inc/customizer/settings/error-layout.php:128
 #: inc/customizer/settings/error-layout.php:168
@@ -2124,16 +2127,16 @@ msgstr ""
 #: inc/customizer/settings/footer.php:308
 #: inc/customizer/settings/footer.php:348
 #: inc/customizer/settings/footer.php:353
-#: inc/customizer/settings/footer.php:375
-#: inc/customizer/settings/footer.php:380
-#: inc/customizer/settings/footer.php:402
-#: inc/customizer/settings/footer.php:407
-#: inc/customizer/settings/footer.php:469
-#: inc/customizer/settings/footer.php:474
-#: inc/customizer/settings/footer.php:536
-#: inc/customizer/settings/footer.php:541
-#: inc/customizer/settings/footer.php:726
-#: inc/customizer/settings/footer.php:731 inc/customizer/settings/forum.php:141
+#: inc/customizer/settings/footer.php:376
+#: inc/customizer/settings/footer.php:381
+#: inc/customizer/settings/footer.php:403
+#: inc/customizer/settings/footer.php:408
+#: inc/customizer/settings/footer.php:470
+#: inc/customizer/settings/footer.php:475
+#: inc/customizer/settings/footer.php:537
+#: inc/customizer/settings/footer.php:542
+#: inc/customizer/settings/footer.php:727
+#: inc/customizer/settings/footer.php:732 inc/customizer/settings/forum.php:141
 #: inc/customizer/settings/forum.php:146 inc/customizer/settings/general.php:56
 #: inc/customizer/settings/general.php:61
 #: inc/customizer/settings/general.php:81
@@ -2176,10 +2179,6 @@ msgstr ""
 msgid "Service Archive Layout"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:95
-msgid "Service Category Slug"
-msgstr ""
-
 #: inc/customizer/customizer.php:424
 msgid "Service Setting"
 msgstr ""
@@ -2188,15 +2187,11 @@ msgstr ""
 msgid "Service Single Layout"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:49
-msgid "Service Slug"
-msgstr ""
-
-#: inc/customizer/settings/blog.php:279 inc/customizer/settings/error.php:207
+#: inc/customizer/settings/blog.php:313 inc/customizer/settings/error.php:207
 msgid "shakeX"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:280 inc/customizer/settings/error.php:208
+#: inc/customizer/settings/blog.php:314 inc/customizer/settings/error.php:208
 msgid "shakeY"
 msgstr ""
 
@@ -2209,7 +2204,7 @@ msgstr ""
 msgid "Shop Archive Layout"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:152
+#: inc/customizer/settings/blog.php:168
 msgid "Show Author"
 msgstr ""
 
@@ -2221,7 +2216,7 @@ msgstr ""
 msgid "Show Author Name"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:180 inc/customizer/settings/single.php:155
+#: inc/customizer/settings/blog.php:196 inc/customizer/settings/single.php:155
 msgid "Show Category"
 msgstr ""
 
@@ -2229,15 +2224,15 @@ msgstr ""
 msgid "Show Cloud Share Button"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:166 inc/customizer/settings/single.php:141
+#: inc/customizer/settings/blog.php:182 inc/customizer/settings/single.php:141
 msgid "Show Comment"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:124
+#: inc/customizer/settings/blog.php:124 inc/customizer/settings/blog.php:139
 msgid "Show Content"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:138
+#: inc/customizer/settings/blog.php:154
 msgid "Show Date"
 msgstr ""
 
@@ -2277,11 +2272,11 @@ msgstr ""
 msgid "Show Print Share Button"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:236
+#: inc/customizer/settings/blog.php:252 inc/customizer/settings/blog.php:267
 msgid "Show Read More"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:208
+#: inc/customizer/settings/blog.php:224
 msgid "Show Reading Length"
 msgstr ""
 
@@ -2321,11 +2316,11 @@ msgstr ""
 msgid "Show Twitter Share Button"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:222
+#: inc/customizer/settings/blog.php:238
 msgid "Show Video"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:194 inc/customizer/settings/single.php:225
+#: inc/customizer/settings/blog.php:210 inc/customizer/settings/single.php:225
 msgid "Show Views"
 msgstr ""
 
@@ -2375,19 +2370,19 @@ msgstr ""
 msgid "Skype"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:293 inc/customizer/settings/error.php:221
+#: inc/customizer/settings/blog.php:327 inc/customizer/settings/error.php:221
 msgid "slideInDown"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:294 inc/customizer/settings/error.php:222
+#: inc/customizer/settings/blog.php:328 inc/customizer/settings/error.php:222
 msgid "slideInLeft"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:295 inc/customizer/settings/error.php:223
+#: inc/customizer/settings/blog.php:329 inc/customizer/settings/error.php:223
 msgid "slideInRight"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:296 inc/customizer/settings/error.php:224
+#: inc/customizer/settings/blog.php:330 inc/customizer/settings/error.php:224
 msgid "slideInUp"
 msgstr ""
 
@@ -2407,7 +2402,7 @@ msgstr ""
 msgid "Social Label"
 msgstr ""
 
-#: inc/customizer/customizer-default-data.php:309
+#: inc/customizer/customizer-default-data.php:308
 msgid "Sorry! This Page Is Not Available!"
 msgstr ""
 
@@ -2474,7 +2469,6 @@ msgstr ""
 #: bbpress/form-forum.php:156 bbpress/form-reply-move.php:81
 #: bbpress/form-reply.php:176 bbpress/form-topic-merge.php:103
 #: bbpress/form-topic-split.php:107 bbpress/form-topic.php:138
-#: template-parts/banner-search.php:13
 msgid "Submit"
 msgstr ""
 
@@ -2490,7 +2484,7 @@ msgstr ""
 msgid "Subscriptions"
 msgstr ""
 
-#: inc/customizer/settings/blog.php:282 inc/customizer/settings/error.php:210
+#: inc/customizer/settings/blog.php:316 inc/customizer/settings/error.php:210
 msgid "swing"
 msgstr ""
 
@@ -2507,10 +2501,6 @@ msgstr ""
 msgid "Team Archive Layout"
 msgstr ""
 
-#: inc/customizer/settings/slug.php:80
-msgid "Team Category Slug"
-msgstr ""
-
 #: inc/customizer/settings/docs.php:142
 msgid "Team Post"
 msgstr ""
@@ -2521,10 +2511,6 @@ msgstr ""
 
 #: inc/customizer/customizer.php:281
 msgid "Team Single Layout"
-msgstr ""
-
-#: inc/customizer/settings/slug.php:34
-msgid "Team Slug"
 msgstr ""
 
 #: bbpress/form-forum.php:180
@@ -2582,29 +2568,29 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:141
 #: inc/customizer/settings/blog-single-layout.php:141
 #: inc/customizer/settings/docs-layout.php:141
-#: inc/customizer/settings/docs-single-layout.php:145
+#: inc/customizer/settings/docs-single-layout.php:160
 #: inc/customizer/settings/error-layout.php:100
 #: inc/customizer/settings/footer.php:260
-#: inc/customizer/settings/footer.php:426
-#: inc/customizer/settings/footer.php:493
+#: inc/customizer/settings/footer.php:427
+#: inc/customizer/settings/footer.php:494
 #: inc/customizer/settings/page-layout.php:141
 #: inc/customizer/settings/search-layout.php:141
 msgid "This is banner background type."
 msgstr ""
 
-#: inc/rt-archive-meta.php:28 inc/rt-archive-meta.php:50
+#: inc/rt-archive-meta.php:25 inc/rt-archive-meta.php:47
 msgid "This is category background color."
 msgstr ""
 
-#: inc/rt-archive-meta.php:152
+#: inc/rt-archive-meta.php:148
 msgid "This is Group background color."
 msgstr ""
 
-#: inc/rt-archive-meta.php:171 inc/rt-archive-meta.php:196
+#: inc/rt-archive-meta.php:166 inc/rt-archive-meta.php:191
 msgid "This is group background color."
 msgstr ""
 
-#: inc/rt-archive-meta.php:140
+#: inc/rt-archive-meta.php:136
 msgid "This is Icon background color."
 msgstr ""
 
@@ -2614,19 +2600,19 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:205
 #: inc/customizer/settings/docs-layout.php:160
 #: inc/customizer/settings/docs-layout.php:205
-#: inc/customizer/settings/docs-single-layout.php:164
-#: inc/customizer/settings/docs-single-layout.php:209
+#: inc/customizer/settings/docs-single-layout.php:179
+#: inc/customizer/settings/docs-single-layout.php:224
 #: inc/customizer/settings/error-layout.php:119
 #: inc/customizer/settings/error-layout.php:164
 #: inc/customizer/settings/error.php:52 inc/customizer/settings/error.php:77
 #: inc/customizer/settings/footer.php:105
 #: inc/customizer/settings/footer.php:299
 #: inc/customizer/settings/footer.php:344
-#: inc/customizer/settings/footer.php:371
-#: inc/customizer/settings/footer.php:398
-#: inc/customizer/settings/footer.php:465
-#: inc/customizer/settings/footer.php:532
-#: inc/customizer/settings/footer.php:722 inc/customizer/settings/forum.php:137
+#: inc/customizer/settings/footer.php:372
+#: inc/customizer/settings/footer.php:399
+#: inc/customizer/settings/footer.php:466
+#: inc/customizer/settings/footer.php:533
+#: inc/customizer/settings/footer.php:723 inc/customizer/settings/forum.php:137
 #: inc/customizer/settings/general.php:52
 #: inc/customizer/settings/general.php:77
 #: inc/customizer/settings/general.php:226 inc/customizer/settings/login.php:40
@@ -2715,6 +2701,7 @@ msgstr ""
 msgid "Topics Started: %s"
 msgstr ""
 
+#: inc/customizer/settings/docs-single-layout.php:84
 #: inc/customizer/settings/header.php:94
 msgid "Transparent Header"
 msgstr ""
@@ -2731,7 +2718,7 @@ msgstr ""
 msgid "Type your new password again."
 msgstr ""
 
-#: header.php:72
+#: header.php:68
 msgid "Type your search..."
 msgstr ""
 
@@ -2751,12 +2738,12 @@ msgstr ""
 msgid "Update User"
 msgstr ""
 
-#: inc/rt-archive-meta.php:34 inc/rt-archive-meta.php:65
-#: inc/rt-archive-meta.php:146 inc/rt-archive-meta.php:188
+#: inc/rt-archive-meta.php:31 inc/rt-archive-meta.php:62
+#: inc/rt-archive-meta.php:142 inc/rt-archive-meta.php:183
 msgid "Upload an Image"
 msgstr ""
 
-#: inc/rt-archive-meta.php:32 inc/rt-archive-meta.php:144
+#: inc/rt-archive-meta.php:29 inc/rt-archive-meta.php:140
 msgid "Upload and Image"
 msgstr ""
 
@@ -2877,7 +2864,7 @@ msgstr ""
 msgid "You do not have permission to view this forum."
 msgstr ""
 
-#: inc/customizer/customizer-default-data.php:273
+#: inc/customizer/customizer-default-data.php:272
 msgid "You May Also Like"
 msgstr ""
 
