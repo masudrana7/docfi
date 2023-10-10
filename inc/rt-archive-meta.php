@@ -325,6 +325,12 @@
 			if ( ! $select_group ) {
 				_e( 'n/a', 'docfi' );  
 			} else {
+				$term = get_term_by('id', $select_group, 'docfi_docs_group');
+
+				if ( empty( $term ) ) {
+					return;
+				}
+
 				$title = get_term_by('id', $select_group, 'docfi_docs_group')->name;
 				$url = admin_url() . 'term.php?taxonomy=docfi_docs_group&tag_ID=' . $select_group;
 				echo '<a href=' . esc_url( $url ) . '>' . esc_html( $title ) . '</a>';

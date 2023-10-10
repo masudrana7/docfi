@@ -36,10 +36,6 @@ $args = array(
 	'post_status'		=> 'publish',
 	'paged'             => $paged,
 );
-
-
-
-
 $query = new WP_Query( $args ); ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">

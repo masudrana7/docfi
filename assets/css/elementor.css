@@ -280,7 +280,7 @@ CSS INDEX
     color: var(--docfi-white-color);
 }
 .join-community-wrapper .join-community-btn:hover {
-    color: var(--color-title);
+    color: var(--docfi-white-color);
 }
 .join-community-wrapper .join-community-btn:hover::before,
 .join-community-wrapper .join-community-btn::after {
@@ -346,6 +346,7 @@ CSS INDEX
     position: relative;
     z-index: 0;
     overflow: hidden;
+    transition: all 0.4s ease-in-out;
 }
 .rt-card .icon {
     margin-bottom: 25px;
@@ -660,9 +661,6 @@ CSS INDEX
 .rt-card--style-6 .card-title {
     margin-bottom: 16px;
 }
-.rt-card--style-6 .card-title a:hover {
-    color: var(--color-shade25);
-}
 .rt-card--style-6 .card-info {
     margin-bottom: 33px;
 }
@@ -687,7 +685,7 @@ CSS INDEX
     border-radius: 20px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-    background: #fbfbff;
+    background: #F8F8FF;
     overflow: visible;
 }
 .rt-card--style-8 .card-title {
@@ -837,7 +835,7 @@ CSS INDEX
 ---------------------------------------*/
 .rt-counter-box {
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 45px 34px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -940,11 +938,14 @@ CSS INDEX
     display: none;
 }
 .rt-accordion-item{
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
     overflow: hidden;
     background: #fff;
     text-align: left;
+}
+.rt-accordion-style-1 .rt-accordion-item{
+    border-radius: 10px;
 }
 /*accordion style 01*/
 
@@ -1028,23 +1029,37 @@ CSS INDEX
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     margin-bottom: 24px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
     background: var(--docfi-white-color);
+    overflow: hidden;
 }
 
 .explore-topics-card:hover {
-    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.09);
     background: var(--docfi-white-color);
 }
 .explore-topics-card .explore-topics-header {
-    border-bottom: 1px solid #D9D9D9;
     padding-bottom: 25px;
+    position: relative;
+}
+.explore-topics-card .explore-topics-header:before{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #D9D9D9;
+    content: "";
+    height: 1px;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+.explore-topics-card:hover .explore-topics-header:before{
+    width: 140%;
 }
 .explore-topics-card .explore-topics-header .title-area {
     gap: 10px;
 }
-
 .explore-topics-card .explore-topics-header .title-area .icon {
     width: 35px;
     height: 35px;
@@ -1166,10 +1181,14 @@ ul.explore-topics-list li i {
 .testimonial-multi-layout-1 .item-content {
     background: var(--docfi-white-color);
     padding: 50px 33px;
-    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 2;
+    border-radius: 10px;
+}
+.testimonial-multi-layout-1 .rt-item{
+    padding-top: 15px;
 }
 .rt-testimonial-default .item-content .item-rating {
     list-style: none;
@@ -1235,7 +1254,7 @@ ul.explore-topics-list li i {
     background: var(--docfi-white-color);
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 69px 85px;
     margin-top: 50px;
 }
@@ -1403,9 +1422,9 @@ ul.explore-topics-list li i {
 }
 .faq-section .faq-nav-wrapper {
     background: var(--docfi-white-color);
-    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.04);
-    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
     padding: 30px 45px 45px;
 }
 .faq-section .faq-nav-wrapper .top-title {
@@ -1716,9 +1735,15 @@ ul.explore-topics-list li i {
     border-radius: 10px;
     font-size: 1rem;
 }
+.rt-code-syntax-area .contains-code > pre > code,
 .rt-code-syntax-area .hljs {
     background: rgb(35, 35, 65) !important;
     padding: 1.5rem !important;
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #abb2bf;
+    background: #282c34;
 }
 .rt-code-syntax-area .contains-code {
     position: relative;
@@ -1890,8 +1915,8 @@ ul.explore-topics-list li i {
     transition: 0.1s;
 }
 .best-online-documentation-section .nav .nav-link.active {
-    background-color: var(--color-white);
-    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.05);
+    background-color: var(--docfi-white-color);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
 }
 .best-online-documentation-section .nav .nav-link.active::before{
     width: 100%;
@@ -1929,7 +1954,7 @@ ul.explore-topics-list li i {
 }
 .best-online-documentation-section .best-documentation-info-wrapper {
     padding: 60px 65px 20px 65px;
-    filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.05));
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
 }
 .best-online-documentation-section .best-documentation-info-wrapper .rt-card:hover .icon img{
     -webkit-filter: brightness(0) invert(1);
@@ -1948,8 +1973,8 @@ ul.explore-topics-list li i {
 div.rt-cat-list .logo-card{
     margin-bottom: 25px;
     border-color: transparent;
-    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow:0px 0px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
     transition: 0.4s;
     position: relative;
     top: 0;
@@ -2034,9 +2059,6 @@ div.rt-cat-list .logo-card:hover svg{
     margin-top: 18px;
     font-size: 22px;
     font-weight: 700;
-}
-.rt-card--style-3 .card-title a:hover {
-    color: var(--color-secondary);
 }
 .rt-card--style-3 .card-info {
     line-height: 30px;
@@ -2123,12 +2145,12 @@ div.rt-cat-list .logo-card:hover svg{
     }
 }
 .rt-card--style-4 {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 68px 20px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     margin: 30px 0;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
 }
 .rt-card--style-4 .icon {
     margin-bottom: 20px;

@@ -39,13 +39,13 @@ jQuery(document).ready(function ($) {
         var plusFont = $(".font-size-plus");
         var normalFont = $(".font-size-normal");
         $(plusFont).on("click", function () {
-            $(".rt-docs-single-content p").css({ "font-size": "+=2", "line-height": "+=1px" });
+            $(".rt-docs-single-content p, .accordion-body, .rt-timeline li, .elementor-tab-content").css({ "font-size": "+=2"});
         });
         $(normalFont).on("click", function () {
-            $(".rt-docs-single-content p").css({ "font-size": "16px" });
+            $(".rt-docs-single-content p, .accordion-body, .rt-timeline li, .elementor-tab-content").css({ "font-size": "16px" });
         });
         $(minusFont).on("click", function () {
-            $(".rt-docs-single-content p").css({ "font-size": "-=2", "line-height": "-=1px" });
+            $(".rt-docs-single-content p, .accordion-body, .rt-timeline li, .elementor-tab-content").css({ "font-size": "-=2"});
         });
     }
 
